@@ -69,6 +69,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClanKluba.cs" />
+    <Compile Include="FudbalskaUtakmica.cs" />
     <Compile Include="Koeficijent.cs" />
     <Compile Include="Ponuda.cs" />
     <Compile Include="Radnica.cs" />
