@@ -11,7 +11,7 @@ namespace Kladionica
         private List<StavkaTiketa> OdigraneIgre { get; set; }
         public decimal UkupniKoeficijent { get; set; }
         public decimal Ulog { get; set; }
-        public tipTiketa TipTiketa { get; set; }
+        public TipTiketa TipTiketa { get; set; }
         public int ID { get; set; }
         public Boolean JelDobitni() { return false; }
         public List<StavkaTiketa> DajIgre() { return OdigraneIgre; }
