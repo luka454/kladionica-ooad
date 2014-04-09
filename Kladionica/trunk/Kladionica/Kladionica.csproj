@@ -69,7 +69,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ClanKluba.cs" />
+    <Compile Include="Koeficijent.cs" />
     <Compile Include="Radnica.cs" />
+    <Compile Include="StatusIgre.cs" />
     <Compile Include="Tiket.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
