@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kladionica
 {
-    public class Osoba
+    public abstract class Osoba
     {
         protected int _ID;
         protected string _ime;
@@ -14,34 +14,10 @@ namespace Kladionica
         protected string _username;
         protected int _hashPassword;
 
-        public int DajPassword
-        {
-            get { return _hashPassword; }
-            set { _hashPassword = value; }
-        }
-
-        public string DajUsername
-        {
-            get { return _username; }
-            set { _username = value; }
-        }
-
-        public string DajPrezime
-        {
-            get { return _prezime; }
-            set { _prezime = value; }
-        }
-
-        public string DajIme
-        {
-            get { return _ime; }
-            set { _ime = value; }
-        }
-
-        public int DajID
-        {
-            get { return _ID; }
-            set { _ID = value; }
-        }
+        public int DajPassword{ get; set; }
+        public string DajUsername{ get; set; }
+        public string DajPrezime{ get; set; }
+        public string DajIme{ get; set; }
+        public int DajID{ get; set; }
     }
 }
