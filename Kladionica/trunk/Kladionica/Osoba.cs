@@ -8,7 +8,7 @@ namespace Kladionica
 {
     public abstract class Osoba
     {
-        public int Password{ get; set; }
+        public int HashPassword{ get; set; }
         public string Username{ get; set; }
         public string Prezime{ get; set; }
         public string Ime{ get; set; }
