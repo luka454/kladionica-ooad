@@ -9,7 +9,11 @@ namespace Kladionica
     public class Radnica : Osoba 
     { 
         public Decimal Plata { get; set; } 
-        public Boolean ProvjeriUsernameRadnice(string username) { return false; } 
-        public Boolean ProvjeriPassRadnice(int pass) { return false; } 
+        public Boolean ProvjeriUsernameRadnice(string username) {
+            return Username.ToLower().Equals(username.ToLower());
+        } 
+        public Boolean ProvjeriPassRadnice(int hash_pass) {
+            return hash_pass == HashPassword;
+        } 
     }
 }
