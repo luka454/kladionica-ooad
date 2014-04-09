@@ -70,6 +70,7 @@
     </ApplicationDefinition>
     <Compile Include="ClanKluba.cs" />
     <Compile Include="Koeficijent.cs" />
+    <Compile Include="Ponuda.cs" />
     <Compile Include="Radnica.cs" />
     <Compile Include="StatusIgre.cs" />
     <Compile Include="StavkaTiketa.cs" />
