@@ -13,7 +13,7 @@ namespace Kladionica
         public tipTiketa TipTiketa { get; set; }
         public int ID { get; set; } 
         public Boolean JelDobitni() { return false; }
-        public List<OdigraneIgre> DajIgre() { return _odigraneIgre }
-        public List<OdigraneIgre> DajDobitneIgre() { return _dobitneIgre }
+        public List<StavkaTiketa> DajIgre() { return _odigraneIgre }
+        public List<StavkaTiketa> DajDobitneIgre() { return _dobitneIgre }
     }
 }
