@@ -14,8 +14,8 @@ namespace Kladionica
         public StatusIgre satusIgre { get; set; }
         public List<Koeficijent> koeficijenti { get; set; }
 
-        public abstract Boolean provjeriTip(String tip);
-        public abstract Boolean provjeriJeLiDobitni(String tip);
+        public abstract Boolean ProvjeriTip(String tip);
+        public abstract Boolean ProvjeriJeLiDobitni(String tip);
     }
 
 }

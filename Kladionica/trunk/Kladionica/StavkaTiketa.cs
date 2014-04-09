@@ -10,5 +10,10 @@ namespace Kladionica
     {
         public String OdigraniTip { get; set; }
         public Igra OdigranaIgra { get; set; }
+
+        public Boolean JeLiDobitni()
+        {
+            return OdigranaIgra.ProvjeriJeLiDobitni(OdigraniTip);
+        }
     }
 }

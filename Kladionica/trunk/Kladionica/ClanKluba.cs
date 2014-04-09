@@ -21,6 +21,6 @@ namespace Kladionica
         public List<Tiket> DajSveTikete() { return _tiketi; }
         public List<Tiket> DajDobitneTikete() { return _tiketi; }
         public Boolean PromijeniPIN(int noviPIN) { return false; }
-        public Boolean PromijeniSifru(string NovaSifra) { return false;     
+        public Boolean PromijeniSifru(string NovaSifra) { return false; }   
     }
 }
