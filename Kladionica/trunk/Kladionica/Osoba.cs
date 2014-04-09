@@ -8,16 +8,10 @@ namespace Kladionica
 {
     public abstract class Osoba
     {
-        protected int _ID;
-        protected string _ime;
-        protected string _prezime;
-        protected string _username;
-        protected int _hashPassword;
-
-        public int DajPassword{ get; set; }
-        public string DajUsername{ get; set; }
-        public string DajPrezime{ get; set; }
-        public string DajIme{ get; set; }
-        public int DajID{ get; set; }
+        public int Password{ get; set; }
+        public string Username{ get; set; }
+        public string Prezime{ get; set; }
+        public string Ime{ get; set; }
+        public int ID{ get; set; }
     }
 }
