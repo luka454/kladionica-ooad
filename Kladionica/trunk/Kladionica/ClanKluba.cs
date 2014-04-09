@@ -8,6 +8,8 @@ namespace Kladionica
 {
     public class ClanKluba: Osoba
     {
+        private List<Tiket> _tiketi = new List<Tiket>();
+
         public decimal DajNovac { get; set; }   
         public int DajPIN { get; set; }
         public void UplatiNovac(decimal pare) { }
