@@ -75,6 +75,7 @@
     <Compile Include="StatusIgre.cs" />
     <Compile Include="StavkaTiketa.cs" />
     <Compile Include="Tiket.cs" />
+    <Compile Include="TwoSideWLDMatch.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
