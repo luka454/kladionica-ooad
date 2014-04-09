@@ -8,39 +8,37 @@ namespace Kladionica
 {
     public class Radnica: Osoba
     {
-        private decimal _plata;
-
-        public override int DajPassword
+        public override int Password
         {
             get { return _hashPassword; }
             set { _hashPassword = value; }
         }
 
-        public override string DajUsername
+        public override string Username
         {
             get { return _username; }
             set { _username = value; }
         }
 
-        public override string DajPrezime
+        public override string Prezime
         {
             get { return _prezime; }
             set { _prezime = value; }
         }
 
-        public override string DajIme
+        public override string Ime
         {
             get { return _ime; }
             set { _ime = value; }
         }
 
-        public override int DajID
+        public override int ID
         {
             get { return _ID; }
             set { _ID = value; }
         }
 
-        public decimal DajPlatu
+        public decimal Platu
         {
             get { return _plata; }
             set { _plata = value; }
