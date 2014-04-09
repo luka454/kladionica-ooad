@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace Kladionica
 {
-    class Igra
+    public abstract class Igra
     {
-        public String LukaBioOvdje;
+        public int ID { get; set; }
+        public DateTime Pocetak { get; set; }
+        public String Naziv { get; set; }
+        public StatusIgre satusIgre { get; set; }
+        public List<Koeficijent> koeficijenti { get; set; }
+
+        public abstract Boolean provjeriTip(String tip);
+        public abstract Boolean procjeriJeLiDobitni(String tip);
     }
+
 }
