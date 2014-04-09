@@ -68,6 +68,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Administracija.cs" />
     <Compile Include="ClanKluba.cs" />
     <Compile Include="FudbalskaUtakmica.cs" />
     <Compile Include="Koeficijent.cs" />
@@ -75,8 +76,10 @@
     <Compile Include="Radnica.cs" />
     <Compile Include="StatusIgre.cs" />
     <Compile Include="StavkaTiketa.cs" />
+    <Compile Include="Tenis.cs" />
     <Compile Include="Tiket.cs" />
     <Compile Include="TipTiketa.cs" />
+    <Compile Include="Transakcija.cs" />
     <Compile Include="TwoSideWLDMatch.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
