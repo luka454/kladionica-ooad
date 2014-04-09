@@ -15,7 +15,7 @@ namespace Kladionica
         public List<Koeficijent> koeficijenti { get; set; }
 
         public abstract Boolean provjeriTip(String tip);
-        public abstract Boolean procjeriJeLiDobitni(String tip);
+        public abstract Boolean provjeriJeLiDobitni(String tip);
     }
 
 }
