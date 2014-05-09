@@ -68,19 +68,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Administracija.cs" />
-    <Compile Include="ClanKluba.cs" />
-    <Compile Include="FudbalskaUtakmica.cs" />
-    <Compile Include="Koeficijent.cs" />
-    <Compile Include="Ponuda.cs" />
-    <Compile Include="Radnica.cs" />
-    <Compile Include="StatusIgre.cs" />
-    <Compile Include="StavkaTiketa.cs" />
-    <Compile Include="Tenis.cs" />
-    <Compile Include="Tiket.cs" />
-    <Compile Include="TipTiketa.cs" />
-    <Compile Include="Transakcija.cs" />
-    <Compile Include="TwoSideWLDMatch.cs" />
+    <Compile Include="Klase\Administracija.cs" />
+    <Compile Include="Klase\ClanKluba.cs" />
+    <Compile Include="Klase\FudbalskaUtakmica.cs" />
+    <Compile Include="Klase\Koeficijent.cs" />
+    <Compile Include="Klase\Ponuda.cs" />
+    <Compile Include="Klase\Radnica.cs" />
+    <Compile Include="Klase\StatusIgre.cs" />
+    <Compile Include="Klase\StavkaTiketa.cs" />
+    <Compile Include="Klase\Tenis.cs" />
+    <Compile Include="Klase\Tiket.cs" />
+    <Compile Include="Klase\TipTiketa.cs" />
+    <Compile Include="Klase\Transakcija.cs" />
+    <Compile Include="Klase\TwoSideWLDMatch.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -89,14 +89,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Igra.cs" />
+    <Compile Include="Klase\Igra.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Osoba.cs" />
+    <Compile Include="Klase\Osoba.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -139,6 +139,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BazaPodataka\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
