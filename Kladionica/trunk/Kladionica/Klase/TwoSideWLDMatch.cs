@@ -12,6 +12,5 @@ namespace Kladionica
         public String Gost { get; set; }
         public int PoeniDomacin { get; set; }
         public int PoeniGost { get; set; }
-
     }
 }
