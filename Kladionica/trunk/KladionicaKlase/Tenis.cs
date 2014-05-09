@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kladionica
+namespace KladionicaKlase
 {
     public class Tenis : Igra
     {
@@ -15,8 +15,8 @@ namespace Kladionica
         public String DrugiProtivnik { get; set; }
         public int PrviPoenaSetova { get; set; }
         public int DrugiPoenaSetova { get; set; }
-        public Boolean provjeriTip(String tip) { return false; }
-        public Boolean provjeriJeLiDobitni(String tip) { return false; }
+        public override bool ProvjeriTip(String tip) { return false; }
+        public override bool ProvjeriJeLiDobitni(String tip) { return false; }
 
     }
 }
