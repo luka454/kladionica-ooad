@@ -13,8 +13,14 @@ namespace Kladionica
         public int BrojZutihDomacin { get; set; }
         public int BrojZutihGost { get; set; }
 
-
-
+        public FudbalskaUtakmica(int id, DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg,
+            int bkd, int bkg, int bzd, int bzg): base(id, p, n, si, d, g, pd, pg)
+        {
+            BrojKorneraDomacin = bkd;
+            BrojKorneraGost = bkg;
+            BrojZutihDomacin = bzd;
+            BrojZutihGost = bzg;
+        }
         public override bool ProvjeriTip(string tip)
         {
             string[] temp = new string[7]{"1", "1x", "x1", "x", "2x", "x2", "2"};
@@ -26,7 +32,6 @@ namespace Kladionica
 
             return false;
         }
-
         public override bool ProvjeriJeLiDobitni(string tip)
         {
             switch (tip.ToLower())
