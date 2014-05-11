@@ -17,7 +17,7 @@ namespace Kladionica.BazaPodataka
             }
         }
 
-        private DAOFactory _instance;
+        private static DAOFactory _instance;
   
     }
 }
