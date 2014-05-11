@@ -8,9 +8,7 @@ namespace Kladionica.BazaPodataka
 {
     public class DAOFactory
     {
-        private DAOFactory _instance;
-
-        public DAOFactory Instance
+        public static DAOFactory Instance
         {
             get
             {
@@ -18,11 +16,8 @@ namespace Kladionica.BazaPodataka
                 return _instance; 
             }
         }
-        
 
-        public static DAOFactory Instace()
-        {
-            throw new NotImplementedException();
-        }
+        private DAOFactory _instance;
+  
     }
 }
