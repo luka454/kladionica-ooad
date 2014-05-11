@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Kladionica.BazaPodataka
 {
-    public class KladionicaDAOFactory
+    public class DAOFactory
     {
-        private KladionicaDAOFactory _instance;
+        private DAOFactory _instance;
 
-        public KladionicaDAOFactory Instance
+        public DAOFactory Instance
         {
             get
             {
-                if (_instance == null) _instance = new KladionicaDAOFactory();
+                if (_instance == null) _instance = new DAOFactory();
                 return _instance; 
             }
         }
         
 
-        public static KladionicaDAOFactory Instace()
+        public static DAOFactory Instace()
         {
             throw new NotImplementedException();
         }
