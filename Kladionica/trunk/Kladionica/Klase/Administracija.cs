@@ -12,6 +12,13 @@ namespace Kladionica
 	    public String AdminUsername ;
 	    public int AdminHashPass;
 	    public List<Radnica> Radnici;
+        public Administracija(decimal db, string au, int ahp)
+        {
+            DnevniBilans = db;
+            AdminUsername = au;
+            AdminHashPass = ahp;
+            Radnici = new List<Radnica>();
+        }
 	    private long HashPassFunkcija(String lozinka)
         {
             long hash = 5381;

@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="Administracija.cs" />
     <Compile Include="ClanKluba.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="FudbalskaUtakmica.cs" />
     <Compile Include="Igra.cs" />
     <Compile Include="Koeficijent.cs" />

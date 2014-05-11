@@ -13,5 +13,14 @@ namespace Kladionica
         public string Prezime{ get; set; }
         public string Ime{ get; set; }
         public int ID{ get; set; }
+
+        public Osoba(int id, string i, string p, string u, int hp)
+        {
+            ID = id;
+            Ime = i;
+            Prezime = p;
+            Username = u;
+            HashPassword = hp;
+        }
     }
 }

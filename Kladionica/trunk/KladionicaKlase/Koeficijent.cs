@@ -9,5 +9,10 @@ namespace KladionicaKlase
     {
         public String tip;
         public float koeficijent;
+        public Koeficijent(string t, float k)
+        {
+            tip = t;
+            koeficijent = k;
+        }
     }
 }

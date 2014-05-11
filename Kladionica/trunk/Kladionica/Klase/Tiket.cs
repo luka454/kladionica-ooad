@@ -13,6 +13,15 @@ namespace Kladionica
         public decimal Ulog { get; set; }
         public TipTiketa TipTiketa { get; set; }
         public int ID { get; set; }
+
+        public Tiket(int id, decimal uk, decimal ul, TipTiketa tt)
+        {
+            ID = id;
+            UkupniKoeficijent = uk;
+            Ulog = ul;
+            TipTiketa = tt;
+            OdigraneIgre = new List<StavkaTiketa>();
+        }
         public Boolean JelDobitni() { return false; }
         public List<StavkaTiketa> DajIgre() { return OdigraneIgre; }
         public List<StavkaTiketa> DajDobitneIgre() { return OdigraneIgre; }
