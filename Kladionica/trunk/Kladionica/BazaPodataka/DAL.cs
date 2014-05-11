@@ -7,30 +7,8 @@ using MySql.Data.MySqlClient;
 
 namespace Kladionica.BazaPodataka
 {
-    public class DAL
+    public partial class DAL
     {
-        
-        public DAOFactory Factory
-        {
-            get { return DAOFactory.Instance; }
-        }
-        public static DAL Instance 
-        {
-            get
-            {
-                if (_instance == null) _instance = new DAL();
-                
-                return _instance;
-            } 
-        }
-
-
-        public void kreirajTabele()
-        {
-            throw new NotImplementedException();
-        }
-
-
         private DAL()
         {
             _user = "root";
