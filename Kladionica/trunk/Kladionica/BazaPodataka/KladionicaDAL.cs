@@ -7,20 +7,20 @@ using MySql.Data.MySqlClient;
 
 namespace Kladionica.BazaPodataka
 {
-    public class KladionicaDAL
+    public class DAL
     {
-        public MySqlConnection con;
-        public KladionicaDAOFactory Factory
+        
+        public DAOFactory Factory
         {
-            get { return KladionicaDAOFactory.Instace(); }
+            get { return DAOFactory.Instace(); }
         }
-        public static KladionicaDAL Instance 
+        public static DAL Instance 
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new KladionicaDAL();
+                    _instance = new DAL();
                 }
                 return _instance;
             } 
@@ -33,32 +33,33 @@ namespace Kladionica.BazaPodataka
         }
 
 
-        private KladionicaDAL()
+        private DAL()
         {
             _user = "root";
             _password = "";
             _database = "dao";
 
             String conString = String.Format("server=localhost;user={0};password={1};database={2}",_user,_password,_database);
-            con = new MySqlConnection(conString);
+            _con = new MySqlConnection(conString);
 
         }
 
-        private KladionicaDAL(string user, string password, string database)
+        private DAL(string user, string password, string database)
         {
             _user = user;
             _password = password;
             _database = database;
 
-            String conString = String.Format("server=localhost;user={0};password={1};database={2}", _user, _password, _database);
-            con = new MySqlConnection(conString);
+            String conString = String.Format("server=localhost;user={0};password={1};database={2};", _user, _password, _database);
+            _con = new MySqlConnection(conString);
         }
 
 
         private String _user = "root";
         private String _password = "";
         private String _database = "dao";
-        private static KladionicaDAL _instance;
+        private MySqlConnection _con;
+        private static DAL _instance;
                 
     }
 }
