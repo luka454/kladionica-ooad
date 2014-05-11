@@ -69,6 +69,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BazaPodataka\DAL-public.cs" />
     <Compile Include="BazaPodataka\DAL.cs" />
     <Compile Include="BazaPodataka\DAOFactory.cs" />
     <Compile Include="Klase\Administracija.cs" />
