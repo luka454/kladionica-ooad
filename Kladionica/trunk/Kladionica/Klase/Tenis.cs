@@ -22,5 +22,15 @@ namespace Kladionica
         }
         public Boolean provjeriTip(String tip) { return false; }
         public Boolean provjeriJeLiDobitni(String tip) { return false; }
+
+        public override bool ProvjeriTip(string tip)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool ProvjeriJeLiDobitni(string tip)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

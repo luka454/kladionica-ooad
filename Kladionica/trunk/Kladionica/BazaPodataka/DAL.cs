@@ -12,16 +12,14 @@ namespace Kladionica.BazaPodataka
         
         public DAOFactory Factory
         {
-            get { return DAOFactory.Instace(); }
+            get { return DAOFactory.Instance; }
         }
         public static DAL Instance 
         {
             get
             {
-                if (_instance == null)
-                {
-                    _instance = new DAL();
-                }
+                if (_instance == null) _instance = new DAL();
+                
                 return _instance;
             } 
         }
@@ -39,7 +37,7 @@ namespace Kladionica.BazaPodataka
             _password = "";
             _database = "dao";
 
-            String conString = String.Format("server=localhost;user={0};password={1};database={2}",_user,_password,_database);
+            String conString = String.Format("server=localhost;user={0};password={1};database={2};",_user,_password,_database);
             _con = new MySqlConnection(conString);
 
         }

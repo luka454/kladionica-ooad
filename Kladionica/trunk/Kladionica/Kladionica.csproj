@@ -69,8 +69,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="BazaPodataka\KladionicaDAL.cs" />
-    <Compile Include="BazaPodataka\KladionicaDAOFactory.cs" />
+    <Compile Include="BazaPodataka\DAL.cs" />
+    <Compile Include="BazaPodataka\DAOFactory.cs" />
     <Compile Include="Klase\Administracija.cs" />
     <Compile Include="Klase\ClanKluba.cs" />
     <Compile Include="Klase\FudbalskaUtakmica.cs" />
