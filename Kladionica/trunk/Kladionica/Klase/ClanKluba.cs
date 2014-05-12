@@ -10,7 +10,7 @@ namespace Kladionica
     {
         private List<Tiket> _tiketi = new List<Tiket>();
 
-        public ClanKluba(int id, string i, string p, string u, int hp) : base(id, i, p, u, hp) { }
+        public ClanKluba(string i, string p, string u, int hp) : base(i, p, u, hp) { }
         public decimal DajNovac { get; set; }   
         public int DajPIN { get; set; }
         public void UplatiNovac(decimal pare) { }

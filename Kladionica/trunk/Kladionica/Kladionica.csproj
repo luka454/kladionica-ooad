@@ -72,6 +72,7 @@
     <Compile Include="BazaPodataka\DAL-public.cs" />
     <Compile Include="BazaPodataka\DAL.cs" />
     <Compile Include="BazaPodataka\DAOFactory.cs" />
+    <Compile Include="BazaPodataka\Entiteti\RadnicaDAO.cs" />
     <Compile Include="Klase\Administracija.cs" />
     <Compile Include="Klase\ClanKluba.cs" />
     <Compile Include="Klase\FudbalskaUtakmica.cs" />
@@ -144,8 +145,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="BazaPodataka\Entiteti\" />
+    <ProjectReference Include="..\DAL\DAL\DAL.csproj">
+      <Project>{2367f75d-c970-4416-800a-b9c39259a23e}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

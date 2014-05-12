@@ -10,8 +10,8 @@ namespace Kladionica
     { 
         public Decimal Plata { get; set; }
 
-        public Radnica(int id, string i, string p, string u, int hp, decimal pl)
-            : base(id, i, p, u, hp)
+        public Radnica(string i, string p, string u, int hp, decimal pl)
+            : base(i, p, u, hp)
         {
             Plata = pl;
         }
