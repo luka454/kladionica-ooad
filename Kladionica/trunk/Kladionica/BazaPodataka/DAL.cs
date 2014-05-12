@@ -34,7 +34,7 @@ namespace Kladionica.BazaPodataka
         private String _user = "root";
         private String _password = "";
         private String _database = "dao";
-        private MySqlConnection _con;
+        private static MySqlConnection _con;
         private static DAL _instance;
                 
     }
