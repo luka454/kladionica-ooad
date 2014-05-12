@@ -9,8 +9,8 @@ namespace Kladionica
     public class ClanKluba: Osoba
     {
         private List<Tiket> _tiketi = new List<Tiket>();
-
         public ClanKluba(string i, string p, string u, int hp) : base(i, p, u, hp) { }
+
         public decimal DajNovac { get; set; }   
         public int DajPIN { get; set; }
         public void UplatiNovac(decimal pare) { }

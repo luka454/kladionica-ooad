@@ -10,16 +10,16 @@ namespace Kladionica.BazaPodataka
 {
     public partial class DAL
     {
-        public class RadnicaDAO : IDaoCrud<Radnica>
+        public class ClanKlubaDAO : IDaoCrud<ClanKluba>
         {
             protected MySqlCommand c;
-            public long create(Radnica entity)
+            public long create(ClanKluba entity)
             {
                 try
                 {
-                    c = new MySqlCommand("insert into radnice(ime, prezime, username, hashpassword, plata)" +
+                    c = new MySqlCommand("insert into clanovi(ime, prezime, username, hashpassword)" +
                         " values( " + entity.Ime + ", " + entity.Prezime + ", " + entity.Username + ", " +
-                        entity.HashPassword + ", " + entity.Plata + ")", _con);
+                        entity.HashPassword + ")", _con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -30,18 +30,18 @@ namespace Kladionica.BazaPodataka
 
             }
 
-            public Radnica read(Radnica entity)
+            public ClanKluba read(ClanKluba entity)
             {
                 return getById(entity.ID);
             }
 
-            public Radnica update(Radnica entity)
+            public ClanKluba update(ClanKluba entity)
             {
                 try
                 {
-                    c = new MySqlCommand("update radnice set ime=" + entity.Ime +
+                    c = new MySqlCommand("update clanovi set ime=" + entity.Ime +
                         ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
-                        entity.HashPassword + ", plata=" + entity.Plata + "where id=" + entity.ID, _con);
+                        entity.HashPassword + "where id=" + entity.ID, _con);
                     c.ExecuteNonQuery();
                     return getById(entity.ID);
                 }
@@ -52,12 +52,12 @@ namespace Kladionica.BazaPodataka
                 }
             }
 
-            public void delete(Radnica entity)
+            public void delete(ClanKluba entity)
             {
                 try
                 {
                     int id = Convert.ToInt32(entity.ID);
-                    c = new MySqlCommand("delete from radnice where id=" + id, _con);
+                    c = new MySqlCommand("delete from clanovi where id=" + id, _con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -70,17 +70,17 @@ namespace Kladionica.BazaPodataka
                 }
             }
 
-            public Radnica getById(int id)
+            public ClanKluba getById(int id)
             {
                 try
                 {
-                    c = new MySqlCommand("select * from radnice where id=" + id, _con);
+                    c = new MySqlCommand("select * from clanovi where id=" + id, _con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
-                        Radnica rad = new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                            r.GetInt32("hashpassword"), r.GetDecimal("plata"));
-                        return rad;
+                        ClanKluba ck = new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                            r.GetInt32("hashpassword"));
+                        return ck;
                     }
                     else
                         return null;
@@ -91,17 +91,17 @@ namespace Kladionica.BazaPodataka
                 }
             }
 
-            public List<Radnica> getAll()
+            public List<ClanKluba> getAll()
             {
                 try
                 {
-                    c = new MySqlCommand("select * from radnice", _con);
+                    c = new MySqlCommand("select * from clanovi", _con);
                     MySqlDataReader r = c.ExecuteReader();
-                    List<Radnica> radnice = new List<Radnica>();
+                    List<ClanKluba> clanovi = new List<ClanKluba>();
                     while (r.Read())
-                        radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                            r.GetInt32("hashpassword"), r.GetDecimal("plata")));
-                    return radnice;
+                        clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                            r.GetInt32("hashpassword")));
+                    return clanovi;
                 }
                 catch (Exception ex)
                 {
@@ -109,22 +109,22 @@ namespace Kladionica.BazaPodataka
                 }
             }
 
-            public List<Radnica> getByExample(string name, string value)
-            { 
-                try 
-                { 
-                    c = new MySqlCommand("select * from radnice where ime=" + name + " and prezime=" + value, _con);
-                    MySqlDataReader r = c.ExecuteReader(); 
-                    List<Radnica> radnice = new List<Radnica>();
+            public List<ClanKluba> getByExample(string name, string value)
+            {
+                try
+                {
+                    c = new MySqlCommand("select * from clanovi where ime=" + name + " and prezime=" + value, _con);
+                    MySqlDataReader r = c.ExecuteReader();
+                    List<ClanKluba> clanovi = new List<ClanKluba>();
                     while (r.Read())
-                        radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                            r.GetInt32("hashpassword"), r.GetDecimal("plata")));
-                    return radnice; 
-                } 
-                catch (Exception ex) 
-                { 
-                    throw ex; 
-                } 
+                        clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                            r.GetInt32("hashpassword")));
+                    return clanovi;
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
             }
         }
     }

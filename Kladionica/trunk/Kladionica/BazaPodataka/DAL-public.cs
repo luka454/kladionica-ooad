@@ -27,7 +27,7 @@ namespace Kladionica.BazaPodataka
         {
             get
             {
-                return Instance._con;
+                return DAL.Instance._con;
             }
         }
 
