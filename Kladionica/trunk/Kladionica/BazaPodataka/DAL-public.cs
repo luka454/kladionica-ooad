@@ -23,7 +23,7 @@ namespace Kladionica.BazaPodataka
                 return _instance;
             }
         }
-        public static MySqlConnection Con
+        public static MySqlConnection Connection
         {
             get
             {
