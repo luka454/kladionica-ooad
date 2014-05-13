@@ -19,7 +19,7 @@ namespace KladionicaKlase
             PrviPoenaSetova = pps;
             DrugiPoenaSetova = dps;
         }
-        public override bool ProvjeriTip(String tip) { return false; }
-        public override bool ProvjeriJeLiDobitni(String tip) { return false; }
+        public override bool ProvjeriTip(String tip) { throw new Exception("Unimplementerd"); }
+        public override bool ProvjeriJeLiDobitni(String tip) { throw new Exception("Unimplementerd"); }
     }
 }
