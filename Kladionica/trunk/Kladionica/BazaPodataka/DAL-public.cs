@@ -10,6 +10,9 @@ namespace Kladionica.BazaPodataka
 {
     public partial class DAL
     {
+        /*
+         * gives you factory for DAO classes
+         */
         public DAOFactory Factory
         {
             get { return DAOFactory.Instance; }
@@ -23,6 +26,10 @@ namespace Kladionica.BazaPodataka
                 return _instance;
             }
         }
+
+        /*
+         * gives you connection to datebase
+         */
         public static MySqlConnection Connection
         {
             get
@@ -31,11 +38,6 @@ namespace Kladionica.BazaPodataka
             }
         }
 
-
-        public void kreirajTabele()
-        {
-            throw new NotImplementedException();
-        }
 
     }
 }
