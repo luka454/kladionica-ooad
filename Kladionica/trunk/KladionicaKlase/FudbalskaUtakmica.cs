@@ -12,6 +12,7 @@ namespace KladionicaKlase
         public String Gost { get; set; }
         public int PoeniDomacin { get; set; }
         public int PoeniGost { get; set; }
+        
         public FudbalskaUtakmica(int id, DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg): base(id,p,n,si)
         {
             Domacin = d;

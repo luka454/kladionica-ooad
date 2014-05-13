@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kladionica", "Kladionica\Kladionica.csproj", "{2B090C3E-4A73-4444-B3ED-715E2D3302BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL\DAL.csproj", "{2367F75D-C970-4416-800A-B9C39259A23E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KladionicaKlase", "KladionicaKlase\KladionicaKlase.csproj", "{94D3239B-E329-47A9-AE50-733D5004E451}"
 EndProject
 Global
@@ -21,10 +19,6 @@ Global
 		{2B090C3E-4A73-4444-B3ED-715E2D3302BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B090C3E-4A73-4444-B3ED-715E2D3302BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B090C3E-4A73-4444-B3ED-715E2D3302BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2367F75D-C970-4416-800A-B9C39259A23E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2367F75D-C970-4416-800A-B9C39259A23E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2367F75D-C970-4416-800A-B9C39259A23E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2367F75D-C970-4416-800A-B9C39259A23E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94D3239B-E329-47A9-AE50-733D5004E451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94D3239B-E329-47A9-AE50-733D5004E451}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94D3239B-E329-47A9-AE50-733D5004E451}.Release|Any CPU.ActiveCfg = Release|Any CPU
