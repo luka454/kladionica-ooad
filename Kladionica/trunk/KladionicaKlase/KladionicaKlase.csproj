@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="Administracija.cs" />
     <Compile Include="ClanKluba.cs" />
-    <Compile Include="FudbalskaUtakmica.cs" />
     <Compile Include="Igra.cs" />
     <Compile Include="Koeficijent.cs" />
     <Compile Include="Osoba.cs" />
@@ -54,7 +53,7 @@
     <Compile Include="Tiket.cs" />
     <Compile Include="TipTiketa.cs" />
     <Compile Include="Transakcija.cs" />
-    <Compile Include="TwoSideWLDMatch.cs" />
+    <Compile Include="FudbalskaUtakmica.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
