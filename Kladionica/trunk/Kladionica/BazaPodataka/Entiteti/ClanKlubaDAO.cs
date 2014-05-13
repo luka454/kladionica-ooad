@@ -8,123 +8,120 @@ using Kladionica.BazaPodataka.Interfejsi;
 
 namespace Kladionica.BazaPodataka
 {
-    public partial class DAL
+    public class ClanKlubaDAO : IDaoCrud<ClanKluba>
     {
-        public class ClanKlubaDAO : IDaoCrud<ClanKluba>
+        protected MySqlCommand c;
+        public long create(ClanKluba entity)
         {
-            protected MySqlCommand c;
-            public long create(ClanKluba entity)
+            try
             {
-                try
-                {
-                    c = new MySqlCommand("insert into clanovi(ime, prezime, username, hashpassword)" +
-                        " values( " + entity.Ime + ", " + entity.Prezime + ", " + entity.Username + ", " +
-                        entity.HashPassword + ")", Con);
-                    c.ExecuteNonQuery();
-                    return c.LastInsertedId;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-
+                c = new MySqlCommand("insert into clanovi(ime, prezime, username, hashpassword)" +
+                    " values( " + entity.Ime + ", " + entity.Prezime + ", " + entity.Username + ", " +
+                    entity.HashPassword + ")", DAL.Con);
+                c.ExecuteNonQuery();
+                return c.LastInsertedId;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
 
-            public ClanKluba read(ClanKluba entity)
+        }
+
+        public ClanKluba read(ClanKluba entity)
+        {
+            return getById(entity.ID);
+        }
+
+        public ClanKluba update(ClanKluba entity)
+        {
+            try
             {
+                c = new MySqlCommand("update clanovi set ime=" + entity.Ime +
+                    ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
+                    entity.HashPassword + "where id=" + entity.ID, DAL.Con);
+                c.ExecuteNonQuery();
                 return getById(entity.ID);
             }
 
-            public ClanKluba update(ClanKluba entity)
+            catch (Exception ex)
             {
-                try
-                {
-                    c = new MySqlCommand("update clanovi set ime=" + entity.Ime +
-                        ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
-                        entity.HashPassword + "where id=" + entity.ID, Con);
-                    c.ExecuteNonQuery();
-                    return getById(entity.ID);
-                }
-
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                throw ex;
             }
+        }
 
-            public void delete(ClanKluba entity)
+        public void delete(ClanKluba entity)
+        {
+            try
             {
-                try
-                {
-                    int id = Convert.ToInt32(entity.ID);
-                    c = new MySqlCommand("delete from clanovi where id=" + id, Con);
-                    c.ExecuteNonQuery();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    Con.Close();
-                }
+                int id = Convert.ToInt32(entity.ID);
+                c = new MySqlCommand("delete from clanovi where id=" + id, DAL.Con);
+                c.ExecuteNonQuery();
             }
-
-            public ClanKluba getById(int id)
+            catch (Exception ex)
             {
-                try
-                {
-                    c = new MySqlCommand("select * from clanovi where id=" + id, Con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    if (r.Read())
-                    {
-                        ClanKluba ck = new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                            r.GetInt32("hashpassword"));
-                        return ck;
-                    }
-                    else
-                        return null;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                throw ex;
             }
-
-            public List<ClanKluba> getAll()
+            finally
             {
-                try
-                {
-                    c = new MySqlCommand("select * from clanovi", Con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    List<ClanKluba> clanovi = new List<ClanKluba>();
-                    while (r.Read())
-                        clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                            r.GetInt32("hashpassword")));
-                    return clanovi;
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                DAL.Con.Close();
             }
+        }
 
-            public List<ClanKluba> getByExample(string name, string value)
+        public ClanKluba getById(int id)
+        {
+            try
             {
-                try
+                c = new MySqlCommand("select * from clanovi where id=" + id, DAL.Con);
+                MySqlDataReader r = c.ExecuteReader();
+                if (r.Read())
                 {
-                    c = new MySqlCommand("select * from clanovi where ime=" + name + " and prezime=" + value, Con);
-                    MySqlDataReader r = c.ExecuteReader();
-                    List<ClanKluba> clanovi = new List<ClanKluba>();
-                    while (r.Read())
-                        clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                            r.GetInt32("hashpassword")));
-                    return clanovi;
+                    ClanKluba ck = new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                        r.GetInt32("hashpassword"));
+                    return ck;
                 }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<ClanKluba> getAll()
+        {
+            try
+            {
+                c = new MySqlCommand("select * from clanovi", DAL.Con);
+                MySqlDataReader r = c.ExecuteReader();
+                List<ClanKluba> clanovi = new List<ClanKluba>();
+                while (r.Read())
+                    clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                        r.GetInt32("hashpassword")));
+                return clanovi;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<ClanKluba> getByExample(string name, string value)
+        {
+            try
+            {
+                c = new MySqlCommand("select * from clanovi where ime=" + name + " and prezime=" + value, DAL.Con);
+                MySqlDataReader r = c.ExecuteReader();
+                List<ClanKluba> clanovi = new List<ClanKluba>();
+                while (r.Read())
+                    clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                        r.GetInt32("hashpassword")));
+                return clanovi;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }
