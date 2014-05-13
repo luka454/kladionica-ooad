@@ -13,9 +13,8 @@ namespace Kladionica
 	    public Decimal Iznos ;
 	    public ClanKluba KojiKorisnik ;
 
-        public Transakcija(int id, DateTime v, decimal i, ClanKluba k)
+        public Transakcija(DateTime v, decimal i, ClanKluba k)
         {
-            ID = id;
             Vrijeme = v;
             Iznos = i;
             KojiKorisnik = k;
