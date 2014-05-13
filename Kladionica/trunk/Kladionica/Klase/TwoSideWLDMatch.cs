@@ -12,8 +12,8 @@ namespace Kladionica
         public String Gost { get; set; }
         public int PoeniDomacin { get; set; }
         public int PoeniGost { get; set; }
-        public TwoSideWLDMatch(int id, DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg)
-            : base(id, p, n, si)
+        public TwoSideWLDMatch(DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg)
+            : base(p, n, si)
         {
             Domacin = d;
             Gost = g;

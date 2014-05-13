@@ -12,8 +12,8 @@ namespace Kladionica
         public String DrugiProtivnik { get; set; }
         public int PrviPoenaSetova { get; set; }
         public int DrugiPoenaSetova { get; set; }
-        public Tenis(int id, DateTime p, string n, StatusIgre si, string pp, string dp, int pps, int dps)
-            : base(id, p, n, si)
+        public Tenis(DateTime p, string n, StatusIgre si, string pp, string dp, int pps, int dps)
+            : base(p, n, si)
         {
             PrviProtivnik = pp;
             DrugiProtivnik = dp;

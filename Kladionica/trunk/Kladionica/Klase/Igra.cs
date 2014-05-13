@@ -14,9 +14,8 @@ namespace Kladionica
         public StatusIgre statusIgre { get; set; }
         public List<Koeficijent> koeficijenti { get; set; }
 
-        public Igra(int id, DateTime p, string n, StatusIgre si)
+        public Igra(DateTime p, string n, StatusIgre si)
         {
-            ID = id;
             Pocetak = p;
             Naziv = n;
             statusIgre = si;

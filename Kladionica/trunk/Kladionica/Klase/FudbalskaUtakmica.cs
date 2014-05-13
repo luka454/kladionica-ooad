@@ -13,8 +13,8 @@ namespace Kladionica
         public int BrojZutihDomacin { get; set; }
         public int BrojZutihGost { get; set; }
 
-        public FudbalskaUtakmica(int id, DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg,
-            int bkd, int bkg, int bzd, int bzg): base(id, p, n, si, d, g, pd, pg)
+        public FudbalskaUtakmica(DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg,
+            int bkd, int bkg, int bzd, int bzg): base(p, n, si, d, g, pd, pg)
         {
             BrojKorneraDomacin = bkd;
             BrojKorneraGost = bkg;

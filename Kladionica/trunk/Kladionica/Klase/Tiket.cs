@@ -14,9 +14,8 @@ namespace Kladionica
         public TipTiketa TipTiketa { get; set; }
         public int ID { get; set; }
 
-        public Tiket(int id, decimal uk, decimal ul, TipTiketa tt)
+        public Tiket(decimal uk, decimal ul, TipTiketa tt)
         {
-            ID = id;
             UkupniKoeficijent = uk;
             Ulog = ul;
             TipTiketa = tt;
