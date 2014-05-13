@@ -19,7 +19,7 @@ namespace Kladionica.BazaPodataka
                 {
                     c = new MySqlCommand("insert into clanovi(ime, prezime, username, hashpassword)" +
                         " values( " + entity.Ime + ", " + entity.Prezime + ", " + entity.Username + ", " +
-                        entity.HashPassword + ")", _con);
+                        entity.HashPassword + ")", Con);
                     c.ExecuteNonQuery();
                     return c.LastInsertedId;
                 }
@@ -41,7 +41,7 @@ namespace Kladionica.BazaPodataka
                 {
                     c = new MySqlCommand("update clanovi set ime=" + entity.Ime +
                         ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
-                        entity.HashPassword + "where id=" + entity.ID, _con);
+                        entity.HashPassword + "where id=" + entity.ID, Con);
                     c.ExecuteNonQuery();
                     return getById(entity.ID);
                 }
@@ -57,7 +57,7 @@ namespace Kladionica.BazaPodataka
                 try
                 {
                     int id = Convert.ToInt32(entity.ID);
-                    c = new MySqlCommand("delete from clanovi where id=" + id, _con);
+                    c = new MySqlCommand("delete from clanovi where id=" + id, Con);
                     c.ExecuteNonQuery();
                 }
                 catch (Exception ex)
@@ -66,7 +66,7 @@ namespace Kladionica.BazaPodataka
                 }
                 finally
                 {
-                    _con.Close();
+                    Con.Close();
                 }
             }
 
@@ -74,7 +74,7 @@ namespace Kladionica.BazaPodataka
             {
                 try
                 {
-                    c = new MySqlCommand("select * from clanovi where id=" + id, _con);
+                    c = new MySqlCommand("select * from clanovi where id=" + id, Con);
                     MySqlDataReader r = c.ExecuteReader();
                     if (r.Read())
                     {
@@ -95,7 +95,7 @@ namespace Kladionica.BazaPodataka
             {
                 try
                 {
-                    c = new MySqlCommand("select * from clanovi", _con);
+                    c = new MySqlCommand("select * from clanovi", Con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<ClanKluba> clanovi = new List<ClanKluba>();
                     while (r.Read())
@@ -113,7 +113,7 @@ namespace Kladionica.BazaPodataka
             {
                 try
                 {
-                    c = new MySqlCommand("select * from clanovi where ime=" + name + " and prezime=" + value, _con);
+                    c = new MySqlCommand("select * from clanovi where ime=" + name + " and prezime=" + value, Con);
                     MySqlDataReader r = c.ExecuteReader();
                     List<ClanKluba> clanovi = new List<ClanKluba>();
                     while (r.Read())
