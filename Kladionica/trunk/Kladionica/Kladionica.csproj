@@ -73,6 +73,8 @@
     <Compile Include="BazaPodataka\DAL.cs" />
     <Compile Include="BazaPodataka\DAOFactory.cs" />
     <Compile Include="BazaPodataka\Entiteti\ClanKlubaDAO.cs" />
+    <Compile Include="BazaPodataka\Entiteti\KoeficijentDAO.cs" />
+    <Compile Include="BazaPodataka\Entiteti\PonudaDAO.cs" />
     <Compile Include="BazaPodataka\Entiteti\RadnicaDAO.cs" />
     <Compile Include="BazaPodataka\Interfejsi\IDaoCrud.cs" />
     <Compile Include="Klase\Administracija.cs" />
