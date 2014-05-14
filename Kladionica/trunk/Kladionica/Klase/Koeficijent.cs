@@ -7,8 +7,9 @@ namespace Kladionica
 {
     public class Koeficijent
     {
-        public String tip;
-        public float koeficijent;
+        public int ID { get; set; }
+        public String tip { get; set; }
+        public float koeficijent { get; set; }
         public Koeficijent(string t, float k)
         {
             tip = t;

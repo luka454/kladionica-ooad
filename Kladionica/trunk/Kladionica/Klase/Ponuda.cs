@@ -8,6 +8,7 @@ namespace Kladionica
 {
     public class Ponuda
     {
+        public int ID { get; set; }
         public DateTime Datum { get; set; }
         public List<Igra> IgreUPonudi { get; set; }
 
