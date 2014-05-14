@@ -6,24 +6,25 @@ using System.Threading.Tasks;
 
 namespace Kladionica
 {
-    public class FudbalskaUtakmica: TwoSideWLDMatch
+    public class FudbalskaUtakmica : Igra
     {
-        public int BrojKorneraDomacin { get; set; }
-        public int BrojKorneraGost { get; set; }
-        public int BrojZutihDomacin { get; set; }
-        public int BrojZutihGost { get; set; }
+        public String Domacin { get; set; }
+        public String Gost { get; set; }
+        public int PoeniDomacin { get; set; }
+        public int PoeniGost { get; set; }
 
-        public FudbalskaUtakmica(DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg,
-            int bkd, int bkg, int bzd, int bzg): base(p, n, si, d, g, pd, pg)
+        public FudbalskaUtakmica(DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg)
+            : base(p, n, si)
         {
-            BrojKorneraDomacin = bkd;
-            BrojKorneraGost = bkg;
-            BrojZutihDomacin = bzd;
-            BrojZutihGost = bzg;
+            Domacin = d;
+            Gost = g;
+            PoeniDomacin = pd;
+            PoeniGost = pg;
         }
+
         public override bool ProvjeriTip(string tip)
         {
-            string[] temp = new string[7]{"1", "1x", "x1", "x", "2x", "x2", "2"};
+            string[] temp = new string[7] { "1", "1x", "x1", "x", "2x", "x2", "2" };
             foreach (var item in temp)
             {
                 if (item.Equals(tip.ToLower()))
