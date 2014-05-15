@@ -15,7 +15,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("insert into koeficijenti(tip, koeficijent)" +
+                c = new MySqlCommand("insert into Koeficijenti(tip, koeficijent)" +
                     " values( " + entity.tip + ", " + entity.koeficijent + ")", DAL.Connection);
                 c.ExecuteNonQuery();
                 return c.LastInsertedId;
@@ -36,7 +36,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("update koeficijenti set tip=" + entity.tip +
+                c = new MySqlCommand("update Koeficijenti set tip=" + entity.tip +
                     ", koeficijent=" + entity.koeficijent + "where id=" + entity.ID, DAL.Connection);
                 c.ExecuteNonQuery();
                 return getById(entity.ID);
@@ -53,7 +53,7 @@ namespace Kladionica.BazaPodataka
             try
             {
                 int id = Convert.ToInt32(entity.ID);
-                c = new MySqlCommand("delete from koeficijenti where id=" + id, DAL.Connection);
+                c = new MySqlCommand("delete from Koeficijenti where id=" + id, DAL.Connection);
                 c.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from koeficijenti where id=" + id, DAL.Connection);
+                c = new MySqlCommand("select * from Koeficijenti where id=" + id, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
@@ -90,7 +90,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from koeficijenti", DAL.Connection);
+                c = new MySqlCommand("select * from Koeficijenti", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
@@ -107,7 +107,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from koeficijenti where tip=" + name + " and koeficijent=" + value, DAL.Connection);
+                c = new MySqlCommand("select * from Koeficijenti where tip=" + name + " and koeficijent=" + value, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
