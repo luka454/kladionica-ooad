@@ -13,7 +13,7 @@ namespace Kladionica.BazaPodataka
         /*
          * gives you factory for DAO classes
          */
-        public DAOFactory Factory
+        public static DAOFactory Factory
         {
             get { return DAOFactory.Instance; }
         }
