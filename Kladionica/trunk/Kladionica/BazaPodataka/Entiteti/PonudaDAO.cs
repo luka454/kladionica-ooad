@@ -15,7 +15,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("insert into ponude(datum)" +
+                c = new MySqlCommand("insert into Ponude(datum)" +
                     " values( " + entity.Datum + ")", DAL.Connection);
                 c.ExecuteNonQuery();
                 return c.LastInsertedId;
@@ -36,7 +36,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("update ponude set datum=" + entity.Datum + "where id=" + entity.ID, DAL.Connection);
+                c = new MySqlCommand("update Ponude set datum=" + entity.Datum + "where id=" + entity.ID, DAL.Connection);
                 c.ExecuteNonQuery();
                 return getById(entity.ID);
             }
@@ -52,7 +52,7 @@ namespace Kladionica.BazaPodataka
             try
             {
                 int id = Convert.ToInt32(entity.ID);
-                c = new MySqlCommand("delete from ponude where id=" + id, DAL.Connection);
+                c = new MySqlCommand("delete from Ponude where id=" + id, DAL.Connection);
                 c.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -69,7 +69,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from ponude where id=" + id, DAL.Connection);
+                c = new MySqlCommand("select * from Ponude where id=" + id, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
@@ -89,7 +89,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from ponude", DAL.Connection);
+                c = new MySqlCommand("select * from Ponude", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Ponuda> ponude = new List<Ponuda>();
                 while (r.Read())
@@ -106,7 +106,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from ponude where datum=" + date, DAL.Connection);
+                c = new MySqlCommand("select * from Ponude where datum=" + date, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Ponuda> ponude = new List<Ponuda>();
                 while (r.Read())
