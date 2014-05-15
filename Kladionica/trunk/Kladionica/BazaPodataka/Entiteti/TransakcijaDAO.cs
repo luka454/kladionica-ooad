@@ -115,5 +115,5 @@ namespace Kladionica.BazaPodataka
             } 
         }
     }
-    }
+    
 }
