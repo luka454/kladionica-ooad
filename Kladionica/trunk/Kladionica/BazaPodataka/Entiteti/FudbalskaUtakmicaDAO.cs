@@ -132,7 +132,31 @@ namespace Kladionica.BazaPodataka.Entiteti
                 while (r.Read())
                     radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
                         r.GetInt32("hashpassword"), r.GetDecimal("plata")));
-                return radnice;
+
+                
+                MySqlCommand c1 = new MySqlCommand("select * from FudbalskeUtakmice", DAL.Connection);
+                List<FudbalskaUtakmica> lista = new List<FudbalskaUtakmica>();
+                MySqlDataReader r, r2 = c1.ExecuteReader();
+                while(r2.Read())
+                {
+                    int ID = r2.GetInt32("ID");
+                    c = new MySqlCommand("select * from Igre where id=" + ID, DAL.Connection);
+                    r = c.ExecuteReader();
+
+                    r.Read();
+       
+                    FudbalskaUtakmica f = new FudbalskaUtakmica(r.GetDateTime("Pocetak"), r.GetString("Naziv"), 
+                            encodeStatus(r.GetInt32("StatusIgre")), r2.GetString("Domacin"), 
+                            r2.GetString("Gost"), r2.GetInt32("PoeniDomacin"), r2.GetInt32("PoeniGost"));
+
+                    f.ID = ID;
+
+                    lista.Add(f);
+
+                    
+                }
+                return lista;
+
             }
             catch (Exception ex)
             {
