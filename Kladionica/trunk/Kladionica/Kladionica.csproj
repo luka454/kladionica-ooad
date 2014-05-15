@@ -74,6 +74,7 @@
     <Compile Include="BazaPodataka\DAOFactory.cs" />
     <Compile Include="BazaPodataka\Entiteti\ClanKlubaDAO.cs" />
     <Compile Include="BazaPodataka\Entiteti\FudbalskaUtakmicaDAO.cs" />
+    <Compile Include="BazaPodataka\Entiteti\IgraDAO.cs" />
     <Compile Include="BazaPodataka\Entiteti\KoeficijentDAO.cs" />
     <Compile Include="BazaPodataka\Entiteti\PonudaDAO.cs" />
     <Compile Include="BazaPodataka\Entiteti\RadnicaDAO.cs" />

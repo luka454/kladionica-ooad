@@ -7,7 +7,7 @@ using MySql.Data.MySqlClient;
 
 namespace Kladionica.BazaPodataka.Entiteti
 {
-    public class FudbalskaUtakmicaDAO
+    public class FudbalskaUtakmicaDAO : Interfejsi.IDaoCrud<FudbalskaUtakmica>
     {
         protected MySqlCommand c;
         public long create(FudbalskaUtakmica entity)
@@ -34,6 +34,10 @@ namespace Kladionica.BazaPodataka.Entiteti
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
 
         }
@@ -68,6 +72,10 @@ namespace Kladionica.BazaPodataka.Entiteti
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
         }
 
@@ -115,6 +123,10 @@ namespace Kladionica.BazaPodataka.Entiteti
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         private StatusIgre encodeStatus(int p)
@@ -122,18 +134,12 @@ namespace Kladionica.BazaPodataka.Entiteti
             throw new NotImplementedException();
         }
 
-        public List<Radnica> getAll()
+        public List<FudbalskaUtakmica> getAll()
         {
             try
             {
-                c = new MySqlCommand("select * from radnice", DAL.Connection);
-                MySqlDataReader r = c.ExecuteReader();
-                List<Radnica> radnice = new List<Radnica>();
-                while (r.Read())
-                    radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                        r.GetInt32("hashpassword"), r.GetDecimal("plata")));
-
-                
+                DAL.Connection.Open(); 
+             
                 MySqlCommand c1 = new MySqlCommand("select * from FudbalskeUtakmice", DAL.Connection);
                 List<FudbalskaUtakmica> lista = new List<FudbalskaUtakmica>();
                 MySqlDataReader r, r2 = c1.ExecuteReader();
@@ -162,24 +168,15 @@ namespace Kladionica.BazaPodataka.Entiteti
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         public List<FudbalskaUtakmica> getByExample(string name, string value)
         {
-            try
-            {
-                c = new MySqlCommand("select * from radnice where ime=" + name + " and prezime=" + value, DAL.Connection);
-                MySqlDataReader r = c.ExecuteReader();
-                List<Radnica> radnice = new List<Radnica>();
-                while (r.Read())
-                    radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                        r.GetInt32("hashpassword"), r.GetDecimal("plata")));
-                return radnice;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            throw new NotImplementedException();
         }
     }
 }
