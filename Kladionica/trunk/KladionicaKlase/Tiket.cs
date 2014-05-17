@@ -22,8 +22,17 @@ namespace KladionicaKlase
             TipTiketa = tt;
             OdigraneIgre = new List<StavkaTiketa>();
         }
-        public Boolean JelDobitni() { return false; }
+        public Boolean JelDobitni() 
+        {
+            foreach(StavkaTiketa st in OdigraneIgre) if(st.JeLiDobitni() == false) return false;
+            return true;
+        }
         public List<StavkaTiketa> DajIgre() { return OdigraneIgre; }
-        public List<StavkaTiketa> DajDobitneIgre() { return OdigraneIgre; }
+        public List<StavkaTiketa> DajDobitneIgre() 
+        {
+            List<StavkaTiketa> dobitne = new List<StavkaTiketa>();
+            foreach (StavkaTiketa st in OdigraneIgre) if (st.JeLiDobitni()) dobitne.Add(st);
+            return dobitne;
+        }
     }
 }
