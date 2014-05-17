@@ -21,7 +21,31 @@ namespace Kladionica
             TipTiketa = tt;
             OdigraneIgre = new List<StavkaTiketa>();
         }
-        public Boolean JelDobitni() { return false; }
+        public decimal UkupniDobitak() {
+            return UkupniKoeficijent * Ulog;
+        }
+        public Boolean JelDobitni() {
+            List<StavkaTiketa> dobitniParovi=new List<StavkaTiketa>();
+            if (TipTiketa.ToString()=="Normalni") {
+                foreach (StavkaTiketa oi in OdigraneIgre) {
+                    if (oi.JeLiDobitni())
+                        dobitniParovi.Add(oi);
+                }
+                if (OdigraneIgre.Count == dobitniParovi.Count)
+                    return true;
+                return false;
+            }
+            else if (TipTiketa.ToString() == "Sistem") {
+                foreach (StavkaTiketa oi in OdigraneIgre) {
+                    if (oi.JeLiDobitni())
+                        dobitniParovi.Add(oi);
+                }
+
+            }
+            else if (TipTiketa.ToString() == "Fiksni") {
+                
+            }
+        }
         public List<StavkaTiketa> DajIgre() { return OdigraneIgre; }
         public List<StavkaTiketa> DajDobitneIgre() { return OdigraneIgre; }
     }
