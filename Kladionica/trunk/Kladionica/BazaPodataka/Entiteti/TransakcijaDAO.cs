@@ -15,7 +15,8 @@ namespace Kladionica.BazaPodataka
             try
             {
                 c = new MySqlCommand("insert into transakcije(id, datum, iznos, korisnik_id)" +
-                    " values( " + entity.ID + ", " + entity.Vrijeme + ", " + entity.Iznos + ", " + entity.KojiKorisnik.ID")", DAL.Connection);
+                    " values( " + entity.ID + ", " + entity.Vrijeme + ", " + entity.Iznos +
+                    ", " + entity.KojiKorisnik.ID + ")", DAL.Connection);
                 c.ExecuteNonQuery();
                 return c.LastInsertedId;
             }
@@ -74,7 +75,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
-                    Transakcija transakcija = new Transakcija(r.GetInt32("id"), r.GetDateTime("datum"), r.GetDecimal("username"),new ClanKluba());
+                    Transakcija transakcija = new Transakcija(r.GetDateTime("datum"), r.GetDecimal("username"),new ClanKluba());
                     return transakcija;
                     //implementiraj clan kluba do kraja obavezo!!!
                 }
@@ -95,7 +96,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 List<Transakcija> transakcije = new List<Transakcija>();
                 while (r.Read())
-                    transakcije.Add( new Transakcija(r.GetInt32("id"), r.GetDateTime("datum"), r.GetDecimal("username"),new ClanKluba()));
+                    transakcije.Add( new Transakcija(r.GetDateTime("datum"), r.GetDecimal("username"),new ClanKluba()));
                     return transakcije;
                     //implementiraj clan kluba do kraja obavezo!!!
             }

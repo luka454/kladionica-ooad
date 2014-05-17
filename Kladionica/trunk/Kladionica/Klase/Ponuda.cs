@@ -24,7 +24,7 @@ namespace Kladionica
             IgreUPonudi = new List<Igra>();
         }
 
-        public void printaj() { 
+        public void Printaj() { 
             //TODO: implementirati direktno printanje na printer
         }
     }

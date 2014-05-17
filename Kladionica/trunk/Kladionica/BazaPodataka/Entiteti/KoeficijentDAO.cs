@@ -74,7 +74,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
-                    Koeficijent k=new Koeficijent(r.GetString("tip"), r.GetFloat("koeficijent"));
+                    Koeficijent k=new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent"));
                     return k;
                 }
                 else
@@ -94,7 +94,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
-                    koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetFloat("koeficijent")));
+                    koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent")));
                 return koeficijenti;
             }
             catch (Exception ex)
@@ -103,7 +103,7 @@ namespace Kladionica.BazaPodataka
             }
         }
 
-        public List<Koeficijent> getByExample(string name, float value)
+        public List<Koeficijent> getByExample(string name, string value)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
-                    koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetFloat("koeficijent")));
+                    koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent")));
                 return koeficijenti;
             }
             catch (Exception ex)
