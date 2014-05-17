@@ -26,8 +26,11 @@ namespace Kladionica
         }
         public Boolean JelDobitni() {
             List<StavkaTiketa> dobitniParovi=new List<StavkaTiketa>();
-            if (TipTiketa.ToString()=="Normalni") {
-                foreach (StavkaTiketa oi in OdigraneIgre) {
+            List<StavkaTiketa> fiksniParovi = new List<StavkaTiketa>();
+            if (TipTiketa.ToString() == "Normalni")
+            {
+                foreach (StavkaTiketa oi in OdigraneIgre)
+                {
                     if (oi.JeLiDobitni())
                         dobitniParovi.Add(oi);
                 }
@@ -35,18 +38,41 @@ namespace Kladionica
                     return true;
                 return false;
             }
-            else if (TipTiketa.ToString() == "Sistem") {
-                foreach (StavkaTiketa oi in OdigraneIgre) {
+            else if (TipTiketa.ToString() == "Sistem")
+            {
+                foreach (StavkaTiketa oi in OdigraneIgre)
+                {
                     if (oi.JeLiDobitni())
                         dobitniParovi.Add(oi);
                 }
 
             }
-            else if (TipTiketa.ToString() == "Fiksni") {
-                
+            else if (TipTiketa.ToString() == "Fiksni")
+            {
+                foreach (StavkaTiketa oi in OdigraneIgre)
+                {
+                    if (oi.JeLiFiksni())
+                        fiksniParovi.Add(oi);
+                    if (oi.JeLiDobitni())
+                        dobitniParovi.Add(oi);
+                }
+                if (dobitniParovi.Count == fiksniParovi.Count)
+                    return true;
+                return false;
             }
+            return false;
         }
-        public List<StavkaTiketa> DajIgre() { return OdigraneIgre; }
-        public List<StavkaTiketa> DajDobitneIgre() { return OdigraneIgre; }
+        public List<StavkaTiketa> DajIgre() { 
+            return OdigraneIgre;
+        }
+        public List<StavkaTiketa> DajDobitneIgre() {
+            List<StavkaTiketa> dobitne = new List<StavkaTiketa>();
+            foreach (StavkaTiketa oi in OdigraneIgre)
+            {
+                if (oi.JeLiDobitni())
+                    dobitne.Add(oi);
+            }
+            return dobitne;
+        }
     }
 }

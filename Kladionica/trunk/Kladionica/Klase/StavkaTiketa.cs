@@ -12,12 +12,11 @@ namespace Kladionica
         public Igra OdigranaIgra { get; set; }
         public String Stavka { get; set; }
 
-        public StavkaTiketa(string ot, Igra oi, string s)
+        public StavkaTiketa(string ot, Igra oi)
         {
-            if (s != "Normalni" || s != "Sistem" || s != "Fiksni") throw new Exception("Stavka ne postoji.");
             OdigraniTip = ot;
             OdigranaIgra = oi;
-            Stavka = s;
+            Stavka = null;
         }
         public Boolean JeLiFiksni() {
             return Stavka == "Fiksni";
