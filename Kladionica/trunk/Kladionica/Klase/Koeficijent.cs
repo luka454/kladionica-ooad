@@ -9,8 +9,8 @@ namespace Kladionica
     {
         public int ID { get; set; }
         public String tip { get; set; }
-        public float koeficijent { get; set; }
-        public Koeficijent(string t, float k)
+        public decimal koeficijent { get; set; }
+        public Koeficijent(string t, decimal k)
         {
             tip = t;
             koeficijent = k;

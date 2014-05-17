@@ -7,6 +7,6 @@ namespace Kladionica
 {
     public enum TipTiketa
     { 
-        Normalni, Sistem, Fiksni 
+        Normalni, Sistem
     }
 }
