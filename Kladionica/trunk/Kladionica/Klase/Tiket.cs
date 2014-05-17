@@ -49,6 +49,7 @@ namespace Kladionica
             }
             else if (TipTiketa.ToString() == "Fiksni")
             {
+                int brojac = 0;
                 foreach (StavkaTiketa oi in OdigraneIgre)
                 {
                     if (oi.JeLiFiksni())
@@ -56,7 +57,12 @@ namespace Kladionica
                     if (oi.JeLiDobitni())
                         dobitniParovi.Add(oi);
                 }
-                if (dobitniParovi.Count == fiksniParovi.Count)
+                foreach (StavkaTiketa dp in dobitniParovi)
+                {
+                    if (dp.JeLiFiksni())
+                        brojac++;
+                }
+                if (brojac == fiksniParovi.Count)
                     return true;
                 return false;
             }
