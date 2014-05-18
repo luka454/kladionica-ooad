@@ -12,6 +12,8 @@ namespace KladionicaKlase
 	    public String AdminUsername ;
 	    public int AdminHashPass;
 	    public List<Radnica> Radnici;
+        public List<ClanKluba> ClanoviKluba;
+        public List<Tiket> Tiketi;
         public Administracija(decimal db, string au, int ahp)
         {
             DnevniBilans = db;
@@ -25,17 +27,57 @@ namespace KladionicaKlase
             for (int i = 0; i < lozinka.Length; i++) hash = ((hash << 5) + hash) + lozinka[i];
             return hash;
         }
-	    public Boolean NoviTiket(Tiket noviTiket) { return false; }
+	    public void NoviTiket(Tiket noviTiket) 
+        {
+            Tiketi.Add(noviTiket);
+        }
         public Boolean NovaIgra(Igra novaIgra) { return false; }
-        public Boolean DodajRadnika(Radnica noviRadnik) { return false; }
-        public Decimal IsplatiTiket(Tiket tiket) { return 0; }
-	    private void AzurirajBilans(){}
-        public Boolean OtpustiRadnika(Radnica radnik) { return false; }
-        public Boolean UplatiTiket(Tiket tiket, Decimal iznos) { return true; }
-        public Decimal IsplatiPlati(Radnica radnik) { return 0; }
-        public int DodajClanaKluba(ClanKluba user) { return 0; }
-        public Boolean IspisiClanaKluba(ClanKluba user) { return true; }
-        public Boolean UplatiNovacNaClansku(int userID, Decimal iznos) { return true; }
+        public void DodajRadnika(Radnica noviRadnik) 
+        {
+            Radnici.Add(noviRadnik);
+        }
+        public Transakcija IsplatiTiket(Tiket tiket) 
+        {
+            //pobrini se za id 
+            if (tiket.JelDobitni())
+            {
+                AzurirajBilans(-tiket.UkupniKoeficijent * tiket.Ulog);
+                return new Transakcija(0, DateTime.Now, tiket.UkupniKoeficijent * tiket.Ulog);
+            }
+            
+            throw new Exception("Nije dobitni");
+        }
+	    private void AzurirajBilans(decimal p)
+        {
+            DnevniBilans += p;
+        }
+        public void OtpustiRadnika(Radnica radnik) 
+        {
+            Radnici.Remove(radnik);
+        }
+        public void UplatiTiket(Tiket tiket, Decimal iznos) 
+        {
+            Tiketi.Add(tiket);
+            AzurirajBilans(iznos);
+        }
+        public Decimal IsplatiPlati(Radnica radnik) 
+        {
+            AzurirajBilans(-radnik.Plata);
+            return radnik.Plata;
+        }
+        public void DodajClanaKluba(ClanKluba user) 
+        {
+            ClanoviKluba.Add(user);
+        }
+        public Boolean IspisiClanaKluba(ClanKluba user) 
+        {
+            ClanoviKluba.Remove(user); 
+            return true; 
+        }
+        public Boolean UplatiNovacNaClansku(int userID, Decimal iznos) 
+        {
+            return true; 
+        }
         public Boolean IsplatiNovacSaRacuna(int UserId, Decimal iznos) { return true; }
     }
 }

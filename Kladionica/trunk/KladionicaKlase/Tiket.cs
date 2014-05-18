@@ -22,7 +22,7 @@ namespace KladionicaKlase
             TipTiketa = tt;
             OdigraneIgre = new List<StavkaTiketa>();
         }
-        public Boolean JelDobitni() 
+        public bool JelDobitni() 
         {
             foreach(StavkaTiketa st in OdigraneIgre) if(st.JeLiDobitni() == false) return false;
             return true;
