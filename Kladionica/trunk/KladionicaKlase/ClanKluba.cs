@@ -8,14 +8,24 @@ namespace KladionicaKlase
 {
     public class ClanKluba: Osoba
     {
-        private List<Tiket> _tiketi = new List<Tiket>();
-
-        public ClanKluba(int id, string i, string p, string u, int hp): base(id,i,p,u,hp){ }
-        public decimal DajNovac { get; set; }   
+        public decimal DajNovac { get; set; }
         public int DajPIN { get; set; }
-        public void UplatiNovac(decimal pare) { }
-        public Boolean IsplatiNovac(decimal pare) { return false; }
-        public Boolean ProvjeriPIN(int pin) { return false; }
+
+        private List<Tiket> _tiketi = new List<Tiket>();
+        public ClanKluba(int id, string i, string p, string u, int hp): base(id,i,p,u,hp){ }
+        public void UplatiNovac(decimal pare) 
+        {
+            //
+        }
+        public Boolean IsplatiNovac(decimal pare) 
+        { 
+            return false; 
+        }
+        public Boolean ProvjeriPIN(int pin) 
+        {
+            if (DajPIN == pin) return true;
+            return false;
+        }
         public Boolean ProvjeriSifru(string pass) { return false; }
         static public int HashFunkcijaPassword(int pin) { return 0; }
         static public string HashFunkcijaSifra(string pass) { return pass; }
