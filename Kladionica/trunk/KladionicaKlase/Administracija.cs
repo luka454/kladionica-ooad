@@ -31,7 +31,10 @@ namespace KladionicaKlase
         {
             Tiketi.Add(noviTiket);
         }
-        public Boolean NovaIgra(Igra novaIgra) { return false; }
+        public Boolean NovaIgra(Igra novaIgra) 
+        {
+            return false;
+        }
         public void DodajRadnika(Radnica noviRadnik) 
         {
             Radnici.Add(noviRadnik);
@@ -69,15 +72,27 @@ namespace KladionicaKlase
         {
             ClanoviKluba.Add(user);
         }
-        public Boolean IspisiClanaKluba(ClanKluba user) 
+        public void IspisiClanaKluba(ClanKluba user) 
         {
-            ClanoviKluba.Remove(user); 
-            return true; 
+            ClanoviKluba.Remove(user);  
         }
         public Boolean UplatiNovacNaClansku(int userID, Decimal iznos) 
         {
-            return true; 
+            ClanKluba k = null;
+            foreach (ClanKluba ck in ClanoviKluba) if (ck.ID == userID) k = ck;
+
+            if (k == null) return false;
+            k.UplatiNovac(iznos);
+            return true;
         }
-        public Boolean IsplatiNovacSaRacuna(int UserId, Decimal iznos) { return true; }
+        public Boolean IsplatiNovacSaRacuna(int UserId, Decimal iznos) 
+        {
+            ClanKluba k = null;
+            foreach (ClanKluba ck in ClanoviKluba) if (ck.ID == UserId) k = ck;
+
+            if (k == null) return false;
+            k.IsplatiNovac(iznos);
+            return true;
+        }
     }
 }
