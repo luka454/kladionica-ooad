@@ -13,7 +13,7 @@ namespace Kladionica.BazaPodataka
         {
             _user = "root";
             _password = "";
-            _database = "dao";
+            _database = "kladionica";
 
             String conString = String.Format("server=localhost;user={0};password={1};database={2};",_user,_password,_database);
             _con = new MySqlConnection(conString);
@@ -33,7 +33,7 @@ namespace Kladionica.BazaPodataka
 
         private String _user = "root";
         private String _password = "";
-        private String _database = "dao";
+        private String _database = "kladionica";
         private MySqlConnection _con;
         private static DAL _instance;
                 
