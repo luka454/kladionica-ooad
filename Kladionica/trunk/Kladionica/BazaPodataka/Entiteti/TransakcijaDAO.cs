@@ -107,14 +107,8 @@ namespace Kladionica.BazaPodataka
         }
 
         public List<Transakcija> getByExample(string name, string value)
-        { 
-            try 
-            { 
-            } 
-            catch (Exception ex) 
-            { 
-                throw ex; 
-            } 
+        {
+            throw new NotImplementedException();
         }
     }
     
