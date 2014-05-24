@@ -20,14 +20,19 @@ namespace Kladionica.BazaPodataka
         private static DAOFactory _instance;
 
 
-        public Entiteti.FudbalskaUtakmicaDAO getFudbalskaUtakmicaDao()
+        public FudbalskaUtakmicaDAO getFudbalskaUtakmicaDao()
         {
-            return new Entiteti.FudbalskaUtakmicaDAO();
+            return new FudbalskaUtakmicaDAO();
         }
 
         public TenisDAO getTenisDao()
         {
             return new TenisDAO();
+        }
+
+        public RadnicaDAO getRadnicaDAO()
+        {
+            return new RadnicaDAO();
         }
     }
 }

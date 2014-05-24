@@ -23,7 +23,20 @@ namespace Kladionica
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.Title = "Kladionica d.o.o.";
+            /*
+              //Ako nemate radnicu dodanu u bazu
+            try
+            {
+                Radnica r = new Radnica("Katarina", "Velika", "radnica01", Administracija.HashPassFunkcija("radnica01"), 500M);
+                BazaPodataka.DAL.Factory.getRadnicaDAO().create(r);
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+             */
         }
     }
 }

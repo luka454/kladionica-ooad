@@ -22,13 +22,57 @@ namespace Kladionica
     {
         public LogInScreen()
         {
-            InitializeComponent();
-            
+            InitializeComponent();       
         }
 
         private void UserName_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+
+            {
+                
+                if (Username.Text.Equals(String.Empty))
+                {
+                    ErrorPanel.Visibility = Visibility.Visible;
+                    ErrorMessage.Text = "!! Niste unijeli username";
+
+                    return;
+                }
+
+                
+                Radnica r = BazaPodataka.DAL.Factory.getRadnicaDAO().getByUsername(Username.Text);
+
+                if (r == null)
+                {
+                    ErrorPanel.Visibility = Visibility.Visible;
+                    ErrorMessage.Text = "!! Uneseni username nije pronadjen";
+
+                    return;
+                }
+
+                if (r.HashPassword != Administracija.HashPassFunkcija(Password.Password))
+                {
+                    ErrorPanel.Visibility = Visibility.Visible;
+                    ErrorMessage.Text = "!! Uneseni password nije točan";
+
+                    return;
+                }
+
+                MainWindow w = Window.GetWindow(this) as MainWindow;
+
+                w.Stranica.Source = new Uri("Welcome.xaml", UriKind.Relative);
+              
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

@@ -13,6 +13,6 @@ namespace Kladionica.BazaPodataka.Interfejsi
         void delete(T entity);
         T getById(int id);
         List<T> getAll();
-        List<T> getByExample(string name, string value);
+        
     }
 }
