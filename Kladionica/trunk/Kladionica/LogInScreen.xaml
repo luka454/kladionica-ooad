@@ -29,9 +29,9 @@
     </Page.Resources>
     <Grid Background="{DynamicResource Plava}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="165*"/>
+            <RowDefinition Height="144*"/>
             <RowDefinition Height="159*"/>
-            <RowDefinition Height="146*"/>
+            <RowDefinition Height="167*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" Margin="150,0">
             <Grid.RowDefinitions>
