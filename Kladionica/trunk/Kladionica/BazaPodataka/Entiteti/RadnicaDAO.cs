@@ -15,15 +15,21 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("insert into Radnik(ime, prezime, username, hashpassword, plata)" +
-                    " values( " + entity.Ime + ", " + entity.Prezime + ", " + entity.Username + ", " +
-                    entity.HashPassword + ", " + entity.Plata + ")", DAL.Connection);
+                DAL.Connection.Open();
+                c = new MySqlCommand("insert into Radnik(ime, prezime, username, hashpassworda, Plata)" +
+                    " values(' " + entity.Ime + "', '" + entity.Prezime + "', '" + entity.Username + "', " +
+                    entity.HashPassword + ", " + Convert.ToDouble(entity.Plata) + ")", DAL.Connection);
                 c.ExecuteNonQuery();
                 return c.LastInsertedId;
+
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
 
         }
@@ -77,7 +83,7 @@ namespace Kladionica.BazaPodataka
                 if (r.Read())
                 {
                     Radnica rad = new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                        r.GetInt32("hashpassword"), r.GetDecimal("plata"));
+                        r.GetInt32("hashpassworda"), r.GetDecimal("plata"));
                     return rad;
                 }
                 else
@@ -98,7 +104,7 @@ namespace Kladionica.BazaPodataka
                 List<Radnica> radnice = new List<Radnica>();
                 while (r.Read())
                     radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                        r.GetInt32("hashpassword"), r.GetDecimal("plata")));
+                        r.GetInt32("hashpassworda"), r.GetDecimal("plata")));
                 return radnice;
             }
             catch (Exception ex)
@@ -116,13 +122,40 @@ namespace Kladionica.BazaPodataka
                 List<Radnica> radnice = new List<Radnica>();
                 while (r.Read())
                     radnice.Add(new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                        r.GetInt32("hashpassword"), r.GetDecimal("plata")));
+                        r.GetInt32("hashpassworda"), r.GetDecimal("plata")));
                 return radnice; 
             } 
             catch (Exception ex) 
             { 
                 throw ex; 
             } 
+        }
+
+        public Radnica getByUsername(string username)
+        {
+            try
+            {
+                DAL.Connection.Open();
+
+                c = new MySqlCommand("select * from Radnik where username= '" + username + "'", DAL.Connection);
+                MySqlDataReader r = c.ExecuteReader();
+                if (r.Read())
+                {
+                    Radnica rad = new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
+                        r.GetInt32("hashpassworda"), r.GetDecimal("plata"));
+                    return rad;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
     }
 }

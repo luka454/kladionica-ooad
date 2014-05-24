@@ -21,9 +21,9 @@ namespace Kladionica
             AdminHashPass = ahp;
             Radnici = new List<Radnica>();
         }
-        private long HashPassFunkcija(String lozinka)
+        public static int HashPassFunkcija(String lozinka)
         {
-            long hash = 5381;
+            int hash = 5381;
             for (int i = 0; i < lozinka.Length; i++) hash = ((hash << 5) + hash) + lozinka[i];
             return hash;
         }

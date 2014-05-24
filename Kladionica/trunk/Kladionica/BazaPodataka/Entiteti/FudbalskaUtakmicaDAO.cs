@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace Kladionica.BazaPodataka.Entiteti
+namespace Kladionica.BazaPodataka
 {
     public class FudbalskaUtakmicaDAO : Interfejsi.IDaoCrud<FudbalskaUtakmica>
     {

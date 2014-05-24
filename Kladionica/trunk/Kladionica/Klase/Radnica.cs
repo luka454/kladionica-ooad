@@ -10,10 +10,10 @@ namespace Kladionica
     { 
         public Decimal Plata { get; set; }
 
-        public Radnica(string i, string p, string u, int hp, decimal pl)
-            : base(i, p, u, hp)
+        public Radnica(string ime, string prezime, string username, int hashpassword, decimal plata)
+            : base(ime, prezime, username, hashpassword)
         {
-            Plata = pl;
+            Plata = plata;
         }
         public Boolean ProvjeriUsernameRadnice(string username) {
             return Username.ToLower().Equals(username.ToLower());
