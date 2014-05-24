@@ -23,6 +23,12 @@ namespace Kladionica
         public LogInScreen()
         {
             InitializeComponent();
+            
+        }
+
+        private void UserName_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
