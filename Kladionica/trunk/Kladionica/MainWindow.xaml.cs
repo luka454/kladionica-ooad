@@ -23,6 +23,7 @@ namespace Kladionica
         public MainWindow()
         {
             InitializeComponent();
+            
         }
     }
 }

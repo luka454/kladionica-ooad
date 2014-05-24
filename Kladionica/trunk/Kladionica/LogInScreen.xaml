@@ -3,15 +3,77 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      mc:Ignorable="d"
+      d:DesignHeight="470" d:DesignWidth="700"
 	Title="LogInScreen">
-    
-    <ResourceDictionary>    
-        <SolidColorBrush x:Key="Nebeska plava" >#00bbff</SolidColorBrush>
-    </ResourceDictionary>
+    <Page.Resources>
+        <Style x:Key="Labels" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+        </Style>
+        <Style x:Key="Borders" TargetType="Border">
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="MaxWidth" Value="250" />
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="MinWidth" Value="100" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderBrush" Value="Beige" /> 
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Padding" Value="20,2" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" /> 
+        </Style>
+    </Page.Resources>
+    <Grid Background="{DynamicResource Plava}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="165*"/>
+            <RowDefinition Height="159*"/>
+            <RowDefinition Height="146*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="150,0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="117*"/>
+                <ColumnDefinition Width="283*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Column="0" Grid.Row="0" Style="{DynamicResource Labels}" Height="37" Margin="0,15" Width="103">Username:</Label>
+            <Label Grid.Column="0" Grid.Row="1" Style="{DynamicResource Labels}" Height="38" Margin="0,15" Width="98">Password:</Label>
 
-    <Grid>
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Border Style="{DynamicResource Borders}">
+                    <Grid>
+                        <TextBox x:Name="Username" FontSize="18" BorderThickness="0" />
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Border Style="{DynamicResource Borders}">
+                    <Grid>
+                        <PasswordBox x:Name="Password"  FontSize="18" BorderThickness="0" />
+                    </Grid>
+                </Border>
+            </Grid>
+
+
+            <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">
+                <Border Background="Beige" VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="380" Margin="10,5,10,0">
+                    <Button Background="#505050" Foreground="White" FontSize="20">Prijavi se</Button>
+                </Border>
+            </Grid>
+
+        </Grid>
         
+
     </Grid>
+    
 </Page>
