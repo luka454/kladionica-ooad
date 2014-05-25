@@ -21,10 +21,13 @@ namespace Kladionica
             TipTiketa = tt;
             OdigraneIgre = new List<StavkaTiketa>();
         }
-        public decimal UkupniDobitak() {
+        public decimal UkupniDobitak() 
+        {
             return UkupniKoeficijent * Ulog;
         }
-        public Boolean JelDobitni() {
+        public Boolean JelDobitni() 
+        {
+            //Javi luki da moze ovo ljepse vako je previse rovokopacki
             List<StavkaTiketa> dobitniParovi=new List<StavkaTiketa>();
             List<StavkaTiketa> fiksniParovi = new List<StavkaTiketa>();
             if (TipTiketa.ToString() == "Normalni")
@@ -68,17 +71,16 @@ namespace Kladionica
             }
             return false;
         }
-        public List<StavkaTiketa> DajIgre() { 
+        public List<StavkaTiketa> DajIgre() 
+        { 
             return OdigraneIgre;
         }
-        public List<StavkaTiketa> DajDobitneIgre() {
+        public List<StavkaTiketa> DajDobitneIgre() 
+        {
             List<StavkaTiketa> dobitne = new List<StavkaTiketa>();
-            foreach (StavkaTiketa oi in OdigraneIgre)
-            {
-                if (oi.JeLiDobitni())
-                    dobitne.Add(oi);
-            }
+            foreach (StavkaTiketa oi in OdigraneIgre)if (oi.JeLiDobitni()) dobitne.Add(oi);
             return dobitne;
         }
+        
     }
 }

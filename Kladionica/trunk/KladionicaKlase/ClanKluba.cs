@@ -20,24 +20,7 @@ namespace KladionicaKlase
             return hash;
         }
         public ClanKluba(int id, string i, string p, string u, int hp): base(id,i,p,u,hp){ }
-        public Transakcija UplatiNovac(decimal pare) 
-        {
-            return new Transakcija(0, DateTime.Now, pare, this);
-        }
-        public Transakcija IsplatiNovac(decimal pare) 
-        {
-            return new Transakcija(0, DateTime.Now, -pare, this);
-        }
-        public Boolean ProvjeriPIN(int pin) 
-        {
-            if (DajPIN == pin) return true;
-            return false;
-        }
-        public Boolean ProvjeriSifru(string pass) 
-        {
-            if (HashPassFunkcija(pass) == HashPassword) return true;
-            return false; 
-        }
+
         static public int HashFunkcijaPassword(int pin) { return 0; }
         static public string HashFunkcijaSifra(string pass) { return pass; }
         public Boolean UplatiTiket(Tiket noviTiket, decimal pare) { return false; }
