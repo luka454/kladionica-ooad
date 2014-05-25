@@ -12,7 +12,6 @@ namespace Kladionica
         public ClanKluba(string i, string p, string u, int hp) : base(i, p, u, hp) { }
 
         //nisam sigurna ko je ovo ubacio i zasto?
-        public ClanKluba(): base(" ", " ", " ", 1) { }
         public decimal Novac { get; set; }   
         public int PIN { get; set; }
 
@@ -29,10 +28,6 @@ namespace Kladionica
         }
         public Boolean ProvjeriSifru(String pass) {
             return HashFunkcijaSifra(pass) == HashPassword;
-        }
-        //ne kontam ovu funkciju hashfunkcijapassword
-        static public int HashFunkcijaPassword(int pin) {
-            return pin;
         }
         static public int HashFunkcijaSifra(String pass) {
             return Convert.ToInt32(pass); 
@@ -70,6 +65,17 @@ namespace Kladionica
                 return true;
             }
             return false;
-        }   
+        }
+        /*
+        public Transakcija UplatiNovac(decimal pare)
+        {
+            return new Transakcija(0, DateTime.Now, pare, this);
+        }
+        public Transakcija IsplatiNovac(decimal pare)
+        {
+            return new Transakcija(0, DateTime.Now, -pare, this);
+        }
+        
+         // vjerujem da ce i ovo zatrebat kasnije */
     }
 }

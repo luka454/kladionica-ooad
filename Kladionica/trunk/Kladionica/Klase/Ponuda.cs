@@ -26,6 +26,7 @@ namespace Kladionica
 
         public void Printaj() { 
             //TODO: implementirati direktno printanje na printer
+            //bice posla :D uglavnom moras razbiti na printanje fudbalskih, teniskih, kosarkaskih meceva pojedinacno
         }
     }
 }
