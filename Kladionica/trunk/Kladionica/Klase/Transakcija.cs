@@ -8,21 +8,19 @@ namespace Kladionica
 {
         public class Transakcija
         {
-            public int ID;
+            public int ID { get; set; }
             public DateTime Vrijeme;
             public Decimal Iznos;
             public ClanKluba KojiKorisnik;
 
-            public Transakcija(int id, DateTime v, decimal i)
+            public Transakcija(DateTime v, decimal i)
             {
-                ID = id;
                 Vrijeme = v;
                 Iznos = i;
                 KojiKorisnik = null;
             }
-            public Transakcija(int id, DateTime v, decimal i, ClanKluba k)
+            public Transakcija(DateTime v, decimal i, ClanKluba k)
             {
-                ID = id;
                 Vrijeme = v;
                 Iznos = i;
                 KojiKorisnik = k;

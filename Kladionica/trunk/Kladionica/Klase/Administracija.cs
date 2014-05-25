@@ -45,7 +45,7 @@ namespace Kladionica
             if (tiket.JelDobitni())
             {
                 AzurirajBilans(-tiket.UkupniKoeficijent * tiket.Ulog);
-                return new Transakcija(0, DateTime.Now, tiket.UkupniKoeficijent * tiket.Ulog);
+                return new Transakcija(DateTime.Now, tiket.UkupniKoeficijent * tiket.Ulog);
             }
 
             throw new Exception("Nije dobitni");

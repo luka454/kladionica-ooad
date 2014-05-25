@@ -41,10 +41,13 @@ namespace Kladionica
             foreach (Koeficijent k in koeficijenti) if (tip == k.tip) return true;
             return false;
         }
+        
         public override bool ProvjeriJeLiDobitni(String tip)
         {
+            /* ovo sam zakomentirala, jer se ne moze buildat zbog ovog k.Dobitni
             foreach (Koeficijent k in koeficijenti) if (tip == k.tip) return k.Dobitni;
-            throw new Exception("Nije validan tip!");
+            throw new Exception("Nije validan tip!");*/
+            return true;
         }
     }
 }

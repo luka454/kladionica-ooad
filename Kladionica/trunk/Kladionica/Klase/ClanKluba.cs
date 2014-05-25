@@ -11,7 +11,6 @@ namespace Kladionica
         private List<Tiket> _tiketi = new List<Tiket>();
         public ClanKluba(string i, string p, string u, int hp) : base(i, p, u, hp) { }
 
-        //nisam sigurna ko je ovo ubacio i zasto?
         public decimal Novac { get; set; }   
         public int PIN { get; set; }
 

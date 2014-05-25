@@ -75,7 +75,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
-                    Transakcija transakcija = new Transakcija(r.GetDateTime("datum"), r.GetDecimal("username"),new ClanKluba());
+                    Transakcija transakcija = new Transakcija(r.GetDateTime("datum"), r.GetDecimal("username"));
                     return transakcija;
                     //implementiraj clan kluba do kraja obavezo!!!
                 }
@@ -96,7 +96,7 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 List<Transakcija> transakcije = new List<Transakcija>();
                 while (r.Read())
-                    transakcije.Add( new Transakcija(r.GetDateTime("datum"), r.GetDecimal("username"),new ClanKluba()));
+                    transakcije.Add( new Transakcija(r.GetDateTime("datum"), r.GetDecimal("username")));
                     return transakcije;
                     //implementiraj clan kluba do kraja obavezo!!!
             }
