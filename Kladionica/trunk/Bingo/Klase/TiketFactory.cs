@@ -123,7 +123,7 @@ namespace Bingo
         public static BingoTiket DajZelene(int broj)
         {
             if (broj != 5 && broj != 12 && broj != 19 && broj != 26 && broj != 33 && broj != 40 && broj != 47)
-                throw new Exception("Taj broj ne spada u plave!");
+                throw new Exception("Taj broj ne spada u zelene!");
             BingoTiket t = new BingoTiket();
             int j = 5;
             for (int i = 0; i < 6; i++)
