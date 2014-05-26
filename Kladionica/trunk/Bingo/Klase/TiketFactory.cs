@@ -9,20 +9,25 @@ namespace Bingo
     public class TiketFactory
     {
         public static BingoTiket DajAutomatski()
-        {
+        {         
             BingoTiket t = new BingoTiket();
-            // ovo je primjer samo
+            List<int> temp = new List<int>();
+            Random rand = new Random();
+            int tempBroj;
+            for (int i = 1; i <= 49; i++)
+                temp.Add(i);
+            int granica = 49;
             for (int i = 0; i < 6; i++)
             {
-                int j = 5;
-                t.Brojevi[i] = j;
-                j += 5;
+                tempBroj = rand.Next(0, granica--);
+                t.Brojevi[i] = temp[tempBroj];
+                temp.RemoveAt(tempBroj);
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
             return t;
         }
-        // ima 7 kuglica svake boje, a samo 6 mogu na listic, pa je ovaj broj koji zele izbaciti
+        // ima 7 kuglica svake boje, a samo 6 mogu na listic, pa je ovo broj koji zele izbaciti
         public static BingoTiket DajCrvene(int broj)
         {
             if (broj != 1 && broj != 8 && broj != 15 && broj != 22 && broj != 29 && broj != 36 && broj != 43)
