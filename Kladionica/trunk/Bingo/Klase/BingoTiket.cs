@@ -26,9 +26,6 @@ namespace Bingo
                 Brojevi.Add(broj);
             }
         }
-        public BingoTiket KreirajTiket()
-        {
-            
-        }
+        
     }
 }
