@@ -33,12 +33,14 @@ namespace Bingo
             if (broj != 1 && broj != 8 && broj != 15 && broj != 22 && broj != 29 && broj != 36 && broj != 43)
                 throw new Exception("Taj broj ne spada u crvene!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 1;
             for (int i = 0; i < 6; i++)
             {
-                j = 1;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
@@ -54,12 +56,14 @@ namespace Bingo
             if (broj != 2 && broj != 9 && broj != 16 && broj != 23 && broj != 30 && broj != 37 && broj != 44)
                 throw new Exception("Taj broj ne spada u zute!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 2;
             for (int i = 0; i < 6; i++)
             {
-                j = 2;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
@@ -75,12 +79,14 @@ namespace Bingo
             if (broj != 3 && broj != 10 && broj != 17 && broj != 24 && broj != 31 && broj != 38 && broj != 45)
                 throw new Exception("Taj broj ne spada u plave!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 3;
             for (int i = 0; i < 6; i++)
             {
-                j = 3;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
@@ -96,12 +102,14 @@ namespace Bingo
             if (broj != 4 && broj != 11 && broj != 18 && broj != 25 && broj != 32 && broj != 39 && broj != 46)
                 throw new Exception("Taj broj ne spada u narandzaste!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 4;
             for (int i = 0; i < 6; i++)
             {
-                j = 4;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
@@ -117,12 +125,14 @@ namespace Bingo
             if (broj != 5 && broj != 12 && broj != 19 && broj != 26 && broj != 33 && broj != 40 && broj != 47)
                 throw new Exception("Taj broj ne spada u plave!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 5;
             for (int i = 0; i < 6; i++)
             {
-                j = 5;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
@@ -138,12 +148,14 @@ namespace Bingo
             if (broj != 6 && broj != 13 && broj != 20 && broj != 27 && broj != 34 && broj != 41 && broj != 48)
                 throw new Exception("Taj broj ne spada u roze!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 6;
             for (int i = 0; i < 6; i++)
             {
-                j = 6;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
@@ -159,12 +171,14 @@ namespace Bingo
             if (broj != 7 && broj != 14 && broj != 21 && broj != 28 && broj != 35 && broj != 42 && broj != 49)
                 throw new Exception("Taj broj ne spada u ljubicaste!");
             BingoTiket t = new BingoTiket();
-            int j;
+            int j = 7;
             for (int i = 0; i < 6; i++)
             {
-                j = 7;
                 if (j == broj)
+                {
                     j += 7;
+                    i--;
+                }
                 else
                 {
                     t.Brojevi[i] = j;
