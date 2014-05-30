@@ -43,16 +43,20 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("update Radnik set ime=" + entity.Ime +
                     ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
                     entity.HashPassword + ", plata=" + entity.Plata + "where id=" + entity.ID, DAL.Connection);
                 c.ExecuteNonQuery();
                 return getById(entity.ID);
             }
-
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
         }
 
@@ -60,6 +64,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 int id = Convert.ToInt32(entity.ID);
                 c = new MySqlCommand("delete from Radnik where id=" + id, DAL.Connection);
                 c.ExecuteNonQuery();
@@ -78,6 +83,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("select * from Radnik where id=" + id, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
@@ -93,12 +99,17 @@ namespace Kladionica.BazaPodataka
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         public List<Radnica> getAll()
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("select * from Radnik", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Radnica> radnice = new List<Radnica>();
@@ -111,13 +122,18 @@ namespace Kladionica.BazaPodataka
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
-        public List<Radnica> getByExample(string name, string value)
+        public List<Radnica> getByPlata(decimal plata)
         { 
             try 
-            { 
-                c = new MySqlCommand("select * from Radnik where ime=" + name + " and prezime=" + value, DAL.Connection);
+            {
+                DAL.Connection.Open();
+                c = new MySqlCommand("select * from Radnik where plata=" + plata, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader(); 
                 List<Radnica> radnice = new List<Radnica>();
                 while (r.Read())
@@ -128,13 +144,18 @@ namespace Kladionica.BazaPodataka
             catch (Exception ex) 
             { 
                 throw ex; 
-            } 
+            }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         public Radnica getByUsername(string username)
         {
             try
             {
+                DAL.Connection.Open();
                 DAL.Connection.Open();
 
                 c = new MySqlCommand("select * from Radnik where username= '" + username + "'", DAL.Connection);
