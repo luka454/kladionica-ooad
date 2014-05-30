@@ -93,6 +93,9 @@
     <Compile Include="Klase\Tiket.cs" />
     <Compile Include="Klase\TipTiketa.cs" />
     <Compile Include="Klase\Transakcija.cs" />
+    <Compile Include="RadnikPocetna.xaml.cs">
+      <DependentUpon>RadnikPocetna.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
@@ -117,6 +120,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RadnikPocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
