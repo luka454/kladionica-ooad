@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -66,7 +67,13 @@ namespace Kladionica
                 MainWindow w = Window.GetWindow(this) as MainWindow;
 
                 w.Stranica.Source = new Uri("Welcome.xaml", UriKind.Relative);
-              
+
+                RadnikPocetna novi = new RadnikPocetna();
+                App.Current.MainWindow = novi;
+                w.Close();
+                novi.Show();
+                
+
 
             }
             catch (Exception ex)

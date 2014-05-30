@@ -37,6 +37,9 @@ namespace Kladionica
                 MessageBox.Show(ex.Message);
             }
              */
+
+            Uri page = new Uri("LogInScreen.xaml", UriKind.Relative);
+            Stranica.Source = page;
         }
     }
 }

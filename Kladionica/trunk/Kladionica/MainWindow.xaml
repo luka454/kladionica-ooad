@@ -3,6 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="470" Width="700" ResizeMode="NoResize">
     <Grid>
-        <Frame x:Name="Stranica" Source="LogInScreen.xaml" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="Stranica" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
