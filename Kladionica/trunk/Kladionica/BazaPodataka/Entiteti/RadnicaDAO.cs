@@ -156,8 +156,6 @@ namespace Kladionica.BazaPodataka
             try
             {
                 DAL.Connection.Open();
-                DAL.Connection.Open();
-
                 c = new MySqlCommand("select * from Radnik where username= '" + username + "'", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
