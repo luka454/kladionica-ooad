@@ -24,7 +24,7 @@ namespace Kladionica
         {
             InitializeComponent();
             
-            Stranica.Source = null;
+            
         }
     }
 }

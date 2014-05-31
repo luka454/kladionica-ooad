@@ -4,6 +4,18 @@
         Title="RadnikPocetna" Height="700" Width="1200" >
     <Window.Resources>
         <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
+        <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
+        <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
+        <Style x:Key="Borders" TargetType="Border">
+            <Setter Property="Background" Value="#72a700"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderBrush" Value="Beige" />
+            <Setter Property="Width" Value="130"/>
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Padding" Value="20,3" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -18,12 +30,12 @@
                 </MenuItem>
             </Menu>
             <Frame x:Name="Stranica" Source="Welcome.xaml"  
-               NavigationUIVisibility="Hidden" Background="Gray"/>
+               NavigationUIVisibility="Hidden" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}"/>
 
         </DockPanel>
         
-        <Grid Grid.Column="1" Margin="4" HorizontalAlignment="Right"  VerticalAlignment="Stretch" Width="300"
-                   Background="AliceBlue" DockPanel.Dock="Right" >
+        <Grid Grid.Column="1" Margin="0" HorizontalAlignment="Right"  VerticalAlignment="Stretch" Width="300"
+                   Background="White" DockPanel.Dock="Right" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -35,8 +47,12 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Content="Button" Margin="4" Background="#FF64C92A" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
-                    <Button Grid.Column="1" Margin="4"/>
+                    <Border Grid.Column="0" Style="{DynamicResource Borders}">
+                        <Button  Content="Lock" Margin="4" Background="{DynamicResource Zelena}" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
+                    </Border>
+                    <Border Grid.Column="1" Style="{DynamicResource Borders}">
+                        <Button  Content="Logout" Margin="4" Background="{DynamicResource Zelena}" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
+                    </Border>
                 </Grid>
                 
                 
