@@ -4,5 +4,6 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
+        <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
     </Application.Resources>
 </Application>
