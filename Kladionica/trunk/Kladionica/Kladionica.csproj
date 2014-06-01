@@ -52,6 +52,7 @@
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -93,17 +94,20 @@
     <Compile Include="Klase\Tiket.cs" />
     <Compile Include="Klase\TipTiketa.cs" />
     <Compile Include="Klase\Transakcija.cs" />
-    <Compile Include="RadnikPocetna.xaml.cs">
+    <Compile Include="KomunikacijaVanjskiUredjaji\PCPrint.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Dizajn\RadnikPocetna.xaml.cs">
       <DependentUpon>RadnikPocetna.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Welcome.xaml.cs">
+    <Compile Include="Dizajn\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
-    <Page Include="LogInScreen.xaml">
+    <Page Include="Dizajn\LogInScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Dizajn\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -112,29 +116,29 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Klase\Igra.cs" />
-    <Compile Include="LogInScreen.xaml.cs">
+    <Compile Include="Dizajn\LogInScreen.xaml.cs">
       <DependentUpon>LogInScreen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Dizajn\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Page1.xaml">
+    <Page Include="Dizajn\Page1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RadnikPocetna.xaml">
+    <Page Include="Dizajn\RadnikPocetna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Welcome.xaml">
+    <Page Include="Dizajn\Welcome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Klase\Osoba.cs" />
-    <Compile Include="Page1.xaml.cs">
+    <Compile Include="Dizajn\Page1.xaml.cs">
       <DependentUpon>Page1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -180,6 +184,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
