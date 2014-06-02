@@ -47,7 +47,7 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" Style="{DynamicResource Borders}">
+                    <Border Grid.Column="0" Style="{DynamicResource Borders}" Margin="10,2,10,4">
                         <Button  Content="Lock" Margin="4" Background="{DynamicResource Zelena}" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
                     </Border>
                     <Border Grid.Column="1" Style="{DynamicResource Borders}">

@@ -1,0 +1,74 @@
+﻿<Page x:Class="Kladionica.Dizajn.PocetniPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      Background = "{StaticResource Plava}"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      
+	Title="PocetniPage">
+
+    <Page.Resources>
+        <Image x:Key="User" Source = "C:\Users\Elmir\Documents\Visual Studio 2013\Projects\WpfApplication4\WpfApplication4\add_user-128.png"/>
+        <Image x:Key="Ticket" Source = "C:\Users\Elmir\Documents\Visual Studio 2013\Projects\WpfApplication4\WpfApplication4\add_ticket-128.png"/>
+        <Image x:Key="Card" Source = "C:\Users\Elmir\Documents\Visual Studio 2013\Projects\WpfApplication4\WpfApplication4\business_contact-128.png"/>
+        <Image x:Key="Money" Source = "C:\Users\Elmir\Documents\Visual Studio 2013\Projects\WpfApplication4\WpfApplication4\money_bag-128.png"/>
+        <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
+        <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
+        <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
+    </Page.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Button 
+ Content="{StaticResource Card}" 
+ Width="150"
+ Background = "{StaticResource SvijetloSiva}"
+ Foreground="AntiqueWhite"
+ BorderBrush="AntiqueWhite"
+ Height="80"  
+ Grid.Row="0" 
+ Grid.Column="0" FontSize="26.667" FontWeight="Bold" FontFamily="Calibri" Margin="54.25,41,54.25,39" 
+ />
+
+        <Button 
+ Content="{StaticResource User}" 
+ Width="150"
+ Background = "{StaticResource SvijetloSiva}"
+ Foreground="AntiqueWhite"
+ BorderBrush="AntiqueWhite"
+ Height="80"  
+ Grid.Row="0" 
+ Grid.Column="1" 
+ />
+        <Button 
+ Content="{StaticResource Ticket}" 
+ Width="150"
+ Background = "{StaticResource SvijetloSiva}"
+ Foreground="AntiqueWhite"
+ BorderBrush="AntiqueWhite"
+ Height="80"  
+ Grid.Row="1" 
+ Grid.Column="0" 
+ />        <Button 
+ Content="{StaticResource Money}" 
+ Width="150"
+ Background = "{StaticResource SvijetloSiva}"
+ Foreground="AntiqueWhite"
+ BorderBrush="AntiqueWhite"
+ Height="80"  
+ Grid.Row="1" 
+ Grid.Column="1" 
+ />    </Grid>
+</Page>

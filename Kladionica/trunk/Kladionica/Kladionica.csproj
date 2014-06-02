@@ -82,6 +82,9 @@
     <Compile Include="BazaPodataka\Entiteti\TenisDAO.cs" />
     <Compile Include="BazaPodataka\Interfejsi\IDaoCrud.cs" />
     <Compile Include="BazaPodataka\Entiteti\TransakcijaDAO.cs" />
+    <Compile Include="Dizajn\PocetniPage.xaml.cs">
+      <DependentUpon>PocetniPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Administracija.cs" />
     <Compile Include="Klase\ClanKluba.cs" />
     <Compile Include="Klase\FudbalskaUtakmica.cs" />
@@ -124,6 +127,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Dizajn\Page1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\PocetniPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
