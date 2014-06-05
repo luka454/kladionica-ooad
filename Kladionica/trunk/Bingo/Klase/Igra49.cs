@@ -34,13 +34,13 @@ namespace Bingo
             IzvuceniBrojevi.Add(tempBroj);
             return tempBroj;
         }
-        public override void DodajObserver(Tiket6 t) {
+        public void DodajObserver(Tiket6 t) {
             OdigraniTiketi.Add(t);
         }
-        public override void IzbrisiObserver(Tiket6 t) {
+        public void IzbrisiObserver(Tiket6 t) {
             OdigraniTiketi.Remove(t);
         }
-        public override void Obavijesti(int broj)
+        public void Obavijesti(int broj)
         {
             foreach (Tiket6 tiket in OdigraniTiketi) {
                 tiket.Obavijesti(broj);

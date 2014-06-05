@@ -8,6 +8,6 @@ namespace Bingo
 {
     public interface ITiket
     {
-        public bool Obavijesti(int broj);
+        bool Obavijesti(int broj);
     }
 }
