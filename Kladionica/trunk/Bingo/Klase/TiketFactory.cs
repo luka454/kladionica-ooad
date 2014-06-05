@@ -8,6 +8,9 @@ namespace Bingo
 {
     public class TiketFactory
     {
+        public TiketFactory OnlyInstance { get; set; }
+
+        public TiketFactory() { }
         public static BingoTiket DajAutomatski()
         {         
             BingoTiket t = new BingoTiket();
