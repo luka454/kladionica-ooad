@@ -18,7 +18,7 @@ namespace Kladionica
     /// <summary>
     /// Interaction logic for Welcome.xaml
     /// </summary>
-    public partial class Welcome : Page
+    public partial class Welcome : ContentControl
     {
         public Welcome()
         {
