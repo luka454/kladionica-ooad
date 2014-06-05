@@ -9,15 +9,17 @@ namespace Bingo
     public class TiketFactory
     {
         private static TiketFactory onlyInstance;
-        private TiketFactory() { }
+        public static Admin Administrator { get; set; }
+        public TiketFactory() { }
 
         public static TiketFactory Instance() {
+            Administrator = new Admin();
             if (onlyInstance == null)
                 onlyInstance = new TiketFactory();
             return onlyInstance;
         }
         public static Tiket6 DajAutomatski()
-        {         
+        {       
             Tiket6 t = new Tiket6();
             List<int> temp = new List<int>();
             Random rand = new Random();
@@ -33,6 +35,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         // ima 7 kuglica svake boje, a samo 6 mogu na listic, pa je ovo broj koji zele izbaciti
@@ -57,6 +60,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajZute(int broj)
@@ -80,6 +84,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajPlave(int broj)
@@ -103,6 +108,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajNarandzaste(int broj)
@@ -126,6 +132,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajZelene(int broj)
@@ -149,6 +156,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajRoze(int broj)
@@ -172,6 +180,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajLjubicaste(int broj)
@@ -195,6 +204,7 @@ namespace Bingo
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajNormalni(List<int> brojevi)
@@ -204,6 +214,7 @@ namespace Bingo
             t.Brojevi = brojevi;
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
+            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
     }

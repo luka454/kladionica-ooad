@@ -12,6 +12,7 @@ namespace Bingo
         public List<int> IzvuceniBrojevi { get; set; }
         public List<int> MoguciBrojevi { get; set; }
         public List<Tiket6> OdigraniTiketi { get; set; }
+        public int TrenutniBroj { get; set; }
 
         public Igra49()
         {
@@ -25,14 +26,13 @@ namespace Bingo
         {
             if (IzvuceniBrojevi.Count > 35) throw new Exception("Maksimalno 35 brojeva!");
             Random rand = new Random();
-            int tempBroj;
             for (int i = 1; i <= 49; i++)
                 MoguciBrojevi.Add(i);
             int granica = 49;
-            tempBroj = rand.Next(0, granica--);
-            MoguciBrojevi.RemoveAt(tempBroj);
-            IzvuceniBrojevi.Add(tempBroj);
-            return tempBroj;
+            TrenutniBroj = rand.Next(0, granica--);
+            MoguciBrojevi.RemoveAt(TrenutniBroj);
+            IzvuceniBrojevi.Add(TrenutniBroj);
+            return TrenutniBroj;
         }
         public void DodajObserver(Tiket6 t) {
             OdigraniTiketi.Add(t);
@@ -40,10 +40,11 @@ namespace Bingo
         public void IzbrisiObserver(Tiket6 t) {
             OdigraniTiketi.Remove(t);
         }
-        public void Obavijesti(int broj)
+        public void Obavijesti()
         {
+            if (TrenutniBroj == null) throw new Exception("Nije jos izasao broj!");
             foreach (Tiket6 tiket in OdigraniTiketi) {
-                tiket.Obavijesti(broj);
+                tiket.Obavijesti(TrenutniBroj);
             }
         }
     }

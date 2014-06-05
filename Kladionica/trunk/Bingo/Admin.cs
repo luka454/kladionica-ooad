@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Bingo
 {
-    public interface Igra
+    public class Admin
     {
-        void DodajObserver(Tiket6 t);
-        void IzbrisiObserver(Tiket6 t);
-        void Obavijesti();
+        public Igra49 TrenutnaIgra { get; set; }
+
+        public Admin() { }
     }
 }
