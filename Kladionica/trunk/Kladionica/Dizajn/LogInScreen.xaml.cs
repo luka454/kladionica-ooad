@@ -66,9 +66,7 @@ namespace Kladionica
 
                 MainWindow w = Window.GetWindow(this) as MainWindow;
 
-                w.Stranica.Source = new Uri("Welcome.xaml", UriKind.Relative);
-
-                RadnikPocetna novi = new RadnikPocetna();
+                RadnikPocetna novi = new RadnikPocetna(r);
                 App.Current.MainWindow = novi;
                 w.Close();
                 novi.Show();

@@ -20,11 +20,14 @@ namespace Kladionica
     /// </summary>
     public partial class RadnikPocetna : Window
     {
-        public RadnikPocetna()
+        private Radnica r;
+
+        public RadnikPocetna(Radnica r)
         {
             InitializeComponent();
-            
-            
+
+            Stranica.Content = new Welcome();
+            this.r = r;
         }
     }
 }
