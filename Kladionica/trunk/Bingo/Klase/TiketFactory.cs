@@ -11,7 +11,7 @@ namespace Bingo
         private static TiketFactory onlyInstance;
         private TiketFactory() { }
 
-        public TiketFactory Instance() {
+        public static TiketFactory Instance() {
             if (onlyInstance == null)
                 onlyInstance = new TiketFactory();
             return onlyInstance;
