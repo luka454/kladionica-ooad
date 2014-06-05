@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Bingo
 {
-    public class BingoTiket
+    public class Tiket6 : ITiket
     {
         public int ID { get; set; }
         public List<int> Brojevi { get; set; }
 
-        public BingoTiket() {
+        public Tiket6() {
             Brojevi = new List<int>();
             Brojevi.Capacity = 6;
         }
@@ -31,6 +31,12 @@ namespace Bingo
         }
         public void SortirajBrojeve() {
             Brojevi.Sort();
+        }
+        public override bool Obavijesti(int broj) {
+            foreach (int br in Brojevi) {
+                if (br == broj) return true;
+            }
+            return false;
         }
     }
 }

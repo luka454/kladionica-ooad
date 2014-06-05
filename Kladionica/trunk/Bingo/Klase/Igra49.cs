@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Bingo
 {
-    public class Igra49
+    public class Igra49 : Igra
     {
         public List<int> IzvuceniBrojevi { get; set; }
         public List<int> MoguciBrojevi { get; set; }
+        public List<Tiket6> OdigraniTiketi { get; set; }
 
         public Igra49()
         {
@@ -17,6 +18,7 @@ namespace Bingo
             IzvuceniBrojevi.Capacity = 35;
             MoguciBrojevi = new List<int>();
             MoguciBrojevi.Capacity = 49;
+            OdigraniTiketi = new List<Tiket6>();
         }
         public int DajSljedeciBroj()
         {
@@ -29,6 +31,10 @@ namespace Bingo
             MoguciBrojevi.RemoveAt(tempBroj);
             IzvuceniBrojevi.Add(tempBroj);
             return tempBroj;
+        }
+        public override bool Obavijesti()
+        {
+
         }
     }
 }
