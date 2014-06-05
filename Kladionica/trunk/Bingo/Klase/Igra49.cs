@@ -8,6 +8,7 @@ namespace Bingo
 {
     public class Igra49 : Igra
     {
+        public int ID { get; set; }
         public List<int> IzvuceniBrojevi { get; set; }
         public List<int> MoguciBrojevi { get; set; }
         public List<Tiket6> OdigraniTiketi { get; set; }
@@ -32,9 +33,17 @@ namespace Bingo
             IzvuceniBrojevi.Add(tempBroj);
             return tempBroj;
         }
-        public override bool Obavijesti()
+        public override void DodajObserver(Tiket6 t) {
+            OdigraniTiketi.Add(t);
+        }
+        public override void IzbrisiObserver(Tiket6 t) {
+            OdigraniTiketi.Remove(t);
+        }
+        public override void Obavijesti(int broj)
         {
-
+            foreach (Tiket6 tiket in OdigraniTiketi) {
+                tiket.Obavijesti(broj);
+            }
         }
     }
 }

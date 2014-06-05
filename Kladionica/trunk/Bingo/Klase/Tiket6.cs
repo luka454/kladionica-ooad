@@ -10,10 +10,12 @@ namespace Bingo
     {
         public int ID { get; set; }
         public List<int> Brojevi { get; set; }
+        public int Brojac { get; set; }
 
         public Tiket6() {
             Brojevi = new List<int>();
             Brojevi.Capacity = 6;
+            Brojac = 0;
         }
         public void ProvjeriBrojeve() 
         {
@@ -32,9 +34,17 @@ namespace Bingo
         public void SortirajBrojeve() {
             Brojevi.Sort();
         }
+        public bool JelDobitni()
+        {
+            if (Brojac == 6) return true;
+            return false;
+        }
         public override bool Obavijesti(int broj) {
             foreach (int br in Brojevi) {
-                if (br == broj) return true;
+                if (br == broj) {
+                    Brojac++;
+                    return true;
+                }
             }
             return false;
         }
