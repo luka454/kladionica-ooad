@@ -9,8 +9,8 @@ namespace Bingo
     public class TiketFactory
     {
         private static TiketFactory onlyInstance;
-
         private TiketFactory() { }
+
         public TiketFactory Instance() {
             if (onlyInstance == null)
                 onlyInstance = new TiketFactory();
