@@ -79,5 +79,17 @@ namespace Kladionica
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Radnica r = new Radnica("Luka", "Pejović", "luka454", 000, 5000M);
+
+            MainWindow w = Window.GetWindow(this) as MainWindow;
+
+            RadnikPocetna novi = new RadnikPocetna(r);
+            App.Current.MainWindow = novi;
+            w.Close();
+            novi.Show();
+        }
     }
 }

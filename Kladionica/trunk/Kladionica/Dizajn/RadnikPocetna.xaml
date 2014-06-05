@@ -16,6 +16,25 @@
             <Setter Property="VerticalAlignment" Value="Center" />
             <Setter Property="HorizontalAlignment" Value="Center" />
         </Style>
+        <Style x:Key="DugmeZeleno" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource Zelena}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#426700"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <BitmapImage x:Key ="NoviTiketICO" UriSource="E:\novi_tiket.png"/>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -34,10 +53,10 @@
         </DockPanel>
         
         <Grid Grid.Column="1" Margin="0" HorizontalAlignment="Right"  VerticalAlignment="Stretch" Width="300"
-                   Background="White" DockPanel.Dock="Right" >
+                   Background="#E0E4CC" DockPanel.Dock="Right">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                 
@@ -46,14 +65,15 @@
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" Style="{DynamicResource Borders}" Margin="10,2,10,4">
-                        <Button  Content="Lock" Margin="4" Background="{DynamicResource Zelena}" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
-                    </Border>
+                   
+                        
                     <!--<Border Grid.Column="1" Style="{DynamicResource Borders}">
                         <Button  Content="Logout" Margin="4" Background="{DynamicResource Zelena}" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
                     </Border>-->
-                    <Button Grid.Column="1" Content="Logout" Background="{DynamicResource Zelena}"
-                            Foreground="White" FontSize="18" BorderBrush="Beige"/>
+                    <Button Name="BLock"  Grid.Column="0" Content="Lock" Style="{DynamicResource DugmeZeleno}"
+                            Foreground="White" FontSize="18" BorderBrush="Beige" Margin="10"/>
+                    <Button Name="BLogOut"  Grid.Column="1" Content="Logout" Style="{DynamicResource DugmeZeleno}"
+                            Foreground="White" FontSize="18" BorderBrush="Beige" Margin="10"/>
                 </Grid>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
@@ -67,16 +87,26 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     
-                    <Button Name="BPrintaj" Grid.Row="1" Grid.Column="0" Width="130" Height="130" Background="{DynamicResource Zelena}"
-                            BorderThickness="0">
+                    <Button Name="BPrintaj" Grid.Row="1" Grid.Column="0" Width="130" Height="130" 
+                            Style="{DynamicResource DugmeZeleno}">
                     </Button>
 
-                    <Button Name="BKlubKorisnika" Grid.Row="1" Grid.Column="1" Width="130" Height="130" Background="{DynamicResource Zelena}"
-                            BorderThickness="0">
+                    <Button Name="BKlubKorisnika" Grid.Row="1" Grid.Column="1" Width="130" Height="130" 
+                            Style="{DynamicResource DugmeZeleno}">
                     </Button>
 
-                    <Button Name="BNoviTiket" Grid.Row="2" Grid.ColumnSpan="2" Width="280" Height="130" Background="{DynamicResource Zelena}"
-                            BorderThickness="0">
+                    <Button Name="BNoviTiket" Grid.Row="2" Grid.ColumnSpan="2" Width="280" Height="130"
+                            Style="{DynamicResource DugmeZeleno}">
+                        
+                        <Grid Height="126" Width="265">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40*"/>
+                                <RowDefinition Height="23*"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="{DynamicResource NoviTiketICO}" Margin="77,10,76,2"  />
+                            <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="18"
+                                       Foreground="White">Novi tiket</TextBlock>
+                        </Grid>
                     </Button>
                 </Grid>
                 
