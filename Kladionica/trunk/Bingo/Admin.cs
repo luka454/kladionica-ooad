@@ -10,6 +10,8 @@ namespace Bingo
     {
         public Igra49 TrenutnaIgra { get; set; }
 
-        public Admin() { }
+        public Admin() {
+            TrenutnaIgra = new Igra49();
+        }
     }
 }
