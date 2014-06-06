@@ -34,5 +34,10 @@ namespace Kladionica.BazaPodataka
         {
             return new RadnicaDAO();
         }
+
+        public PonudaDAO getPonudaDAO()
+        {
+            return new PonudaDAO();
+        }
     }
 }
