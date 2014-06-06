@@ -25,6 +25,9 @@ namespace Kladionica
         public RadnikPocetna(Radnica r)
         {
             InitializeComponent();
+            this.Title = "Kladionica d.o.o.";
+            this.Top = 0;
+            this.Left = 0;
 
             Stranica.Content = new Welcome();
             this.r = r;
@@ -35,11 +38,17 @@ namespace Kladionica
             BazaPodataka.PonudaDAO p = BazaPodataka.DAL.Factory.getPonudaDAO();
 
             TextBox b = new TextBox();
-
+            List<Ponuda> po = p.getAll();
 
             Stranica.Content = b;
 
-            b.Text = DateTime.Now.ToString("dd.mm.yyyy");
+            b.Text = String.Empty;
+
+            foreach (var item in po)
+            {
+                b.Text += String.Format("{0} - {1} {2}", item.ID, item.Datum.ToString("yyyy-MM-dd"), Environment.NewLine);
+            }
+           
         }
     }
 }

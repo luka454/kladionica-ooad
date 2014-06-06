@@ -24,6 +24,8 @@ namespace Kladionica
         {
             InitializeComponent();
             this.Title = "Kladionica d.o.o.";
+            this.Top = 0;
+            this.Left = 0;
             /*
               //Ako nemate radnicu dodanu u bazu
             try

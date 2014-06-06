@@ -11,6 +11,7 @@ namespace Kladionica.BazaPodataka
     public class PonudaDAO: IDaoCrud<Ponuda>
     {
         protected MySqlCommand c;
+        private static string dateFormat = "yyyy-MM-dd";
         public long create(Ponuda entity)
         {
             try
@@ -89,33 +90,50 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("select * from Ponude", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Ponuda> ponude = new List<Ponuda>();
                 while (r.Read())
-                    ponude.Add(new Ponuda(r.GetDateTime("datum")));
+                {
+                    Ponuda p = new Ponuda(r.GetDateTime("datum"));
+                    p.ID = r.GetInt32("id");
+                    ponude.Add(p);
+                }
                 return ponude;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
         }
 
-        public List<Ponuda> getByExample(DateTime datum)
+        public Ponuda getByExample(DateTime datum)
         {
             try
             {
-                c = new MySqlCommand("select * from Ponude where datum=" + datum.ToString(), DAL.Connection);
+                DAL.Connection.Open();
+
+                c = new MySqlCommand("select * from Ponude where datum=" + datum.ToString(dateFormat), DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
-                List<Ponuda> ponude = new List<Ponuda>();
-                while (r.Read())
-                    ponude.Add(new Ponuda(r.GetDateTime("datum")));
-                return ponude;
+                if (!r.Read()) return null;
+
+                Ponuda ponuda = new Ponuda(r.GetDateTime("datum"));
+                ponuda.ID = r.GetInt32("id");
+
+                return ponuda;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
         }
     }
