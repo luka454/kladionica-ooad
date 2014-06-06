@@ -6,5 +6,25 @@
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
         <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
         <BitmapImage x:Key ="NoviTiketICO" UriSource="ico/novi_tiket.png"/>
+        
+        <Style x:Key="DugmeZeleno" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource Zelena}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#426700"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
     </Application.Resources>
 </Application>
