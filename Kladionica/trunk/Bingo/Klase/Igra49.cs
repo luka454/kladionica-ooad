@@ -42,7 +42,6 @@ namespace Bingo
         }
         public void Obavijesti()
         {
-            if (TrenutniBroj == null) throw new Exception("Nije jos izasao broj!");
             foreach (Tiket6 tiket in OdigraniTiketi) {
                 tiket.Obavijesti(TrenutniBroj);
             }
