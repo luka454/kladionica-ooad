@@ -29,5 +29,17 @@ namespace Kladionica
             Stranica.Content = new Welcome();
             this.r = r;
         }
+
+        private void BPrintaj_Click(object sender, RoutedEventArgs e)
+        {
+            BazaPodataka.PonudaDAO p = BazaPodataka.DAL.Factory.getPonudaDAO();
+
+            TextBox b = new TextBox();
+
+
+            Stranica.Content = b;
+
+            b.Text = DateTime.Now.ToString("dd.mm.yyyy");
+        }
     }
 }

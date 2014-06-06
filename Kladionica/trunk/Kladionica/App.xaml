@@ -5,5 +5,6 @@
     <Application.Resources>
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
         <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
+        <BitmapImage x:Key ="NoviTiketICO" UriSource="ico/novi_tiket.png"/>
     </Application.Resources>
 </Application>

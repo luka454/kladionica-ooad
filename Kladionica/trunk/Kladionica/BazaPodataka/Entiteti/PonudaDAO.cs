@@ -102,11 +102,11 @@ namespace Kladionica.BazaPodataka
             }
         }
 
-        public List<Ponuda> getByExample(string name, string value)
+        public List<Ponuda> getByExample(DateTime datum)
         {
             try
             {
-                c = new MySqlCommand("select * from Ponude where datum=" + name, DAL.Connection);
+                c = new MySqlCommand("select * from Ponude where datum=" + datum.ToString(), DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Ponuda> ponude = new List<Ponuda>();
                 while (r.Read())
