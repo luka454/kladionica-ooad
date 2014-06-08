@@ -52,11 +52,24 @@ namespace Kladionica
             BazaPodataka.IgraDAO dao = BazaPodataka.DAL.Factory.getIgraDao();
 
             FudbalskaUtakmica f = new FudbalskaUtakmica(new DateTime(2014, 6, 7, 20, 00, 0), "Derbi", StatusIgre.NijePocela, "NK Dinamo", "NK Hajduk");
+            f.koeficijenti.AddRange(new Koeficijent[] { new Koeficijent("1", 1.1M), new Koeficijent("1x",1.01M),
+                                    new Koeficijent("x",2.1M), new Koeficijent("2x", 1.6M), new Koeficijent("2",3.0M)});
+            
             dao.create(f);
 
-            dao.create(new FudbalskaUtakmica(new DateTime(2014,6,7,20,30,0), "Finale", StatusIgre.NijePocela, "Hrvatska", "Australija"));
-            dao.create(new FudbalskaUtakmica(new DateTime(2014,6,7,18,00,0), "Polu-finale", StatusIgre.NijePocela, "Bosna", "Australija"));
-        }
+            f = new FudbalskaUtakmica(new DateTime(2014, 6, 7, 20, 00, 0), "Finale", StatusIgre.NijePocela, "Hrvatska", "Australija");
+            f.koeficijenti.AddRange(new Koeficijent[] { new Koeficijent("1", 1.33M), new Koeficijent("1x",1.2M),
+                                    new Koeficijent("x",1.5M), new Koeficijent("2x", 1.35M), new Koeficijent("2",2.0M)});
+
+            dao.create(f);
+
+            f = new FudbalskaUtakmica(new DateTime(2014, 6, 7, 20, 00, 0), "Derbi", StatusIgre.NijePocela, "Bosna", "Kina");
+            f.koeficijenti.AddRange(new Koeficijent[] { new Koeficijent("1", 1.2M), new Koeficijent("1x",1.15M),
+                                    new Koeficijent("x",1.7M), new Koeficijent("2x", 1.5M), new Koeficijent("2",2.3M)});
+
+            dao.create(f);
+
+           }
 
         private void BKlubKorisnika_Click(object sender, RoutedEventArgs e)
         {

@@ -20,9 +20,18 @@ namespace Kladionica.Dizajn.PregledPonuda
     /// </summary>
     public partial class FUNijePocelo : ListBoxItem
     {
+
+        String rec;
+        List<Koeficijent> koeficijenti;
+
         public FUNijePocelo(FudbalskaUtakmica f)
         {
+            
             InitializeComponent();
+            if(f.Naziv != String.Empty) natpis.Text = f.Naziv + ": ";
+            natpis.Text += String.Format("{0} - {1}", f.Domacin, f.Gost);
+
+            vrijeme.Text = f.Pocetak.ToString("d.M.yyyy hh:mm");
         }
     }
 }

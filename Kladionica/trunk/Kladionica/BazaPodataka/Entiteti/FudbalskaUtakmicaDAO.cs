@@ -188,6 +188,7 @@ namespace Kladionica.BazaPodataka
 
         public List<FudbalskaUtakmica> getAll()
         {
+            //vjerojatno ne radi
             try
             {
                 DAL.Connection.Open(); 
