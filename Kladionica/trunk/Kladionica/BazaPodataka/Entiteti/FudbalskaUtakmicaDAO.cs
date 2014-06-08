@@ -161,6 +161,11 @@ namespace Kladionica.BazaPodataka
 
                     f.ID = ID;
                     r2.Close();
+
+                    DAL.Connection.Close();
+                    f.koeficijenti = DAL.Factory.getKoeficijentDAO().getByIgraID(ID);
+
+                    DAL.Connection.Open();
                     return f;
                 }
                 else

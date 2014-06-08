@@ -44,5 +44,10 @@ namespace Kladionica.BazaPodataka
         {
             return new PonudaDAO();
         }
+
+        public KoeficijentDAO getKoeficijentDAO()
+        {
+            return new KoeficijentDAO();
+        }
     }
 }
