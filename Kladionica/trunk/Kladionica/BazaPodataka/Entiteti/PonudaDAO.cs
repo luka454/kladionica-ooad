@@ -16,6 +16,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("insert into Ponude(datum)" +
                     " values( " + entity.Datum + ")", DAL.Connection);
                 c.ExecuteNonQuery();
@@ -24,6 +25,10 @@ namespace Kladionica.BazaPodataka
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
 
         }
@@ -37,6 +42,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("update Ponude set datum=" + entity.Datum + "where id=" + entity.ID, DAL.Connection);
                 c.ExecuteNonQuery();
                 return getById(entity.ID);
@@ -46,12 +52,18 @@ namespace Kladionica.BazaPodataka
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         public void delete(Ponuda entity)
         {
             try
             {
+                DAL.Connection.Open();
+
                 int id = Convert.ToInt32(entity.ID);
                 c = new MySqlCommand("delete from Ponude where id=" + id, DAL.Connection);
                 c.ExecuteNonQuery();
@@ -70,15 +82,25 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
+
                 c = new MySqlCommand("select * from Ponude where id=" + id, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
                     Ponuda p = new Ponuda(r.GetDateTime("datum"));
+                    DAL.Connection.Close();
+                    r.Close();
+
+                    p.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(p);
                     return p;
                 }
                 else
+                {
+                    DAL.Connection.Close();
+                    r.Close();
                     return null;
+                }
             }
             catch (Exception ex)
             {
@@ -94,22 +116,29 @@ namespace Kladionica.BazaPodataka
                 c = new MySqlCommand("select * from Ponude", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Ponuda> ponude = new List<Ponuda>();
+
                 while (r.Read())
                 {
                     Ponuda p = new Ponuda(r.GetDateTime("datum"));
                     p.ID = r.GetInt32("id");
                     ponude.Add(p);
                 }
+                r.Close();
+
+                DAL.Connection.Close();
+
+                foreach (var item in ponude)
+                {
+                    item.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(item);
+                }
+
                 return ponude;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            finally
-            {
-                DAL.Connection.Close();
-            }
+            
         }
 
         public Ponuda getByExample(DateTime datum)
@@ -118,23 +147,29 @@ namespace Kladionica.BazaPodataka
             {
                 DAL.Connection.Open();
 
-                c = new MySqlCommand("select * from Ponude where datum=" + datum.ToString(dateFormat), DAL.Connection);
+                c = new MySqlCommand("select * from Ponude where datum= '" + datum.ToString(dateFormat) + "'", DAL.Connection);
+                
                 MySqlDataReader r = c.ExecuteReader();
-                if (!r.Read()) return null;
+                if (!r.Read())
+                {
+                    r.Close();
+                    return null;
+                }
 
                 Ponuda ponuda = new Ponuda(r.GetDateTime("datum"));
                 ponuda.ID = r.GetInt32("id");
+                DAL.Connection.Close();
+                r.Close();
 
+                ponuda.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(ponuda);
+                
                 return ponuda;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            finally
-            {
-                DAL.Connection.Close();
-            }
+            
         }
     }
 }

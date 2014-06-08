@@ -30,6 +30,11 @@ namespace Kladionica.BazaPodataka
             return new TenisDAO();
         }
 
+        public IgraDAO getIgraDao()
+        {
+            return new IgraDAO();
+        }
+
         public RadnicaDAO getRadnicaDAO()
         {
             return new RadnicaDAO();

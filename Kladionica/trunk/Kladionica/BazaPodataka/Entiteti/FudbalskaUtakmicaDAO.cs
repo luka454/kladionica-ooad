@@ -14,18 +14,22 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+
+                DAL.Connection.Open();
+
                 //moguće greške sa smještanjem DATETIME u bazu
                 //rijašiti tako da DateTIme konverutjemo u string, a iz stringa u bazi u DateTime
                 //Ponude ID nije riješeno kako treba
+                string ponuda = "(select max(id) from ponude)";
                 c = new MySqlCommand("insert into Igre(Pocetak, StatusIgre, Naziv, IgreType_ID, Ponude_ID)" +
-                    " values( " + entity.Pocetak + ", " + codeStatus(entity.statusIgre) + ", " + entity.Naziv + ", " +
-                    1 + ", " + 0 + ")", DAL.Connection);
+                    " values( '" + entity.Pocetak.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + codeStatus(entity.statusIgre) + "', '" + entity.Naziv + "', " +
+                    1 + ", " + ponuda + ")", DAL.Connection);
                 c.ExecuteNonQuery();
 
                 long ID = c.LastInsertedId;
 
                 c = new MySqlCommand("insert into FudbalskeUtakmice(ID, Domacin, Gost, PoeniDomacin, PoeniGost)" +
-                    " values( " + ID + ", " + entity.Domacin + ", " + entity.Gost + ", " +
+                    " values( " + ID + ", '" + entity.Domacin + "', '" + entity.Gost + "', " +
                     entity.PoeniDomacin + ", " + entity.PoeniGost + ")", DAL.Connection);
                 c.ExecuteNonQuery();
 
@@ -44,7 +48,38 @@ namespace Kladionica.BazaPodataka
 
         private int codeStatus(StatusIgre statusIgre)
         {
-            throw new NotImplementedException();
+            switch (statusIgre)
+            {
+                case StatusIgre.NijePocela:
+                    return 0;
+                case StatusIgre.Obustavljena:
+                    return 1;
+                case StatusIgre.Odgodjena:
+                    return 2;
+                case StatusIgre.UToku:
+                    return 3;
+                case StatusIgre.Zavrsena:
+                    return 4;
+                default:
+                    return -1;
+            }
+        }
+
+        private StatusIgre encodeStatus(int p)
+        {
+            switch (p)
+            {
+                case 0:
+                    return StatusIgre.NijePocela;
+                case 1:
+                    return StatusIgre.Obustavljena;
+                case 2:
+                    return StatusIgre.Odgodjena;
+                case 3:
+                    return StatusIgre.UToku;
+                default:
+                    return StatusIgre.Zavrsena;
+            }
         }
 
         public FudbalskaUtakmica read(FudbalskaUtakmica entity)
@@ -104,20 +139,35 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
+                
                 c = new MySqlCommand("select * from Igre where id=" + id, DAL.Connection);
                 MySqlCommand c1  = new MySqlCommand("select * from FudbalskeUtakmice where id=" + id, DAL.Connection);
-                MySqlDataReader r = c.ExecuteReader(), r2 = c1.ExecuteReader();
-                if (r.Read() && r2.Read())
+                MySqlDataReader r = c.ExecuteReader(), r2;
+
+                if (!r.Read()) return null;
+                DateTime t = r.GetDateTime("pocetak");
+                string naziv = r.GetString("Naziv");
+                int ID = r.GetInt32("ID");
+                StatusIgre s = encodeStatus(r.GetInt32("StatusIgre"));
+                r.Close();
+
+                r2 = c1.ExecuteReader();
+
+                if (r2.Read())
                 {
-                    int ID = r.GetInt32("ID");
-                    FudbalskaUtakmica f = new FudbalskaUtakmica(r.GetDateTime("Pocetak"), r.GetString("Naziv"), encodeStatus(r.GetInt32("StatusIgre")), r2.GetString("Domacin"), r2.GetString("Gost"), r2.GetInt32("PoeniDomacin"), r2.GetInt32("PoeniGost"));
+
+                    FudbalskaUtakmica f = new FudbalskaUtakmica(t, naziv, s, r2.GetString("Domacin"), r2.GetString("Gost"), r2.GetInt32("PoeniDomacin"), r2.GetInt32("PoeniGost"));
 
                     f.ID = ID;
-
+                    r2.Close();
                     return f;
                 }
                 else
+                {
+                    r2.Close();
                     return null;
+                }
             }
             catch (Exception ex)
             {
@@ -129,10 +179,7 @@ namespace Kladionica.BazaPodataka
             }
         }
 
-        private StatusIgre encodeStatus(int p)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public List<FudbalskaUtakmica> getAll()
         {

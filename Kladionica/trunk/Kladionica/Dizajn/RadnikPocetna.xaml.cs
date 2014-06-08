@@ -35,20 +35,31 @@ namespace Kladionica
 
         private void BPrintaj_Click(object sender, RoutedEventArgs e)
         {
-            BazaPodataka.PonudaDAO p = BazaPodataka.DAL.Factory.getPonudaDAO();
-
             TextBox b = new TextBox();
-            List<Ponuda> po = p.getAll();
 
+            Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(new DateTime(2014,6,6));
             Stranica.Content = b;
 
-            b.Text = String.Empty;
-
-            foreach (var item in po)
+            b.Text = "";
+            
+            foreach (var item in p.IgreUPonudi)
             {
-                b.Text += String.Format("{0} - {1} {2}", item.ID, item.Datum.ToString("yyyy-MM-dd"), Environment.NewLine);
+                FudbalskaUtakmica f = item as FudbalskaUtakmica;
+                if(f!= null)
+                b.Text += String.Format("{2} {0} - {1} {3}", f.Domacin, f.Gost, f.Pocetak, Environment.NewLine);
             }
            
+        }
+
+        private void BPrintaj_Click1(object sender, RoutedEventArgs e)
+        {
+            BazaPodataka.IgraDAO dao = BazaPodataka.DAL.Factory.getIgraDao();
+
+            FudbalskaUtakmica f = new FudbalskaUtakmica(new DateTime(2014, 6, 7, 20, 00, 0), "Derbi", StatusIgre.NijePocela, "NK Dinamo", "NK Hajduk");
+            dao.create(f);
+
+            dao.create(new FudbalskaUtakmica(new DateTime(2014,6,7,20,30,0), "Finale", StatusIgre.NijePocela, "Hrvatska", "Australija"));
+            dao.create(new FudbalskaUtakmica(new DateTime(2014,6,7,18,00,0), "Polu-finale", StatusIgre.NijePocela, "Bosna", "Australija"));
         }
     }
 }
