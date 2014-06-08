@@ -29,8 +29,9 @@ namespace Bingo
             int granica = 49;
             for (int i = 0; i < 6; i++)
             {
+                int index = i;
                 tempBroj = rand.Next(0, granica--);
-                t.Brojevi[i] = temp[tempBroj];
+                t.Brojevi[index] = temp[tempBroj];
                 temp.RemoveAt(tempBroj);
             }
             t.ProvjeriBrojeve();
@@ -45,23 +46,33 @@ namespace Bingo
                 throw new Exception("Taj broj ne spada u crvene!");
             Tiket6 t = new Tiket6();
             int j = 1;
-            for (int i = 0; i < 6; i++)
-            {
-                if (j != broj)
-                {
-                    t.Brojevi[i] = j;
-                    j += 7;
-                }
-                else
-                {                    
-                    j += 7;
-                    i--;
-                }
-                if (t.Brojevi.Count == 6) break;
-            }
+            t.Brojevi.Capacity = 7;
+            t.Brojevi.Add(1);
+            t.Brojevi.Add(8);
+            t.Brojevi.Add(15);
+            t.Brojevi.Add(22);
+            t.Brojevi.Add(29);
+            t.Brojevi.Add(36);
+            t.Brojevi.Add(43);
+            if (t.Brojevi.Contains(broj)) t.Brojevi.Remove(broj);
+            t.Brojevi.Capacity = 6;
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    if (j != broj)
+            //    {
+            //        t.Brojevi[i] = j;
+            //        j += 7;
+            //    }
+            //    else
+            //    {
+            //        j += 7;
+            //        i--;
+            //    }
+            //    if (t.Brojevi.Count == 6) break;
+            //}
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
-            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
+            //Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         public static Tiket6 DajZute(int broj)
