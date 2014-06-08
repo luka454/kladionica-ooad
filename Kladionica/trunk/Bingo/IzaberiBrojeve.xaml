@@ -4,7 +4,7 @@
         xmlns:local="clr-namespace:Bingo" x:Class="Bingo.IzaberiBrojeve"
         Title="IzaberiBrojeve" Height="580" Width="700">
     <Grid>
-        <Grid Background="LightSteelBlue">
+        <Grid x:Name="sveaaa" Background="LightSteelBlue">
         <!--SVE KUGLICE-->
             <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Click="Kuglica1_Click">

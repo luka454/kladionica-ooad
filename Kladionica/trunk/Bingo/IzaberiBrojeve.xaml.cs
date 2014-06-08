@@ -19,12 +19,17 @@ namespace Bingo
     /// </summary>
     public partial class IzaberiBrojeve : Window
     {
-        public List<Kuglice> Kuglice { get; set; }
+        public List<Kuglice> _kuglice { get; set; }
         public IzaberiBrojeve()
         {
             InitializeComponent();
-            Kuglice = new List<Kuglice>();
-            Kuglice.Add(Kuglica1);
+            foreach (var  item in sveaaa.Children)
+            {
+                if (item is Kuglice)
+                {
+                    _kuglice.Add( (Kuglice)item);
+                }
+            }
         }
 
         private void CrveneButton_Click(object sender, RoutedEventArgs e)
