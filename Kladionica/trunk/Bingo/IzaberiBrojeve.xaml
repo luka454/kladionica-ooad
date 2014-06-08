@@ -19,18 +19,18 @@
                 <ColumnDefinition Width="98*"/>
             </Grid.ColumnDefinitions>
             <!--SVE KUGLICE-->
-            <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Left" Margin="20,8,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Left" Margin="20,8,0,0" VerticalAlignment="Top" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Click="Kuglica1_Click" Grid.Row="1">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
-                            <Ellipse Fill="Red"/>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
                             <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Grid>
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="Kuglica2" Content="2" HorizontalAlignment="Left" Margin="24,8,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica2" Content="2" HorizontalAlignment="Left" Margin="24,7,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica2_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">

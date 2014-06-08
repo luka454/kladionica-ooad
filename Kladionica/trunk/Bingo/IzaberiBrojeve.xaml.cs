@@ -407,8 +407,8 @@ namespace Bingo
         private void Kuglica1_Click(object sender, RoutedEventArgs e)
         {
             Kuglica1.IsSelected = true;
-            Kuglica1.Foreground = Brushes.Black;
-            TiketFactory.DajCrvene(1);            
+            Kuglica1.Background = Brushes.Silver;
+           ;            
         }
 
         private void Kuglica2_Click(object sender, RoutedEventArgs e)
