@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Bingo" x:Class="Bingo.IzaberiBrojeve"
-        Title="IzaberiBrojeve" Height="580" Width="700">
+        Title="IzaberiBrojeve" Height="600" Width="700">
     <Grid>
         <Grid x:Name="sveaaa" Background="LightSteelBlue">
             <Grid.RowDefinitions>
@@ -31,7 +31,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica2" Content="2" HorizontalAlignment="Left" Margin="24,8,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica2_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -42,7 +42,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica3" Content="3" HorizontalAlignment="Left" Margin="25,8,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica3_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -53,7 +53,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica4" Content="4" HorizontalAlignment="Left" Margin="25,8,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica4_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -64,7 +64,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica5" Content="5" HorizontalAlignment="Left" Margin="27,8,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica5_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -75,7 +75,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica6" Content="6" HorizontalAlignment="Left" Margin="27,8,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica6_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -86,7 +86,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica7" Content="7" HorizontalAlignment="Left" Margin="26,8,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica7_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -97,7 +97,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica8" Content="8" HorizontalAlignment="Left" Margin="20,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Click="Kuglica8_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -108,7 +108,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica9" Content="9" HorizontalAlignment="Left" Margin="24,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica9_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -119,7 +119,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica10" Content="10" HorizontalAlignment="Left" Margin="25,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica10_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -130,7 +130,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica11" Content="11" HorizontalAlignment="Left" Margin="25,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica11_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -141,7 +141,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica12" Content="12" HorizontalAlignment="Left" Margin="27,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica12_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -152,7 +152,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica13" Content="13" HorizontalAlignment="Left" Margin="27,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica13_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -163,7 +163,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica14" Content="14" HorizontalAlignment="Left" Margin="26,78,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica14_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -174,7 +174,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica15" Content="15" HorizontalAlignment="Left" Margin="20,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Click="Kuglica15_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -185,7 +185,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica16" Content="16" HorizontalAlignment="Left" Margin="24,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica16_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -196,7 +196,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica17" Content="17" HorizontalAlignment="Left" Margin="25,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica17_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -207,7 +207,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica18" Content="18" HorizontalAlignment="Left" Margin="25,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica18_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -218,7 +218,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica19" Content="19" HorizontalAlignment="Left" Margin="27,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica19_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -229,7 +229,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica20" Content="20" HorizontalAlignment="Left" Margin="27,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica20_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -240,7 +240,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica21" Content="21" HorizontalAlignment="Left" Margin="26,148,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica21_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -251,7 +251,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica22" Content="22" HorizontalAlignment="Left" Margin="20,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Click="Kuglica22_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -262,7 +262,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica23" Content="23" HorizontalAlignment="Left" Margin="24,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica23_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -273,7 +273,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica24" Content="24" HorizontalAlignment="Left" Margin="25,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica24_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -284,7 +284,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica25" Content="25" HorizontalAlignment="Left" Margin="25,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica25_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -295,7 +295,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica26" Content="26" HorizontalAlignment="Left" Margin="27,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica26_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -306,7 +306,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica27" Content="27" HorizontalAlignment="Left" Margin="27,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica27_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -317,7 +317,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica28" Content="28" HorizontalAlignment="Left" Margin="26,218,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica28_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -328,7 +328,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica29" Content="29" HorizontalAlignment="Left" Margin="20,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Click="Kuglica29_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -339,7 +339,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica30" Content="30" HorizontalAlignment="Left" Margin="24,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica30_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -350,7 +350,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica31" Content="31" HorizontalAlignment="Left" Margin="25,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica31_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -361,7 +361,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica32" Content="32" HorizontalAlignment="Left" Margin="25,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica32_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -372,7 +372,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica33" Content="33" HorizontalAlignment="Left" Margin="27,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica33_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -383,7 +383,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica34" Content="34" HorizontalAlignment="Left" Margin="27,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica34_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -394,7 +394,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica35" Content="35" HorizontalAlignment="Left" Margin="26,288,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica35_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -405,7 +405,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica36" Content="36" HorizontalAlignment="Left" Margin="20,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Click="Kuglica36_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -416,7 +416,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica37" Content="37" HorizontalAlignment="Left" Margin="24,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica37_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -427,7 +427,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica38" Content="38" HorizontalAlignment="Left" Margin="25,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica38_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -438,7 +438,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica39" Content="39" HorizontalAlignment="Left" Margin="25,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica39_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -449,7 +449,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica40" Content="40" HorizontalAlignment="Left" Margin="27,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica40_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -460,7 +460,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica41" Content="41" HorizontalAlignment="Left" Margin="27,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica41_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -471,7 +471,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica42" Content="42" HorizontalAlignment="Left" Margin="26,358,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica42_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -482,7 +482,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica43" Content="43" HorizontalAlignment="Left" Margin="20,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Click="Kuglica43_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -493,7 +493,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica44" Content="44" HorizontalAlignment="Left" Margin="24,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="1" Grid.Row="1" Click="Kuglica44_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -504,7 +504,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica45" Content="45" HorizontalAlignment="Left" Margin="25,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="2" Grid.Row="1" Click="Kuglica45_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -515,7 +515,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica46" Content="46" HorizontalAlignment="Left" Margin="25,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="3" Grid.Row="1" Click="Kuglica46_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -526,7 +526,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica47" Content="47" HorizontalAlignment="Left" Margin="27,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="4" Grid.Row="1" Click="Kuglica47_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -537,7 +537,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica48" Content="48" HorizontalAlignment="Left" Margin="27,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="5" Grid.Row="1" Click="Kuglica48_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -548,7 +548,7 @@
                 </Button.Template>
             </local:Kuglice>
             <local:Kuglice x:Name="Kuglica49" Content="49" HorizontalAlignment="Left" Margin="26,428,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1">
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Column="6" Grid.Row="1" Click="Kuglica49_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>

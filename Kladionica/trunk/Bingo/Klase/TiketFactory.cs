@@ -47,16 +47,17 @@ namespace Bingo
             int j = 1;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
-                {
-                    j += 7;
-                    i--;
-                }
-                else
+                if (j != broj)
                 {
                     t.Brojevi[i] = j;
                     j += 7;
                 }
+                else
+                {                    
+                    j += 7;
+                    i--;
+                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
@@ -71,16 +72,17 @@ namespace Bingo
             int j = 2;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
-                {
-                    j += 7;
-                    i--;
-                }
-                else
+                if (j != broj)
                 {
                     t.Brojevi[i] = j;
                     j += 7;
                 }
+                else
+                {                  
+                    j += 7;
+                    i--;
+                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
@@ -95,16 +97,17 @@ namespace Bingo
             int j = 3;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
+                if (j != broj)
+                {
+                    t.Brojevi[i] = j;
+                    j += 7;                    
+                }
+                else
                 {
                     j += 7;
                     i--;
                 }
-                else
-                {
-                    t.Brojevi[i] = j;
-                    j += 7;
-                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
@@ -119,16 +122,17 @@ namespace Bingo
             int j = 4;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
-                {
-                    j += 7;
-                    i--;
-                }
-                else
+                if (j != broj)
                 {
                     t.Brojevi[i] = j;
                     j += 7;
                 }
+                else
+                {
+                    j += 7;
+                    i--;                    
+                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
@@ -143,16 +147,17 @@ namespace Bingo
             int j = 5;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
+                if (j != broj)
+                {
+                    t.Brojevi[i] = j;
+                    j += 7;                   
+                }
+                else
                 {
                     j += 7;
                     i--;
                 }
-                else
-                {
-                    t.Brojevi[i] = j;
-                    j += 7;
-                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
@@ -167,16 +172,17 @@ namespace Bingo
             int j = 6;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
+                if (j != broj)
+                {
+                    t.Brojevi[i] = j;
+                    j += 7;                    
+                }
+                else
                 {
                     j += 7;
                     i--;
                 }
-                else
-                {
-                    t.Brojevi[i] = j;
-                    j += 7;
-                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
@@ -191,16 +197,17 @@ namespace Bingo
             int j = 7;
             for (int i = 0; i < 6; i++)
             {
-                if (j == broj)
+                if (j != broj)
+                {
+                    t.Brojevi[i] = j;
+                    j += 7;                    
+                }
+                else
                 {
                     j += 7;
                     i--;
                 }
-                else
-                {
-                    t.Brojevi[i] = j;
-                    j += 7;
-                }
+                if (t.Brojevi.Count == 6) break;
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();

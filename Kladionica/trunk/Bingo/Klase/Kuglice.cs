@@ -17,5 +17,6 @@ namespace Bingo
     public class Kuglice : Button
     {
         public bool IsSelected { get; set; }
+        public Kuglice() { }
     }
 }
