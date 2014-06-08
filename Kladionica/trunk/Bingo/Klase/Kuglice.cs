@@ -18,5 +18,8 @@ namespace Bingo
     {
         public bool IsSelected { get; set; }
         public Kuglice() { }
+
     }
+
+    
 }
