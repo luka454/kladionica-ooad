@@ -19,9 +19,64 @@ namespace Bingo
     /// </summary>
     public partial class IzaberiBrojeve : Window
     {
+        public List<Kuglice> Kuglice { get; set; }
         public IzaberiBrojeve()
         {
             InitializeComponent();
+            Kuglice = new List<Kuglice>();
+            Kuglice.Add(Kuglica1);
+        }
+
+        private void CrveneButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Kuglica1.IsSelected) TiketFactory.DajCrvene(1);
+            else if (Kuglica8.IsSelected) TiketFactory.DajCrvene(8);
+            else if (Kuglica15.IsSelected) TiketFactory.DajCrvene(15);
+            else if (Kuglica22.IsSelected) TiketFactory.DajCrvene(22);
+            else if (Kuglica29.IsSelected) TiketFactory.DajCrvene(29);
+            else if (Kuglica36.IsSelected) TiketFactory.DajCrvene(36);
+            else if (Kuglica43.IsSelected) TiketFactory.DajCrvene(43);
+            else return;
+        }
+
+        private void ZuteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PlaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void NarandzasteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ZeleneButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RozeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LjubicasteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Kuglica1_Click(object sender, RoutedEventArgs e)
+        {
+            Kuglica1.IsSelected = true;
+            Kuglica1.Background = Brushes.Silver;
+            for (int i = 0; i < length; i++)
+            {
+                
+            }
         }
     }
 }

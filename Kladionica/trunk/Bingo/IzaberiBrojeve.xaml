@@ -6,8 +6,8 @@
     <Grid>
         <Grid Background="LightSteelBlue">
         <!--SVE KUGLICE-->
-            <local:Kuglice Content="1" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"
-                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+            <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Click="Kuglica1_Click">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
@@ -17,7 +17,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="2" HorizontalAlignment="Left" Margin="120,70,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica2" Content="2" HorizontalAlignment="Left" Margin="120,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -28,7 +28,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="3" HorizontalAlignment="Left" Margin="220,70,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica3" Content="3" HorizontalAlignment="Left" Margin="220,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -39,7 +39,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="4" HorizontalAlignment="Left" Margin="320,70,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica4" Content="4" HorizontalAlignment="Left" Margin="320,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -50,7 +50,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="5" HorizontalAlignment="Left" Margin="420,70,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica5" Content="5" HorizontalAlignment="Left" Margin="420,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -61,7 +61,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="6" HorizontalAlignment="Left" Margin="520,70,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica6" Content="6" HorizontalAlignment="Left" Margin="520,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -72,7 +72,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="7" HorizontalAlignment="Left" Margin="620,70,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica7" Content="7" HorizontalAlignment="Left" Margin="620,70,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -83,7 +83,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="8" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica8" Content="8" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -94,7 +94,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="9" HorizontalAlignment="Left" Margin="120,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica9" Content="9" HorizontalAlignment="Left" Margin="120,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -105,7 +105,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="10" HorizontalAlignment="Left" Margin="220,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica10" Content="10" HorizontalAlignment="Left" Margin="220,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -116,7 +116,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="11" HorizontalAlignment="Left" Margin="320,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica11" Content="11" HorizontalAlignment="Left" Margin="320,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -127,7 +127,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="12" HorizontalAlignment="Left" Margin="420,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica12" Content="12" HorizontalAlignment="Left" Margin="420,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -138,7 +138,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="13" HorizontalAlignment="Left" Margin="520,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica13" Content="13" HorizontalAlignment="Left" Margin="520,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -149,7 +149,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="14" HorizontalAlignment="Left" Margin="620,140,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica14" Content="14" HorizontalAlignment="Left" Margin="620,140,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -160,7 +160,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="15" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica15" Content="15" HorizontalAlignment="Left" Margin="20,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -171,7 +171,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="16" HorizontalAlignment="Left" Margin="120,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica16" Content="16" HorizontalAlignment="Left" Margin="120,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -182,7 +182,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="17" HorizontalAlignment="Left" Margin="220,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica17" Content="17" HorizontalAlignment="Left" Margin="220,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -193,7 +193,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="18" HorizontalAlignment="Left" Margin="320,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica18" Content="18" HorizontalAlignment="Left" Margin="320,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -204,7 +204,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="19" HorizontalAlignment="Left" Margin="420,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica19" Content="19" HorizontalAlignment="Left" Margin="420,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -215,7 +215,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="20" HorizontalAlignment="Left" Margin="520,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica20" Content="20" HorizontalAlignment="Left" Margin="520,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -226,7 +226,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="21" HorizontalAlignment="Left" Margin="620,210,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica21" Content="21" HorizontalAlignment="Left" Margin="620,210,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -237,7 +237,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="22" HorizontalAlignment="Left" Margin="20,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica22" Content="22" HorizontalAlignment="Left" Margin="20,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -248,7 +248,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="23" HorizontalAlignment="Left" Margin="120,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica23" Content="23" HorizontalAlignment="Left" Margin="120,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -259,7 +259,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="24" HorizontalAlignment="Left" Margin="220,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica24" Content="24" HorizontalAlignment="Left" Margin="220,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -270,7 +270,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="25" HorizontalAlignment="Left" Margin="320,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica25" Content="25" HorizontalAlignment="Left" Margin="320,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -281,7 +281,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="26" HorizontalAlignment="Left" Margin="420,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica26" Content="26" HorizontalAlignment="Left" Margin="420,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -292,7 +292,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="27" HorizontalAlignment="Left" Margin="520,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica27" Content="27" HorizontalAlignment="Left" Margin="520,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -303,7 +303,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="28" HorizontalAlignment="Left" Margin="620,280,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica28" Content="28" HorizontalAlignment="Left" Margin="620,280,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -314,7 +314,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="29" HorizontalAlignment="Left" Margin="20,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica29" Content="29" HorizontalAlignment="Left" Margin="20,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -325,7 +325,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="30" HorizontalAlignment="Left" Margin="120,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica30" Content="30" HorizontalAlignment="Left" Margin="120,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -336,7 +336,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="31" HorizontalAlignment="Left" Margin="220,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica31" Content="31" HorizontalAlignment="Left" Margin="220,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -347,7 +347,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="32" HorizontalAlignment="Left" Margin="320,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica32" Content="32" HorizontalAlignment="Left" Margin="320,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -358,7 +358,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="33" HorizontalAlignment="Left" Margin="420,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica33" Content="33" HorizontalAlignment="Left" Margin="420,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -369,7 +369,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="34" HorizontalAlignment="Left" Margin="520,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica34" Content="34" HorizontalAlignment="Left" Margin="520,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -380,7 +380,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="35" HorizontalAlignment="Left" Margin="620,350,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica35" Content="35" HorizontalAlignment="Left" Margin="620,350,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -391,7 +391,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="36" HorizontalAlignment="Left" Margin="20,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica36" Content="36" HorizontalAlignment="Left" Margin="20,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -402,7 +402,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="37" HorizontalAlignment="Left" Margin="120,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica37" Content="37" HorizontalAlignment="Left" Margin="120,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -413,7 +413,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="38" HorizontalAlignment="Left" Margin="220,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica38" Content="38" HorizontalAlignment="Left" Margin="220,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -424,7 +424,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="39" HorizontalAlignment="Left" Margin="320,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica39" Content="39" HorizontalAlignment="Left" Margin="320,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -435,7 +435,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="40" HorizontalAlignment="Left" Margin="420,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica40" Content="40" HorizontalAlignment="Left" Margin="420,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -446,7 +446,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="41" HorizontalAlignment="Left" Margin="520,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica41" Content="41" HorizontalAlignment="Left" Margin="520,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -457,7 +457,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="42" HorizontalAlignment="Left" Margin="620,420,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica42" Content="42" HorizontalAlignment="Left" Margin="620,420,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -468,7 +468,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="43" HorizontalAlignment="Left" Margin="20,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica43" Content="43" HorizontalAlignment="Left" Margin="20,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -479,7 +479,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="44" HorizontalAlignment="Left" Margin="120,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica44" Content="44" HorizontalAlignment="Left" Margin="120,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -490,7 +490,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="45" HorizontalAlignment="Left" Margin="220,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica45" Content="45" HorizontalAlignment="Left" Margin="220,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -501,7 +501,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="46" HorizontalAlignment="Left" Margin="320,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica46" Content="46" HorizontalAlignment="Left" Margin="320,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -512,7 +512,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="47" HorizontalAlignment="Left" Margin="420,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica47" Content="47" HorizontalAlignment="Left" Margin="420,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -523,7 +523,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="48" HorizontalAlignment="Left" Margin="520,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica48" Content="48" HorizontalAlignment="Left" Margin="520,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -534,7 +534,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice Content="49" HorizontalAlignment="Left" Margin="620,490,0,0" VerticalAlignment="Top"
+            <local:Kuglice x:Name="Kuglica49" Content="49" HorizontalAlignment="Left" Margin="620,490,0,0" VerticalAlignment="Top"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -548,20 +548,20 @@
             <!--KRAJ KUGLICA!!!-->
             <!--KRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJ!!!!!!!!!-->
             <!--POCETAK BUTTONa-->
-            <Button Content="Crvene" HorizontalAlignment="Left" Margin="5,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
-            <Button Content="Zute" HorizontalAlignment="Left" Margin="105,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
-            <Button Content="Plave" HorizontalAlignment="Left" Margin="205,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
-            <Button Content="Narandzaste" HorizontalAlignment="Left" Margin="305,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
-            <Button Content="Zelene" HorizontalAlignment="Left" Margin="405,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
-            <Button Content="Roze" HorizontalAlignment="Left" Margin="505,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
-            <Button Content="Ljubicaste" HorizontalAlignment="Left" Margin="605,20,0,0" VerticalAlignment="Top" 
-                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button x:Name="CrveneButton" Content="Crvene" HorizontalAlignment="Left" Margin="5,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="CrveneButton_Click"/>
+            <Button x:Name="ZuteButton" Content="Zute" HorizontalAlignment="Left" Margin="105,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="ZuteButton_Click"/>
+            <Button x:Name="PlaveButton" Content="Plave" HorizontalAlignment="Left" Margin="205,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="PlaveButton_Click"/>
+            <Button x:Name="NarandzasteButton" Content="Narandzaste" HorizontalAlignment="Left" Margin="305,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="NarandzasteButton_Click"/>
+            <Button x:Name="ZeleneButton" Content="Zelene" HorizontalAlignment="Left" Margin="405,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="ZeleneButton_Click"/>
+            <Button x:Name="RozeButton" Content="Roze" HorizontalAlignment="Left" Margin="505,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="RozeButton_Click"/>
+            <Button x:Name="LjubicasteButton" Content="Ljubicaste" HorizontalAlignment="Left" Margin="605,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium" Click="LjubicasteButton_Click"/>
         </Grid>
 
     </Grid>
