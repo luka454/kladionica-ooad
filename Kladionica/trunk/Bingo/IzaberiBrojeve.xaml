@@ -1,8 +1,105 @@
-﻿<Window x:Class="Bingo.IzaberiBrojeve"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Bingo" x:Class="Bingo.IzaberiBrojeve"
         Title="IzaberiBrojeve" Height="470" Width="700">
     <Grid>
+        <Grid Background="LightSteelBlue">
+        <!--SVE KUGLICE-->
+            <local:Kuglice Content="1" HorizontalAlignment="Left" Margin="20,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="Red"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice Content="2" HorizontalAlignment="Left" Margin="120,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="Yellow"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice Content="3" HorizontalAlignment="Left" Margin="220,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="Blue"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice Content="4" HorizontalAlignment="Left" Margin="320,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="Orange"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice Content="5" HorizontalAlignment="Left" Margin="420,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="LimeGreen"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice Content="6" HorizontalAlignment="Left" Margin="520,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="HotPink"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice Content="7" HorizontalAlignment="Left" Margin="620,70,0,0" VerticalAlignment="Top"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="Indigo"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <!--KRAJ KUGLICA!!!-->
+            <!--POCETAK BUTTONa-->
+            <Button Content="Crvene" HorizontalAlignment="Left" Margin="5,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Zute" HorizontalAlignment="Left" Margin="105,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Plave" HorizontalAlignment="Left" Margin="205,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Narandzaste" HorizontalAlignment="Left" Margin="305,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Zelene" HorizontalAlignment="Left" Margin="405,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Roze" HorizontalAlignment="Left" Margin="505,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Ljubicaste" HorizontalAlignment="Left" Margin="605,20,0,0" VerticalAlignment="Top" 
+                    Height="35" Width="80" FontWeight="Medium"/>
+        </Grid>
 
     </Grid>
 </Window>
