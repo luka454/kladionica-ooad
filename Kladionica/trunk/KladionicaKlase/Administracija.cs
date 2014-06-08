@@ -82,7 +82,7 @@ namespace KladionicaKlase
             foreach (ClanKluba ck in ClanoviKluba) if (ck.ID == userID) k = ck;
 
             if (k == null) return false;
-            k.UplatiNovac(iznos);
+            //k.UplatiNovac(iznos);
             return true;
         }
         public Boolean IsplatiNovacSaRacuna(int UserId, Decimal iznos) 
@@ -91,7 +91,7 @@ namespace KladionicaKlase
             foreach (ClanKluba ck in ClanoviKluba) if (ck.ID == UserId) k = ck;
 
             if (k == null) return false;
-            k.IsplatiNovac(iznos);
+            //k.IsplatiNovac(iznos);
             return true;
         }
     }
