@@ -117,7 +117,8 @@
                         </Grid>
                     </Button>
                     <Button x:Name="BPrintaj_Copy" Grid.Column="0" Width="130" Height="130" 
-                    	Style="{DynamicResource DugmeZeleno}"  Margin="10,11,10,18" Grid.Row="3">
+                    	Style="{DynamicResource DugmeZeleno}"  Margin="10,11,10,18" Grid.Row="3"
+                            Click="BPrintaj_Click1">
                         <Grid Height="126" >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="40*"/>
