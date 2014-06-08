@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Bingo
@@ -23,7 +24,7 @@ namespace Bingo
         public IzaberiBrojeve()
         {
             InitializeComponent();
-            MainWindow w = Window.GetWindow(this) as MainWindow;
+            _kuglice = new List<Kuglice>();
             foreach (var item in sveaaa.Children)
             {
                 if (item is Kuglice)
