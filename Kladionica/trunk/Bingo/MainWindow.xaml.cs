@@ -23,6 +23,12 @@ namespace Bingo
         public MainWindow()
         {
             InitializeComponent();
+
+            this.Title = "Bingo";
+            this.Top = 0;
+            this.Left = 0;
+            Uri page = new Uri("IzaberiBrojeve.xaml", UriKind.Relative);
+            Stranica.Source = page;
         }
     }
 }
