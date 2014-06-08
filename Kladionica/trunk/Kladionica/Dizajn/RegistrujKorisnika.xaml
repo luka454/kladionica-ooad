@@ -125,7 +125,7 @@
                         </Border>
                     </Grid>
                     <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="Button_Click_1"/>
                 </Grid>
 
             </TabItem>
@@ -160,7 +160,7 @@
                         </Border>
                     </Grid>
                     <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
 
