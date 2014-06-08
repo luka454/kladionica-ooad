@@ -13,7 +13,7 @@ namespace Kladionica
         public int PoeniDomacin { get; set; }
         public int PoeniGost { get; set; }
 
-        public FudbalskaUtakmica(DateTime p, string n, StatusIgre si, string d, string g, int pd, int pg)
+        public FudbalskaUtakmica(DateTime p, string n, StatusIgre si, string d, string g, int pd = 0, int pg = 0)
             : base(p, n, si)
         {
             Domacin = d;
