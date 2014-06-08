@@ -35,19 +35,15 @@ namespace Kladionica
 
         private void BPrintaj_Click(object sender, RoutedEventArgs e)
         {
-            TextBox b = new TextBox();
-
-            Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(new DateTime(2014,6,6));
-            Stranica.Content = b;
-
-            b.Text = "";
             
-            foreach (var item in p.IgreUPonudi)
-            {
-                FudbalskaUtakmica f = item as FudbalskaUtakmica;
-                if(f!= null)
-                b.Text += String.Format("{2} {0} - {1} {3}", f.Domacin, f.Gost, f.Pocetak, Environment.NewLine);
-            }
+            Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(new DateTime(2014,6,6));
+            
+            PregledPonuda pregled = new PregledPonuda(p);
+            
+            Stranica.Content = pregled;
+            
+            
+            
            
         }
 
