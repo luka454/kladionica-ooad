@@ -34,19 +34,14 @@ namespace Bingo
         public void SortirajBrojeve() {
             Brojevi.Sort();
         }
-        public bool JelDobitni()
-        {
+        public bool JelDobitni() {
             if (Brojac == 6) return true;
             return false;
         }
-        public bool Obavijesti(int broj) {
-            foreach (int br in Brojevi) {
-                if (br == broj) {
+        public void Obavijesti(int broj) {
+            foreach (int br in Brojevi)
+                if (br == broj)
                     Brojac++;
-                    return true;
-                }
-            }
-            return false;
         }
     }
 }
