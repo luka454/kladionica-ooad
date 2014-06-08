@@ -24,7 +24,6 @@ namespace Bingo
         }
         public int DajSljedeciBroj()
         {
-            if (IzvuceniBrojevi.Count > 35) throw new Exception("Maksimalno 35 brojeva!");
             Random rand = new Random();
             for (int i = 1; i <= 49; i++)
                 MoguciBrojevi.Add(i);
