@@ -152,7 +152,7 @@ namespace Bingo
             {
                 Kuglica2.IsSelected = false;
                 Kuglica2.Background = Brushes.Yellow;
-                _tiket = TiketFactory.DajCrvene(2);
+                _tiket = TiketFactory.DajZute(2);
                 return;
             }
             Kuglica2.IsSelected = true;
@@ -165,7 +165,7 @@ namespace Bingo
             {
                 Kuglica3.IsSelected = false;
                 Kuglica3.Background = Brushes.Blue;
-                _tiket = TiketFactory.DajCrvene(3);
+                _tiket = TiketFactory.DajPlave(3);
                 return;
             }
             Kuglica3.IsSelected = true;
@@ -178,7 +178,7 @@ namespace Bingo
             {
                 Kuglica4.IsSelected = false;
                 Kuglica4.Background = Brushes.Orange;
-                _tiket = TiketFactory.DajCrvene(4);
+                _tiket = TiketFactory.DajNarandzaste(4);
                 return;
             }
             Kuglica4.IsSelected = true;
@@ -191,7 +191,7 @@ namespace Bingo
             {
                 Kuglica5.IsSelected = false;
                 Kuglica5.Background = Brushes.LimeGreen;
-                _tiket = TiketFactory.DajCrvene(5);
+                _tiket = TiketFactory.DajZelene(5);
                 return;
             }
             Kuglica5.IsSelected = true;
@@ -204,7 +204,7 @@ namespace Bingo
             {
                 Kuglica6.IsSelected = false;
                 Kuglica6.Background = Brushes.HotPink;
-                _tiket = TiketFactory.DajCrvene(6);
+                _tiket = TiketFactory.DajRoze(6);
                 return;
             }
             Kuglica6.IsSelected = true;
@@ -217,7 +217,7 @@ namespace Bingo
             {
                 Kuglica7.IsSelected = false;
                 Kuglica7.Background = Brushes.Indigo;
-                _tiket = TiketFactory.DajCrvene(7);
+                _tiket = TiketFactory.DajLjubicaste(7);
                 return;
             }
             Kuglica7.IsSelected = true;
@@ -243,7 +243,7 @@ namespace Bingo
             {
                 Kuglica9.IsSelected = false;
                 Kuglica9.Background = Brushes.Yellow;
-                _tiket = TiketFactory.DajCrvene(9);
+                _tiket = TiketFactory.DajZute(9);
                 return;
             }
             Kuglica9.IsSelected = true;
@@ -256,7 +256,7 @@ namespace Bingo
             {
                 Kuglica10.IsSelected = false;
                 Kuglica10.Background = Brushes.Blue;
-                _tiket = TiketFactory.DajCrvene(10);
+                _tiket = TiketFactory.DajPlave(10);
                 return;
             }
             Kuglica10.IsSelected = true;
@@ -269,7 +269,7 @@ namespace Bingo
             {
                 Kuglica11.IsSelected = false;
                 Kuglica11.Background = Brushes.Orange;
-                _tiket = TiketFactory.DajCrvene(11);
+                _tiket = TiketFactory.DajNarandzaste(11);
                 return;
             }
             Kuglica11.IsSelected = true;
@@ -278,25 +278,46 @@ namespace Bingo
 
         private void Kuglica12_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZelene)
+            {
+                Kuglica12.IsSelected = false;
+                Kuglica12.Background = Brushes.LimeGreen;
+                _tiket = TiketFactory.DajZelene(12);
+                return;
+            }
             Kuglica12.IsSelected = true;
             Kuglica12.Background = Brushes.Gray;
         }
 
         private void Kuglica13_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajRoze)
+            {
+                Kuglica13.IsSelected = false;
+                Kuglica13.Background = Brushes.HotPink;
+                _tiket = TiketFactory.DajRoze(13);
+                return;
+            }
             Kuglica13.IsSelected = true;
             Kuglica13.Background = Brushes.Gray;
         }
 
         private void Kuglica14_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste)
+            {
+                Kuglica14.IsSelected = false;
+                Kuglica14.Background = Brushes.Indigo;
+                _tiket = TiketFactory.DajLjubicaste(14);
+                return;
+            }
             Kuglica14.IsSelected = true;
             Kuglica14.Background = Brushes.Gray;
         }
 
         private void Kuglica15_Click(object sender, RoutedEventArgs e)
         {
-            if (CrveneButton.IsEnabled)
+            if (AktivirajCrvene)
             {
                 Kuglica15.IsSelected = false;
                 Kuglica15.Background = Brushes.Red;
@@ -309,43 +330,85 @@ namespace Bingo
 
         private void Kuglica16_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZute)
+            {
+                Kuglica16.IsSelected = false;
+                Kuglica16.Background = Brushes.Yellow;
+                _tiket = TiketFactory.DajZute(16);
+                return;
+            }
             Kuglica16.IsSelected = true;
             Kuglica16.Background = Brushes.Gray;
         }
 
         private void Kuglica17_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajPlave)
+            {
+                Kuglica17.IsSelected = false;
+                Kuglica17.Background = Brushes.Blue;
+                _tiket = TiketFactory.DajPlave(17);
+                return;
+            }
             Kuglica17.IsSelected = true;
             Kuglica17.Background = Brushes.Gray;
         }
 
         private void Kuglica18_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajNarandzaste)
+            {
+                Kuglica18.IsSelected = false;
+                Kuglica18.Background = Brushes.Orange;
+                _tiket = TiketFactory.DajNarandzaste(18);
+                return;
+            }
             Kuglica18.IsSelected = true;
             Kuglica18.Background = Brushes.Gray;
         }
 
         private void Kuglica19_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZelene)
+            {
+                Kuglica19.IsSelected = false;
+                Kuglica19.Background = Brushes.LimeGreen;
+                _tiket = TiketFactory.DajZelene(19);
+                return;
+            }
             Kuglica19.IsSelected = true;
             Kuglica19.Background = Brushes.Gray;
         }
 
         private void Kuglica20_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajRoze)
+            {
+                Kuglica20.IsSelected = false;
+                Kuglica20.Background = Brushes.HotPink;
+                _tiket = TiketFactory.DajRoze(20);
+                return;
+            }
             Kuglica20.IsSelected = true;
             Kuglica20.Background = Brushes.Gray;
         }
 
         private void Kuglica21_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste)
+            {
+                Kuglica21.IsSelected = false;
+                Kuglica21.Background = Brushes.Indigo;
+                _tiket = TiketFactory.DajLjubicaste(21);
+                return;
+            }
             Kuglica21.IsSelected = true;
             Kuglica21.Background = Brushes.Gray;
         }
 
         private void Kuglica22_Click(object sender, RoutedEventArgs e)
         {
-            if (CrveneButton.IsEnabled)
+            if (AktivirajCrvene)
             {
                 Kuglica22.IsSelected = false;
                 Kuglica22.Background = Brushes.Red;
@@ -358,43 +421,85 @@ namespace Bingo
 
         private void Kuglica23_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZute)
+            {
+                Kuglica23.IsSelected = false;
+                Kuglica23.Background = Brushes.Yellow;
+                _tiket = TiketFactory.DajZute(23);
+                return;
+            }
             Kuglica23.IsSelected = true;
             Kuglica23.Background = Brushes.Gray;
         }
 
         private void Kuglica24_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajPlave)
+            {
+                Kuglica24.IsSelected = false;
+                Kuglica24.Background = Brushes.Blue;
+                _tiket = TiketFactory.DajPlave(24);
+                return;
+            }
             Kuglica24.IsSelected = true;
             Kuglica24.Background = Brushes.Gray;
         }
 
         private void Kuglica25_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajNarandzaste)
+            {
+                Kuglica25.IsSelected = false;
+                Kuglica25.Background = Brushes.Orange;
+                _tiket = TiketFactory.DajNarandzaste(25);
+                return;
+            }
             Kuglica25.IsSelected = true;
             Kuglica25.Background = Brushes.Gray;
         }
 
         private void Kuglica26_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZelene)
+            {
+                Kuglica26.IsSelected = false;
+                Kuglica26.Background = Brushes.LimeGreen;
+                _tiket = TiketFactory.DajZelene(26);
+                return;
+            }
             Kuglica26.IsSelected = true;
             Kuglica26.Background = Brushes.Gray;
         }
 
         private void Kuglica27_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajRoze)
+            {
+                Kuglica27.IsSelected = false;
+                Kuglica27.Background = Brushes.HotPink;
+                _tiket = TiketFactory.DajRoze(27);
+                return;
+            }
             Kuglica27.IsSelected = true;
             Kuglica27.Background = Brushes.Gray;
         }
 
         private void Kuglica28_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste)
+            {
+                Kuglica28.IsSelected = false;
+                Kuglica28.Background = Brushes.Indigo;
+                _tiket = TiketFactory.DajLjubicaste(28);
+                return;
+            }
             Kuglica28.IsSelected = true;
             Kuglica28.Background = Brushes.Gray;
         }
 
         private void Kuglica29_Click(object sender, RoutedEventArgs e)
         {
-            if (CrveneButton.IsEnabled)
+            if (AktivirajCrvene)
             {
                 Kuglica29.IsSelected = false;
                 Kuglica29.Background = Brushes.Red;
@@ -407,43 +512,85 @@ namespace Bingo
 
         private void Kuglica30_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZute)
+            {
+                Kuglica30.IsSelected = false;
+                Kuglica30.Background = Brushes.Yellow;
+                _tiket = TiketFactory.DajZute(30);
+                return;
+            }
             Kuglica30.IsSelected = true;
             Kuglica30.Background = Brushes.Gray;
         }
 
         private void Kuglica31_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajPlave)
+            {
+                Kuglica31.IsSelected = false;
+                Kuglica31.Background = Brushes.Blue;
+                _tiket = TiketFactory.DajPlave(31);
+                return;
+            }
             Kuglica31.IsSelected = true;
             Kuglica31.Background = Brushes.Gray;
         }
 
         private void Kuglica32_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajNarandzaste)
+            {
+                Kuglica32.IsSelected = false;
+                Kuglica32.Background = Brushes.Orange;
+                _tiket = TiketFactory.DajNarandzaste(32);
+                return;
+            }
             Kuglica32.IsSelected = true;
             Kuglica32.Background = Brushes.Gray;
         }
 
         private void Kuglica33_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZelene)
+            {
+                Kuglica33.IsSelected = false;
+                Kuglica33.Background = Brushes.LimeGreen;
+                _tiket = TiketFactory.DajZelene(33);
+                return;
+            }
             Kuglica33.IsSelected = true;
             Kuglica33.Background = Brushes.Gray;
         }
 
         private void Kuglica34_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajRoze)
+            {
+                Kuglica34.IsSelected = false;
+                Kuglica34.Background = Brushes.HotPink;
+                _tiket = TiketFactory.DajRoze(34);
+                return;
+            }
             Kuglica34.IsSelected = true;
             Kuglica34.Background = Brushes.Gray;
         }
 
         private void Kuglica35_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste)
+            {
+                Kuglica35.IsSelected = false;
+                Kuglica35.Background = Brushes.Indigo;
+                _tiket = TiketFactory.DajLjubicaste(35);
+                return;
+            }
             Kuglica35.IsSelected = true;
             Kuglica35.Background = Brushes.Gray;
         }
 
         private void Kuglica36_Click(object sender, RoutedEventArgs e)
         {
-            if (CrveneButton.IsEnabled)
+            if (AktivirajCrvene)
             {
                 Kuglica36.IsSelected = false;
                 Kuglica36.Background = Brushes.Red;
@@ -456,36 +603,78 @@ namespace Bingo
 
         private void Kuglica37_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZute)
+            {
+                Kuglica37.IsSelected = false;
+                Kuglica37.Background = Brushes.Yellow;
+                _tiket = TiketFactory.DajZute(37);
+                return;
+            }
             Kuglica37.IsSelected = true;
             Kuglica37.Background = Brushes.Gray;
         }
 
         private void Kuglica38_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajPlave)
+            {
+                Kuglica38.IsSelected = false;
+                Kuglica38.Background = Brushes.Blue;
+                _tiket = TiketFactory.DajPlave(38);
+                return;
+            }
             Kuglica38.IsSelected = true;
             Kuglica38.Background = Brushes.Gray;
         }
 
         private void Kuglica39_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajNarandzaste)
+            {
+                Kuglica39.IsSelected = false;
+                Kuglica39.Background = Brushes.Orange;
+                _tiket = TiketFactory.DajNarandzaste(39);
+                return;
+            }
             Kuglica39.IsSelected = true;
             Kuglica39.Background = Brushes.Gray;
         }
 
         private void Kuglica40_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZelene)
+            {
+                Kuglica40.IsSelected = false;
+                Kuglica40.Background = Brushes.LimeGreen;
+                _tiket = TiketFactory.DajZelene(40);
+                return;
+            }
             Kuglica40.IsSelected = true;
             Kuglica40.Background = Brushes.Gray;
         }
 
         private void Kuglica41_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajRoze)
+            {
+                Kuglica41.IsSelected = false;
+                Kuglica41.Background = Brushes.HotPink;
+                _tiket = TiketFactory.DajRoze(41);
+                return;
+            }
             Kuglica41.IsSelected = true;
             Kuglica41.Background = Brushes.Gray;
         }
 
         private void Kuglica42_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste)
+            {
+                Kuglica42.IsSelected = false;
+                Kuglica42.Background = Brushes.Indigo;
+                _tiket = TiketFactory.DajLjubicaste(42);
+                return;
+            }
             Kuglica42.IsSelected = true;
             Kuglica42.Background = Brushes.Gray;
         }
@@ -497,49 +686,86 @@ namespace Bingo
                 Kuglica43.IsSelected = false;
                 Kuglica43.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(43);
-                string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-                " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
-                " " + Convert.ToString(_tiket.Brojevi.Count);
-                MessageBox.Show(ispis);
                 return;
             }
             Kuglica43.IsSelected = true;
-            Kuglica43.Background = Brushes.Gray;
-            
+            Kuglica43.Background = Brushes.Gray;            
         }
 
         private void Kuglica44_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZute)
+            {
+                Kuglica44.IsSelected = false;
+                Kuglica44.Background = Brushes.Yellow;
+                _tiket = TiketFactory.DajZute(44);
+                return;
+            }
             Kuglica44.IsSelected = true;
             Kuglica44.Background = Brushes.Gray;
         }
 
         private void Kuglica45_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajPlave)
+            {
+                Kuglica45.IsSelected = false;
+                Kuglica45.Background = Brushes.Blue;
+                _tiket = TiketFactory.DajPlave(45);
+                return;
+            }
             Kuglica45.IsSelected = true;
             Kuglica45.Background = Brushes.Gray;
         }
 
         private void Kuglica46_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajNarandzaste)
+            {
+                Kuglica46.IsSelected = false;
+                Kuglica46.Background = Brushes.Orange;
+                _tiket = TiketFactory.DajNarandzaste(46);
+                return;
+            }
             Kuglica46.IsSelected = true;
             Kuglica46.Background = Brushes.Gray;
         }
 
         private void Kuglica47_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajZelene)
+            {
+                Kuglica47.IsSelected = false;
+                Kuglica47.Background = Brushes.LimeGreen;
+                _tiket = TiketFactory.DajZelene(47);
+                return;
+            }
             Kuglica47.IsSelected = true;
             Kuglica47.Background = Brushes.Gray;
         }
 
         private void Kuglica48_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajRoze)
+            {
+                Kuglica48.IsSelected = false;
+                Kuglica48.Background = Brushes.HotPink;
+                _tiket = TiketFactory.DajRoze(48);
+                return;
+            }
             Kuglica48.IsSelected = true;
             Kuglica48.Background = Brushes.Gray;
         }
 
         private void Kuglica49_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste)
+            {
+                Kuglica49.IsSelected = false;
+                Kuglica49.Background = Brushes.Indigo;
+                _tiket = TiketFactory.DajLjubicaste(49);
+                return;
+            }
             Kuglica49.IsSelected = true;
             Kuglica49.Background = Brushes.Gray;
         }
