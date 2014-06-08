@@ -228,6 +228,12 @@
   <ItemGroup>
     <Resource Include="ico\lock.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ico\dodaj_tiket1.png" />
+    <Resource Include="ico\dodaj_korisnika1.png" />
+    <Resource Include="ico\info_korisnik1.png" />
+    <Resource Include="ico\stanje_racuna1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
