@@ -13,5 +13,6 @@ namespace Kladionica
     /// </summary>
     public partial class App : Application
     {
+        
     }
 }

@@ -6,6 +6,7 @@
         <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
         <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
+        <SolidColorBrush x:Key="BlagoZelena">#E0E4CC</SolidColorBrush>
         <Style x:Key="Borders" TargetType="Border">
             <Setter Property="Background" Value="{DynamicResource Zelena}"/>
             <Setter Property="BorderThickness" Value="0" />
@@ -19,7 +20,7 @@
         
         
     </Window.Resources>
-    <Grid>
+    <Grid Background="{DynamicResource SvijetloSiva}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="300"></ColumnDefinition>

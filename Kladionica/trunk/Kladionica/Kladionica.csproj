@@ -85,6 +85,12 @@
     <Compile Include="Dizajn\PocetniPage.xaml.cs">
       <DependentUpon>PocetniPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dizajn\PregledPonuda\FUNijePocelo.xaml.cs">
+      <DependentUpon>FUNijePocelo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dizajn\PregledPonuda\PregledPonnuda.xaml.cs">
+      <DependentUpon>PregledPonnuda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Administracija.cs" />
     <Compile Include="Klase\ClanKluba.cs" />
     <Compile Include="Klase\FudbalskaUtakmica.cs" />
@@ -131,6 +137,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dizajn\PocetniPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\PregledPonuda\FUNijePocelo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\PregledPonuda\PregledPonnuda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

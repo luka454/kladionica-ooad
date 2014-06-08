@@ -24,7 +24,7 @@ namespace Kladionica
         public LogInScreen()
         {
             InitializeComponent();
-            System.Windows.MessageBox.Show(String.Format("ovo ono").Contains("").ToString());
+            
         }
 
         private void UserName_TextChanged(object sender, TextChangedEventArgs e)
