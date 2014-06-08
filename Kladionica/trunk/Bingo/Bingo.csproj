@@ -74,7 +74,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Klase\Tiket6.cs" />
-    <Compile Include="Kuglice.cs" />
+    <Compile Include="Klase\Kuglice.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
