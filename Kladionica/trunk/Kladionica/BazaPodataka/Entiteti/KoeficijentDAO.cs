@@ -15,16 +15,22 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("insert into Koeficijenti(tip, koeficijent)" +
                     " values( " + entity.tip + ", " + entity.koeficijent + ")", DAL.Connection);
                 c.ExecuteNonQuery();
+
+                
                 return c.LastInsertedId;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         public Koeficijent read(Koeficijent entity)
@@ -36,6 +42,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("update Koeficijenti set tip=" + entity.tip +
                     ", koeficijent=" + entity.koeficijent + "where id=" + entity.ID, DAL.Connection);
                 c.ExecuteNonQuery();
@@ -46,12 +53,17 @@ namespace Kladionica.BazaPodataka
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
         public void delete(Koeficijent entity)
         {
             try
             {
+                DAL.Connection.Open();
                 int id = Convert.ToInt32(entity.ID);
                 c = new MySqlCommand("delete from Koeficijenti where id=" + id, DAL.Connection);
                 c.ExecuteNonQuery();
@@ -70,19 +82,29 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("select * from Koeficijenti where id=" + id, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 if (r.Read())
                 {
-                    Koeficijent k=new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent"));
+                    
+                    Koeficijent k = new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent"));
+                    r.Close();
                     return k;
                 }
                 else
+                {
+                    r.Close();
                     return null;
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
         }
 
@@ -90,33 +112,46 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand("select * from Koeficijenti", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
                     koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent")));
+
+                r.Close();
                 return koeficijenti;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
-        public List<Koeficijent> getByExample(string name, string value)
+        public List<Koeficijent> getByIgraID(int IgraID)
         {
             try
             {
-                c = new MySqlCommand("select * from Koeficijenti where tip=" + name + " and koeficijent=" + value, DAL.Connection);
+                DAL.Connection.Open();
+                c = new MySqlCommand("select * from Koeficijenti where IgraID=" + IgraID, DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
                     koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent")));
+                r.Close();
                 return koeficijenti;
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
             }
         }
     }

@@ -57,5 +57,10 @@ namespace Kladionica
             dao.create(new FudbalskaUtakmica(new DateTime(2014,6,7,20,30,0), "Finale", StatusIgre.NijePocela, "Hrvatska", "Australija"));
             dao.create(new FudbalskaUtakmica(new DateTime(2014,6,7,18,00,0), "Polu-finale", StatusIgre.NijePocela, "Bosna", "Australija"));
         }
+
+        private void BKlubKorisnika_Click(object sender, RoutedEventArgs e)
+        {
+            Stranica.Content = new AfterBKorisKlubClick(Stranica);
+        }
     }
 }
