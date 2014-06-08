@@ -35,5 +35,11 @@ namespace Kladionica
         {
             _c.Content = new UnosKorisnika(_c);
         }
+
+        private void InfoOKorisniku_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrujKorisnika p = new RegistrujKorisnika();
+            p.Show();
+        }
     }
 }

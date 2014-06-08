@@ -38,7 +38,7 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Button x:Name = "InfoOKorisniku" Grid.Row="0" Grid.Column="0" Width="200" Height="150" Style="{DynamicResource DugmeZeleno}">
+        <Button x:Name = "InfoOKorisniku" Grid.Row="0" Grid.Column="0" Width="200" Height="150" Style="{DynamicResource DugmeZeleno}" Click="InfoOKorisniku_Click">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="8*"/>
