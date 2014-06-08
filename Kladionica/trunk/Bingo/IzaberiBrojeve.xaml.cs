@@ -577,6 +577,7 @@ namespace Bingo
         {
             Kuglica29.IsSelected = true;
             Kuglica29.Foreground = Brushes.Black;
+            MessageBox.Show("radi");
             TiketFactory.DajCrvene(29);  
         }
 
@@ -661,7 +662,9 @@ namespace Bingo
         private void Kuglica43_Click(object sender, RoutedEventArgs e)
         {
             Kuglica43.IsSelected = true;
-            Kuglica43.Background = Brushes.Silver;
+            Kuglica43.Foreground = Brushes.Black;
+            MessageBox.Show("radi");
+            TiketFactory.DajCrvene(43);  
         }
 
         private void Kuglica44_Click(object sender, RoutedEventArgs e)
