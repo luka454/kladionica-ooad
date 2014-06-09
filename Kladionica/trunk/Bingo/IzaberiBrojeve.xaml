@@ -582,6 +582,8 @@
                     Height="35" Width="80" FontWeight="Medium" Click="Obicni_Click"/>
             <Button Content="Reset" Grid.Column="7" HorizontalAlignment="Left" Margin="39,233,0,0" Grid.Row="1" VerticalAlignment="Top"
                     Height="35" Width="80" FontWeight="Medium" Click="Reset_Click"/>
+            <Button Content="Zapocni igru" Grid.Column="7" HorizontalAlignment="Left" Margin="39,303,0,0" Grid.Row="1" VerticalAlignment="Top"
+                    Height="35" Width="80" FontWeight="Medium" Click="Zapocni_Click"/>
         </Grid>
 
     </Grid>
