@@ -180,13 +180,10 @@ namespace Bingo
             //Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
-        public static Tiket6 DajNormalni(List<int> brojevi)
+        public static Tiket6 DajNormalni(Tiket6 t)
         {
-            //if (brojevi.Count > 6) throw new Exception("Ne smije biti vise od 6 brojeva!");
-            Tiket6 t = new Tiket6();
-            t.Brojevi = brojevi;
             t.ProvjeriBrojeve();
-            //t.SortirajBrojeve();
+            t.SortirajBrojeve();
             //Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }

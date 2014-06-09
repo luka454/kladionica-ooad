@@ -27,9 +27,7 @@ namespace Bingo
             }
         }
         public void ObrisiBrojeve() {
-            foreach (int broj in Brojevi) {
-                Brojevi.Remove(broj);
-            }
+            while (Brojevi.Count != 0) Brojevi.RemoveAt(0);
         }
         public void SortirajBrojeve() {
             Brojevi.Sort();
