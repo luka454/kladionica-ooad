@@ -426,7 +426,7 @@
             <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="247" VerticalAlignment="Top" Width="242" Grid.ColumnSpan="3" Margin="0,0,-86,0" Grid.RowSpan="3"/>
             <Rectangle Grid.ColumnSpan="3" Fill="CornflowerBlue" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" Stroke="Navy" VerticalAlignment="Top" Width="222"/>
             <Label Content="Vaši brojevi" HorizontalAlignment="Center" Margin="56,20,-36,0" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="51" Width="222" FontWeight="Medium" FontSize="20"/>
-            <local:Kuglice x:Name="KuglicaA" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaA" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="0">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -437,7 +437,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="KuglicaB" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaB" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="1">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -448,7 +448,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="KuglicaC" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaC" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="2">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -459,7 +459,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="KuglicaD" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaD" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="0">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -470,7 +470,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="KuglicaE" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaE" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="1">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -481,7 +481,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="KuglicaF" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaF" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="2">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">

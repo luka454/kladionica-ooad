@@ -10,6 +10,5 @@ namespace Bingo
     {
         void DodajObserver(Tiket6 t);
         void IzbrisiObserver(Tiket6 t);
-        void Obavijesti();
     }
 }
