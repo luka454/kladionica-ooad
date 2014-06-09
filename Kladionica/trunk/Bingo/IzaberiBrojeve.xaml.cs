@@ -917,11 +917,8 @@ namespace Bingo
                 MessageBox.Show("Morate prvo kreirati tiket!");
                 return;
             }
-
-            MainWindow w = Window.GetWindow(this) as MainWindow;
             IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva();
-            App.Current.MainWindow = novi;
-            w.Close();
+            this.Close();
             novi.Show();
         }
 

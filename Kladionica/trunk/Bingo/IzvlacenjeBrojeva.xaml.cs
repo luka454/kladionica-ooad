@@ -23,6 +23,8 @@ namespace Bingo
         public IzvlacenjeBrojeva()
         {
             InitializeComponent();
+            TrenutnaIgra = new Igra49();
+            this.Title = "Bingo";
         }
     }
 }

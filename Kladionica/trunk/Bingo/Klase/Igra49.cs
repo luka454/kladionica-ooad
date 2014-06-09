@@ -33,12 +33,14 @@ namespace Bingo
             IzvuceniBrojevi.Add(TrenutniBroj);
             return TrenutniBroj;
         }
-        //public void DodajObserver(Tiket6 t) {
-        //    OdigraniTiketi.Add(t);
-        //}
-        //public void IzbrisiObserver(Tiket6 t) {
-        //    OdigraniTiketi.Remove(t);
-        //}
+        public void DodajObserver(Tiket6 t)
+        {
+            //OdigraniTiketi.Add(t);
+        }
+        public void IzbrisiObserver(Tiket6 t)
+        {
+            //OdigraniTiketi.Remove(t);
+        }
         public void Obavijesti()
         {
             Tiket.Obavijesti(TrenutniBroj);
