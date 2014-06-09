@@ -21,5 +21,11 @@ namespace Kladionica
             Username = username;
             HashPassword = hashpassword;
         }
+        public Osoba(string ime, string prezime, string username)
+        {
+            Ime = ime;
+            Prezime = prezime;
+            Username = username;
+        }
     }
 }
