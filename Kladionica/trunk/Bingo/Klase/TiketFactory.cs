@@ -182,12 +182,12 @@ namespace Bingo
         }
         public static Tiket6 DajNormalni(List<int> brojevi)
         {
-            if (brojevi.Count > 6) throw new Exception("Ne smije biti vise od 6 brojeva!");
+            //if (brojevi.Count > 6) throw new Exception("Ne smije biti vise od 6 brojeva!");
             Tiket6 t = new Tiket6();
             t.Brojevi = brojevi;
             t.ProvjeriBrojeve();
-            t.SortirajBrojeve();
-            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
+            //t.SortirajBrojeve();
+            //Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
     }

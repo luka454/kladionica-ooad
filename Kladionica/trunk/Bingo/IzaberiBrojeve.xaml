@@ -578,8 +578,10 @@
                     Height="35" Width="80" FontWeight="Medium" Click="LjubicasteButton_Click" Grid.Column="6"/>
             <Button Content="Automatski" Grid.Column="7" HorizontalAlignment="Left" Margin="39,93,0,0" Grid.Row="1" VerticalAlignment="Top"
                     Height="35" Width="80" FontWeight="Medium" Click="Automatski_Click"/>
-            <Button Content="Napravi tiket" Grid.Column="7" HorizontalAlignment="Left" Margin="39,163,0,0" Grid.Row="1" VerticalAlignment="Top"
-                    Height="35" Width="80" FontWeight="Medium"/>
+            <Button Content="Obicni tiket" Grid.Column="7" HorizontalAlignment="Left" Margin="39,163,0,0" Grid.Row="1" VerticalAlignment="Top"
+                    Height="35" Width="80" FontWeight="Medium" Click="Obicni_Click"/>
+            <Button Content="Reset" Grid.Column="7" HorizontalAlignment="Left" Margin="39,233,0,0" Grid.Row="1" VerticalAlignment="Top"
+                    Height="35" Width="80" FontWeight="Medium" Click="Reset_Click"/>
         </Grid>
 
     </Grid>
