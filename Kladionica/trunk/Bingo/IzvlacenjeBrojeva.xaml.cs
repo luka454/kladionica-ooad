@@ -35,9 +35,11 @@ namespace Bingo
             this._mojeKuglice = _mojeKuglice;
             TrenutnaIgra.Tiket = _tiket;
             PostaviKuglice();
-            if (Grid.NameProperty.Name == "grid1")
-                foreach (Kuglice k in grid1.Children)
-                    k.Visibility = Visibility.Hidden;
+            foreach (var item in grid1.Children)
+            {
+                if (item is Kuglice)
+                    ((Kuglice)item).Visibility = Visibility.Hidden;
+            }
         }
 
         private void PostaviKuglice()
