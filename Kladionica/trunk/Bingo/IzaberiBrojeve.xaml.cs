@@ -70,85 +70,113 @@ namespace Bingo
 
         private void CrveneButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
+                || AktivirajZelene || AktivirajZute) return;
             AktivirajCrvene = true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 0)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Crvene";
+                    _mojeKuglice.Add(k);
                 }
         }
 
         private void ZuteButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
+                || AktivirajZelene || AktivirajCrvene) return;
             AktivirajZute=true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 1)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Zute";
+                    _mojeKuglice.Add(k);
                 }
         }
 
         private void PlaveButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene || AktivirajRoze
+                || AktivirajZelene || AktivirajZute) return;
             AktivirajPlave=true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 2)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Plave";
+                    _mojeKuglice.Add(k);
                 }
         }
 
         private void NarandzasteButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave || AktivirajRoze
+                || AktivirajZelene || AktivirajZute) return;
             AktivirajNarandzaste=true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 3)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Narandzaste";
+                    _mojeKuglice.Add(k);
                 }
         }
 
         private void ZeleneButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
+                || AktivirajCrvene || AktivirajZute) return;
             AktivirajZelene=true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 4)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Zelene";
+                    _mojeKuglice.Add(k);
                 }
         }
 
         private void RozeButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajCrvene
+                || AktivirajZelene || AktivirajZute) return;
             AktivirajRoze=true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 5)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Roze";
+                    _mojeKuglice.Add(k);
                 }
         }
 
         private void LjubicasteButton_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
+                || AktivirajZelene || AktivirajZute) return;
             AktivirajLjubicaste=true;
+            _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
                 if (Grid.GetColumn(k) == 6)
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
                     k.Boja = "Ljubicaste";
+                    _mojeKuglice.Add(k);
                 }
         }
 
@@ -159,6 +187,8 @@ namespace Bingo
                 Kuglica1.IsSelected = false;
                 Kuglica1.Background = Brushes.Red;
                 _tiket=TiketFactory.DajCrvene(1);
+                _mojeKuglice.Remove(Kuglica1);
+                _mojeKuglice.Capacity = 6;
                 return;
             }
             if (Kuglica1.IsSelected) return;
