@@ -38,9 +38,5 @@ namespace Bingo
         {
             //OdigraniTiketi.Remove(t);
         }
-        public void Obavijesti()
-        {
-            Tiket.Obavijesti(TrenutniBroj);
-        }
     }
 }

@@ -47,28 +47,38 @@ namespace Bingo
 
         private void PostaviKuglice()
         {
-            KuglicaA.Background = _mojeKuglice[0].Background;
+            //
             KuglicaA.Content = _mojeKuglice[0].Content;
 
-            KuglicaB.Background = _mojeKuglice[1].Background;
+            //KuglicaB.Background = _mojeKuglice[1].Background;
             KuglicaB.Content = _mojeKuglice[1].Content;
 
-            KuglicaC.Background = _mojeKuglice[2].Background;
+            //KuglicaC.Background = _mojeKuglice[2].Background;
             KuglicaC.Content = _mojeKuglice[2].Content;
 
-            KuglicaD.Background = _mojeKuglice[3].Background;
+            //KuglicaD.Background = _mojeKuglice[3].Background;
             KuglicaD.Content = _mojeKuglice[3].Content;
 
-            KuglicaE.Background = _mojeKuglice[4].Background;
+            //KuglicaE.Background = _mojeKuglice[4].Background;
             KuglicaE.Content = _mojeKuglice[4].Content;
 
-            KuglicaF.Background = _mojeKuglice[5].Background;
+            //KuglicaF.Background = _mojeKuglice[5].Background;
             KuglicaF.Content = _mojeKuglice[5].Content;
         }
 
         private void Sljedeci_Click(object sender, RoutedEventArgs e)
         {
             int broj = TrenutnaIgra.DajSljedeciBroj();
+            if (TrenutnaIgra.Tiket.Obavijesti(broj))
+            {
+                TrenutnaIgra.Tiket.Brojac++;
+                if (_mojeKuglice[0].Broj == broj) KuglicaA.Background = _mojeKuglice[0].Background;
+                else if (_mojeKuglice[1].Broj == broj) KuglicaB.Background = _mojeKuglice[1].Background;
+                else if (_mojeKuglice[2].Broj == broj) KuglicaC.Background = _mojeKuglice[2].Background;
+                else if (_mojeKuglice[3].Broj == broj) KuglicaD.Background = _mojeKuglice[3].Background;
+                else if (_mojeKuglice[4].Broj == broj) KuglicaE.Background = _mojeKuglice[4].Background;
+                else if (_mojeKuglice[5].Broj == broj) KuglicaF.Background = _mojeKuglice[5].Background;
+            }
             for (int i = 0; i < 35; i++)
             {
                 if (_kuglice[i].Visibility == Visibility.Hidden)
