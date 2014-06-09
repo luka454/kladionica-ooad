@@ -53,85 +53,78 @@ namespace Bingo
         private void CrveneButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajCrvene = true;
-            Kuglica1.Background = Brushes.Gray;
-            Kuglica8.Background = Brushes.Gray;
-            Kuglica15.Background = Brushes.Gray;
-            Kuglica22.Background = Brushes.Gray;
-            Kuglica29.Background = Brushes.Gray;
-            Kuglica36.Background = Brushes.Gray;
-            Kuglica43.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 0)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void ZuteButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajZute=true;
-            Kuglica2.Background = Brushes.Gray;
-            Kuglica9.Background = Brushes.Gray;
-            Kuglica16.Background = Brushes.Gray;
-            Kuglica23.Background = Brushes.Gray;
-            Kuglica30.Background = Brushes.Gray;
-            Kuglica37.Background = Brushes.Gray;
-            Kuglica44.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 1)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void PlaveButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajPlave=true;
-            Kuglica3.Background = Brushes.Gray;
-            Kuglica10.Background = Brushes.Gray;
-            Kuglica17.Background = Brushes.Gray;
-            Kuglica24.Background = Brushes.Gray;
-            Kuglica31.Background = Brushes.Gray;
-            Kuglica38.Background = Brushes.Gray;
-            Kuglica45.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 2)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void NarandzasteButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajNarandzaste=true;
-            Kuglica4.Background = Brushes.Gray;
-            Kuglica11.Background = Brushes.Gray;
-            Kuglica18.Background = Brushes.Gray;
-            Kuglica25.Background = Brushes.Gray;
-            Kuglica32.Background = Brushes.Gray;
-            Kuglica39.Background = Brushes.Gray;
-            Kuglica46.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 3)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void ZeleneButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajZelene=true;
-            Kuglica5.Background = Brushes.Gray;
-            Kuglica12.Background = Brushes.Gray;
-            Kuglica19.Background = Brushes.Gray;
-            Kuglica26.Background = Brushes.Gray;
-            Kuglica33.Background = Brushes.Gray;
-            Kuglica40.Background = Brushes.Gray;
-            Kuglica47.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 4)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void RozeButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajRoze=true;
-            Kuglica6.Background = Brushes.Gray;
-            Kuglica13.Background = Brushes.Gray;
-            Kuglica20.Background = Brushes.Gray;
-            Kuglica27.Background = Brushes.Gray;
-            Kuglica34.Background = Brushes.Gray;
-            Kuglica41.Background = Brushes.Gray;
-            Kuglica48.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 5)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void LjubicasteButton_Click(object sender, RoutedEventArgs e)
         {
             AktivirajLjubicaste=true;
-            Kuglica7.Background = Brushes.Gray;
-            Kuglica14.Background = Brushes.Gray;
-            Kuglica21.Background = Brushes.Gray;
-            Kuglica28.Background = Brushes.Gray;
-            Kuglica35.Background = Brushes.Gray;
-            Kuglica42.Background = Brushes.Gray;
-            Kuglica49.Background = Brushes.Gray;
+            foreach (Kuglice k in _kuglice)
+                if (Grid.GetColumn(k) == 6)
+                {
+                    k.Background = Brushes.Gray;
+                    k.IsSelected = true;
+                }
         }
 
         private void Kuglica1_Click(object sender, RoutedEventArgs e)
