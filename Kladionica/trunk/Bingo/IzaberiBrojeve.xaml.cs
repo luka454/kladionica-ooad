@@ -878,17 +878,20 @@ namespace Bingo
                 }
             }
             string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
-               " " + Convert.ToString(_tiket.Brojevi.Count);
+               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]);
             MessageBox.Show(ispis);
         }
 
         private void Obicni_Click(object sender, RoutedEventArgs e)
         {
+            if (_tiket.Brojevi.Count < 6)
+            {
+                MessageBox.Show("Morate unijeti 6 brojeva!");
+                return;
+            }
             _tiket = TiketFactory.DajNormalni(_tiket);
             string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
-               " " + Convert.ToString(_tiket.Brojevi.Count);
+               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]);
             MessageBox.Show(ispis);
         }
 
