@@ -136,8 +136,10 @@ namespace Bingo
                 _tiket=TiketFactory.DajCrvene(1);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica1.IsSelected = true;
-            Kuglica1.Background = Brushes.Gray;          
+            Kuglica1.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(1);
         }
 
         private void Kuglica2_Click(object sender, RoutedEventArgs e)
@@ -149,8 +151,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZute(2);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica2.IsSelected = true;
-            Kuglica2.Background = Brushes.Gray;   
+            Kuglica2.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(2);
         }
 
         private void Kuglica3_Click(object sender, RoutedEventArgs e)
@@ -162,8 +166,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajPlave(3);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica3.IsSelected = true;
-            Kuglica3.Background = Brushes.Gray;   
+            Kuglica3.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(3);
         }
 
         private void Kuglica4_Click(object sender, RoutedEventArgs e)
@@ -175,8 +181,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajNarandzaste(4);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica4.IsSelected = true;
-            Kuglica4.Background = Brushes.Gray;   
+            Kuglica4.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(4);
         }
 
         private void Kuglica5_Click(object sender, RoutedEventArgs e)
@@ -188,8 +196,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZelene(5);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica5.IsSelected = true;
-            Kuglica5.Background = Brushes.Gray;   
+            Kuglica5.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(5);
         }
 
         private void Kuglica6_Click(object sender, RoutedEventArgs e)
@@ -201,8 +211,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajRoze(6);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica6.IsSelected = true;
-            Kuglica6.Background = Brushes.Gray;   
+            Kuglica6.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(6);
         }
 
         private void Kuglica7_Click(object sender, RoutedEventArgs e)
@@ -214,8 +226,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajLjubicaste(7);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica7.IsSelected = true;
-            Kuglica7.Background = Brushes.Gray;   
+            Kuglica7.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(7);
         }
 
         private void Kuglica8_Click(object sender, RoutedEventArgs e)
@@ -227,8 +241,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajCrvene(8);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica8.IsSelected = true;
-            Kuglica8.Background = Brushes.Gray;         
+            Kuglica8.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(8);
         }
 
         private void Kuglica9_Click(object sender, RoutedEventArgs e)
@@ -240,8 +256,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZute(9);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica9.IsSelected = true;
-            Kuglica9.Background = Brushes.Gray;   
+            Kuglica9.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(9);
         }
 
         private void Kuglica10_Click(object sender, RoutedEventArgs e)
@@ -253,8 +271,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajPlave(10);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica10.IsSelected = true;
-            Kuglica10.Background = Brushes.Gray;   
+            Kuglica10.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(10);
         }
 
         private void Kuglica11_Click(object sender, RoutedEventArgs e)
@@ -266,8 +286,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajNarandzaste(11);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica11.IsSelected = true;
-            Kuglica11.Background = Brushes.Gray;   
+            Kuglica11.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(11);
         }
 
         private void Kuglica12_Click(object sender, RoutedEventArgs e)
@@ -279,8 +301,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZelene(12);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica12.IsSelected = true;
             Kuglica12.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(12);
         }
 
         private void Kuglica13_Click(object sender, RoutedEventArgs e)
@@ -292,8 +316,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajRoze(13);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica13.IsSelected = true;
             Kuglica13.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(13);
         }
 
         private void Kuglica14_Click(object sender, RoutedEventArgs e)
@@ -305,8 +331,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajLjubicaste(14);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica14.IsSelected = true;
             Kuglica14.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(14);
         }
 
         private void Kuglica15_Click(object sender, RoutedEventArgs e)
@@ -318,8 +346,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajCrvene(15);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica15.IsSelected = true;
             Kuglica15.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(15);
         }
 
         private void Kuglica16_Click(object sender, RoutedEventArgs e)
@@ -331,8 +361,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZute(16);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica16.IsSelected = true;
             Kuglica16.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(16);
         }
 
         private void Kuglica17_Click(object sender, RoutedEventArgs e)
@@ -344,8 +376,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajPlave(17);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica17.IsSelected = true;
             Kuglica17.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(17);
         }
 
         private void Kuglica18_Click(object sender, RoutedEventArgs e)
@@ -357,8 +391,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajNarandzaste(18);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica18.IsSelected = true;
             Kuglica18.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(18);
         }
 
         private void Kuglica19_Click(object sender, RoutedEventArgs e)
@@ -370,8 +406,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZelene(19);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica19.IsSelected = true;
             Kuglica19.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(19);
         }
 
         private void Kuglica20_Click(object sender, RoutedEventArgs e)
@@ -383,8 +421,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajRoze(20);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica20.IsSelected = true;
             Kuglica20.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(20);
         }
 
         private void Kuglica21_Click(object sender, RoutedEventArgs e)
@@ -396,8 +436,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajLjubicaste(21);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica21.IsSelected = true;
             Kuglica21.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(21);
         }
 
         private void Kuglica22_Click(object sender, RoutedEventArgs e)
@@ -409,8 +451,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajCrvene(22);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica22.IsSelected = true;
             Kuglica22.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(22);
         }
 
         private void Kuglica23_Click(object sender, RoutedEventArgs e)
@@ -422,8 +466,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZute(23);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica23.IsSelected = true;
             Kuglica23.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(23);
         }
 
         private void Kuglica24_Click(object sender, RoutedEventArgs e)
@@ -435,8 +481,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajPlave(24);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica24.IsSelected = true;
             Kuglica24.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(24);
         }
 
         private void Kuglica25_Click(object sender, RoutedEventArgs e)
@@ -448,8 +496,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajNarandzaste(25);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica25.IsSelected = true;
             Kuglica25.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(25);
         }
 
         private void Kuglica26_Click(object sender, RoutedEventArgs e)
@@ -461,8 +511,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZelene(26);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica26.IsSelected = true;
             Kuglica26.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(26);
         }
 
         private void Kuglica27_Click(object sender, RoutedEventArgs e)
@@ -474,8 +526,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajRoze(27);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica27.IsSelected = true;
             Kuglica27.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(27);
         }
 
         private void Kuglica28_Click(object sender, RoutedEventArgs e)
@@ -487,8 +541,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajLjubicaste(28);
                 return;
             }
+            if (_tiket.Brojevi.Count == 6) return;
             Kuglica28.IsSelected = true;
             Kuglica28.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(28);
         }
 
         private void Kuglica29_Click(object sender, RoutedEventArgs e)
@@ -500,13 +556,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajCrvene(29);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica49.IsSelected = true;
-                Kuglica49.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(49);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica29.IsSelected = true;
+            Kuglica20.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(29);
         }
 
         private void Kuglica30_Click(object sender, RoutedEventArgs e)
@@ -518,13 +571,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZute(30);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica30.IsSelected = true;
-                Kuglica30.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(30);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica30.IsSelected = true;
+            Kuglica30.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(30);
         }
 
         private void Kuglica31_Click(object sender, RoutedEventArgs e)
@@ -536,13 +586,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajPlave(31);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica31.IsSelected = true;
-                Kuglica31.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(31);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica31.IsSelected = true;
+            Kuglica31.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(31);
         }
 
         private void Kuglica32_Click(object sender, RoutedEventArgs e)
@@ -554,13 +601,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajNarandzaste(32);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica32.IsSelected = true;
-                Kuglica32.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(32);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica32.IsSelected = true;
+            Kuglica32.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(32);
         }
 
         private void Kuglica33_Click(object sender, RoutedEventArgs e)
@@ -572,13 +616,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZelene(33);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica33.IsSelected = true;
-                Kuglica33.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(33);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica33.IsSelected = true;
+            Kuglica33.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(33);
         }
 
         private void Kuglica34_Click(object sender, RoutedEventArgs e)
@@ -590,13 +631,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajRoze(34);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica34.IsSelected = true;
-                Kuglica34.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(34);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica34.IsSelected = true;
+            Kuglica34.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(34);
         }
 
         private void Kuglica35_Click(object sender, RoutedEventArgs e)
@@ -608,13 +646,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajLjubicaste(35);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica35.IsSelected = true;
-                Kuglica35.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(35);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica35.IsSelected = true;
+            Kuglica35.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(35);
         }
 
         private void Kuglica36_Click(object sender, RoutedEventArgs e)
@@ -626,13 +661,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajCrvene(36);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica36.IsSelected = true;
-                Kuglica36.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(36);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica36.IsSelected = true;
+            Kuglica36.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(36);
         }
 
         private void Kuglica37_Click(object sender, RoutedEventArgs e)
@@ -644,13 +676,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZute(37);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica37.IsSelected = true;
-                Kuglica37.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(37);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica37.IsSelected = true;
+            Kuglica37.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(37);
         }
 
         private void Kuglica38_Click(object sender, RoutedEventArgs e)
@@ -662,13 +691,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajPlave(38);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica38.IsSelected = true;
-                Kuglica38.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(38);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica38.IsSelected = true;
+            Kuglica38.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(38);
         }
 
         private void Kuglica39_Click(object sender, RoutedEventArgs e)
@@ -680,13 +706,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajNarandzaste(39);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica39.IsSelected = true;
-                Kuglica39.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(39);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica39.IsSelected = true;
+            Kuglica39.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(39);
         }
 
         private void Kuglica40_Click(object sender, RoutedEventArgs e)
@@ -698,13 +721,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajZelene(40);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica40.IsSelected = true;
-                Kuglica40.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(40);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica40.IsSelected = true;
+            Kuglica40.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(40);
         }
 
         private void Kuglica41_Click(object sender, RoutedEventArgs e)
@@ -716,13 +736,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajRoze(41);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica41.IsSelected = true;
-                Kuglica41.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(41);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica41.IsSelected = true;
+            Kuglica41.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(41);
         }
 
         private void Kuglica42_Click(object sender, RoutedEventArgs e)
@@ -734,13 +751,10 @@ namespace Bingo
                 _tiket = TiketFactory.DajLjubicaste(42);
                 return;
             }
-            foreach (Kuglice k in _kuglice)
-            {
-                if (_tiket.Brojevi.Count == 6) return;
-                Kuglica42.IsSelected = true;
-                Kuglica42.Background = Brushes.Gray;
-                _tiket.Brojevi.Add(42);
-            }
+            if (_tiket.Brojevi.Count == 6) return;
+            Kuglica42.IsSelected = true;
+            Kuglica42.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(42);
         }
 
         private void Kuglica43_Click(object sender, RoutedEventArgs e)
@@ -878,17 +892,15 @@ namespace Bingo
         private void Obicni_Click(object sender, RoutedEventArgs e)
         {
             _tiket = TiketFactory.DajNormalni(_tiket);
-            string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
-               " " + Convert.ToString(_tiket.Brojevi.Count);
-            MessageBox.Show(ispis);
+            //string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
+            //   " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
+            //   " " + Convert.ToString(_tiket.Brojevi.Count);
+            //MessageBox.Show(ispis);
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             _tiket.ObrisiBrojeve();
-            string ispis = Convert.ToString(_tiket.Brojevi.Count);
-            MessageBox.Show(ispis);
             foreach (Kuglice k in _kuglice)
             {
                 k.IsSelected = false;
