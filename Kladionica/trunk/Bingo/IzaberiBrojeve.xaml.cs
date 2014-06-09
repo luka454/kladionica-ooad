@@ -35,6 +35,7 @@ namespace Bingo
             this.Title = "Bingo";
             _kuglice = new List<Kuglice>();
             _tiket = new Tiket6();
+            _tiket.Brojevi.Capacity = 6;
             AktivirajCrvene = false;
             AktivirajLjubicaste=false;
             AktivirajNarandzaste=false;
@@ -677,6 +678,7 @@ namespace Bingo
             }
             Kuglica42.IsSelected = true;
             Kuglica42.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(42);
         }
 
         private void Kuglica43_Click(object sender, RoutedEventArgs e)
@@ -689,7 +691,8 @@ namespace Bingo
                 return;
             }
             Kuglica43.IsSelected = true;
-            Kuglica43.Background = Brushes.Gray;            
+            Kuglica43.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(43);
         }
 
         private void Kuglica44_Click(object sender, RoutedEventArgs e)
@@ -703,6 +706,7 @@ namespace Bingo
             }
             Kuglica44.IsSelected = true;
             Kuglica44.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(44);
         }
 
         private void Kuglica45_Click(object sender, RoutedEventArgs e)
@@ -716,6 +720,7 @@ namespace Bingo
             }
             Kuglica45.IsSelected = true;
             Kuglica45.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(45);
         }
 
         private void Kuglica46_Click(object sender, RoutedEventArgs e)
@@ -729,6 +734,7 @@ namespace Bingo
             }
             Kuglica46.IsSelected = true;
             Kuglica46.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(46);
         }
 
         private void Kuglica47_Click(object sender, RoutedEventArgs e)
@@ -742,6 +748,7 @@ namespace Bingo
             }
             Kuglica47.IsSelected = true;
             Kuglica47.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(47);
         }
 
         private void Kuglica48_Click(object sender, RoutedEventArgs e)
@@ -755,6 +762,7 @@ namespace Bingo
             }
             Kuglica48.IsSelected = true;
             Kuglica48.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(48);
         }
 
         private void Kuglica49_Click(object sender, RoutedEventArgs e)
@@ -768,6 +776,7 @@ namespace Bingo
             }
             Kuglica49.IsSelected = true;
             Kuglica49.Background = Brushes.Gray;
+            _tiket.Brojevi.Add(49);
         }
 
         private void Automatski_Click(object sender, RoutedEventArgs e)
@@ -791,7 +800,57 @@ namespace Bingo
                     }
                 }
             }
-            MessageBox.Show("radi");
+            string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
+               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
+               " " + Convert.ToString(_tiket.Brojevi.Count);
+            MessageBox.Show(ispis);
+        }
+
+        private void Obicni_Click(object sender, RoutedEventArgs e)
+        {
+            int brojac=0;
+            List<int> brojevi = new List<int>();
+            brojevi.Capacity = 6;
+            foreach (Kuglice k in _kuglice)
+                if (k.IsSelected) brojac++;
+            MessageBox.Show(Convert.ToString(brojac));
+            if (brojac != 6) {
+                MessageBox.Show("Morate unijeti 6 brojeva!");
+                return;
+            }
+            //foreach (Kuglice k in _kuglice)
+            //{
+            //    for (int i = 0; i < 49; i++)
+            //    {
+            //        if (k.IsSelected)
+            //        {
+            //            int index = i + 1;
+            //            brojevi.Add(index);
+            //        }
+            //    }
+            //}
+            _tiket.Brojevi = brojevi;
+            //_tiket = TiketFactory.DajNormalni(brojevi);
+            string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
+               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
+               " " + Convert.ToString(_tiket.Brojevi.Count);
+            MessageBox.Show(ispis);
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (Kuglice k in _kuglice)
+            {
+                k.IsSelected = false;
+                if (Grid.GetColumn(k) == 0) k.Background = Brushes.Red;
+                else if (Grid.GetColumn(k) == 1) k.Background = Brushes.Yellow;
+                else if (Grid.GetColumn(k) == 2) k.Background = Brushes.Blue;
+                else if (Grid.GetColumn(k) == 3) k.Background = Brushes.Orange;
+                else if (Grid.GetColumn(k) == 4) k.Background = Brushes.LimeGreen;
+                else if (Grid.GetColumn(k) == 5) k.Background = Brushes.HotPink;
+                else if (Grid.GetColumn(k) == 6) k.Background = Brushes.Indigo;
+                else return;
+            }
         }
 
     }
