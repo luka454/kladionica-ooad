@@ -558,7 +558,7 @@ namespace Bingo
             }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica29.IsSelected = true;
-            Kuglica20.Background = Brushes.Gray;
+            Kuglica29.Background = Brushes.Gray;
             _tiket.Brojevi.Add(29);
         }
 
@@ -892,10 +892,10 @@ namespace Bingo
         private void Obicni_Click(object sender, RoutedEventArgs e)
         {
             _tiket = TiketFactory.DajNormalni(_tiket);
-            //string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-            //   " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
-            //   " " + Convert.ToString(_tiket.Brojevi.Count);
-            //MessageBox.Show(ispis);
+            string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
+               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]) +
+               " " + Convert.ToString(_tiket.Brojevi.Count);
+            MessageBox.Show(ispis);
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
