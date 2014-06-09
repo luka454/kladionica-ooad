@@ -21,6 +21,7 @@ namespace Bingo
     public partial class IzaberiBrojeve : Window
     {
         public List<Kuglice> _kuglice { get; set; }
+        public List<Kuglice> _mojeKuglice { get; set; }
         public Tiket6 _tiket { get; set; }
         public bool AktivirajCrvene { get; set; }
         public bool AktivirajZute { get; set; }
@@ -29,11 +30,14 @@ namespace Bingo
         public bool AktivirajZelene { get; set; }
         public bool AktivirajRoze { get; set; }
         public bool AktivirajLjubicaste { get; set; }
+
         public IzaberiBrojeve()
         {
             InitializeComponent();
             this.Title = "Bingo";
             _kuglice = new List<Kuglice>();
+            _mojeKuglice = new List<Kuglice>();
+            _mojeKuglice.Capacity = 6;
             _tiket = new Tiket6();
             _tiket.Brojevi.Capacity = 6;
             AktivirajCrvene = false;
@@ -58,6 +62,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Crvene";
                 }
         }
 
@@ -69,6 +74,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Zute";
                 }
         }
 
@@ -80,6 +86,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Plave";
                 }
         }
 
@@ -91,6 +98,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Narandzaste";
                 }
         }
 
@@ -102,6 +110,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Zelene";
                 }
         }
 
@@ -113,6 +122,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Roze";
                 }
         }
 
@@ -124,6 +134,7 @@ namespace Bingo
                 {
                     k.Background = Brushes.Gray;
                     k.IsSelected = true;
+                    k.Boja = "Ljubicaste";
                 }
         }
 
@@ -140,6 +151,7 @@ namespace Bingo
             Kuglica1.IsSelected = true;
             Kuglica1.Background = Brushes.Gray;
             _tiket.Brojevi.Add(1);
+            _mojeKuglice.Add(Kuglica1);
         }
 
         private void Kuglica2_Click(object sender, RoutedEventArgs e)
@@ -155,6 +167,7 @@ namespace Bingo
             Kuglica2.IsSelected = true;
             Kuglica2.Background = Brushes.Gray;
             _tiket.Brojevi.Add(2);
+            _mojeKuglice.Add(Kuglica2);
         }
 
         private void Kuglica3_Click(object sender, RoutedEventArgs e)
@@ -170,6 +183,7 @@ namespace Bingo
             Kuglica3.IsSelected = true;
             Kuglica3.Background = Brushes.Gray;
             _tiket.Brojevi.Add(3);
+            _mojeKuglice.Add(Kuglica3);
         }
 
         private void Kuglica4_Click(object sender, RoutedEventArgs e)
@@ -185,6 +199,7 @@ namespace Bingo
             Kuglica4.IsSelected = true;
             Kuglica4.Background = Brushes.Gray;
             _tiket.Brojevi.Add(4);
+            _mojeKuglice.Add(Kuglica4);
         }
 
         private void Kuglica5_Click(object sender, RoutedEventArgs e)
@@ -200,6 +215,7 @@ namespace Bingo
             Kuglica5.IsSelected = true;
             Kuglica5.Background = Brushes.Gray;
             _tiket.Brojevi.Add(5);
+            _mojeKuglice.Add(Kuglica5);
         }
 
         private void Kuglica6_Click(object sender, RoutedEventArgs e)
@@ -215,6 +231,7 @@ namespace Bingo
             Kuglica6.IsSelected = true;
             Kuglica6.Background = Brushes.Gray;
             _tiket.Brojevi.Add(6);
+            _mojeKuglice.Add(Kuglica6);
         }
 
         private void Kuglica7_Click(object sender, RoutedEventArgs e)
@@ -230,6 +247,7 @@ namespace Bingo
             Kuglica7.IsSelected = true;
             Kuglica7.Background = Brushes.Gray;
             _tiket.Brojevi.Add(7);
+            _mojeKuglice.Add(Kuglica7);
         }
 
         private void Kuglica8_Click(object sender, RoutedEventArgs e)
@@ -245,6 +263,7 @@ namespace Bingo
             Kuglica8.IsSelected = true;
             Kuglica8.Background = Brushes.Gray;
             _tiket.Brojevi.Add(8);
+            _mojeKuglice.Add(Kuglica8);
         }
 
         private void Kuglica9_Click(object sender, RoutedEventArgs e)
@@ -260,6 +279,7 @@ namespace Bingo
             Kuglica9.IsSelected = true;
             Kuglica9.Background = Brushes.Gray;
             _tiket.Brojevi.Add(9);
+            _mojeKuglice.Add(Kuglica9);
         }
 
         private void Kuglica10_Click(object sender, RoutedEventArgs e)
@@ -275,6 +295,7 @@ namespace Bingo
             Kuglica10.IsSelected = true;
             Kuglica10.Background = Brushes.Gray;
             _tiket.Brojevi.Add(10);
+            _mojeKuglice.Add(Kuglica10);
         }
 
         private void Kuglica11_Click(object sender, RoutedEventArgs e)
@@ -290,6 +311,7 @@ namespace Bingo
             Kuglica11.IsSelected = true;
             Kuglica11.Background = Brushes.Gray;
             _tiket.Brojevi.Add(11);
+            _mojeKuglice.Add(Kuglica11);
         }
 
         private void Kuglica12_Click(object sender, RoutedEventArgs e)
@@ -305,6 +327,7 @@ namespace Bingo
             Kuglica12.IsSelected = true;
             Kuglica12.Background = Brushes.Gray;
             _tiket.Brojevi.Add(12);
+            _mojeKuglice.Add(Kuglica12);
         }
 
         private void Kuglica13_Click(object sender, RoutedEventArgs e)
@@ -320,6 +343,7 @@ namespace Bingo
             Kuglica13.IsSelected = true;
             Kuglica13.Background = Brushes.Gray;
             _tiket.Brojevi.Add(13);
+            _mojeKuglice.Add(Kuglica13);
         }
 
         private void Kuglica14_Click(object sender, RoutedEventArgs e)
@@ -335,6 +359,7 @@ namespace Bingo
             Kuglica14.IsSelected = true;
             Kuglica14.Background = Brushes.Gray;
             _tiket.Brojevi.Add(14);
+            _mojeKuglice.Add(Kuglica14);
         }
 
         private void Kuglica15_Click(object sender, RoutedEventArgs e)
@@ -350,6 +375,7 @@ namespace Bingo
             Kuglica15.IsSelected = true;
             Kuglica15.Background = Brushes.Gray;
             _tiket.Brojevi.Add(15);
+            _mojeKuglice.Add(Kuglica15);
         }
 
         private void Kuglica16_Click(object sender, RoutedEventArgs e)
@@ -365,6 +391,7 @@ namespace Bingo
             Kuglica16.IsSelected = true;
             Kuglica16.Background = Brushes.Gray;
             _tiket.Brojevi.Add(16);
+            _mojeKuglice.Add(Kuglica16);
         }
 
         private void Kuglica17_Click(object sender, RoutedEventArgs e)
@@ -380,6 +407,7 @@ namespace Bingo
             Kuglica17.IsSelected = true;
             Kuglica17.Background = Brushes.Gray;
             _tiket.Brojevi.Add(17);
+            _mojeKuglice.Add(Kuglica17);
         }
 
         private void Kuglica18_Click(object sender, RoutedEventArgs e)
@@ -395,6 +423,7 @@ namespace Bingo
             Kuglica18.IsSelected = true;
             Kuglica18.Background = Brushes.Gray;
             _tiket.Brojevi.Add(18);
+            _mojeKuglice.Add(Kuglica18);
         }
 
         private void Kuglica19_Click(object sender, RoutedEventArgs e)
@@ -410,6 +439,7 @@ namespace Bingo
             Kuglica19.IsSelected = true;
             Kuglica19.Background = Brushes.Gray;
             _tiket.Brojevi.Add(19);
+            _mojeKuglice.Add(Kuglica19);
         }
 
         private void Kuglica20_Click(object sender, RoutedEventArgs e)
@@ -425,6 +455,7 @@ namespace Bingo
             Kuglica20.IsSelected = true;
             Kuglica20.Background = Brushes.Gray;
             _tiket.Brojevi.Add(20);
+            _mojeKuglice.Add(Kuglica20);
         }
 
         private void Kuglica21_Click(object sender, RoutedEventArgs e)
@@ -440,6 +471,7 @@ namespace Bingo
             Kuglica21.IsSelected = true;
             Kuglica21.Background = Brushes.Gray;
             _tiket.Brojevi.Add(21);
+            _mojeKuglice.Add(Kuglica21);
         }
 
         private void Kuglica22_Click(object sender, RoutedEventArgs e)
@@ -455,6 +487,7 @@ namespace Bingo
             Kuglica22.IsSelected = true;
             Kuglica22.Background = Brushes.Gray;
             _tiket.Brojevi.Add(22);
+            _mojeKuglice.Add(Kuglica22);
         }
 
         private void Kuglica23_Click(object sender, RoutedEventArgs e)
@@ -470,6 +503,7 @@ namespace Bingo
             Kuglica23.IsSelected = true;
             Kuglica23.Background = Brushes.Gray;
             _tiket.Brojevi.Add(23);
+            _mojeKuglice.Add(Kuglica23);
         }
 
         private void Kuglica24_Click(object sender, RoutedEventArgs e)
@@ -485,6 +519,7 @@ namespace Bingo
             Kuglica24.IsSelected = true;
             Kuglica24.Background = Brushes.Gray;
             _tiket.Brojevi.Add(24);
+            _mojeKuglice.Add(Kuglica24);
         }
 
         private void Kuglica25_Click(object sender, RoutedEventArgs e)
@@ -500,6 +535,7 @@ namespace Bingo
             Kuglica25.IsSelected = true;
             Kuglica25.Background = Brushes.Gray;
             _tiket.Brojevi.Add(25);
+            _mojeKuglice.Add(Kuglica25);
         }
 
         private void Kuglica26_Click(object sender, RoutedEventArgs e)
@@ -515,6 +551,7 @@ namespace Bingo
             Kuglica26.IsSelected = true;
             Kuglica26.Background = Brushes.Gray;
             _tiket.Brojevi.Add(26);
+            _mojeKuglice.Add(Kuglica26);
         }
 
         private void Kuglica27_Click(object sender, RoutedEventArgs e)
@@ -530,6 +567,7 @@ namespace Bingo
             Kuglica27.IsSelected = true;
             Kuglica27.Background = Brushes.Gray;
             _tiket.Brojevi.Add(27);
+            _mojeKuglice.Add(Kuglica27);
         }
 
         private void Kuglica28_Click(object sender, RoutedEventArgs e)
@@ -545,6 +583,7 @@ namespace Bingo
             Kuglica28.IsSelected = true;
             Kuglica28.Background = Brushes.Gray;
             _tiket.Brojevi.Add(28);
+            _mojeKuglice.Add(Kuglica28);
         }
 
         private void Kuglica29_Click(object sender, RoutedEventArgs e)
@@ -560,6 +599,7 @@ namespace Bingo
             Kuglica29.IsSelected = true;
             Kuglica29.Background = Brushes.Gray;
             _tiket.Brojevi.Add(29);
+            _mojeKuglice.Add(Kuglica29);
         }
 
         private void Kuglica30_Click(object sender, RoutedEventArgs e)
@@ -575,6 +615,7 @@ namespace Bingo
             Kuglica30.IsSelected = true;
             Kuglica30.Background = Brushes.Gray;
             _tiket.Brojevi.Add(30);
+            _mojeKuglice.Add(Kuglica30);
         }
 
         private void Kuglica31_Click(object sender, RoutedEventArgs e)
@@ -590,6 +631,7 @@ namespace Bingo
             Kuglica31.IsSelected = true;
             Kuglica31.Background = Brushes.Gray;
             _tiket.Brojevi.Add(31);
+            _mojeKuglice.Add(Kuglica31);
         }
 
         private void Kuglica32_Click(object sender, RoutedEventArgs e)
@@ -605,6 +647,7 @@ namespace Bingo
             Kuglica32.IsSelected = true;
             Kuglica32.Background = Brushes.Gray;
             _tiket.Brojevi.Add(32);
+            _mojeKuglice.Add(Kuglica32);
         }
 
         private void Kuglica33_Click(object sender, RoutedEventArgs e)
@@ -620,6 +663,7 @@ namespace Bingo
             Kuglica33.IsSelected = true;
             Kuglica33.Background = Brushes.Gray;
             _tiket.Brojevi.Add(33);
+            _mojeKuglice.Add(Kuglica33);
         }
 
         private void Kuglica34_Click(object sender, RoutedEventArgs e)
@@ -635,6 +679,7 @@ namespace Bingo
             Kuglica34.IsSelected = true;
             Kuglica34.Background = Brushes.Gray;
             _tiket.Brojevi.Add(34);
+            _mojeKuglice.Add(Kuglica34);
         }
 
         private void Kuglica35_Click(object sender, RoutedEventArgs e)
@@ -650,6 +695,7 @@ namespace Bingo
             Kuglica35.IsSelected = true;
             Kuglica35.Background = Brushes.Gray;
             _tiket.Brojevi.Add(35);
+            _mojeKuglice.Add(Kuglica35);
         }
 
         private void Kuglica36_Click(object sender, RoutedEventArgs e)
@@ -665,6 +711,7 @@ namespace Bingo
             Kuglica36.IsSelected = true;
             Kuglica36.Background = Brushes.Gray;
             _tiket.Brojevi.Add(36);
+            _mojeKuglice.Add(Kuglica36);
         }
 
         private void Kuglica37_Click(object sender, RoutedEventArgs e)
@@ -680,6 +727,7 @@ namespace Bingo
             Kuglica37.IsSelected = true;
             Kuglica37.Background = Brushes.Gray;
             _tiket.Brojevi.Add(37);
+            _mojeKuglice.Add(Kuglica37);
         }
 
         private void Kuglica38_Click(object sender, RoutedEventArgs e)
@@ -695,6 +743,7 @@ namespace Bingo
             Kuglica38.IsSelected = true;
             Kuglica38.Background = Brushes.Gray;
             _tiket.Brojevi.Add(38);
+            _mojeKuglice.Add(Kuglica38);
         }
 
         private void Kuglica39_Click(object sender, RoutedEventArgs e)
@@ -710,6 +759,7 @@ namespace Bingo
             Kuglica39.IsSelected = true;
             Kuglica39.Background = Brushes.Gray;
             _tiket.Brojevi.Add(39);
+            _mojeKuglice.Add(Kuglica39);
         }
 
         private void Kuglica40_Click(object sender, RoutedEventArgs e)
@@ -725,6 +775,7 @@ namespace Bingo
             Kuglica40.IsSelected = true;
             Kuglica40.Background = Brushes.Gray;
             _tiket.Brojevi.Add(40);
+            _mojeKuglice.Add(Kuglica40);
         }
 
         private void Kuglica41_Click(object sender, RoutedEventArgs e)
@@ -740,6 +791,7 @@ namespace Bingo
             Kuglica41.IsSelected = true;
             Kuglica41.Background = Brushes.Gray;
             _tiket.Brojevi.Add(41);
+            _mojeKuglice.Add(Kuglica41);
         }
 
         private void Kuglica42_Click(object sender, RoutedEventArgs e)
@@ -755,6 +807,7 @@ namespace Bingo
             Kuglica42.IsSelected = true;
             Kuglica42.Background = Brushes.Gray;
             _tiket.Brojevi.Add(42);
+            _mojeKuglice.Add(Kuglica42);
         }
 
         private void Kuglica43_Click(object sender, RoutedEventArgs e)
@@ -770,6 +823,7 @@ namespace Bingo
             Kuglica43.IsSelected = true;
             Kuglica43.Background = Brushes.Gray;
             _tiket.Brojevi.Add(43);
+            _mojeKuglice.Add(Kuglica43);
         }
 
         private void Kuglica44_Click(object sender, RoutedEventArgs e)
@@ -785,6 +839,7 @@ namespace Bingo
             Kuglica44.IsSelected = true;
             Kuglica44.Background = Brushes.Gray;
             _tiket.Brojevi.Add(44);
+            _mojeKuglice.Add(Kuglica44);
         }
 
         private void Kuglica45_Click(object sender, RoutedEventArgs e)
@@ -800,6 +855,7 @@ namespace Bingo
             Kuglica45.IsSelected = true;
             Kuglica45.Background = Brushes.Gray;
             _tiket.Brojevi.Add(45);
+            _mojeKuglice.Add(Kuglica45);
         }
 
         private void Kuglica46_Click(object sender, RoutedEventArgs e)
@@ -815,6 +871,7 @@ namespace Bingo
             Kuglica46.IsSelected = true;
             Kuglica46.Background = Brushes.Gray;
             _tiket.Brojevi.Add(46);
+            _mojeKuglice.Add(Kuglica46);
         }
 
         private void Kuglica47_Click(object sender, RoutedEventArgs e)
@@ -830,6 +887,7 @@ namespace Bingo
             Kuglica47.IsSelected = true;
             Kuglica47.Background = Brushes.Gray;
             _tiket.Brojevi.Add(47);
+            _mojeKuglice.Add(Kuglica47);
         }
 
         private void Kuglica48_Click(object sender, RoutedEventArgs e)
@@ -845,6 +903,7 @@ namespace Bingo
             Kuglica48.IsSelected = true;
             Kuglica48.Background = Brushes.Gray;
             _tiket.Brojevi.Add(48);
+            _mojeKuglice.Add(Kuglica48);
         }
 
         private void Kuglica49_Click(object sender, RoutedEventArgs e)
@@ -859,7 +918,8 @@ namespace Bingo
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica49.IsSelected = true;
             Kuglica49.Background = Brushes.Gray;
-            _tiket.Brojevi.Add(49);        
+            _tiket.Brojevi.Add(49);
+            _mojeKuglice.Add(Kuglica49);
         }
 
         private void Automatski_Click(object sender, RoutedEventArgs e)
@@ -917,7 +977,43 @@ namespace Bingo
                 MessageBox.Show("Morate prvo kreirati tiket!");
                 return;
             }
-            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket);
+            for (int i = 0; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.Red;
+                _kuglice[i].Broj = i+1;
+            }
+            for (int i = 1; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.Yellow;
+                _kuglice[i].Broj = i + 1;
+            }
+            for (int i = 2; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.Blue;
+                _kuglice[i].Broj = i + 1;
+            }
+            for (int i = 3; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.Orange;
+                _kuglice[i].Broj = i + 1;
+            }
+            for (int i = 4; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.LimeGreen;
+                _kuglice[i].Broj = i + 1;
+            }
+            for (int i = 5; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.HotPink;
+                _kuglice[i].Broj = i + 1;
+            }
+            for (int i = 6; i < 49; i += 7)
+            {
+                _kuglice[i].Background = Brushes.Indigo;
+                _kuglice[i].Broj = i + 1;
+            }
+            _mojeKuglice.OrderBy(Kuglice => Kuglice.Broj);
+            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket, _kuglice, _mojeKuglice);
             this.Close();
             novi.Show();
         }
