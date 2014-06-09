@@ -17,10 +17,11 @@ namespace Bingo
     public class Kuglice : Button
     {
         public bool IsSelected { get; set; }
+        public string Boja { get; set; }
+        public int Broj { get; set; }
         public Kuglice() {
             IsSelected = false;
         }
-
     }
 
     
