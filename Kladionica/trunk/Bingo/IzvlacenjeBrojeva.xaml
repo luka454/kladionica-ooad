@@ -4,6 +4,7 @@
         xmlns:local="clr-namespace:Bingo" x:Class="Bingo.IzvlacenjeBrojeva"
         Title="IzvlacenjeBrojeva" Height="550" Width="850">
     <Grid x:Name="ekran" Background="LightSteelBlue">
+        <!--GRID1-->
         <Grid x:Name="grid1" Background="LightSteelBlue" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="600">
             <Grid.RowDefinitions>
                 <RowDefinition Height="35*"/>
@@ -21,10 +22,396 @@
                 <ColumnDefinition Width="80*"/>
                 <ColumnDefinition Width="80*"/>
             </Grid.ColumnDefinitions>
-            <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="600" Grid.ColumnSpan="5" Grid.RowSpan="7"/>
+            <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="600"/>
+            <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="0" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica2" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica3" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica4" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="3" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica5" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="4" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica6" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="5" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica7" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="6" Grid.Column="0">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica8" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="0" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica9" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica10" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica11" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="3" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica12" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="4" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica13" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="5" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica14" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="6" Grid.Column="1">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica15" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="0" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica16" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica17" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica18" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="3" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica19" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="4" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica20" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="5" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica21" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="6" Grid.Column="2">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica22" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="0" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica23" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica24" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica25" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="3" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica26" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="4" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica27" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="5" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica28" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="6" Grid.Column="3">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica29" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="0" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica30" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica31" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica32" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="3" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica33" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="4" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica34" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="5" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
+            <local:Kuglice x:Name="Kuglica35" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+                           Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="6" Grid.Column="4">
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse  Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </local:Kuglice>
         </Grid>
+        
+        <!--GRID2-->
         <Grid x:Name="grid2" Background="LightSteelBlue" HorizontalAlignment="Left" Height="247" Margin="600,0,0,0" VerticalAlignment="Top" Width="242">
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="40*"/>
                 <RowDefinition Height="50*"/>
@@ -39,7 +426,7 @@
             <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="247" VerticalAlignment="Top" Width="242" Grid.ColumnSpan="3" Margin="0,0,-86,0" Grid.RowSpan="3"/>
             <Rectangle Grid.ColumnSpan="3" Fill="CornflowerBlue" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" Stroke="Navy" VerticalAlignment="Top" Width="222"/>
             <Label Content="Vaši brojevi" HorizontalAlignment="Center" Margin="56,20,-36,0" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="51" Width="222" FontWeight="Medium" FontSize="20"/>
-            <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaA" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="0">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -50,7 +437,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="Kuglica2" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaB" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="1">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -61,7 +448,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="Kuglica3" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaC" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="2">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -72,7 +459,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="Kuglica4" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaD" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="0">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -83,7 +470,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="Kuglica5" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaE" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="1">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -94,7 +481,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-            <local:Kuglice x:Name="Kuglica6" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
+            <local:Kuglice x:Name="KuglicaF" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="2" Grid.Column="2">
                 <Button.Template>
                     <ControlTemplate TargetType="{x:Type Button}">

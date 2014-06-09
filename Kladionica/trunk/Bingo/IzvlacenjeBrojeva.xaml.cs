@@ -35,27 +35,30 @@ namespace Bingo
             this._mojeKuglice = _mojeKuglice;
             TrenutnaIgra.Tiket = _tiket;
             PostaviKuglice();
+            if (Grid.NameProperty.Name == "grid1")
+                foreach (Kuglice k in grid1.Children)
+                    k.Visibility = Visibility.Hidden;
         }
 
         private void PostaviKuglice()
         {
-            Kuglica1.Background = _mojeKuglice[0].Background;
-            Kuglica1.Content = _mojeKuglice[0].Content;
+            KuglicaA.Background = _mojeKuglice[0].Background;
+            KuglicaA.Content = _mojeKuglice[0].Content;
 
-            Kuglica2.Background = _mojeKuglice[1].Background;
-            Kuglica2.Content = _mojeKuglice[1].Content;
+            KuglicaB.Background = _mojeKuglice[1].Background;
+            KuglicaB.Content = _mojeKuglice[1].Content;
 
-            Kuglica3.Background = _mojeKuglice[2].Background;
-            Kuglica3.Content = _mojeKuglice[2].Content;
+            KuglicaC.Background = _mojeKuglice[2].Background;
+            KuglicaC.Content = _mojeKuglice[2].Content;
 
-            Kuglica4.Background = _mojeKuglice[3].Background;
-            Kuglica4.Content = _mojeKuglice[3].Content;
+            KuglicaD.Background = _mojeKuglice[3].Background;
+            KuglicaD.Content = _mojeKuglice[3].Content;
 
-            Kuglica5.Background = _mojeKuglice[4].Background;
-            Kuglica5.Content = _mojeKuglice[4].Content;
+            KuglicaE.Background = _mojeKuglice[4].Background;
+            KuglicaE.Content = _mojeKuglice[4].Content;
 
-            Kuglica6.Background = _mojeKuglice[5].Background;
-            Kuglica6.Content = _mojeKuglice[5].Content;
+            KuglicaF.Background = _mojeKuglice[5].Background;
+            KuglicaF.Content = _mojeKuglice[5].Content;
         }
     }
 }
