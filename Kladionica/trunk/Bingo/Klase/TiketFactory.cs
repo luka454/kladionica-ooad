@@ -21,22 +21,21 @@ namespace Bingo
         public static Tiket6 DajAutomatski()
         {       
             Tiket6 t = new Tiket6();
-            List<int> temp = new List<int>();
             Random rand = new Random();
-            int tempBroj;
+            List<int> temp = new List<int>();            
+            int tempBroj, br;
             for (int i = 1; i <= 49; i++)
                 temp.Add(i);
-            int granica = 49;
             for (int i = 0; i < 6; i++)
             {
-                int index = i;
-                tempBroj = rand.Next(0, granica--);
-                t.Brojevi[index] = temp[tempBroj];
+                tempBroj = rand.Next(0, temp.Count);
+                br = temp[tempBroj];
+                t.Brojevi.Insert(i, br);
                 temp.RemoveAt(tempBroj);
             }
             t.ProvjeriBrojeve();
             t.SortirajBrojeve();
-            Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
+            //Administrator.TrenutnaIgra.OdigraniTiketi.Add(t);
             return t;
         }
         // ima 7 kuglica svake boje, a samo 6 mogu na listic, pa je ovo broj koji zele izbaciti

@@ -865,12 +865,6 @@ namespace Bingo
         private void Automatski_Click(object sender, RoutedEventArgs e)
         {
             _tiket=TiketFactory.DajAutomatski();
-            //_tiket.Brojevi.Add(1);
-            //_tiket.Brojevi.Add(17);
-            //_tiket.Brojevi.Add(22);
-            //_tiket.Brojevi.Add(29);
-            //_tiket.Brojevi.Add(43);
-            //_tiket.Brojevi.Add(49);
             foreach (int broj in _tiket.Brojevi)
             {
                 for (int i = 1; i <= 49; i++)
