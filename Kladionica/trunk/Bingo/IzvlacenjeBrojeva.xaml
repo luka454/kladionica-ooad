@@ -409,7 +409,7 @@
                 </Button.Template>
             </local:Kuglice>
         </Grid>
-        
+
         <!--GRID2-->
         <Grid x:Name="grid2" Background="LightSteelBlue" HorizontalAlignment="Left" Height="247" Margin="600,0,0,0" VerticalAlignment="Top" Width="242">
             <Grid.RowDefinitions>
@@ -424,7 +424,7 @@
             </Grid.ColumnDefinitions>
 
             <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="247" VerticalAlignment="Top" Width="242" Grid.ColumnSpan="3" Margin="0,0,-86,0" Grid.RowSpan="3"/>
-            <Rectangle Grid.ColumnSpan="3" Fill="CornflowerBlue" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" Stroke="Navy" VerticalAlignment="Top" Width="222"/>
+            <Rectangle Grid.ColumnSpan="3" Fill="CornflowerBlue" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" Stroke="Navy" VerticalAlignment="Top" Width="222" StrokeThickness="2"/>
             <Label Content="Vaši brojevi" HorizontalAlignment="Center" Margin="56,20,-36,0" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="51" Width="222" FontWeight="Medium" FontSize="20"/>
             <local:Kuglice x:Name="KuglicaA" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="0">
@@ -493,12 +493,16 @@
                 </Button.Template>
             </local:Kuglice>
         </Grid>
-        
+
         <!--GRID3-->
         <Grid x:Name="grid3" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="242" Margin="600,247,0,0">
-            <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="242">
-                <Button Content="Sljedeći broj" Margin="76,40,74,167" Height="40" Width="80" FontWeight="Medium" Click="Sljedeci_Click"/>
-            </Border>
+            <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="242"/>
+            <Button Content="Sljedeći broj" Margin="10,21,121,185" FontWeight="Medium" Click="Sljedeci_Click"/>
+            <Button Content="Nova igra" Margin="126,21,10,185" FontWeight="Medium" Click="Novi_Click"/>
+            <Rectangle HorizontalAlignment="Left" Height="143" Margin="10,120,0,0" VerticalAlignment="Top" Width="222"
+                       Fill="CornflowerBlue" StrokeThickness="2" Stroke="Navy"/>
+            <Label x:Name="pobjeda" Content="Čestitamo!" HorizontalAlignment="Center" Margin="10,160,0,0" VerticalAlignment="Center" Height="118" Width="192"
+                   FontWeight="Medium" FontSize="36" Visibility="Hidden"/>
 
         </Grid>
 
