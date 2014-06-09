@@ -10,7 +10,12 @@ namespace Kladionica
     {
         private List<Tiket> _tiketi = new List<Tiket>();
         public ClanKluba(string i, string p, string u, int hp) : base(i, p, u, hp) { }
-
+        public ClanKluba(string _ime, string _prezime, string _username, string _pass, int _pin) : base(_ime, _prezime, _username) 
+        {
+            HashPassword = HashFunkcijaSifra(_pass);
+            Novac = 0;
+            PIN = _pin;
+        }
         public decimal Novac { get; set; }   
         public int PIN { get; set; }
 
@@ -28,8 +33,11 @@ namespace Kladionica
         public Boolean ProvjeriSifru(String pass) {
             return HashFunkcijaSifra(pass) == HashPassword;
         }
-        static public int HashFunkcijaSifra(String pass) {
-            return Convert.ToInt32(pass); 
+        public static int HashFunkcijaSifra(String lozinka)
+        {
+            int hash = 5381;
+            for (int i = 0; i < lozinka.Length; i++) hash = ((hash << 5) + hash) + lozinka[i];
+            return hash;
         }
         public void UplatiTiket(Tiket noviTiket, decimal pare) {
             noviTiket.Ulog = pare;

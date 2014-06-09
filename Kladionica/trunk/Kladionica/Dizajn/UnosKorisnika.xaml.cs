@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kladionica.BazaPodataka;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -38,8 +39,24 @@ namespace Kladionica
 
         private void PassCheckBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (PasswordBox.Password != PassCheckBox.Password) { }
+            if (PasswordBox.Password != PassCheckBox.Password) 
+            {
+                ErrorText.Foreground = Brushes.Red;
+                ErrorBorder.BorderBrush = Brushes.Red;
+                KreirajButton.IsEnabled = false;
+            }
+            else
+            {
+                ErrorText.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString("#00bbff");
+                ErrorBorder.BorderBrush = (SolidColorBrush)new BrushConverter().ConvertFromString("#00bbff");
+                KreirajButton.IsEnabled = true;
+            }
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
+            baza.create(new ClanKluba(ImeBox.Text, PrezimeBox.Text, UsernameBox.Text, PasswordBox.Password, Convert.ToInt32(PINBox.Text)));
         }
     }
 }

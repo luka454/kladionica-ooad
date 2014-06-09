@@ -49,5 +49,10 @@ namespace Kladionica.BazaPodataka
         {
             return new KoeficijentDAO();
         }
+
+        public ClanKlubaDAO getClanKlubaDao()
+        {
+            return new ClanKlubaDAO();
+        }
     }
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Kladionica.BazaPodataka.Interfejsi;
+using System.Globalization;
 
 namespace Kladionica.BazaPodataka
 {
@@ -15,14 +16,17 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("insert into ClanKluba(ime, prezime, username, hashpassword)" +
-                    " values( " + entity.Ime + ", " + entity.Prezime + ", " + entity.Username + ", " +
-                    entity.HashPassword + ")", DAL.Connection);
+                DAL.Connection.Open();
+                c = new MySqlCommand("insert into ClanKluba(Ime, Prezime, Username, HashPassworda, PIN, Novac)" +
+                " values( '" + entity.Ime + "', '" + entity.Prezime + "', '" + entity.Username + "', " +
+                entity.HashPassword + ", " + entity.PIN + ", " + entity.Novac.ToString(CultureInfo.InvariantCulture) + ")", DAL.Connection);
                 c.ExecuteNonQuery();
+                DAL.Connection.Close();
                 return c.LastInsertedId;
             }
             catch (Exception ex)
             {
+                System.Windows.MessageBox.Show(ex.Message);
                 throw ex;
             }
 

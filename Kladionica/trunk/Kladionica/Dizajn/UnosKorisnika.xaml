@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="530">
+      d:DesignHeight="567.91" d:DesignWidth="789.701">
     <ContentControl.Resources>
         <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
@@ -56,7 +56,7 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="40" />
+
             <RowDefinition Height="20" />
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
@@ -74,7 +74,7 @@
         <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Password:"/>
         <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Ponovi password:"/>
         <Label Style="{DynamicResource Labels}" Grid.Row="6" Grid.Column="1" Content="PIN:"/>
-        <Label Style="{DynamicResource Labels}" Grid.Row="7" Grid.Column="1" Content="JMBG:"/>
+
 
         <Grid Grid.Column="2" Grid.Row="1">
             <Border Style="{DynamicResource Borders}">
@@ -101,18 +101,18 @@
                 <PasswordBox x:Name="PassCheckBox" FontSize="18" BorderThickness="0" LostFocus="PassCheckBox_LostFocus"/>
             </Border>
         </Grid>
+        <Grid Grid.Column="3" Grid.Row="5" >
+            <Border x:Name="ErrorBorder" BorderThickness="2" Grid.Row="0" Grid.ColumnSpan="2" CornerRadius="20,20,20,20" BorderBrush="{DynamicResource Plava}" Height="30" Width="200" HorizontalAlignment="Left">
+                <TextBlock x:Name="ErrorText" Text="Neispravno ponovljen password" Foreground="{DynamicResource Plava}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold"/>
+            </Border>
+        </Grid>
         <Grid Grid.Column="2" Grid.Row="6">
             <Border Style="{DynamicResource Borders}">
                 <TextBox x:Name="PINBox" FontSize="18" BorderThickness="0" />
             </Border>
         </Grid>
-        <Grid Grid.Column="2" Grid.Row="7">
-            <Border Style="{DynamicResource Borders}">
-                <TextBox x:Name="JMBGBox" FontSize="18" BorderThickness="0" />
-            </Border>
-        </Grid>
-        <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="9" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Kreiraj" FontWeight="Bold"/>
-        <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="Button_Click"/>
+        <Button x:Name="KreirajButton" Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Kreiraj" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 
 </ContentControl>
