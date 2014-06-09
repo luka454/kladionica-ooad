@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Kladionica.BazaPodataka.Interfejsi;
+using System.Globalization;
 
 namespace Kladionica.BazaPodataka
 {
@@ -13,7 +14,8 @@ namespace Kladionica.BazaPodataka
         protected MySqlCommand c;
         public long create(Koeficijent entity)
         {
-            try
+            throw new Exception("Nije moguce koristiti bez ID-a igre");
+            /*   try
             {
                 DAL.Connection.Open();
                 c = new MySqlCommand("insert into Koeficijenti(tip, koeficijent)" +
@@ -25,6 +27,32 @@ namespace Kladionica.BazaPodataka
             }
             catch (Exception ex)
             {
+                System.Windows.MessageBox.Show(ex.Message);
+                throw ex;
+            }
+            finally
+            {
+                DAL.Connection.Close();
+            }*/
+        }
+
+        public long create(Koeficijent entity, long igraID = 0)
+        {
+            try
+            {
+                DAL.Connection.Open();
+
+                
+                string com = String.Format("INSERT INTO `kladionica`.`koeficijenti` (`ID`, `Tip`, `koeficijent`, `IgraID`) VALUES (NULL, '{0}', '{1}', '{2}')",
+                            entity.tip, entity.koeficijent.ToString(CultureInfo.InvariantCulture), igraID);
+                c = new MySqlCommand(com, DAL.Connection);
+                c.ExecuteNonQuery();
+
+                return c.LastInsertedId;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
                 throw ex;
             }
             finally
@@ -141,7 +169,11 @@ namespace Kladionica.BazaPodataka
                 MySqlDataReader r = c.ExecuteReader();
                 List<Koeficijent> koeficijenti = new List<Koeficijent>();
                 while (r.Read())
+                {
+                    
                     koeficijenti.Add(new Koeficijent(r.GetString("tip"), r.GetDecimal("koeficijent")));
+                   
+                }
                 r.Close();
                 return koeficijenti;
             }

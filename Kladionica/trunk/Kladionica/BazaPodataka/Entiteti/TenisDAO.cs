@@ -20,18 +20,27 @@ namespace Kladionica.BazaPodataka
                 //moguće greške sa smještanjem DATETIME u bazu
                 //rijašiti tako da DateTIme konverutjemo u string, a iz stringa u bazi u DateTime
                 //Ponude ID nije riješeno kako treba
+                string ponuda = "(select max(id) from ponude)";
                 c = new MySqlCommand("insert into Igre(Pocetak, StatusIgre, Naziv, IgreType_ID, Ponude_ID)" +
-                    " values( " + entity.Pocetak + ", " + codeStatus(entity.statusIgre) + ", " + entity.Naziv + ", " +
-                    2 + ", " + 0 + ")", DAL.Connection);
+                    " values( '" + entity.Pocetak.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + codeStatus(entity.statusIgre) + "', '" + entity.Naziv + "', " +
+                    2 + ", " + ponuda + ")", DAL.Connection);
                 c.ExecuteNonQuery();
 
                 long ID = c.LastInsertedId;
 
-                c = new MySqlCommand("insert into FudbalskeUtakmice(ID, PrviProtivnik, DrugiProtivnik, PrviPoenaSetova, DrugiPoenaSetova)" +
-                    " values( " + ID + ", " + entity.PrviProtivnik + ", " + entity.DrugiProtivnik + ", " +
+                c = new MySqlCommand("insert into Tenis(ID, PrviProtivnik, DrugiProtivnik, PrviPoenaSetova, DrugiPoenaSetova)" +
+                    " values( " + ID + ", '" + entity.PrviProtivnik + "', '" + entity.DrugiProtivnik + "', " +
                     entity.PrviPoenaSetova + ", " + entity.DrugiPoenaSetova + ")", DAL.Connection);
                 c.ExecuteNonQuery();
 
+                KoeficijentDAO k = DAL.Factory.getKoeficijentDAO();
+
+                DAL.Connection.Close();
+
+                foreach (var item in entity.koeficijenti)
+                {
+                    k.create(item, ID);
+                }
                 return ID;
             }
             catch (Exception ex)
@@ -43,7 +52,38 @@ namespace Kladionica.BazaPodataka
 
         private int codeStatus(StatusIgre statusIgre)
         {
-            throw new NotImplementedException();
+            switch (statusIgre)
+            {
+                case StatusIgre.NijePocela:
+                    return 0;
+                case StatusIgre.Obustavljena:
+                    return 1;
+                case StatusIgre.Odgodjena:
+                    return 2;
+                case StatusIgre.UToku:
+                    return 3;
+                case StatusIgre.Zavrsena:
+                    return 4;
+                default:
+                    return -1;
+            }
+        }
+
+        private StatusIgre encodeStatus(int p)
+        {
+            switch (p)
+            {
+                case 0:
+                    return StatusIgre.NijePocela;
+                case 1:
+                    return StatusIgre.Obustavljena;
+                case 2:
+                    return StatusIgre.Odgodjena;
+                case 3:
+                    return StatusIgre.UToku;
+                default:
+                    return StatusIgre.Zavrsena;
+            }
         }
 
         public Tenis read(Tenis entity)
@@ -62,7 +102,7 @@ namespace Kladionica.BazaPodataka
                 c.ExecuteNonQuery();
 
                
-                c = new MySqlCommand(String.Format("insert into FudbalskeUtakmice set PrviProtivnik={0}, DrugiProtivnik={1}, PrviPoeniSetova={2}, DrugiPoenaSetova={3} where id={4})",
+                c = new MySqlCommand(String.Format("insert into Tenis set PrviProtivnik={0}, DrugiProtivnik={1}, PrviPoeniSetova={2}, DrugiPoenaSetova={3} where id={4})",
                     entity.PrviProtivnik, entity.DrugiProtivnik, entity.PrviPoenaSetova, entity.DrugiPoenaSetova, entity.ID), DAL.Connection);
                 c.ExecuteNonQuery();
 
@@ -103,36 +143,57 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
+
                 c = new MySqlCommand("select * from Igre where id=" + id, DAL.Connection);
-                MySqlCommand c1 = new MySqlCommand("select * from FudbalskeUtakmice where id=" + id, DAL.Connection);
-                MySqlDataReader r = c.ExecuteReader(), r2 = c1.ExecuteReader();
-                if (r.Read() && r2.Read())
+                MySqlCommand c1 = new MySqlCommand("select * from Tenis where id=" + id, DAL.Connection);
+                MySqlDataReader r = c.ExecuteReader(), r2;
+
+                if (!r.Read()) return null;
+                DateTime t = r.GetDateTime("pocetak");
+                string naziv = r.GetString("Naziv");
+                int ID = r.GetInt32("ID");
+                StatusIgre s = encodeStatus(r.GetInt32("StatusIgre"));
+                r.Close();
+
+                r2 = c1.ExecuteReader();
+
+                if (r2.Read())
                 {
-                    int ID = r.GetInt32("ID");
-                    Tenis f = new Tenis(r.GetDateTime("Pocetak"), r.GetString("Naziv"),
-                            encodeStatus(r.GetInt32("StatusIgre")), r2.GetString("PrviProtivnik"),
+
+                    Tenis f = new Tenis(t, naziv, s, r2.GetString("PrviProtivnik"),
                             r2.GetString("DrugiProtivnik"), r2.GetInt32("PrviPoenaSetova"), r2.GetInt32("DrugiPoenaSetova"));
 
                     f.ID = ID;
+                    r2.Close();
+
+                    DAL.Connection.Close();
+                    f.koeficijenti = DAL.Factory.getKoeficijentDAO().getByIgraID(ID);
+
+                    DAL.Connection.Open();
 
                     return f;
                 }
                 else
+                {
+                    r2.Close();
                     return null;
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            finally
+            {
+                DAL.Connection.Close();
+            }
         }
 
-        private StatusIgre encodeStatus(int p)
-        {
-            throw new NotImplementedException();
-        }
 
         public List<Tenis> getAll()
         {
+            //vjerojatno ne radi potrebnno uraditi kao u primjeru ranije... usaglasiti otvaranja i zatvaranja
             try
             {
                 DAL.Connection.Open(); 

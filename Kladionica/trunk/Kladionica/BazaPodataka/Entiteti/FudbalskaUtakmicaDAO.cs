@@ -33,15 +33,27 @@ namespace Kladionica.BazaPodataka
                     entity.PoeniDomacin + ", " + entity.PoeniGost + ")", DAL.Connection);
                 c.ExecuteNonQuery();
 
+                KoeficijentDAO k = DAL.Factory.getKoeficijentDAO();
+
+                DAL.Connection.Close();
+
+                foreach (var item in entity.koeficijenti)
+                {
+                    
+                    k.create(item, ID);
+                }
                 return ID;
+
+
             }
             catch (Exception ex)
             {
+                System.Windows.MessageBox.Show(ex.Message);
                 throw ex;
             }
             finally
             {
-                DAL.Connection.Close();
+                
             }
 
         }
@@ -91,6 +103,7 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
                 c = new MySqlCommand(String.Format("update Igre set Pocetak={0}, StatusIgre={1}, Naziv={2}, IgreType_ID={3}, Ponude_ID={4} where id={5}",                  
                 entity.Pocetak,codeStatus(entity.statusIgre),entity.Naziv,1 ,0, entity.ID), DAL.Connection);
                 c.ExecuteNonQuery();
@@ -118,6 +131,8 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
+                DAL.Connection.Open();
+
                 int id = Convert.ToInt32(entity.ID);
                 c = new MySqlCommand("delete from Igre where id=" + id, DAL.Connection);
                 c.ExecuteNonQuery();
@@ -157,7 +172,8 @@ namespace Kladionica.BazaPodataka
                 if (r2.Read())
                 {
 
-                    FudbalskaUtakmica f = new FudbalskaUtakmica(t, naziv, s, r2.GetString("Domacin"), r2.GetString("Gost"), r2.GetInt32("PoeniDomacin"), r2.GetInt32("PoeniGost"));
+                    FudbalskaUtakmica f = new FudbalskaUtakmica(t, naziv, s, r2.GetString("Domacin"), r2.GetString("Gost"), 
+                        r2.GetInt32("PoeniDomacin"), r2.GetInt32("PoeniGost"));
 
                     f.ID = ID;
                     r2.Close();

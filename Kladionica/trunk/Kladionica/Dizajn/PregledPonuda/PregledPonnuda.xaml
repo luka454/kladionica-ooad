@@ -12,16 +12,7 @@
                 <StackPanel>
                     <TextBlock FontSize="22" FontWeight="Bold">Fudbalske utakmice</TextBlock>
                     <ListBox x:Name="fudbalkseUtakmice" Background="{Binding Background}" FontSize="18">
-                       <!-- <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Domacin}"></TextBlock>
-                                    <TextBlock Text=" - "></TextBlock>
-                                    <TextBlock Text="{Binding Gost}"></TextBlock>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                        -->
+                        
                     </ListBox>
                 </StackPanel>
             </Border>
@@ -29,8 +20,8 @@
             <Border Padding="10" Background="#FFF3ECCB" IsHitTestVisible="False">
                 <StackPanel>
                     <TextBlock FontSize="22" FontWeight="Bold">Tenis</TextBlock>
-                    <ListBox Background="{Binding Background}" FontSize="18">
-                        <ListBoxItem>Dinamo hajduk</ListBoxItem>
+                    <ListBox x:Name="Tenis" Background="{Binding Background}" FontSize="18">
+                        
                     </ListBox>
                 </StackPanel>
             </Border>

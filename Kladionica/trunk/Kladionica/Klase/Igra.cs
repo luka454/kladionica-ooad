@@ -23,6 +23,18 @@ namespace Kladionica
         }
         public abstract Boolean ProvjeriTip(String tip);
         public abstract Boolean ProvjeriJeLiDobitni(String tip);
+
+        public void dodajKoeficijent(Koeficijent k)
+        {
+            if (ProvjeriTip(k.tip) == false) throw new Exception("Neispravan tip");
+            foreach (var item in koeficijenti)
+            {
+                if(item == k) return;
+                if (item.tip == k.tip) throw new Exception("Postojeci tip vec postoji");
+            }
+
+            koeficijenti.Add(k);
+        }
     }
 
 }
