@@ -8,7 +8,7 @@
     <ScrollViewer>
         <StackPanel Orientation="Vertical">
            
-            <Border Padding="10" Background="#FFF5E5E5" IsHitTestVisible="False">
+            <Border x:Name="borderFU" Padding="10" Background="#FFF5E5E5" IsHitTestVisible="False">
                 <StackPanel>
                     <TextBlock FontSize="22" FontWeight="Bold">Fudbalske utakmice</TextBlock>
                     <ListBox x:Name="fudbalkseUtakmice" Background="{Binding Background}" FontSize="18">
@@ -17,7 +17,7 @@
                 </StackPanel>
             </Border>
 
-            <Border Padding="10" Background="#FFF3ECCB" IsHitTestVisible="False">
+            <Border x:Name="borderT" Padding="10" Background="#FFF3ECCB" IsHitTestVisible="False">
                 <StackPanel>
                     <TextBlock FontSize="22" FontWeight="Bold">Tenis</TextBlock>
                     <ListBox x:Name="Tenis" Background="{Binding Background}" FontSize="18">

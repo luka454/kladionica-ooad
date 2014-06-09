@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Kladionica.Dizajn.PregledPonuda;
+
 namespace Kladionica
 {
     /// <summary>
@@ -21,9 +22,10 @@ namespace Kladionica
     public partial class PregledPonuda : ContentControl
     {
         Ponuda _ponuda;
-        public PregledPonuda(Ponuda ponudaZaPrikaz)
+        public PregledPonuda(Ponuda ponudaZaPrikaz, string filter = "")
         {
             InitializeComponent();
+            filter = filter.ToLower();
 
             _ponuda = ponudaZaPrikaz;
             foreach (var item in _ponuda.IgreUPonudi)
@@ -31,13 +33,21 @@ namespace Kladionica
                // MessageBox.Show(item.Naziv);
                 if (item is FudbalskaUtakmica)
                 {
-                    fudbalkseUtakmice.Items.Add(new FUListBoxItem((FudbalskaUtakmica)item));
+                    
+                    FudbalskaUtakmica u = (FudbalskaUtakmica)item;
+                    string str = String.Format("{0} {3} {1} {2} ", item.ID, u.Domacin, u.Gost, u.Naziv).ToLower(); ;
+                    if (str.Contains(filter))
+                        fudbalkseUtakmice.Items.Add(new FUListBoxItem(u));
+                    
+                    
                 }
                     
                 else if (item is Tenis)
                 {
-                    
-                    Tenis.Items.Add(new TenisListBoxItem((Tenis)item));
+                    Tenis t = (Tenis)item;
+                    string str = String.Format("{0} {3} {1} {2} ", item.ID, t.PrviProtivnik, t.DrugiProtivnik, t.Naziv).ToLower();
+                    if (str.Contains(filter))
+                        Tenis.Items.Add(new TenisListBoxItem(t));
                 }
             }
 

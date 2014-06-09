@@ -38,12 +38,9 @@ namespace Kladionica
             
             Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(new DateTime(2014,6,6));
             
-            PregledPonuda pregled = new PregledPonuda(p);
+            PonudeRadnikMeni pregled = new PonudeRadnikMeni();
             
             Stranica.Content = pregled;
-            
-            
-            
            
         }
 

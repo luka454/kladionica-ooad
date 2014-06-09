@@ -86,7 +86,7 @@
                             </Grid.RowDefinitions>
                             <Image Source="../ico/ponuda.png" Margin="0,10,0,0"/>
                             <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="17"
-                                       Foreground="White">Dnevna ponuda</TextBlock>
+                                       Foreground="White">Ponude</TextBlock>
                         </Grid>
                     </Button>
 

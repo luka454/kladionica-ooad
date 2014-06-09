@@ -140,7 +140,34 @@ namespace Kladionica.BazaPodataka
             }
             
         }
+        public List<Ponuda> getAllWithoutGames()
+        {
+            try
+            {
+                DAL.Connection.Open();
+                List<Ponuda> ponude = new List<Ponuda>();
+                c = new MySqlCommand("select * from Ponude", DAL.Connection);
 
+                MySqlDataReader r = c.ExecuteReader();
+                while (r.Read())
+                {
+                    Ponuda ponuda = new Ponuda(r.GetDateTime("datum"));
+                    ponuda.ID = r.GetInt32("id");
+
+                   
+                    ponude.Add(ponuda);
+                    
+                }
+                DAL.Connection.Close();
+                r.Close();
+
+                return ponude;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public Ponuda getByExample(DateTime datum)
         {
             try
@@ -163,14 +190,12 @@ namespace Kladionica.BazaPodataka
 
                 
                 ponuda.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(ponuda);
-                System.Windows.MessageBox.Show("Ima igara u ponudi: " + ponuda.IgreUPonudi.Count.ToString());
                 return ponuda;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            
         }
     }
 }

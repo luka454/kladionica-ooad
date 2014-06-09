@@ -134,7 +134,6 @@ namespace Kladionica.BazaPodataka
                 r.Close();
                 DAL.Connection.Close();
 
-                System.Windows.MessageBox.Show("idovi.count = " + Idovi.Count);
                 for (int i = 0; i < Idovi.Count; i++)
                 {
                     switch (type_idovi[i])
@@ -147,7 +146,6 @@ namespace Kladionica.BazaPodataka
                         case 2: //teniska utakmica
                            
                             Tenis t = DAL.Factory.getTenisDao().getById(Idovi[i]);
-                            System.Windows.MessageBox.Show(Idovi[i].ToString() + (t == null).ToString());
                             lista.Add(t);
                             break;
                     }
