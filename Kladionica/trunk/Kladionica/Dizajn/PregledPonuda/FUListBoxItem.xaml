@@ -9,7 +9,7 @@
              HorizontalContentAlignment="Stretch"
              VerticalContentAlignment="Stretch"
              
-             x:Name="Ovo"
+             x:Name="Ovo" IsTabStop="False"
              >
     
     <Grid >
@@ -47,10 +47,8 @@
                 <TextBlock FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center">2</TextBlock>
                 <TextBlock FontSize="14" x:Name="K2" HorizontalAlignment="Center">0</TextBlock>
             </StackPanel>
-            
-           
         </StackPanel>
 
-        <TextBlock x:Name="Status" FontSize="14" Grid.Column="2" HorizontalAlignment="Right"></TextBlock>
+        <TextBlock x:Name="Status" FontSize="14" Grid.Column="2" HorizontalAlignment="Right" Margin="2"></TextBlock>
     </Grid>
 </ListBoxItem>
