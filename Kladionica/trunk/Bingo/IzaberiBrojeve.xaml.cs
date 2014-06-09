@@ -1012,7 +1012,10 @@ namespace Bingo
                 _kuglice[i].Background = Brushes.Indigo;
                 _kuglice[i].Broj = i + 1;
             }
-            _mojeKuglice.OrderBy(Kuglice => Kuglice.Broj);
+            _mojeKuglice=_mojeKuglice.OrderBy(Kuglice => Kuglice.Broj).ToList();
+            string ispis = Convert.ToString(_mojeKuglice[0].Broj) + " " + Convert.ToString(_mojeKuglice[1].Broj) + " " + Convert.ToString(_mojeKuglice[2].Broj) + " " +
+                Convert.ToString(_mojeKuglice[3].Broj) + " " + Convert.ToString(_mojeKuglice[4].Broj) + " " + Convert.ToString(_mojeKuglice[5].Broj);
+            MessageBox.Show(ispis);
             IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket, _kuglice, _mojeKuglice);
             this.Close();
             novi.Show();
