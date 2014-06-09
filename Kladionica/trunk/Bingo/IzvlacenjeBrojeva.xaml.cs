@@ -100,11 +100,12 @@ namespace Bingo
                             _kuglice[i].Background = Brushes.Indigo;
                             break;
                     }
+                    if (_kuglice[34].Visibility == Visibility.Visible)
+                        if (TrenutnaIgra.Tiket.JelDobitni())
+                            pobjeda.Visibility = Visibility.Visible;
                     return;
                 }
-            }
-            if (TrenutnaIgra.Tiket.JelDobitni())
-                pobjeda.Visibility = Visibility.Visible;
+            }            
         }
 
         private void Novi_Click(object sender, RoutedEventArgs e)

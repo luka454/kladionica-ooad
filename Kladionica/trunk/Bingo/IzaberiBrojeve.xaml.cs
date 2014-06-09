@@ -1129,9 +1129,6 @@ namespace Bingo
                     if (broj == _kuglice[i].Broj)
                         _mojeKuglice.Add(_kuglice[i]);
             }
-            string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]);
-            MessageBox.Show(ispis);
         }
 
         private void Obicni_Click(object sender, RoutedEventArgs e)
@@ -1140,10 +1137,6 @@ namespace Bingo
                 MessageBox.Show("Morate unijeti 6 brojeva!");
                 return;
             }
-            _tiket = TiketFactory.DajNormalni(_tiket);
-            string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
-               " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]);
-            MessageBox.Show(ispis);
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
