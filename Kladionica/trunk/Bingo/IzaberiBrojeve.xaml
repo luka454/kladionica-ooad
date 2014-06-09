@@ -564,25 +564,25 @@
             <!--POCETAK BUTTONa-->
             <Button x:Name="CrveneButton" Content="Crvene" HorizontalAlignment="Left" Margin="5,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="CrveneButton_Click"/>
-            <Button x:Name="ZuteButton" Content="Zute" HorizontalAlignment="Left" Margin="9,20,0,0" VerticalAlignment="Top" 
+            <Button x:Name="ZuteButton" Content="Žute" HorizontalAlignment="Left" Margin="9,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="ZuteButton_Click" Grid.Column="1"/>
             <Button x:Name="PlaveButton" Content="Plave" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="PlaveButton_Click" Grid.Column="2"/>
-            <Button x:Name="NarandzasteButton" Content="Narandzaste" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" 
+            <Button x:Name="NarandzasteButton" Content="Narandžaste" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="NarandzasteButton_Click" Grid.Column="3"/>
             <Button x:Name="ZeleneButton" Content="Zelene" HorizontalAlignment="Left" Margin="12,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="ZeleneButton_Click" Grid.Column="4"/>
             <Button x:Name="RozeButton" Content="Roze" HorizontalAlignment="Left" Margin="12,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="RozeButton_Click" Grid.Column="5"/>
-            <Button x:Name="LjubicasteButton" Content="Ljubicaste" HorizontalAlignment="Left" Margin="11,20,0,0" VerticalAlignment="Top" 
+            <Button x:Name="LjubicasteButton" Content="Ljubičaste" HorizontalAlignment="Left" Margin="11,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="LjubicasteButton_Click" Grid.Column="6"/>
             <Button Content="Automatski" Grid.Column="7" HorizontalAlignment="Left" Margin="39,93,0,0" Grid.Row="1" VerticalAlignment="Top"
                     Height="35" Width="80" FontWeight="Medium" Click="Automatski_Click"/>
-            <Button Content="Obicni tiket" Grid.Column="7" HorizontalAlignment="Left" Margin="39,163,0,0" Grid.Row="1" VerticalAlignment="Top"
+            <Button Content="Obični tiket" Grid.Column="7" HorizontalAlignment="Left" Margin="39,163,0,0" Grid.Row="1" VerticalAlignment="Top"
                     Height="35" Width="80" FontWeight="Medium" Click="Obicni_Click"/>
             <Button Content="Reset" Grid.Column="7" HorizontalAlignment="Left" Margin="39,233,0,0" Grid.Row="1" VerticalAlignment="Top"
                     Height="35" Width="80" FontWeight="Medium" Click="Reset_Click"/>
-            <Button Content="Zapocni igru" Grid.Column="7" HorizontalAlignment="Left" Margin="39,303,0,0" Grid.Row="1" VerticalAlignment="Top"
+            <Button Content="Započni igru" Grid.Column="7" HorizontalAlignment="Left" Margin="39,303,0,0" Grid.Row="1" VerticalAlignment="Top"
                     Height="35" Width="80" FontWeight="Medium" Click="Zapocni_Click"/>
         </Grid>
 

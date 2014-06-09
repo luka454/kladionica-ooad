@@ -917,7 +917,7 @@ namespace Bingo
                 MessageBox.Show("Morate prvo kreirati tiket!");
                 return;
             }
-            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva();
+            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket);
             this.Close();
             novi.Show();
         }
