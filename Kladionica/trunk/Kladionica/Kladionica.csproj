@@ -85,8 +85,11 @@
     <Compile Include="BazaPodataka\Entiteti\TenisDAO.cs" />
     <Compile Include="BazaPodataka\Interfejsi\IDaoCrud.cs" />
     <Compile Include="BazaPodataka\Entiteti\TransakcijaDAO.cs" />
-    <Compile Include="Dizajn\PregledPonuda\FUNijePocelo.xaml.cs">
-      <DependentUpon>FUNijePocelo.xaml</DependentUpon>
+    <Compile Include="Dizajn\PregledPonuda\TenisListBoxItem.xaml.cs">
+      <DependentUpon>TenisListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dizajn\PregledPonuda\FUListBoxItem.xaml.cs">
+      <DependentUpon>FUListBoxItem.xaml</DependentUpon>
     </Compile>
     <Compile Include="Dizajn\PregledPonuda\PregledPonnuda.xaml.cs">
       <DependentUpon>PregledPonnuda.xaml</DependentUpon>
@@ -145,7 +148,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Dizajn\PregledPonuda\FUNijePocelo.xaml">
+    <Page Include="Dizajn\PregledPonuda\TenisListBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Dizajn\PregledPonuda\FUListBoxItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

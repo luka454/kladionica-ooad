@@ -26,14 +26,21 @@ namespace Kladionica
             InitializeComponent();
 
             _ponuda = ponudaZaPrikaz;
-            List<FudbalskaUtakmica> fu = new List<FudbalskaUtakmica>();
             foreach (var item in _ponuda.IgreUPonudi)
             {
+               // MessageBox.Show(item.Naziv);
                 if (item is FudbalskaUtakmica)
                 {
-                    fudbalkseUtakmice.Items.Add(new FUNijePocelo((FudbalskaUtakmica)item));
+                    fudbalkseUtakmice.Items.Add(new FUListBoxItem((FudbalskaUtakmica)item));
+                }
+                    
+                else if (item is Tenis)
+                {
+                    
+                    Tenis.Items.Add(new TenisListBoxItem((Tenis)item));
                 }
             }
+
             
            
         }

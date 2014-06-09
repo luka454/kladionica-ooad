@@ -1,0 +1,56 @@
+﻿<ListBoxItem x:Class="Kladionica.Dizajn.PregledPonuda.FUListBoxItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             HorizontalContentAlignment="Stretch"
+             VerticalContentAlignment="Stretch"
+             
+             x:Name="Ovo"
+             >
+    
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+       
+        <TextBlock x:Name="natpis"  FontWeight="SemiBold" FontSize="18" HorizontalAlignment="Left" ></TextBlock>
+        <TextBlock x:Name="vrijeme" Grid.Row="1" FontSize="14" HorizontalAlignment="Left"></TextBlock>
+        
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.RowSpan="2" HorizontalAlignment="Center">
+            <StackPanel Orientation="Vertical" Margin="5,2" HorizontalAlignment="Center">
+                <TextBlock FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center">1</TextBlock>
+                <TextBlock FontSize="14" x:Name="K1" HorizontalAlignment="Center">0</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5,2" HorizontalAlignment="Center">
+                <TextBlock FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center">1x</TextBlock>
+                <TextBlock FontSize="14" x:Name="K1x" HorizontalAlignment="Center">0</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5,2" HorizontalAlignment="Center">
+                <TextBlock FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center">x</TextBlock>
+                <TextBlock FontSize="14" x:Name="Kx" HorizontalAlignment="Center">0</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5,2" HorizontalAlignment="Center">
+                <TextBlock FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center">x2</TextBlock>
+                <TextBlock FontSize="14" x:Name="Kx2" HorizontalAlignment="Center">0</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5,2" HorizontalAlignment="Center">
+                <TextBlock FontSize="14" FontWeight="SemiBold" HorizontalAlignment="Center">2</TextBlock>
+                <TextBlock FontSize="14" x:Name="K2" HorizontalAlignment="Center">0</TextBlock>
+            </StackPanel>
+            
+           
+        </StackPanel>
+
+        <TextBlock x:Name="Status" FontSize="14" Grid.Column="2" HorizontalAlignment="Right"></TextBlock>
+    </Grid>
+</ListBoxItem>

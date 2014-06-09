@@ -12,7 +12,7 @@ namespace Kladionica
         public String DrugiProtivnik { get; set; }
         public int PrviPoenaSetova { get; set; }
         public int DrugiPoenaSetova { get; set; }
-        public Tenis(DateTime p, string n, StatusIgre si, string pp, string dp, int pps, int dps) : base(p, n, si)
+        public Tenis(DateTime p, string n, StatusIgre si, string pp, string dp, int pps = 0, int dps = 0) : base(p, n, si)
         {
             PrviProtivnik = pp;
             DrugiProtivnik = dp;
@@ -38,16 +38,18 @@ namespace Kladionica
         //ne moze ovo ja mislim samo sa setovima u tenisu
         public override bool ProvjeriTip(String tip)
         {
-            foreach (Koeficijent k in koeficijenti) if (tip == k.tip) return true;
-            return false;
+            return (tip == "1" || tip == "2");
         }
         
         public override bool ProvjeriJeLiDobitni(String tip)
         {
-            /* ovo sam zakomentirala, jer se ne moze buildat zbog ovog k.Dobitni
-            foreach (Koeficijent k in koeficijenti) if (tip == k.tip) return k.Dobitni;
-            throw new Exception("Nije validan tip!");*/
-            return true;
+            if (tip == "1")
+                return PrviPoenaSetova > DrugiPoenaSetova;
+            else if (tip == "2")
+                return DrugiPoenaSetova > PrviPoenaSetova;
+            else
+                throw new Exception("Odigrani tip nije validan");
+
         }
     }
 }

@@ -161,8 +161,9 @@ namespace Kladionica.BazaPodataka
                 DAL.Connection.Close();
                 r.Close();
 
-                ponuda.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(ponuda);
                 
+                ponuda.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(ponuda);
+                System.Windows.MessageBox.Show("Ima igara u ponudi: " + ponuda.IgreUPonudi.Count.ToString());
                 return ponuda;
             }
             catch (Exception ex)
