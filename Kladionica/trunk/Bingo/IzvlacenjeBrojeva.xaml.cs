@@ -47,22 +47,11 @@ namespace Bingo
 
         private void PostaviKuglice()
         {
-            //
             KuglicaA.Content = _mojeKuglice[0].Content;
-
-            //KuglicaB.Background = _mojeKuglice[1].Background;
             KuglicaB.Content = _mojeKuglice[1].Content;
-
-            //KuglicaC.Background = _mojeKuglice[2].Background;
             KuglicaC.Content = _mojeKuglice[2].Content;
-
-            //KuglicaD.Background = _mojeKuglice[3].Background;
             KuglicaD.Content = _mojeKuglice[3].Content;
-
-            //KuglicaE.Background = _mojeKuglice[4].Background;
             KuglicaE.Content = _mojeKuglice[4].Content;
-
-            //KuglicaF.Background = _mojeKuglice[5].Background;
             KuglicaF.Content = _mojeKuglice[5].Content;
         }
 
@@ -114,6 +103,15 @@ namespace Bingo
                     return;
                 }
             }
+            if (TrenutnaIgra.Tiket.JelDobitni())
+                pobjeda.Visibility = Visibility.Visible;
+        }
+
+        private void Novi_Click(object sender, RoutedEventArgs e)
+        {
+            IzaberiBrojeve novi = new IzaberiBrojeve();
+            this.Close();
+            novi.Show();
         }
     }
 }
