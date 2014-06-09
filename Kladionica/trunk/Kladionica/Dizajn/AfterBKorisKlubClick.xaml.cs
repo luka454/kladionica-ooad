@@ -41,5 +41,10 @@ namespace Kladionica
             RegistrujKorisnika p = new RegistrujKorisnika();
             p.Show();
         }
+
+        private void StanjeRacuna_Click(object sender, RoutedEventArgs e)
+        {
+            _c.Content = new StanjeRacuna();
+        }
     }
 }

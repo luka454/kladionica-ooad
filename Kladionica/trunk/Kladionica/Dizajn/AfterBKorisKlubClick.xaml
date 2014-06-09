@@ -70,7 +70,7 @@
                 <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="White"><Run Text="Dodaj tiket"/></TextBlock>
             </Grid>
         </Button>
-        <Button x:Name = "StanjeRacuna" Grid.Row="1" Grid.Column="1" Width="200" Height="150" Style="{DynamicResource DugmeZeleno}">
+        <Button x:Name = "StanjeRacuna" Grid.Row="1" Grid.Column="1" Width="200" Height="150" Style="{DynamicResource DugmeZeleno}" Click="StanjeRacuna_Click">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="8*"/>

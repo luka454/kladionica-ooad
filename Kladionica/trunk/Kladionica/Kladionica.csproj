@@ -118,6 +118,9 @@
     <Compile Include="Dizajn\RegistrujKorisnika.xaml.cs">
       <DependentUpon>RegistrujKorisnika.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dizajn\StanjeRacuna.xaml.cs">
+      <DependentUpon>StanjeRacuna.xaml</DependentUpon>
+    </Compile>
     <Page Include="Dizajn\AfterBKorisKlubClick.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dizajn\RegistrujKorisnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\StanjeRacuna.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
