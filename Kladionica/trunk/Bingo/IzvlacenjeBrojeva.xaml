@@ -22,7 +22,7 @@
                 <ColumnDefinition Width="80*"/>
                 <ColumnDefinition Width="80*"/>
             </Grid.ColumnDefinitions>
-            <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="600"/>
+            <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="520" VerticalAlignment="Top" Width="600" Grid.RowSpan="7" Grid.ColumnSpan="5"/>
             <local:Kuglice x:Name="Kuglica1" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Red"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="0" Grid.Column="0">
                 <Button.Template>
@@ -492,10 +492,13 @@
                     </ControlTemplate>
                 </Button.Template>
             </local:Kuglice>
-
         </Grid>
+        
+        <!--GRID3-->
         <Grid x:Name="grid3" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="242" Margin="600,247,0,0">
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="242"/>
+            <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="273" VerticalAlignment="Top" Width="242">
+                <Button Content="Sljedeći broj" Margin="76,40,74,167" Height="40" Width="80" FontWeight="Medium" Click="Sljedeci_Click"/>
+            </Border>
 
         </Grid>
 

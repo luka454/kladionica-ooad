@@ -1013,7 +1013,7 @@ namespace Bingo
                 _kuglice[i].Broj = i + 1;
             }
             _mojeKuglice=_mojeKuglice.OrderBy(Kuglice => Kuglice.Broj).ToList();
-            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket, _kuglice, _mojeKuglice);
+            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket, _mojeKuglice);
             this.Close();
             novi.Show();
         }

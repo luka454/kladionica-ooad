@@ -26,19 +26,22 @@ namespace Bingo
         {
             InitializeComponent();
         }
-        public IzvlacenjeBrojeva(Tiket6 _tiket, List<Kuglice> _kuglice, List<Kuglice> _mojeKuglice)
+        public IzvlacenjeBrojeva(Tiket6 _tiket, List<Kuglice> _mojeKuglice)
         {
             InitializeComponent();
             TrenutnaIgra = new Igra49();
             this.Title = "Bingo";
-            this._kuglice = _kuglice;
             this._mojeKuglice = _mojeKuglice;
+            _kuglice = new List<Kuglice>();
             TrenutnaIgra.Tiket = _tiket;
             PostaviKuglice();
             foreach (var item in grid1.Children)
             {
                 if (item is Kuglice)
+                {
+                    _kuglice.Add((Kuglice)item);
                     ((Kuglice)item).Visibility = Visibility.Hidden;
+                }
             }
         }
 
@@ -61,6 +64,46 @@ namespace Bingo
 
             KuglicaF.Background = _mojeKuglice[5].Background;
             KuglicaF.Content = _mojeKuglice[5].Content;
+        }
+
+        private void Sljedeci_Click(object sender, RoutedEventArgs e)
+        {
+            int broj = TrenutnaIgra.DajSljedeciBroj();
+            for (int i = 0; i < 35; i++)
+            {
+                if (_kuglice[i].Visibility == Visibility.Hidden)
+                {
+                    _kuglice[i].Visibility = Visibility.Visible;
+                    _kuglice[i].Broj = broj;
+                    _kuglice[i].Content = broj;
+                    _kuglice[i].OdrediBoju(broj);
+                    switch (_kuglice[i].Boja)
+                    {
+                        case "Crvene":
+                            _kuglice[i].Background = Brushes.Red;
+                            break;
+                        case "Zute":
+                            _kuglice[i].Background = Brushes.Yellow;
+                            break;
+                        case "Plave":
+                            _kuglice[i].Background = Brushes.Blue;
+                            break;
+                        case "Narandzaste":
+                            _kuglice[i].Background = Brushes.Orange;
+                            break;
+                        case "Zelene":
+                            _kuglice[i].Background = Brushes.LimeGreen;
+                            break;
+                        case "Roze":
+                            _kuglice[i].Background = Brushes.HotPink;
+                            break;
+                        case "Ljubicaste":
+                            _kuglice[i].Background = Brushes.Indigo;
+                            break;
+                    }
+                    return;
+                }
+            }
         }
     }
 }
