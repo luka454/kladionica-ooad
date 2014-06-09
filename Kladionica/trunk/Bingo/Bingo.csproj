@@ -56,12 +56,18 @@
     <Compile Include="IzaberiBrojeve.xaml.cs">
       <DependentUpon>IzaberiBrojeve.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Klase\Admin.cs" />
+    <Compile Include="IzvlacenjeBrojeva.xaml.cs">
+      <DependentUpon>IzvlacenjeBrojeva.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Igra.cs" />
     <Compile Include="Klase\ITiket.cs" />
     <Compile Include="Klase\Igra49.cs" />
     <Compile Include="Klase\TiketFactory.cs" />
     <Page Include="IzaberiBrojeve.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="IzvlacenjeBrojeva.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -11,7 +11,7 @@ namespace Bingo
         public int ID { get; set; }
         public List<int> IzvuceniBrojevi { get; set; }
         public List<int> MoguciBrojevi { get; set; }
-        public List<Tiket6> OdigraniTiketi { get; set; }
+        public Tiket6 Tiket { get; set; }
         public int TrenutniBroj { get; set; }
 
         public Igra49()
@@ -20,7 +20,7 @@ namespace Bingo
             IzvuceniBrojevi.Capacity = 35;
             MoguciBrojevi = new List<int>();
             MoguciBrojevi.Capacity = 49;
-            OdigraniTiketi = new List<Tiket6>();
+            Tiket = new Tiket6();
         }
         public int DajSljedeciBroj()
         {
@@ -33,17 +33,15 @@ namespace Bingo
             IzvuceniBrojevi.Add(TrenutniBroj);
             return TrenutniBroj;
         }
-        public void DodajObserver(Tiket6 t) {
-            OdigraniTiketi.Add(t);
-        }
-        public void IzbrisiObserver(Tiket6 t) {
-            OdigraniTiketi.Remove(t);
-        }
+        //public void DodajObserver(Tiket6 t) {
+        //    OdigraniTiketi.Add(t);
+        //}
+        //public void IzbrisiObserver(Tiket6 t) {
+        //    OdigraniTiketi.Remove(t);
+        //}
         public void Obavijesti()
         {
-            foreach (Tiket6 tiket in OdigraniTiketi) {
-                tiket.Obavijesti(TrenutniBroj);
-            }
+            Tiket.Obavijesti(TrenutniBroj);
         }
     }
 }

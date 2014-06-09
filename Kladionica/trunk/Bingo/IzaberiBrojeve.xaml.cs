@@ -884,8 +884,7 @@ namespace Bingo
 
         private void Obicni_Click(object sender, RoutedEventArgs e)
         {
-            if (_tiket.Brojevi.Count < 6)
-            {
+            if (_tiket.Brojevi.Count < 6) {
                 MessageBox.Show("Morate unijeti 6 brojeva!");
                 return;
             }
@@ -910,6 +909,20 @@ namespace Bingo
                 else if (Grid.GetColumn(k) == 6) k.Background = Brushes.Indigo;
                 else return;
             }
+        }
+
+        private void Zapocni_Click(object sender, RoutedEventArgs e)
+        {
+            if (_tiket.Brojevi.Count != 6) {
+                MessageBox.Show("Morate prvo kreirati tiket!");
+                return;
+            }
+
+            MainWindow w = Window.GetWindow(this) as MainWindow;
+            IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva();
+            App.Current.MainWindow = novi;
+            w.Close();
+            novi.Show();
         }
 
     }
