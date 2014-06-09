@@ -52,6 +52,20 @@ namespace Bingo
                 if (item is Kuglice)
                     _kuglice.Add((Kuglice)item);
             }
+            for (int i = 0; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
+            for (int i = 1; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
+            for (int i = 2; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
+            for (int i = 3; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
+            for (int i = 4; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
+            for (int i = 5; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
+            for (int i = 6; i < 49; i += 7)
+                _kuglice[i].Broj = i + 1;
         }
 
         private void CrveneButton_Click(object sender, RoutedEventArgs e)
@@ -985,6 +999,9 @@ namespace Bingo
                         _kuglice[index].Background = Brushes.Gray;                        
                     }
                 }
+                for (int i = 0; i < 49; i++)
+                    if (broj == _kuglice[i].Broj)
+                        _mojeKuglice.Add(_kuglice[i]);
             }
             string ispis = Convert.ToString(_tiket.Brojevi[0]) + " " + Convert.ToString(_tiket.Brojevi[1]) + " " + Convert.ToString(_tiket.Brojevi[2]) +
                " " + Convert.ToString(_tiket.Brojevi[3]) + " " + Convert.ToString(_tiket.Brojevi[4]) + " " + Convert.ToString(_tiket.Brojevi[5]);
@@ -1027,45 +1044,23 @@ namespace Bingo
                 return;
             }
             for (int i = 0; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.Red;
-                _kuglice[i].Broj = i+1;
-            }
             for (int i = 1; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.Yellow;
-                _kuglice[i].Broj = i + 1;
-            }
             for (int i = 2; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.Blue;
-                _kuglice[i].Broj = i + 1;
-            }
             for (int i = 3; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.Orange;
-                _kuglice[i].Broj = i + 1;
-            }
             for (int i = 4; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.LimeGreen;
-                _kuglice[i].Broj = i + 1;
-            }
             for (int i = 5; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.HotPink;
-                _kuglice[i].Broj = i + 1;
-            }
             for (int i = 6; i < 49; i += 7)
-            {
                 _kuglice[i].Background = Brushes.Indigo;
-                _kuglice[i].Broj = i + 1;
-            }
             _mojeKuglice=_mojeKuglice.OrderBy(Kuglice => Kuglice.Broj).ToList();
             IzvlacenjeBrojeva novi = new IzvlacenjeBrojeva(_tiket, _mojeKuglice);
             this.Close();
             novi.Show();
         }
-
     }
 }
