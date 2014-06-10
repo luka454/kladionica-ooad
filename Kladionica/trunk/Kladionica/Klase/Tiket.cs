@@ -13,7 +13,7 @@ namespace Kladionica
         public decimal Ulog { get; set; }
         public TipTiketa TipTiketa { get; set; }
         public int ID { get; set; }
-
+        public ClanKluba Vlasnik { get; set; }
         public Tiket(decimal uk, decimal ul, TipTiketa tt)
         {
             UkupniKoeficijent = uk;
