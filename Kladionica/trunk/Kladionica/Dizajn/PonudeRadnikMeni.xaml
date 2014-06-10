@@ -21,8 +21,8 @@
                 <Button Height="32" Width="32" Click="Button_Click_1">
                     <Button.ToolTip>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock FontWeight="SemiBold">Popis ponuda</TextBlock>
-                            <TextBlock>Prazuje listu ponuda za odabir</TextBlock>
+                            <TextBlock FontWeight="SemiBold">Traži</TextBlock>
+                            <TextBlock>Pretražuje igre u trenutnoj ponudi sa tekstom unesenim lijevo</TextBlock>
                         </StackPanel>
                     </Button.ToolTip>
                     <Image Source="../ico/search-64.png"/>
@@ -30,8 +30,8 @@
                 <Button Height="32" Width="32" Click="PrnBtn_Click">
                     <Button.ToolTip>
                         <StackPanel Orientation="Vertical">
-                            <TextBlock FontWeight="SemiBold">Popis ponuda</TextBlock>
-                            <TextBlock>Prazuje listu ponuda za odabir</TextBlock>
+                            <TextBlock FontWeight="SemiBold">Printanje ponude</TextBlock>
+                            <TextBlock>Pokreće printanje trenutno odabrane ponude</TextBlock>
                         </StackPanel>
                     </Button.ToolTip>
                     <Image Source="../ico/printer-64.png"/>
