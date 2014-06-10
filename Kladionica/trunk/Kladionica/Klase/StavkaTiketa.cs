@@ -12,10 +12,10 @@ namespace Kladionica
         public Igra OdigranaIgra { get; set; }
         public String Stavka { get; set; }
 
-        public StavkaTiketa(string ot, Igra oi)
+        public StavkaTiketa(string odigraniTip, Igra odigranaIgra)
         {
-            OdigraniTip = ot;
-            OdigranaIgra = oi;
+            OdigraniTip = odigraniTip;
+            OdigranaIgra = odigranaIgra;
             Stavka = null;
         }
         public Boolean JeLiFiksni() {

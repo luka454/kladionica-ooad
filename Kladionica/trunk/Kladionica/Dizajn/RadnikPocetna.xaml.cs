@@ -97,5 +97,10 @@ namespace Kladionica
             Stranica.Content = new AfterBKorisKlubClick(Stranica);
         }
 
+        private void BNoviTiket_Click(object sender, RoutedEventArgs e)
+        {
+            Stranica.Content = new NoviTiket.NoviTiketMeni();
+        }
+
     }
 }

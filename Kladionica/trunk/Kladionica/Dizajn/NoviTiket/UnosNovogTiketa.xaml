@@ -1,0 +1,49 @@
+﻿<ListBoxItem x:Class="Kladionica.NoviTiket.UnosNovogTiketa"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch"
+             HorizontalContentAlignment="Stretch"
+             VerticalContentAlignment="Stretch"
+             d:DesignHeight="50" d:DesignWidth="800">
+    <Border BorderThickness="1" Margin="2" BorderBrush="Black">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"  Margin="4" Text="ID:"></TextBlock>
+                <TextBox x:Name="TBID" FontSize="18" Height="22" Margin="0,9" Width="47" VerticalAlignment="Center" LostFocus="TBID_LostFocus"/>
+            </StackPanel>
+            <TextBlock x:Name="Natpis" FontSize="18" Grid.Column="1" FontWeight="SemiBold" VerticalAlignment="Center" Margin="4"/>
+            <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Center">
+                <TextBlock FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"  Margin="4" Text="Tip:"></TextBlock>
+                <TextBox x:Name="TBTip" FontSize="18" Height="22" Margin="0,9" Width="47" VerticalAlignment="Center"
+                         IsEnabled="False" LostFocus="TBTip_LostFocus"/>
+                <Image  x:Name="IMGerr" Source="../../ico/shield-red-64.png" Height="22" Margin="4" Visibility="Visible" >
+                    <Image.ToolTip>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock FontWeight="SemiBold">Greška</TextBlock>
+                            <TextBlock x:Name="TekstGreska"></TextBlock>
+                        </StackPanel>
+                    </Image.ToolTip>
+                </Image>
+            </StackPanel>
+            <StackPanel Grid.Column="3" HorizontalAlignment="Right" Orientation="Horizontal" >
+                <Button x:Name="BDodaj" Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" IsEnabled="False">
+                    Dodaj
+                </Button>
+                <Button  Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" Click="Button_Click_1">
+                    Reset
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+           
+</ListBoxItem>

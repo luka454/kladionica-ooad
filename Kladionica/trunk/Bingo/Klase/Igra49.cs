@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bingo
 {
-    public class Igra49 : Igra
+    public class Igra49 
     {
         public int ID { get; set; }
         public Tiket6 Tiket { get; set; }
