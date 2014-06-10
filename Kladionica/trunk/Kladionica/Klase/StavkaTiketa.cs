@@ -12,10 +12,12 @@ namespace Kladionica
         public Igra OdigranaIgra { get; set; }
         public String Stavka { get; set; }
 
-        public StavkaTiketa(string odigraniTip, Igra odigranaIgra)
+        public StavkaTiketa(string ot, Igra oi)
         {
-            OdigraniTip = odigraniTip;
-            OdigranaIgra = odigranaIgra;
+            if (ot.ToLower() == "2x") ot = "x2";
+            if (ot.ToLower() == "x1") ot = "1x";
+            OdigraniTip = ot.ToLower() ;
+            OdigranaIgra = oi;
             Stavka = null;
         }
         public Boolean JeLiFiksni() {
@@ -24,6 +26,17 @@ namespace Kladionica
         public Boolean JeLiDobitni()
         {
             return OdigranaIgra.ProvjeriJeLiDobitni(OdigraniTip);
+        }
+
+        public decimal Koeficijent()
+        {
+            foreach (var item in OdigranaIgra.koeficijenti)
+            {
+                if (item.tip.ToLower() == OdigraniTip)
+                    return item.koeficijent;
+            }
+
+            return 0.0M;
         }
     }
 }

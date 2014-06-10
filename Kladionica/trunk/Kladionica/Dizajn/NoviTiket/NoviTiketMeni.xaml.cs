@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,25 +22,72 @@ namespace Kladionica.NoviTiket
     public partial class NoviTiketMeni : ContentControl
     {
         ClanKluba _clan;
+        List<StavkaTiketa> stavke;
+        decimal ukupniKoeficijent;
         public NoviTiketMeni(ClanKluba clan = null)
         {
             _clan = clan;
+            stavke = new List<StavkaTiketa>();
+            ukupniKoeficijent = 1;
 
             InitializeComponent();
 
             if (_clan != null) ImeKorisnika.Text = _clan.Ime + " " + _clan.Prezime;
+            listbox.Items.Add(new UnosNovogTiketa(listbox, this));
 
-            BazaPodataka.IgraDAO dao = BazaPodataka.DAL.Factory.getIgraDao();
-            Igra[] igre = new Igra[3] { dao.getById(62), dao.getById(63), dao.getById(65) };
-            StavkaTiketa[]  stavke = new StavkaTiketa[3]{new StavkaTiketa("1",igre[0]),
-                                    new StavkaTiketa("2",igre[1]), new StavkaTiketa("1x",igre[2])};
-            foreach (var item in stavke)
+            uplataObicni.Visibility = System.Windows.Visibility.Collapsed;
+        }
+
+        public void dodajStavku(StavkaTiketa s){
+            bool nadjen = false;
+            foreach (var item in s.OdigranaIgra.koeficijenti)
             {
-                listbox.Items.Add(new UneseniTiketLBI(item));
+                if (s.OdigraniTip.ToLower().Equals(item.tip.ToLower()))
+                {
+                    ukupniKoeficijent *= item.koeficijent;
+                    nadjen = true;
+                    break;
+                }
+            }
+            if(nadjen == false)
+                throw new Exception("Nije pronadjen tip");
+
+            koef.Text = Math.Round(ukupniKoeficijent, 2).ToString(CultureInfo.InvariantCulture);
+            listbox.Items.Add(new UneseniTiketLBI(s));
+            stavke.Add(s);
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (_clan == null)
+            {
+                borderKreiranje.IsEnabled = false;
+                uplataObicni.Visibility = System.Windows.Visibility.Visible;
+             
+            }
+            else
+            {
+
             }
 
-            listbox.Items.Add(new UnosNovogTiketa(listbox));
+        }
 
+        private void TBnovac_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Decimal dec;
+            if(Decimal.TryParse(TBnovac.Text, out dec))
+                Dobitak.Text = Math.Round(ukupniKoeficijent * dec, 2).ToString(CultureInfo.InvariantCulture);
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (_clan == null)
+            {
+                Tiket tiket = new Tiket(ukupniKoeficijent, Convert.ToDecimal(TBnovac.Text), TipTiketa.Normalni);
+                tiket.OdigraneIgre = stavke;
+                BazaPodataka.DAL.Factory.getTiketDAO().create(tiket);
+            }
         }
     }
 }
