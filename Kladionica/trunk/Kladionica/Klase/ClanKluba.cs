@@ -16,6 +16,13 @@ namespace Kladionica
             Novac = 0;
             PIN = _pin;
         }
+        public ClanKluba(int id, string _ime, string _prezime, string _username, int _pass, int _pin, decimal novac): base(_ime, _prezime, _username)
+        {
+            ID = id;
+            HashPassword = _pass;
+            Novac = novac;
+            PIN = _pin;
+        }
         public decimal Novac { get; set; }   
         public int PIN { get; set; }
 
