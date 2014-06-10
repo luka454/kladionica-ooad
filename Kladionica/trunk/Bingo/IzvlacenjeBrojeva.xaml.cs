@@ -57,6 +57,12 @@ namespace Bingo
 
         private void Sljedeci_Click(object sender, RoutedEventArgs e)
         {
+            if (_kuglice[34].Visibility == Visibility.Visible)
+            {
+                osvojili.Visibility = Visibility.Visible;
+                pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
+                return;
+            }
             int broj = TrenutnaIgra.DajSljedeciBroj();
             if (TrenutnaIgra.Tiket.JelDobitni() && TrenutnaIgra.Dobitak==0) Dobitak();
             if (TrenutnaIgra.Tiket.Obavijesti(broj))
@@ -100,11 +106,6 @@ namespace Bingo
                         case "Ljubicaste":
                             _kuglice[i].Background = Brushes.Indigo;
                             break;
-                    }
-                    if (_kuglice[34].Visibility == Visibility.Visible)
-                    {
-                        osvojili.Visibility = Visibility.Visible;
-                        pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
                     }
                     return;
                 }
