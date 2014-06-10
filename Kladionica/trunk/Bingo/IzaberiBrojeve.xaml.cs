@@ -30,6 +30,7 @@ namespace Bingo
         public bool AktivirajZelene { get; set; }
         public bool AktivirajRoze { get; set; }
         public bool AktivirajLjubicaste { get; set; }
+        public bool JelAutomatski { get; set; }
 
         public IzaberiBrojeve()
         {
@@ -47,6 +48,7 @@ namespace Bingo
             AktivirajRoze=false;
             AktivirajZelene=false;
             AktivirajZute=false;
+            JelAutomatski = false;
             foreach (var item in sveaaa.Children)
             {
                 if (item is Kuglice)
@@ -71,7 +73,7 @@ namespace Bingo
         private void CrveneButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
-                || AktivirajZelene || AktivirajZute) return;
+                || AktivirajZelene || AktivirajZute || JelAutomatski) return;
             AktivirajCrvene = true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -87,7 +89,7 @@ namespace Bingo
         private void ZuteButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
-                || AktivirajZelene || AktivirajCrvene) return;
+                || AktivirajZelene || AktivirajCrvene || JelAutomatski) return;
             AktivirajZute=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -103,7 +105,7 @@ namespace Bingo
         private void PlaveButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene || AktivirajRoze
-                || AktivirajZelene || AktivirajZute) return;
+                || AktivirajZelene || AktivirajZute || JelAutomatski) return;
             AktivirajPlave=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -119,7 +121,7 @@ namespace Bingo
         private void NarandzasteButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave || AktivirajRoze
-                || AktivirajZelene || AktivirajZute) return;
+                || AktivirajZelene || AktivirajZute || JelAutomatski) return;
             AktivirajNarandzaste=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -135,7 +137,7 @@ namespace Bingo
         private void ZeleneButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
-                || AktivirajCrvene || AktivirajZute) return;
+                || AktivirajCrvene || AktivirajZute || JelAutomatski) return;
             AktivirajZelene=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -151,7 +153,7 @@ namespace Bingo
         private void RozeButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajCrvene
-                || AktivirajZelene || AktivirajZute) return;
+                || AktivirajZelene || AktivirajZute || JelAutomatski) return;
             AktivirajRoze=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -167,7 +169,7 @@ namespace Bingo
         private void LjubicasteButton_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
-                || AktivirajZelene || AktivirajZute) return;
+                || AktivirajZelene || AktivirajZute || JelAutomatski) return;
             AktivirajLjubicaste=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -1211,6 +1213,9 @@ namespace Bingo
 
         private void Automatski_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute || AktivirajPlave) return;
+            JelAutomatski = true;
             _tiket=TiketFactory.DajAutomatski();
             foreach (int broj in _tiket.Brojevi)
             {
@@ -1240,6 +1245,13 @@ namespace Bingo
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             _tiket.ObrisiBrojeve();
+            AktivirajCrvene = false;
+            AktivirajLjubicaste = false;
+            AktivirajNarandzaste = false;
+            AktivirajPlave = false;
+            AktivirajRoze = false;
+            AktivirajZelene = false;
+            AktivirajZute = false;
             foreach (Kuglice k in _kuglice)
             {
                 k.IsSelected = false;

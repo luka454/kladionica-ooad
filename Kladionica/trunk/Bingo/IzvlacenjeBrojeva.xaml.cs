@@ -57,14 +57,13 @@ namespace Bingo
 
         private void Sljedeci_Click(object sender, RoutedEventArgs e)
         {
-            if (_kuglice[34].Visibility == Visibility.Visible)
-            {
-                osvojili.Visibility = Visibility.Visible;
-                pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
-                return;
-            }
+            //if (_kuglice[34].Visibility == Visibility.Visible)
+            //{
+            //    osvojili.Visibility = Visibility.Visible;
+            //    pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
+            //    return;
+            //}
             int broj = TrenutnaIgra.DajSljedeciBroj();
-            if (TrenutnaIgra.Tiket.JelDobitni() && TrenutnaIgra.Dobitak==0) Dobitak();
             if (TrenutnaIgra.Tiket.Obavijesti(broj))
             {
                 TrenutnaIgra.Tiket.Brojac++;
@@ -182,6 +181,13 @@ namespace Bingo
             IzaberiBrojeve novi = new IzaberiBrojeve();
             this.Close();
             novi.Show();
+        }
+
+        private void PrikaziPoruku(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (TrenutnaIgra.Tiket.JelDobitni() && TrenutnaIgra.Dobitak == 0) Dobitak();
+            osvojili.Visibility = Visibility.Visible;
+            pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
         }
     }
 }
