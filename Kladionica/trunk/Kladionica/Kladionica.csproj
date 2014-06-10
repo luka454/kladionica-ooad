@@ -110,6 +110,9 @@
     <Compile Include="Dizajn\PregledPonuda\PregledPonnuda.xaml.cs">
       <DependentUpon>PregledPonnuda.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dizajn\PrikazIEditovanjeClana\EditKorisnika.xaml.cs">
+      <DependentUpon>EditKorisnika.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Klase\Administracija.cs" />
     <Compile Include="Klase\ClanKluba.cs" />
     <Compile Include="Klase\FudbalskaUtakmica.cs" />
@@ -201,6 +204,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dizajn\Welcome.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\PrikazIEditovanjeClana\EditKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

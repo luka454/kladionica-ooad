@@ -13,68 +13,69 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Kladionica.Dizajn;
 
 namespace Kladionica
 {
     /// <summary>
-    /// Interaction logic for UnosKorisnika.xaml
+    /// Interaction logic for EditKorisnika.xaml
     /// </summary>
-    public partial class UnosKorisnika : ContentControl
+    public partial class EditKorisnika : ContentControl
     {
-        private ContentPresenter _c;
-        public UnosKorisnika()
+        public EditKorisnika()
         {
             InitializeComponent();
         }
-
-        public UnosKorisnika(ContentPresenter c)
+        ContentPresenter _p;
+        ClanKluba ck;
+        public EditKorisnika(ContentPresenter p, ClanKluba c)
         {
-            _c = c;
             InitializeComponent();
+            _p = p;
+            ck = c;
+            ImeBox.Text = ck.Ime;
+            PrezimeBox.Text = ck.Prezime;
+            UsernameBox.Text = ck.Username;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //_c.Content = new AfterBKorisKlubClick(_c);
-        }
-
         private void PassCheckBox_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (PasswordBox.Password != PassCheckBox.Password) 
+            if (PassBox.Password != PassCheckBox.Password)
             {
                 ErrorText.Foreground = Brushes.Red;
                 ErrorBorder.BorderBrush = Brushes.Red;
-                KreirajButton.IsEnabled = false;
+                SpremiButton.IsEnabled = false;
             }
             else
             {
                 ErrorText.Foreground = (SolidColorBrush)new BrushConverter().ConvertFromString("#00bbff");
                 ErrorBorder.BorderBrush = (SolidColorBrush)new BrushConverter().ConvertFromString("#00bbff");
-                KreirajButton.IsEnabled = true;
+                SpremiButton.IsEnabled = true;
             }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            if(validirano())
+            if (validirano())
             {
+                ck.Ime = ImeBox.Text;
+                ck.Prezime = PrezimeBox.Text;
+                ck.Username = UsernameBox.Text;
+                if ((bool)PassChange.IsChecked) ck.HashPassword = ClanKluba.HashFunkcijaSifra(PassBox.Password);
                 ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
-                baza.create(new ClanKluba(ImeBox.Text, PrezimeBox.Text, UsernameBox.Text, PasswordBox.Password, Convert.ToInt32(PINBox.Password)));
-                _c.Content = new DobarUnos("Clan uspjesno dodan!");
+                baza.update(ck);
+                _p.Content = new DobarUnos("Promjene uspjesno izvrsene!");
                 TheEnclosingMethod();
             }
             else
             {
                 System.Windows.MessageBox.Show("Greska prilikom unosa parametara! Unesite ponovo.");
-                _c.Content = new UnosKorisnika(_c);
-
-            }   
+                _p.Content = new EditKorisnika(_p, ck);
+            }
         }
         public async void TheEnclosingMethod()
         {
 
             await Task.Delay(2000);
-            _c.Content = new UnosKorisnika(_c);
+            _p.Content = new PrikazKorisnika(ck, _p);
         }
 
         private bool validirano()
@@ -82,23 +83,26 @@ namespace Kladionica
             if (UsernameBox.Text.Length < 2) return false;
             if (ImeBox.Text.Length < 2) return false;
             if (PrezimeBox.Text.Length < 2) return false;
-            if (PasswordBox.Password.Length < 2) return false;
-            if (PassCheckBox.Password.Length < 2) return false;
-            if (PINBox.Password.Length < 2) return false;
-            if (IsNotAllDigit(PINBox.Password)) return false;
+            if((bool)PassChange.IsChecked) if (PassBox.Password.Length < 2) return false;
+            if ((bool)PassChange.IsChecked) if (PassCheckBox.Password.Length < 2) return false;
             return true;
         }
 
-        public static bool IsNotAllDigit(string p)
+        private void CheckBox_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            for (int i = 0; i < p.Length; i++)
-                if (p[i] < '0' || p[i] > '9') return true;
-            return false;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void PassChange_Unchecked(object sender, RoutedEventArgs e)
         {
-            _c.Content = new UnosKorisnika(_c);
+            PassBox.IsEnabled = false;
+            PassCheckBox.IsEnabled = false;
         }
+
+        private void PassChange_Checked(object sender, RoutedEventArgs e)
+        {
+            PassBox.IsEnabled = true;
+            PassCheckBox.IsEnabled = true;
+        }
+
     }
 }

@@ -101,12 +101,11 @@ namespace Kladionica.BazaPodataka
             try
             {
                 DAL.Connection.Open();
-                c = new MySqlCommand("update clankluba set ime = '" + entity.Ime +
-                    "', prezime = '" + entity.Prezime + "', username = '" + entity.Username + "' , hashpassworda = " +
-                    entity.HashPassword + " where id = " + entity.ID +";", DAL.Connection);
+                c = new MySqlCommand(String.Format("update clankluba set Ime='{0}', Prezime='{1}', Username='{2}', Hashpassworda={3} where id={4}",
+                entity.Ime, entity.Prezime, entity.Username ,entity.HashPassword, entity.ID), DAL.Connection);
                 c.ExecuteNonQuery();
                 DAL.Connection.Close();
-                return getById(entity.ID);
+                return entity;
             }
 
             catch (Exception ex)

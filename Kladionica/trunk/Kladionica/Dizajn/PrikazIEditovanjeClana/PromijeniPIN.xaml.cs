@@ -53,7 +53,7 @@ namespace Kladionica
                 ck.PIN = Convert.ToInt32(NewPIN.Password);
                 ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
                 ClanKluba c = baza.UpdatePIN(ck);
-                cp.Content = new DobarUnos();
+                cp.Content = new DobarUnos("PIN uspijesno promijenjen.");
                 TheEnclosingMethod();
             }
         }

@@ -30,7 +30,10 @@ namespace Kladionica
             InitializeComponent();
             _c = c;
         }
-
-        
+        public DobarUnos(string mrak)
+        {
+            InitializeComponent();
+            Tekst.Text = mrak;
+        }
     }
 }
