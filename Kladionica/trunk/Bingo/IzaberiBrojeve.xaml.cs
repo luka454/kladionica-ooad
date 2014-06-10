@@ -182,6 +182,8 @@ namespace Bingo
 
         private void Kuglica1_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica1.IsSelected = false;
@@ -201,6 +203,8 @@ namespace Bingo
 
         private void Kuglica2_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica2.IsSelected = false;
@@ -220,6 +224,8 @@ namespace Bingo
 
         private void Kuglica3_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica3.IsSelected = false;
@@ -239,6 +245,8 @@ namespace Bingo
 
         private void Kuglica4_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica4.IsSelected = false;
@@ -258,6 +266,8 @@ namespace Bingo
 
         private void Kuglica5_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica5.IsSelected = false;
@@ -277,6 +287,8 @@ namespace Bingo
 
         private void Kuglica6_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica6.IsSelected = false;
@@ -296,6 +308,8 @@ namespace Bingo
 
         private void Kuglica7_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica7.IsSelected = false;
@@ -315,6 +329,8 @@ namespace Bingo
 
         private void Kuglica8_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica8.IsSelected = false;
@@ -334,6 +350,8 @@ namespace Bingo
 
         private void Kuglica9_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica9.IsSelected = false;
@@ -353,6 +371,8 @@ namespace Bingo
 
         private void Kuglica10_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica10.IsSelected = false;
@@ -372,6 +392,8 @@ namespace Bingo
 
         private void Kuglica11_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica11.IsSelected = false;
@@ -391,6 +413,8 @@ namespace Bingo
 
         private void Kuglica12_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica12.IsSelected = false;
@@ -410,6 +434,8 @@ namespace Bingo
 
         private void Kuglica13_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica13.IsSelected = false;
@@ -429,6 +455,8 @@ namespace Bingo
 
         private void Kuglica14_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica14.IsSelected = false;
@@ -448,6 +476,8 @@ namespace Bingo
 
         private void Kuglica15_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica15.IsSelected = false;
@@ -467,6 +497,8 @@ namespace Bingo
 
         private void Kuglica16_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica16.IsSelected = false;
@@ -486,6 +518,8 @@ namespace Bingo
 
         private void Kuglica17_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica17.IsSelected = false;
@@ -505,6 +539,8 @@ namespace Bingo
 
         private void Kuglica18_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica18.IsSelected = false;
@@ -524,6 +560,8 @@ namespace Bingo
 
         private void Kuglica19_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica19.IsSelected = false;
@@ -543,6 +581,8 @@ namespace Bingo
 
         private void Kuglica20_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica20.IsSelected = false;
@@ -562,6 +602,8 @@ namespace Bingo
 
         private void Kuglica21_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica21.IsSelected = false;
@@ -581,6 +623,8 @@ namespace Bingo
 
         private void Kuglica22_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica22.IsSelected = false;
@@ -600,6 +644,8 @@ namespace Bingo
 
         private void Kuglica23_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica23.IsSelected = false;
@@ -619,6 +665,8 @@ namespace Bingo
 
         private void Kuglica24_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica24.IsSelected = false;
@@ -638,6 +686,8 @@ namespace Bingo
 
         private void Kuglica25_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica25.IsSelected = false;
@@ -657,6 +707,8 @@ namespace Bingo
 
         private void Kuglica26_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica26.IsSelected = false;
@@ -676,6 +728,8 @@ namespace Bingo
 
         private void Kuglica27_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica27.IsSelected = false;
@@ -695,6 +749,8 @@ namespace Bingo
 
         private void Kuglica28_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica28.IsSelected = false;
@@ -714,6 +770,8 @@ namespace Bingo
 
         private void Kuglica29_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica29.IsSelected = false;
@@ -733,6 +791,8 @@ namespace Bingo
 
         private void Kuglica30_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica30.IsSelected = false;
@@ -752,6 +812,8 @@ namespace Bingo
 
         private void Kuglica31_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica31.IsSelected = false;
@@ -771,6 +833,8 @@ namespace Bingo
 
         private void Kuglica32_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica32.IsSelected = false;
@@ -790,6 +854,8 @@ namespace Bingo
 
         private void Kuglica33_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica33.IsSelected = false;
@@ -809,6 +875,8 @@ namespace Bingo
 
         private void Kuglica34_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica34.IsSelected = false;
@@ -828,6 +896,8 @@ namespace Bingo
 
         private void Kuglica35_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica35.IsSelected = false;
@@ -847,6 +917,8 @@ namespace Bingo
 
         private void Kuglica36_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica36.IsSelected = false;
@@ -866,6 +938,8 @@ namespace Bingo
 
         private void Kuglica37_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica37.IsSelected = false;
@@ -885,6 +959,8 @@ namespace Bingo
 
         private void Kuglica38_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica38.IsSelected = false;
@@ -904,6 +980,8 @@ namespace Bingo
 
         private void Kuglica39_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica39.IsSelected = false;
@@ -923,6 +1001,8 @@ namespace Bingo
 
         private void Kuglica40_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica40.IsSelected = false;
@@ -942,6 +1022,8 @@ namespace Bingo
 
         private void Kuglica41_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica41.IsSelected = false;
@@ -961,6 +1043,8 @@ namespace Bingo
 
         private void Kuglica42_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica42.IsSelected = false;
@@ -980,6 +1064,8 @@ namespace Bingo
 
         private void Kuglica43_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
                 Kuglica43.IsSelected = false;
@@ -999,6 +1085,8 @@ namespace Bingo
 
         private void Kuglica44_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
                 Kuglica44.IsSelected = false;
@@ -1018,6 +1106,8 @@ namespace Bingo
 
         private void Kuglica45_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
                 Kuglica45.IsSelected = false;
@@ -1037,6 +1127,8 @@ namespace Bingo
 
         private void Kuglica46_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
                 Kuglica46.IsSelected = false;
@@ -1056,6 +1148,8 @@ namespace Bingo
 
         private void Kuglica47_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
                 Kuglica47.IsSelected = false;
@@ -1075,6 +1169,8 @@ namespace Bingo
 
         private void Kuglica48_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
                 Kuglica48.IsSelected = false;
@@ -1094,6 +1190,8 @@ namespace Bingo
 
         private void Kuglica49_Click(object sender, RoutedEventArgs e)
         {
+            if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave ||
+                AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
                 Kuglica49.IsSelected = false;
