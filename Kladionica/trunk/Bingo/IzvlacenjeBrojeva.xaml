@@ -425,7 +425,7 @@
 
             <Border BorderBrush="Navy" BorderThickness="2" HorizontalAlignment="Left" Height="247" VerticalAlignment="Top" Width="242" Grid.ColumnSpan="3" Margin="0,0,-86,0" Grid.RowSpan="3"/>
             <Rectangle Grid.ColumnSpan="3" Fill="CornflowerBlue" HorizontalAlignment="Left" Height="51" Margin="10,10,0,0" Stroke="Navy" VerticalAlignment="Top" Width="222" StrokeThickness="2"/>
-            <Label Content="Vaši brojevi" HorizontalAlignment="Center" Margin="56,20,-36,0" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="51" Width="222" FontWeight="Medium" FontSize="20"/>
+            <Label Content="Vaši brojevi" HorizontalAlignment="Center" Margin="20,4,0,10" VerticalAlignment="Center" Grid.ColumnSpan="3" Height="57" Width="222" FontWeight="Medium" FontSize="36"/>
             <local:Kuglice x:Name="KuglicaA" Content="1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="Gray"
                            Height="50" Width="50" FontSize="20" FontWeight="ExtraBold" Foreground="Black" Grid.Row="1" Grid.Column="0">
                 <Button.Template>
@@ -502,7 +502,7 @@
             <Rectangle HorizontalAlignment="Left" Height="143" Margin="10,120,0,0" VerticalAlignment="Top" Width="222"
                        Fill="CornflowerBlue" StrokeThickness="2" Stroke="Navy"/>
             <Label x:Name="pobjeda" Content="" HorizontalAlignment="Center" Margin="50,188,0,-33" VerticalAlignment="Center" Height="118" Width="192"
-                   FontWeight="Medium" FontSize="36"/>
+                   FontWeight="Medium" FontSize="36" FontFamily="Segoe UI"/>
             <Label x:Name="osvojili" Content="Osvojili ste:" HorizontalAlignment="Left" Margin="21,130,0,0" VerticalAlignment="Top" FontSize="36"
                    FontWeight="Medium" Visibility="Hidden"/>
 
