@@ -55,7 +55,7 @@
                         <Button  Content="Logout" Margin="4" Background="{DynamicResource Zelena}" Foreground="White" FontSize="18" Height="auto" BorderThickness="0"/>
                     </Border>-->
                     <Button Name="BLock"  Grid.Column="0" Style="{DynamicResource DugmeZeleno}"
-                            Foreground="White" FontSize="18" BorderBrush="Beige" Margin="10">
+                            Foreground="White" FontSize="18" BorderBrush="Beige" Margin="10" Click="BLock_Click">
                         <StackPanel Orientation="Horizontal">
                              <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="18"
                                        Foreground="White">Lock</TextBlock>

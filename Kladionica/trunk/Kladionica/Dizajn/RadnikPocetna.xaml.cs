@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Webd
 namespace Kladionica
 {
     /// <summary>
@@ -105,6 +105,11 @@ namespace Kladionica
         private void AddUser_Click(object sender, RoutedEventArgs e)
         {
             Stranica.Content = new UnosKorisnika(Stranica);
+        }
+
+        private void BLock_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

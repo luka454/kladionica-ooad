@@ -16,7 +16,7 @@
                     </Grid.ColumnDefinitions>
                     <TextBlock FontSize="22" FontWeight="Bold">Novi tiket</TextBlock>
                     <TextBlock x:Name="ImeKorisnika" Grid.Column="1" FontSize="22" FontWeight="SemiBold" 
-                               HorizontalAlignment="Right">Luka Pejovic</TextBlock>
+                               HorizontalAlignment="Right"></TextBlock>
                 </Grid>
                 
                 <ListBox x:Name="listbox" Background="{Binding Background}" FontSize="18">
