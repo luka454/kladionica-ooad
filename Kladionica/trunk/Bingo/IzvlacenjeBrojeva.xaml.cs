@@ -57,6 +57,8 @@ namespace Bingo
 
         private void Sljedeci_Click(object sender, RoutedEventArgs e)
         {
+            if (_kuglice[34].Visibility == Visibility.Visible) return;
+            if (TrenutnaIgra.Tiket.JelDobitni() && TrenutnaIgra.Dobitak == 0) Dobitak();
             int broj = TrenutnaIgra.DajSljedeciBroj();
             if (TrenutnaIgra.Tiket.Obavijesti(broj))
             {
@@ -179,7 +181,6 @@ namespace Bingo
 
         private void PrikaziPoruku(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (TrenutnaIgra.Tiket.JelDobitni() && TrenutnaIgra.Dobitak == 0) Dobitak();
             osvojili.Visibility = Visibility.Visible;
             pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
         }
