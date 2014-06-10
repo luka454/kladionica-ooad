@@ -18,33 +18,19 @@ namespace Kladionica
     /// <summary>
     /// Interaction logic for AfterBKorisKlubClick.xaml
     /// </summary>
-    public partial class AfterBKorisKlubClick : ContentControl
+    public partial class DobarUnos : ContentControl
     {
-        public AfterBKorisKlubClick()
+        public DobarUnos()
         {
             InitializeComponent();
         }
         private ContentPresenter _c;
-        public AfterBKorisKlubClick(ContentPresenter c)
+        public DobarUnos(ContentPresenter c)
         {
             InitializeComponent();
             _c = c;
         }
 
-        private void AddUser_Click(object sender, RoutedEventArgs e)
-        {
-            _c.Content = new UnosKorisnika(_c);
-        }
-
-        private void InfoOKorisniku_Click(object sender, RoutedEventArgs e)
-        {
-            RegistrujKorisnika p = new RegistrujKorisnika();
-            p.Show();
-        }
-
-        private void StanjeRacuna_Click(object sender, RoutedEventArgs e)
-        {
-            _c.Content = new StanjeRacuna();
-        }
+        
     }
 }
