@@ -501,8 +501,10 @@
             <Button Content="Nova igra" Margin="126,21,10,185" FontWeight="Medium" Click="Novi_Click"/>
             <Rectangle HorizontalAlignment="Left" Height="143" Margin="10,120,0,0" VerticalAlignment="Top" Width="222"
                        Fill="CornflowerBlue" StrokeThickness="2" Stroke="Navy"/>
-            <Label x:Name="pobjeda" Content="Čestitamo!" HorizontalAlignment="Center" Margin="10,160,0,0" VerticalAlignment="Center" Height="118" Width="192"
-                   FontWeight="Medium" FontSize="36" Visibility="Hidden"/>
+            <Label x:Name="pobjeda" Content="" HorizontalAlignment="Center" Margin="50,188,0,-33" VerticalAlignment="Center" Height="118" Width="192"
+                   FontWeight="Medium" FontSize="36"/>
+            <Label x:Name="osvojili" Content="Osvojili ste:" HorizontalAlignment="Left" Margin="21,130,0,0" VerticalAlignment="Top" FontSize="36"
+                   FontWeight="Medium" Visibility="Hidden"/>
 
         </Grid>
 

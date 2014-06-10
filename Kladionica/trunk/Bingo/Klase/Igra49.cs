@@ -12,6 +12,7 @@ namespace Bingo
         public Tiket6 Tiket { get; set; }
         public int TrenutniBroj { get; set; }
         public List<int> MoguciBrojevi { get; set; }
+        public int Dobitak { get; set; }
 
         public Igra49()
         {
@@ -19,6 +20,7 @@ namespace Bingo
             MoguciBrojevi = new List<int>();
             for (int i = 1; i <= 49; i++)
                 MoguciBrojevi.Add(i);
+            Dobitak = 0;
         }
         public int DajSljedeciBroj()
         {
