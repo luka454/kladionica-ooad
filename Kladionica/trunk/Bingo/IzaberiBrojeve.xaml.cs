@@ -212,7 +212,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica1.IsSelected) return;
+            if (Kuglica1.IsSelected)
+            {
+                Kuglica1.IsSelected = false;
+                Kuglica1.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(1);
+                _mojeKuglice.Remove(Kuglica1);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica1.IsSelected = true;
             Kuglica1.Background = Brushes.Gray;
@@ -236,7 +243,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica2.IsSelected) return;
+            if (Kuglica2.IsSelected)
+            {
+                Kuglica2.IsSelected = false;
+                Kuglica2.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(2);
+                _mojeKuglice.Remove(Kuglica2);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica2.IsSelected = true;
             Kuglica2.Background = Brushes.Gray;
@@ -260,7 +274,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica3.IsSelected) return;
+            if (Kuglica3.IsSelected)
+            {
+                Kuglica3.IsSelected = false;
+                Kuglica3.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(3);
+                _mojeKuglice.Remove(Kuglica3);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica3.IsSelected = true;
             Kuglica3.Background = Brushes.Gray;
@@ -284,7 +305,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica4.IsSelected) return;
+            if (Kuglica4.IsSelected)
+            {
+                Kuglica4.IsSelected = false;
+                Kuglica4.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(4);
+                _mojeKuglice.Remove(Kuglica4);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica4.IsSelected = true;
             Kuglica4.Background = Brushes.Gray;
@@ -308,7 +336,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica5.IsSelected) return;
+            if (Kuglica5.IsSelected)
+            {
+                Kuglica5.IsSelected = false;
+                Kuglica5.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(5);
+                _mojeKuglice.Remove(Kuglica5);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica5.IsSelected = true;
             Kuglica5.Background = Brushes.Gray;
@@ -332,7 +367,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica6.IsSelected) return;
+            if (Kuglica6.IsSelected)
+            {
+                Kuglica6.IsSelected = false;
+                Kuglica6.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(6);
+                _mojeKuglice.Remove(Kuglica6);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica6.IsSelected = true;
             Kuglica6.Background = Brushes.Gray;
@@ -356,7 +398,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica7.IsSelected) return;
+            if (Kuglica7.IsSelected)
+            {
+                Kuglica7.IsSelected = false;
+                Kuglica7.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(7);
+                _mojeKuglice.Remove(Kuglica7);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica7.IsSelected = true;
             Kuglica7.Background = Brushes.Gray;
@@ -380,7 +429,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica8.IsSelected) return;
+            if (Kuglica8.IsSelected)
+            {
+                Kuglica8.IsSelected = false;
+                Kuglica8.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(8);
+                _mojeKuglice.Remove(Kuglica8);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica8.IsSelected = true;
             Kuglica8.Background = Brushes.Gray;
@@ -404,7 +460,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica9.IsSelected) return;
+            if (Kuglica9.IsSelected)
+            {
+                Kuglica9.IsSelected = false;
+                Kuglica9.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(9);
+                _mojeKuglice.Remove(Kuglica9);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica9.IsSelected = true;
             Kuglica9.Background = Brushes.Gray;
@@ -428,7 +491,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica10.IsSelected) return;
+            if (Kuglica10.IsSelected)
+            {
+                Kuglica10.IsSelected = false;
+                Kuglica10.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(10);
+                _mojeKuglice.Remove(Kuglica10);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica10.IsSelected = true;
             Kuglica10.Background = Brushes.Gray;
@@ -452,7 +522,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica11.IsSelected) return;
+            if (Kuglica11.IsSelected)
+            {
+                Kuglica11.IsSelected = false;
+                Kuglica11.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(11);
+                _mojeKuglice.Remove(Kuglica11);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica11.IsSelected = true;
             Kuglica11.Background = Brushes.Gray;
@@ -476,7 +553,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica12.IsSelected) return;
+            if (Kuglica12.IsSelected)
+            {
+                Kuglica12.IsSelected = false;
+                Kuglica12.Background = Brushes.LimeGreen;
+                _tiket.Brojevi.Remove(12);
+                _mojeKuglice.Remove(Kuglica12);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica12.IsSelected = true;
             Kuglica12.Background = Brushes.Gray;
@@ -500,7 +584,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica13.IsSelected) return;
+            if (Kuglica13.IsSelected)
+            {
+                Kuglica13.IsSelected = false;
+                Kuglica13.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(13);
+                _mojeKuglice.Remove(Kuglica13);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica13.IsSelected = true;
             Kuglica13.Background = Brushes.Gray;
@@ -524,7 +615,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica14.IsSelected) return;
+            if (Kuglica14.IsSelected)
+            {
+                Kuglica14.IsSelected = false;
+                Kuglica14.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(14);
+                _mojeKuglice.Remove(Kuglica14);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica14.IsSelected = true;
             Kuglica14.Background = Brushes.Gray;
@@ -548,7 +646,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica15.IsSelected) return;
+            if (Kuglica15.IsSelected)
+            {
+                Kuglica15.IsSelected = false;
+                Kuglica15.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(15);
+                _mojeKuglice.Remove(Kuglica15);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica15.IsSelected = true;
             Kuglica15.Background = Brushes.Gray;
@@ -572,7 +677,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica16.IsSelected) return;
+            if (Kuglica16.IsSelected)
+            {
+                Kuglica16.IsSelected = false;
+                Kuglica16.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(16);
+                _mojeKuglice.Remove(Kuglica16);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica16.IsSelected = true;
             Kuglica16.Background = Brushes.Gray;
@@ -596,7 +708,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica17.IsSelected) return;
+            if (Kuglica17.IsSelected)
+            {
+                Kuglica17.IsSelected = false;
+                Kuglica17.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(17);
+                _mojeKuglice.Remove(Kuglica17);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica17.IsSelected = true;
             Kuglica17.Background = Brushes.Gray;
@@ -620,7 +739,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica18.IsSelected) return;
+            if (Kuglica18.IsSelected)
+            {
+                Kuglica18.IsSelected = false;
+                Kuglica18.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(18);
+                _mojeKuglice.Remove(Kuglica18);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica18.IsSelected = true;
             Kuglica18.Background = Brushes.Gray;
@@ -644,7 +770,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica19.IsSelected) return;
+            if (Kuglica19.IsSelected)
+            {
+                Kuglica19.IsSelected = false;
+                Kuglica19.Background = Brushes.LimeGreen;
+                _tiket.Brojevi.Remove(19);
+                _mojeKuglice.Remove(Kuglica19);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica19.IsSelected = true;
             Kuglica19.Background = Brushes.Gray;
@@ -668,7 +801,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica20.IsSelected) return;
+            if (Kuglica20.IsSelected)
+            {
+                Kuglica20.IsSelected = false;
+                Kuglica20.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(20);
+                _mojeKuglice.Remove(Kuglica20);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica20.IsSelected = true;
             Kuglica20.Background = Brushes.Gray;
@@ -692,7 +832,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica21.IsSelected) return;
+            if (Kuglica21.IsSelected)
+            {
+                Kuglica21.IsSelected = false;
+                Kuglica21.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(21);
+                _mojeKuglice.Remove(Kuglica21);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica21.IsSelected = true;
             Kuglica21.Background = Brushes.Gray;
@@ -716,7 +863,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica22.IsSelected) return;
+            if (Kuglica22.IsSelected)
+            {
+                Kuglica22.IsSelected = false;
+                Kuglica22.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(22);
+                _mojeKuglice.Remove(Kuglica22);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica22.IsSelected = true;
             Kuglica22.Background = Brushes.Gray;
@@ -740,7 +894,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica23.IsSelected) return;
+            if (Kuglica23.IsSelected)
+            {
+                Kuglica23.IsSelected = false;
+                Kuglica23.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(23);
+                _mojeKuglice.Remove(Kuglica23);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica23.IsSelected = true;
             Kuglica23.Background = Brushes.Gray;
@@ -764,7 +925,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica24.IsSelected) return;
+            if (Kuglica24.IsSelected)
+            {
+                Kuglica24.IsSelected = false;
+                Kuglica24.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(24);
+                _mojeKuglice.Remove(Kuglica24);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica24.IsSelected = true;
             Kuglica24.Background = Brushes.Gray;
@@ -788,7 +956,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica25.IsSelected) return;
+            if (Kuglica25.IsSelected)
+            {
+                Kuglica25.IsSelected = false;
+                Kuglica25.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(25);
+                _mojeKuglice.Remove(Kuglica25);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica25.IsSelected = true;
             Kuglica25.Background = Brushes.Gray;
@@ -812,7 +987,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica26.IsSelected) return;
+            if (Kuglica26.IsSelected)
+            {
+                Kuglica26.IsSelected = false;
+                Kuglica26.Background = Brushes.LimeGreen;
+                _tiket.Brojevi.Remove(26);
+                _mojeKuglice.Remove(Kuglica26);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica26.IsSelected = true;
             Kuglica26.Background = Brushes.Gray;
@@ -836,7 +1018,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica27.IsSelected) return;
+            if (Kuglica27.IsSelected)
+            {
+                Kuglica27.IsSelected = false;
+                Kuglica27.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(27);
+                _mojeKuglice.Remove(Kuglica27);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica27.IsSelected = true;
             Kuglica27.Background = Brushes.Gray;
@@ -860,7 +1049,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica28.IsSelected) return;
+            if (Kuglica28.IsSelected)
+            {
+                Kuglica28.IsSelected = false;
+                Kuglica28.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(28);
+                _mojeKuglice.Remove(Kuglica28);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica28.IsSelected = true;
             Kuglica28.Background = Brushes.Gray;
@@ -884,7 +1080,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica29.IsSelected) return;
+            if (Kuglica29.IsSelected)
+            {
+                Kuglica29.IsSelected = false;
+                Kuglica29.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(29);
+                _mojeKuglice.Remove(Kuglica29);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica29.IsSelected = true;
             Kuglica29.Background = Brushes.Gray;
@@ -908,7 +1111,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica30.IsSelected) return;
+            if (Kuglica30.IsSelected)
+            {
+                Kuglica30.IsSelected = false;
+                Kuglica30.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(30);
+                _mojeKuglice.Remove(Kuglica30);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica30.IsSelected = true;
             Kuglica30.Background = Brushes.Gray;
@@ -932,7 +1142,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica31.IsSelected) return;
+            if (Kuglica31.IsSelected)
+            {
+                Kuglica31.IsSelected = false;
+                Kuglica31.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(31);
+                _mojeKuglice.Remove(Kuglica31);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica31.IsSelected = true;
             Kuglica31.Background = Brushes.Gray;
@@ -956,7 +1173,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica32.IsSelected) return;
+            if (Kuglica32.IsSelected)
+            {
+                Kuglica32.IsSelected = false;
+                Kuglica32.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(32);
+                _mojeKuglice.Remove(Kuglica32);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica32.IsSelected = true;
             Kuglica32.Background = Brushes.Gray;
@@ -980,7 +1204,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica33.IsSelected) return;
+            if (Kuglica33.IsSelected)
+            {
+                Kuglica33.IsSelected = false;
+                Kuglica33.Background = Brushes.LimeGreen;
+                _tiket.Brojevi.Remove(33);
+                _mojeKuglice.Remove(Kuglica33);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica33.IsSelected = true;
             Kuglica33.Background = Brushes.Gray;
@@ -1004,7 +1235,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica34.IsSelected) return;
+            if (Kuglica34.IsSelected)
+            {
+                Kuglica34.IsSelected = false;
+                Kuglica34.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(34);
+                _mojeKuglice.Remove(Kuglica34);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica34.IsSelected = true;
             Kuglica34.Background = Brushes.Gray;
@@ -1028,7 +1266,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica35.IsSelected) return;
+            if (Kuglica35.IsSelected)
+            {
+                Kuglica35.IsSelected = false;
+                Kuglica35.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(35);
+                _mojeKuglice.Remove(Kuglica35);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica35.IsSelected = true;
             Kuglica35.Background = Brushes.Gray;
@@ -1052,7 +1297,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica36.IsSelected) return;
+            if (Kuglica36.IsSelected)
+            {
+                Kuglica36.IsSelected = false;
+                Kuglica36.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(36);
+                _mojeKuglice.Remove(Kuglica36);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica36.IsSelected = true;
             Kuglica36.Background = Brushes.Gray;
@@ -1076,7 +1328,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica37.IsSelected) return;
+            if (Kuglica37.IsSelected)
+            {
+                Kuglica37.IsSelected = false;
+                Kuglica37.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(37);
+                _mojeKuglice.Remove(Kuglica37);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica37.IsSelected = true;
             Kuglica37.Background = Brushes.Gray;
@@ -1100,7 +1359,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica38.IsSelected) return;
+            if (Kuglica38.IsSelected)
+            {
+                Kuglica38.IsSelected = false;
+                Kuglica38.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(38);
+                _mojeKuglice.Remove(Kuglica38);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica38.IsSelected = true;
             Kuglica38.Background = Brushes.Gray;
@@ -1124,7 +1390,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica39.IsSelected) return;
+            if (Kuglica39.IsSelected)
+            {
+                Kuglica39.IsSelected = false;
+                Kuglica39.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(39);
+                _mojeKuglice.Remove(Kuglica39);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica39.IsSelected = true;
             Kuglica39.Background = Brushes.Gray;
@@ -1148,7 +1421,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica40.IsSelected) return;
+            if (Kuglica40.IsSelected)
+            {
+                Kuglica40.IsSelected = false;
+                Kuglica40.Background = Brushes.LimeGreen;
+                _tiket.Brojevi.Remove(40);
+                _mojeKuglice.Remove(Kuglica40);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica40.IsSelected = true;
             Kuglica40.Background = Brushes.Gray;
@@ -1172,7 +1452,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica41.IsSelected) return;
+            if (Kuglica41.IsSelected)
+            {
+                Kuglica41.IsSelected = false;
+                Kuglica41.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(41);
+                _mojeKuglice.Remove(Kuglica41);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica41.IsSelected = true;
             Kuglica41.Background = Brushes.Gray;
@@ -1196,7 +1483,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica42.IsSelected) return;
+            if (Kuglica42.IsSelected)
+            {
+                Kuglica42.IsSelected = false;
+                Kuglica42.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(42);
+                _mojeKuglice.Remove(Kuglica42);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica42.IsSelected = true;
             Kuglica42.Background = Brushes.Gray;
@@ -1220,7 +1514,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica43.IsSelected) return;
+            if (Kuglica43.IsSelected)
+            {
+                Kuglica43.IsSelected = false;
+                Kuglica43.Background = Brushes.Red;
+                _tiket.Brojevi.Remove(43);
+                _mojeKuglice.Remove(Kuglica43);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica43.IsSelected = true;
             Kuglica43.Background = Brushes.Gray;
@@ -1244,7 +1545,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica44.IsSelected) return;
+            if (Kuglica44.IsSelected)
+            {
+                Kuglica44.IsSelected = false;
+                Kuglica44.Background = Brushes.Yellow;
+                _tiket.Brojevi.Remove(44);
+                _mojeKuglice.Remove(Kuglica44);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica44.IsSelected = true;
             Kuglica44.Background = Brushes.Gray;
@@ -1268,7 +1576,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica45.IsSelected) return;
+            if (Kuglica45.IsSelected)
+            {
+                Kuglica45.IsSelected = false;
+                Kuglica45.Background = Brushes.Blue;
+                _tiket.Brojevi.Remove(45);
+                _mojeKuglice.Remove(Kuglica45);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica45.IsSelected = true;
             Kuglica45.Background = Brushes.Gray;
@@ -1292,7 +1607,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica46.IsSelected) return;
+            if (Kuglica46.IsSelected)
+            {
+                Kuglica46.IsSelected = false;
+                Kuglica46.Background = Brushes.Orange;
+                _tiket.Brojevi.Remove(46);
+                _mojeKuglice.Remove(Kuglica46);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica46.IsSelected = true;
             Kuglica46.Background = Brushes.Gray;
@@ -1316,7 +1638,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica47.IsSelected) return;
+            if (Kuglica47.IsSelected)
+            {
+                Kuglica47.IsSelected = false;
+                Kuglica47.Background = Brushes.LimeGreen;
+                _tiket.Brojevi.Remove(47);
+                _mojeKuglice.Remove(Kuglica47);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica47.IsSelected = true;
             Kuglica47.Background = Brushes.Gray;
@@ -1340,7 +1669,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica48.IsSelected) return;
+            if (Kuglica48.IsSelected)
+            {
+                Kuglica48.IsSelected = false;
+                Kuglica48.Background = Brushes.HotPink;
+                _tiket.Brojevi.Remove(48);
+                _mojeKuglice.Remove(Kuglica48);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica48.IsSelected = true;
             Kuglica48.Background = Brushes.Gray;
@@ -1364,7 +1700,14 @@ namespace Bingo
                 _mojeKuglice.Capacity = 6;
                 return;
             }
-            if (Kuglica49.IsSelected) return;
+            if (Kuglica49.IsSelected)
+            {
+                Kuglica49.IsSelected = false;
+                Kuglica49.Background = Brushes.Indigo;
+                _tiket.Brojevi.Remove(49);
+                _mojeKuglice.Remove(Kuglica49);
+                return;
+            }
             if (_tiket.Brojevi.Count == 6) return;
             Kuglica49.IsSelected = true;
             Kuglica49.Background = Brushes.Gray;
@@ -1392,14 +1735,6 @@ namespace Bingo
                 for (int i = 0; i < 49; i++)
                     if (broj == _kuglice[i].Broj)
                         _mojeKuglice.Add(_kuglice[i]);
-            }
-        }
-
-        private void Obicni_Click(object sender, RoutedEventArgs e)
-        {
-            if (_tiket.Brojevi.Count < 6) {
-                MessageBox.Show("Morate unijeti 6 brojeva!");
-                return;
             }
         }
 

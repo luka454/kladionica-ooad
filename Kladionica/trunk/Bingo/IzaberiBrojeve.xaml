@@ -576,14 +576,12 @@
                     Height="35" Width="80" FontWeight="Medium" Click="RozeButton_Click" Grid.Column="5"/>
             <Button x:Name="LjubicasteButton" Content="Ljubičaste" HorizontalAlignment="Left" Margin="11,20,0,0" VerticalAlignment="Top" 
                     Height="35" Width="80" FontWeight="Medium" Click="LjubicasteButton_Click" Grid.Column="6"/>
-            <Button Content="Automatski" Grid.Column="7" HorizontalAlignment="Left" Margin="23,68,0,0" Grid.Row="1" VerticalAlignment="Top"
-                    Height="55" Width="95" FontWeight="Medium" Click="Automatski_Click"/>
-            <Button Content="Obični tiket" Grid.Column="7" HorizontalAlignment="Left" Margin="23,148,0,0" Grid.Row="1" VerticalAlignment="Top"
-                    Height="55" Width="95" FontWeight="Medium" Click="Obicni_Click"/>
-            <Button Content="Reset" Grid.Column="7" HorizontalAlignment="Left" Margin="23,227,0,0" Grid.Row="1" VerticalAlignment="Top"
-                    Height="55" Width="95" FontWeight="Medium" Click="Reset_Click"/>
-            <Button Content="Započni igru" Grid.Column="7" HorizontalAlignment="Left" Margin="23,303,0,0" Grid.Row="1" VerticalAlignment="Top"
-                    Height="55" Width="95" FontWeight="Medium" Click="Zapocni_Click"/>
+            <Button Content="Automatski tiket" Grid.Column="7" HorizontalAlignment="Left" Margin="23,200,0,0" Grid.Row="1" VerticalAlignment="Top"
+                    Height="55" Width="100" FontWeight="Medium" Click="Automatski_Click"/>
+            <Button Content="Reset" Grid.Column="7" HorizontalAlignment="Left" Margin="23,100,0,0" Grid.Row="1" VerticalAlignment="Top"
+                    Height="55" Width="100" FontWeight="Medium" Click="Reset_Click"/>
+            <Button Content="Započni igru" Grid.Column="7" HorizontalAlignment="Left" Margin="23,300,0,0" Grid.Row="1" VerticalAlignment="Top"
+                    Height="55" Width="100" FontWeight="Medium" Click="Zapocni_Click"/>
         </Grid>
 
     </Grid>

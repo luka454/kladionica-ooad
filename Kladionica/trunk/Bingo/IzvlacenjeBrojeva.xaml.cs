@@ -57,8 +57,8 @@ namespace Bingo
 
         private void Sljedeci_Click(object sender, RoutedEventArgs e)
         {
-            if (_kuglice[34].Visibility == Visibility.Visible) return;
             if (TrenutnaIgra.Tiket.JelDobitni() && TrenutnaIgra.Dobitak == 0) Dobitak();
+            if (_kuglice[34].Visibility == Visibility.Visible) return;
             int broj = TrenutnaIgra.DajSljedeciBroj();
             if (TrenutnaIgra.Tiket.Obavijesti(broj))
             {
