@@ -22,7 +22,7 @@ namespace Kladionica.NoviTiket
     public partial class UneseniTiketLBI : ListBoxItem
     {
         
-        StavkaTiketa _igra;
+        public StavkaTiketa _igra;
         public UneseniTiketLBI(StavkaTiketa igra)
         {
             _igra = igra;

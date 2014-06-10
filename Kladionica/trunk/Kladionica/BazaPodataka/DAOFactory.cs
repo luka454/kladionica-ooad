@@ -54,5 +54,10 @@ namespace Kladionica.BazaPodataka
         {
             return new ClanKlubaDAO();
         }
+
+        public TiketDAO getTiketDAO()
+        {
+            return new TiketDAO();
+        }
     }
 }

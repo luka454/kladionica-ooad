@@ -8,7 +8,7 @@ namespace Kladionica
 {
     public class Tiket
     {
-        private List<StavkaTiketa> OdigraneIgre { get; set; }
+        public List<StavkaTiketa> OdigraneIgre { get; set; }
         public decimal UkupniKoeficijent { get; set; }
         public decimal Ulog { get; set; }
         public TipTiketa TipTiketa { get; set; }
@@ -81,6 +81,14 @@ namespace Kladionica
             foreach (StavkaTiketa oi in OdigraneIgre)if (oi.JeLiDobitni()) dobitne.Add(oi);
             return dobitne;
         }
-        
+
+        public void ProracujaUkupniKoeficijent()
+        {
+            UkupniKoeficijent = 1;
+            foreach (var item in this.OdigraneIgre)
+            {
+                UkupniKoeficijent *= item.Koeficijent();
+            }
+        }
     }
 }

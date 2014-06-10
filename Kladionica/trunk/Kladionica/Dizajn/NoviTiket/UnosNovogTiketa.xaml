@@ -19,13 +19,13 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal">
                 <TextBlock FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"  Margin="4" Text="ID:"></TextBlock>
-                <TextBox x:Name="TBID" FontSize="18" Height="22" Margin="0,9" Width="47" VerticalAlignment="Center" LostFocus="TBID_LostFocus"/>
+                <TextBox x:Name="TBID" FontSize="18" Height="22" Margin="0,9" Width="47" VerticalAlignment="Center" LostFocus="TBID_LostFocus" KeyDown="TBID_KeyDown"/>
             </StackPanel>
             <TextBlock x:Name="Natpis" FontSize="18" Grid.Column="1" FontWeight="SemiBold" VerticalAlignment="Center" Margin="4"/>
             <StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Center">
                 <TextBlock FontSize="18" FontWeight="SemiBold" VerticalAlignment="Center"  Margin="4" Text="Tip:"></TextBlock>
                 <TextBox x:Name="TBTip" FontSize="18" Height="22" Margin="0,9" Width="47" VerticalAlignment="Center"
-                         IsEnabled="False" LostFocus="TBTip_LostFocus"/>
+                         IsEnabled="False" LostFocus="TBTip_LostFocus" KeyDown="TBTip_KeyDown"/>
                 <Image  x:Name="IMGerr" Source="../../ico/shield-red-64.png" Height="22" Margin="4" Visibility="Visible" >
                     <Image.ToolTip>
                         <StackPanel Orientation="Vertical">
@@ -36,7 +36,7 @@
                 </Image>
             </StackPanel>
             <StackPanel Grid.Column="3" HorizontalAlignment="Right" Orientation="Horizontal" >
-                <Button x:Name="BDodaj" Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" IsEnabled="False">
+                <Button x:Name="BDodaj" Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" IsEnabled="False" Click="BDodaj_Click">
                     Dodaj
                 </Button>
                 <Button  Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" Click="Button_Click_1">

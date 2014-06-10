@@ -70,6 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BazaPodataka\Entiteti\TiketDAO.cs" />
     <Compile Include="Dizajn\ClanKlubaDodaj\DobarUnos.xaml.cs">
       <DependentUpon>DobarUnos.xaml</DependentUpon>
     </Compile>
