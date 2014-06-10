@@ -74,6 +74,8 @@ namespace Bingo
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
                 || AktivirajZelene || AktivirajZute || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajCrvene = true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -90,6 +92,8 @@ namespace Bingo
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
                 || AktivirajZelene || AktivirajCrvene || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajZute=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -106,6 +110,8 @@ namespace Bingo
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene || AktivirajRoze
                 || AktivirajZelene || AktivirajZute || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajPlave=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -122,6 +128,8 @@ namespace Bingo
         {
             if (AktivirajLjubicaste || AktivirajCrvene || AktivirajPlave || AktivirajRoze
                 || AktivirajZelene || AktivirajZute || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajNarandzaste=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -138,6 +146,8 @@ namespace Bingo
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
                 || AktivirajCrvene || AktivirajZute || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajZelene=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -154,6 +164,8 @@ namespace Bingo
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajPlave || AktivirajCrvene
                 || AktivirajZelene || AktivirajZute || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajRoze=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -170,6 +182,8 @@ namespace Bingo
         {
             if (AktivirajCrvene || AktivirajNarandzaste || AktivirajPlave || AktivirajRoze
                 || AktivirajZelene || AktivirajZute || JelAutomatski) return;
+            _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajLjubicaste=true;
             _mojeKuglice.Capacity = 7;
             foreach (Kuglice k in _kuglice)
@@ -188,6 +202,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica1)
+                        if (k.IsSelected == false) return;
                 Kuglica1.IsSelected = false;
                 Kuglica1.Background = Brushes.Red;
                 _tiket=TiketFactory.DajCrvene(1);
@@ -209,6 +226,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica2)
+                        if (k.IsSelected == false) return;
                 Kuglica2.IsSelected = false;
                 Kuglica2.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(2);
@@ -230,6 +250,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica3)
+                        if (k.IsSelected == false) return;
                 Kuglica3.IsSelected = false;
                 Kuglica3.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(3);
@@ -251,6 +274,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica4)
+                        if (k.IsSelected == false) return;
                 Kuglica4.IsSelected = false;
                 Kuglica4.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(4);
@@ -272,6 +298,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica5)
+                        if (k.IsSelected == false) return;
                 Kuglica5.IsSelected = false;
                 Kuglica5.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(5);
@@ -293,6 +322,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica6)
+                        if (k.IsSelected == false) return;
                 Kuglica6.IsSelected = false;
                 Kuglica6.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(6);
@@ -314,6 +346,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica7)
+                        if (k.IsSelected == false) return;
                 Kuglica7.IsSelected = false;
                 Kuglica7.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(7);
@@ -335,6 +370,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica8)
+                        if (k.IsSelected == false) return;
                 Kuglica8.IsSelected = false;
                 Kuglica8.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(8);
@@ -356,6 +394,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica9)
+                        if (k.IsSelected == false) return;
                 Kuglica9.IsSelected = false;
                 Kuglica9.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(9);
@@ -377,6 +418,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica10)
+                        if (k.IsSelected == false) return;
                 Kuglica10.IsSelected = false;
                 Kuglica10.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(10);
@@ -398,6 +442,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica11)
+                        if (k.IsSelected == false) return;
                 Kuglica11.IsSelected = false;
                 Kuglica11.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(11);
@@ -419,6 +466,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica12)
+                        if (k.IsSelected == false) return;
                 Kuglica12.IsSelected = false;
                 Kuglica12.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(12);
@@ -440,6 +490,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica13)
+                        if (k.IsSelected == false) return;
                 Kuglica13.IsSelected = false;
                 Kuglica13.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(13);
@@ -461,6 +514,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica14)
+                        if (k.IsSelected == false) return;
                 Kuglica14.IsSelected = false;
                 Kuglica14.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(14);
@@ -482,6 +538,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica15)
+                        if (k.IsSelected == false) return;
                 Kuglica15.IsSelected = false;
                 Kuglica15.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(15);
@@ -503,6 +562,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica16)
+                        if (k.IsSelected == false) return;
                 Kuglica16.IsSelected = false;
                 Kuglica16.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(16);
@@ -524,6 +586,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica17)
+                        if (k.IsSelected == false) return;
                 Kuglica17.IsSelected = false;
                 Kuglica17.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(17);
@@ -545,6 +610,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica18)
+                        if (k.IsSelected == false) return;
                 Kuglica18.IsSelected = false;
                 Kuglica18.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(18);
@@ -566,6 +634,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica19)
+                        if (k.IsSelected == false) return;
                 Kuglica19.IsSelected = false;
                 Kuglica19.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(19);
@@ -587,6 +658,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica20)
+                        if (k.IsSelected == false) return;
                 Kuglica20.IsSelected = false;
                 Kuglica20.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(20);
@@ -608,6 +682,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica21)
+                        if (k.IsSelected == false) return;
                 Kuglica21.IsSelected = false;
                 Kuglica21.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(21);
@@ -629,6 +706,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica22)
+                        if (k.IsSelected == false) return;
                 Kuglica22.IsSelected = false;
                 Kuglica22.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(22);
@@ -650,6 +730,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica23)
+                        if (k.IsSelected == false) return;
                 Kuglica23.IsSelected = false;
                 Kuglica23.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(23);
@@ -671,6 +754,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica24)
+                        if (k.IsSelected == false) return;
                 Kuglica24.IsSelected = false;
                 Kuglica24.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(24);
@@ -692,6 +778,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica25)
+                        if (k.IsSelected == false) return;
                 Kuglica25.IsSelected = false;
                 Kuglica25.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(25);
@@ -713,6 +802,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica26)
+                        if (k.IsSelected == false) return;
                 Kuglica26.IsSelected = false;
                 Kuglica26.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(26);
@@ -734,6 +826,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica27)
+                        if (k.IsSelected == false) return;
                 Kuglica27.IsSelected = false;
                 Kuglica27.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(27);
@@ -755,6 +850,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica28)
+                        if (k.IsSelected == false) return;
                 Kuglica28.IsSelected = false;
                 Kuglica28.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(28);
@@ -776,6 +874,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica29)
+                        if (k.IsSelected == false) return;
                 Kuglica29.IsSelected = false;
                 Kuglica29.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(29);
@@ -797,6 +898,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica30)
+                        if (k.IsSelected == false) return;
                 Kuglica30.IsSelected = false;
                 Kuglica30.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(30);
@@ -818,6 +922,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica31)
+                        if (k.IsSelected == false) return;
                 Kuglica31.IsSelected = false;
                 Kuglica31.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(31);
@@ -839,6 +946,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica32)
+                        if (k.IsSelected == false) return;
                 Kuglica32.IsSelected = false;
                 Kuglica32.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(32);
@@ -860,6 +970,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica33)
+                        if (k.IsSelected == false) return;
                 Kuglica33.IsSelected = false;
                 Kuglica33.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(33);
@@ -881,6 +994,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica34)
+                        if (k.IsSelected == false) return;
                 Kuglica34.IsSelected = false;
                 Kuglica34.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(34);
@@ -902,6 +1018,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica35)
+                        if (k.IsSelected == false) return;
                 Kuglica35.IsSelected = false;
                 Kuglica35.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(35);
@@ -923,6 +1042,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica36)
+                        if (k.IsSelected == false) return;
                 Kuglica36.IsSelected = false;
                 Kuglica36.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(36);
@@ -944,6 +1066,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica37)
+                        if (k.IsSelected == false) return;
                 Kuglica37.IsSelected = false;
                 Kuglica37.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(37);
@@ -965,6 +1090,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica38)
+                        if (k.IsSelected == false) return;
                 Kuglica38.IsSelected = false;
                 Kuglica38.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(38);
@@ -986,6 +1114,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica39)
+                        if (k.IsSelected == false) return;
                 Kuglica39.IsSelected = false;
                 Kuglica39.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(39);
@@ -1007,6 +1138,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica40)
+                        if (k.IsSelected == false) return;
                 Kuglica40.IsSelected = false;
                 Kuglica40.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(40);
@@ -1028,6 +1162,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica41)
+                        if (k.IsSelected == false) return;
                 Kuglica41.IsSelected = false;
                 Kuglica41.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(41);
@@ -1049,6 +1186,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica42)
+                        if (k.IsSelected == false) return;
                 Kuglica42.IsSelected = false;
                 Kuglica42.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(42);
@@ -1070,6 +1210,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajCrvene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 0 && k != Kuglica43)
+                        if (k.IsSelected == false) return;
                 Kuglica43.IsSelected = false;
                 Kuglica43.Background = Brushes.Red;
                 _tiket = TiketFactory.DajCrvene(43);
@@ -1091,6 +1234,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajCrvene) return;
             if (AktivirajZute)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 1 && k != Kuglica44)
+                        if (k.IsSelected == false) return;
                 Kuglica44.IsSelected = false;
                 Kuglica44.Background = Brushes.Yellow;
                 _tiket = TiketFactory.DajZute(44);
@@ -1112,6 +1258,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajPlave)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 2 && k != Kuglica45)
+                        if (k.IsSelected == false) return;
                 Kuglica45.IsSelected = false;
                 Kuglica45.Background = Brushes.Blue;
                 _tiket = TiketFactory.DajPlave(45);
@@ -1133,6 +1282,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajNarandzaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 3 && k != Kuglica46)
+                        if (k.IsSelected == false) return;
                 Kuglica46.IsSelected = false;
                 Kuglica46.Background = Brushes.Orange;
                 _tiket = TiketFactory.DajNarandzaste(46);
@@ -1154,6 +1306,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajCrvene || AktivirajZute) return;
             if (AktivirajZelene)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 4 && k != Kuglica47)
+                        if (k.IsSelected == false) return;
                 Kuglica47.IsSelected = false;
                 Kuglica47.Background = Brushes.LimeGreen;
                 _tiket = TiketFactory.DajZelene(47);
@@ -1175,6 +1330,9 @@ namespace Bingo
                 AktivirajCrvene || AktivirajZelene || AktivirajZute) return;
             if (AktivirajRoze)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 5 && k != Kuglica48)
+                        if (k.IsSelected == false) return;
                 Kuglica48.IsSelected = false;
                 Kuglica48.Background = Brushes.HotPink;
                 _tiket = TiketFactory.DajRoze(48);
@@ -1196,6 +1354,9 @@ namespace Bingo
                 AktivirajRoze || AktivirajZelene || AktivirajZute) return;
             if (AktivirajLjubicaste)
             {
+                foreach (Kuglice k in _kuglice)
+                    if (Grid.GetColumn(k) == 6 && k != Kuglica49)
+                        if (k.IsSelected == false) return;
                 Kuglica49.IsSelected = false;
                 Kuglica49.Background = Brushes.Indigo;
                 _tiket = TiketFactory.DajLjubicaste(49);
@@ -1245,6 +1406,7 @@ namespace Bingo
         private void Reset_Click(object sender, RoutedEventArgs e)
         {
             _tiket.ObrisiBrojeve();
+            while (_mojeKuglice.Count != 0) _mojeKuglice.RemoveAt(0);
             AktivirajCrvene = false;
             AktivirajLjubicaste = false;
             AktivirajNarandzaste = false;
