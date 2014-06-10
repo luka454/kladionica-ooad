@@ -54,6 +54,11 @@ namespace Kladionica
             _p.Content = new PromijeniPIN(_c, _p);            
         }
 
+        private void EditClan_Click(object sender, RoutedEventArgs e)
+        {
+            _p.Content = new EditKorisnika(_p, _c);
+        }
+
 
     }
 }

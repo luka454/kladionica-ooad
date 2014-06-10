@@ -6,7 +6,7 @@
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
         <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
         <BitmapImage x:Key ="NoviTiketICO" UriSource="ico/novi_tiket.png"/>
-        
+        <BitmapImage x:Key ="OK" UriSource="ico/ok-512.png"/>
         <Style x:Key="DugmeZeleno" TargetType="{x:Type Button}">
             <Setter Property="Background" Value="{DynamicResource Zelena}"/>
             <Setter Property="BorderThickness" Value="0"/>
