@@ -94,13 +94,17 @@ namespace Kladionica
 
         private void BKlubKorisnika_Click(object sender, RoutedEventArgs e)
         {
-            Stranica.Content = new AfterBKorisKlubClick(Stranica);
+            RegistrujKorisnika r = new RegistrujKorisnika(Stranica);
+            r.Show();
         }
 
         private void BNoviTiket_Click(object sender, RoutedEventArgs e)
         {
             Stranica.Content = new NoviTiket.NoviTiketMeni();
         }
-
+        private void AddUser_Click(object sender, RoutedEventArgs e)
+        {
+            Stranica.Content = new UnosKorisnika(Stranica);
+        }
     }
 }

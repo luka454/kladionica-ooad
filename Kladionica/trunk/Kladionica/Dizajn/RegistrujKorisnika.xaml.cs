@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kladionica.BazaPodataka;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +24,32 @@ namespace Kladionica
         {
             InitializeComponent();
         }
-
+        ContentPresenter _c;
+        public RegistrujKorisnika(ContentPresenter c)
+        {
+            InitializeComponent();
+            _c = c;
+        }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
+            ClanKluba c = baza.getByUsername(UserBox.Text);
+            if(ClanKluba.HashFunkcijaSifra(PassBox.Password) == c.HashPassword)
+            {
+                _c.Content = new PrikazKorisnika(c);
+                this.Close();
+            }
+            else
+            {
+
+            }
         }
     }
 }

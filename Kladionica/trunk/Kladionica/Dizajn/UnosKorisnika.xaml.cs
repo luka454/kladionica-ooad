@@ -34,7 +34,7 @@ namespace Kladionica
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _c.Content = new AfterBKorisKlubClick(_c);
+            //_c.Content = new AfterBKorisKlubClick(_c);
         }
 
         private void PassCheckBox_LostFocus(object sender, RoutedEventArgs e)

@@ -31,6 +31,29 @@ namespace Kladionica.BazaPodataka
             }
 
         }
+        public ClanKluba getByUsername(string username)
+        {
+            try
+            {
+                DAL.Connection.Open();
+                c = new MySqlCommand("select * from ClanKluba where username = '" + username + "'", DAL.Connection);
+                MySqlDataReader r = c.ExecuteReader();
+                if (r.Read())
+                {
+                    ClanKluba ck = new ClanKluba(r.GetInt32("ID"), r.GetString("Ime"), r.GetString("Prezime"), r.GetString("Username"), r.GetInt32("HashPassworda"), r.GetInt32("PIN"), r.GetDecimal("Novac"));
+                    System.Windows.MessageBox.Show(ck.HashPassword.ToString());
+                    DAL.Connection.Close();
+                    return ck;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+                throw ex;
+            }
+        }
 
         public ClanKluba read(ClanKluba entity)
         {
@@ -97,12 +120,13 @@ namespace Kladionica.BazaPodataka
         {
             try
             {
-                c = new MySqlCommand("select * from ClanKluba", DAL.Connection);
+                DAL.Connection.Open();
+
+                c = new MySqlCommand("select * from clankluba", DAL.Connection);
                 MySqlDataReader r = c.ExecuteReader();
                 List<ClanKluba> clanovi = new List<ClanKluba>();
                 while (r.Read())
-                    clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
-                        r.GetInt32("hashpassword")));
+                    clanovi.Add(new ClanKluba(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"), r.GetInt32("hashpassword")));
                 return clanovi;
             }
             catch (Exception ex)
@@ -111,7 +135,7 @@ namespace Kladionica.BazaPodataka
             }
         }
 
-        public List<ClanKluba> getByExample(string name, string value)
+      /*  public List<ClanKluba> getByExample(string name, string value)
         {
             try
             {
@@ -127,6 +151,6 @@ namespace Kladionica.BazaPodataka
             {
                 throw ex;
             }
-        }
+        }*/
     }
 }

@@ -159,7 +159,7 @@
                             <PasswordBox x:Name="PassBox" FontSize="18" BorderThickness="0" />
                         </Border>
                     </Grid>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold" Click="Button_Click"/>
                     <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="Button_Click_1"/>
                 </Grid>
             </TabItem>
