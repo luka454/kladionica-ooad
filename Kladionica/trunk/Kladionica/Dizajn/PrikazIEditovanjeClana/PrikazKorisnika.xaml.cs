@@ -49,6 +49,11 @@ namespace Kladionica
             u.Show();
         }
 
+        private void PromijeniPass_Click(object sender, RoutedEventArgs e)
+        {
+            _p.Content = new PromijeniPIN(_c, _p);            
+        }
+
 
     }
 }

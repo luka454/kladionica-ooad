@@ -73,24 +73,45 @@ namespace Kladionica.BazaPodataka
 
             catch (Exception ex)
             {
+                return false;
                 throw ex;
             }
-            
+        }
+
+        public ClanKluba UpdatePIN(ClanKluba entity)
+        {
+            try
+            {
+                DAL.Connection.Open();
+                c = new MySqlCommand("update clankluba set PIN = " + entity.PIN + " where ID = " + entity.ID + ";", DAL.Connection);
+                c.ExecuteNonQuery();
+                DAL.Connection.Close();
+                return entity;
+            }
+
+            catch (Exception ex)
+            {
+                DAL.Connection.Close();
+                throw ex;
+            }
         }
 
         public ClanKluba update(ClanKluba entity)
         {
             try
             {
-                c = new MySqlCommand("update ClanKluba set ime = " + entity.Ime +
-                    ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
-                    entity.HashPassword + "where id=" + entity.ID, DAL.Connection);
+                DAL.Connection.Open();
+                c = new MySqlCommand("update clankluba set ime = '" + entity.Ime +
+                    "', prezime = '" + entity.Prezime + "', username = '" + entity.Username + "' , hashpassworda = " +
+                    entity.HashPassword + " where id = " + entity.ID +";", DAL.Connection);
                 c.ExecuteNonQuery();
+                DAL.Connection.Close();
                 return getById(entity.ID);
             }
 
             catch (Exception ex)
             {
+                DAL.Connection.Close();
                 throw ex;
             }
         }

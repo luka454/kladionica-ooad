@@ -223,11 +223,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Dizajn\PrikazIEditovanjeClana\PromijeniPIN.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Klase\Osoba.cs" />
     <Compile Include="Dizajn\PrikazIEditovanjeClana\PrikazKorisnika.xaml.cs">
       <DependentUpon>PrikazKorisnika.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dizajn\PrikazIEditovanjeClana\PromijeniPIN.xaml.cs">
+      <DependentUpon>PromijeniPIN.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
