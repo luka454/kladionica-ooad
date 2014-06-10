@@ -41,6 +41,7 @@ namespace Kladionica
         {
             ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
             ClanKluba c = baza.getByUsername(UserBox.Text);
+            if(c != null)
             if(ClanKluba.HashFunkcijaSifra(PassBox.Password) == c.HashPassword)
             {
                 _c.Content = new PrikazKorisnika(c);

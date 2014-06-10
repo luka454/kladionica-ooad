@@ -41,7 +41,6 @@ namespace Kladionica.BazaPodataka
                 if (r.Read())
                 {
                     ClanKluba ck = new ClanKluba(r.GetInt32("ID"), r.GetString("Ime"), r.GetString("Prezime"), r.GetString("Username"), r.GetInt32("HashPassworda"), r.GetInt32("PIN"), r.GetDecimal("Novac"));
-                    System.Windows.MessageBox.Show(ck.HashPassword.ToString());
                     DAL.Connection.Close();
                     return ck;
                 }

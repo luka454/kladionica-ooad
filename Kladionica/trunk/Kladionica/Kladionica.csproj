@@ -70,8 +70,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Dizajn\AfterBKorisKlubClick.xaml.cs">
-      <DependentUpon>AfterBKorisKlubClick.xaml</DependentUpon>
+    <Compile Include="Dizajn\DobarUnos.xaml.cs">
+      <DependentUpon>DobarUnos.xaml</DependentUpon>
     </Compile>
     <Compile Include="BazaPodataka\DAL-public.cs" />
     <Compile Include="BazaPodataka\DAL.cs" />
@@ -139,7 +139,7 @@
     <Compile Include="Dizajn\StanjeRacuna.xaml.cs">
       <DependentUpon>StanjeRacuna.xaml</DependentUpon>
     </Compile>
-    <Page Include="Dizajn\AfterBKorisKlubClick.xaml">
+    <Page Include="Dizajn\DobarUnos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -219,14 +219,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PrikazKorisnika.xaml">
+    <Page Include="Dizajn\PrikazKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Klase\Osoba.cs" />
-    <Compile Include="PrikazKorisnika.xaml.cs">
+    <Compile Include="Dizajn\PrikazKorisnika.xaml.cs">
       <DependentUpon>PrikazKorisnika.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -301,6 +301,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ico\shield-red-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ico\ok-512.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
