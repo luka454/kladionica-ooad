@@ -183,6 +183,8 @@ namespace Bingo
         {
             osvojili.Visibility = Visibility.Visible;
             pobjeda.Content = TrenutnaIgra.Dobitak + " KM";
+            if (TrenutnaIgra.Dobitak > 0 && _kuglice[34].Visibility==Visibility.Visible)
+                MessageBox.Show("HAZIME IMAMO BINGO!!!");
         }
     }
 }
