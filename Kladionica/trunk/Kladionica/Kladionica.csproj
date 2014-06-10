@@ -70,7 +70,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Dizajn\DobarUnos.xaml.cs">
+    <Compile Include="Dizajn\ClanKlubaDodaj\DobarUnos.xaml.cs">
       <DependentUpon>DobarUnos.xaml</DependentUpon>
     </Compile>
     <Compile Include="BazaPodataka\DAL-public.cs" />
@@ -130,16 +130,16 @@
     <Compile Include="Dizajn\Welcome.xaml.cs">
       <DependentUpon>Welcome.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dizajn\UnosKorisnika.xaml.cs">
+    <Compile Include="Dizajn\ClanKlubaDodaj\UnosKorisnika.xaml.cs">
       <DependentUpon>UnosKorisnika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dizajn\RegistrujKorisnika.xaml.cs">
+    <Compile Include="Dizajn\PrikazIEditovanjeClana\RegistrujKorisnika.xaml.cs">
       <DependentUpon>RegistrujKorisnika.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dizajn\StanjeRacuna.xaml.cs">
-      <DependentUpon>StanjeRacuna.xaml</DependentUpon>
+    <Compile Include="Dizajn\PrikazIEditovanjeClana\UplataIIsplata.xaml.cs">
+      <DependentUpon>UplataIIsplata.xaml</DependentUpon>
     </Compile>
-    <Page Include="Dizajn\DobarUnos.xaml">
+    <Page Include="Dizajn\ClanKlubaDodaj\DobarUnos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -207,26 +207,26 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dizajn\UnosKorisnika.xaml">
+    <Page Include="Dizajn\ClanKlubaDodaj\UnosKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dizajn\RegistrujKorisnika.xaml">
+    <Page Include="Dizajn\PrikazIEditovanjeClana\RegistrujKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dizajn\StanjeRacuna.xaml">
+    <Page Include="Dizajn\PrikazIEditovanjeClana\PrikazKorisnika.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Dizajn\PrikazKorisnika.xaml">
+    <Page Include="Dizajn\PrikazIEditovanjeClana\UplataIIsplata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Klase\Osoba.cs" />
-    <Compile Include="Dizajn\PrikazKorisnika.xaml.cs">
+    <Compile Include="Dizajn\PrikazIEditovanjeClana\PrikazKorisnika.xaml.cs">
       <DependentUpon>PrikazKorisnika.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">

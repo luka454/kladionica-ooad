@@ -1,4 +1,4 @@
-﻿<ContentControl x:Class="Kladionica.PrikazKorisnika"
+﻿<ContentControl x:Class="Kladionica.UnosKorisnika"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -44,7 +44,9 @@
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" Value="#426700"></Setter>
                 </Trigger>
-          
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="Gray"></Setter>
+                </Trigger>
             </Style.Triggers>
         </Style>
     </ContentControl.Resources>
@@ -56,8 +58,9 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="20" />
             <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+
             <RowDefinition Height="20" />
             <RowDefinition Height="40" />
             <RowDefinition Height="*" />
@@ -65,25 +68,56 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Label Style="{DynamicResource Labels}" Grid.Row="1" Grid.Column="1" Content="Username:"/>
+        <Label Style="{DynamicResource Labels}" Grid.Row="1" Grid.Column="1" Content="Ime:"/>
         <Label Style="{DynamicResource Labels}" Grid.Row="2" Grid.Column="1" Content="Prezime:"/>
-        <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Ime:"/>
-        <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Stanje racuna:"/>
+        <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Username:"/>
+        <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Password:"/>
+        <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Ponovi password:"/>
+        <Label Style="{DynamicResource Labels}" Grid.Row="6" Grid.Column="1" Content="PIN:"/>
 
-        <Label x:Name="Username" Style="{DynamicResource Labels}" Grid.Row="1" Grid.Column="2" Foreground="{DynamicResource Zelena}" FontWeight="SemiBold" HorizontalAlignment="Left"/>
-        <Label x:Name="Prezime" Style="{DynamicResource Labels}" Grid.Row="2" Grid.Column="2" Foreground="{DynamicResource Zelena}" FontWeight="SemiBold" HorizontalAlignment="Left"/>
-        <Label x:Name="Ime" Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="2" Foreground="{DynamicResource Zelena}" FontWeight="SemiBold" HorizontalAlignment="Left"/>
-        <Label x:Name="Novac" Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="2" Foreground="{DynamicResource Zelena}" FontWeight="SemiBold" HorizontalAlignment="Left"/>
 
-        <Button x:Name="UplatiNovac" Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Uplati novac" FontWeight="Bold"/>
-        <Button x:Name="IsplatiNovac" Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Isplati novac" FontWeight="Bold"/>
-        <Button x:Name="EditClan" Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Uredi racun" FontWeight="Bold"/>
-        <Button x:Name="PromijeniPass" Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Promijeni PIN" FontWeight="Bold"/>
-
+        <Grid Grid.Column="2" Grid.Row="1">
+            <Border Style="{DynamicResource Borders}">
+                <TextBox x:Name="ImeBox" FontSize="18" BorderThickness="0" />
+            </Border>
+        </Grid>
+        
+        <Grid Grid.Column="2" Grid.Row="2">
+            <Border Style="{DynamicResource Borders}">
+                <TextBox x:Name="PrezimeBox" FontSize="18" BorderThickness="0" />
+            </Border>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="3">
+            <Border Style="{DynamicResource Borders}">
+                <TextBox x:Name="UsernameBox" FontSize="18" BorderThickness="0" />
+            </Border>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="4">
+            <Border Style="{DynamicResource Borders}">
+                <PasswordBox x:Name="PasswordBox" FontSize="18" BorderThickness="0" />
+            </Border>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="5">
+            <Border Style="{DynamicResource Borders}">
+                <PasswordBox x:Name="PassCheckBox" FontSize="18" BorderThickness="0" LostFocus="PassCheckBox_LostFocus"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="3" Grid.Row="5" >
+            <Border x:Name="ErrorBorder" BorderThickness="2" Grid.Row="0" Grid.ColumnSpan="2" CornerRadius="20,20,20,20" BorderBrush="{DynamicResource Plava}" Height="30" Width="200" HorizontalAlignment="Left">
+                <TextBlock x:Name="ErrorText" Text="Neispravno ponovljen password" Foreground="{DynamicResource Plava}" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="SemiBold"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="2" Grid.Row="6">
+            <Border Style="{DynamicResource Borders}">
+                <PasswordBox x:Name="PINBox" FontSize="18" BorderThickness="0" />
+            </Border>
+        </Grid>
+        <Button x:Name="KreirajButton" Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Kreiraj" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="Button_Click_2"/>
     </Grid>
 
 </ContentControl>
