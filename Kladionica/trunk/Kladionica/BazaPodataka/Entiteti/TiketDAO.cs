@@ -17,9 +17,9 @@ namespace Kladionica.BazaPodataka
             try
             {
                 DAL.Connection.Open();
-                string str = (entity.Vlasnik != null ? entity.Vlasnik.ToString() : "NULL");
+                string str = (entity.Vlasnik != null ? entity.Vlasnik.ToString() : "0");
                 string cmd = String.Format("insert into tiketi(tiptiketa, ulog, clankluba_id) values ('{0}', '{1}', '{2}')",
-                    1, entity.Ulog, 1);
+                    1, entity.Ulog, str);
                 c = new MySqlCommand(cmd, DAL.Connection);
                 c.ExecuteNonQuery();
 
@@ -27,8 +27,7 @@ namespace Kladionica.BazaPodataka
 
                 foreach (var item in entity.DajIgre())
 	            {
-                    System.Windows.MessageBox.Show(item.OdigranaIgra.ID.ToString());
-
+                    
 		            cmd = String.Format("insert into stavketiketa(tiketi_id, igre_id, odigranitip) values('{0}', '{1}', '{2}')",
                          ID, item.OdigranaIgra.ID, item.OdigraniTip);
                     c = new MySqlCommand(cmd, DAL.Connection);
