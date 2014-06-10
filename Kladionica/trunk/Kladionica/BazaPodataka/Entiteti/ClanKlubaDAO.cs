@@ -50,6 +50,7 @@ namespace Kladionica.BazaPodataka
             catch (Exception ex)
             {
                 System.Windows.MessageBox.Show(ex.Message);
+                DAL.Connection.Close();
                 throw ex;
             }
         }
@@ -59,11 +60,29 @@ namespace Kladionica.BazaPodataka
             return getById(entity.ID);
         }
 
+        public bool UpdateStanjeRacuna(int id, decimal ukupno)
+        {
+            try
+            {
+                DAL.Connection.Open();
+                c = new MySqlCommand("update clankluba set Novac = " + ukupno.ToString(CultureInfo.InvariantCulture) + " where ID = " + id + ";", DAL.Connection);
+                c.ExecuteNonQuery();
+                DAL.Connection.Close();
+                return true;
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
+
         public ClanKluba update(ClanKluba entity)
         {
             try
             {
-                c = new MySqlCommand("update ClanKluba set ime=" + entity.Ime +
+                c = new MySqlCommand("update ClanKluba set ime = " + entity.Ime +
                     ", prezime=" + entity.Prezime + ", username=" + entity.Username + ", hashpassword=" +
                     entity.HashPassword + "where id=" + entity.ID, DAL.Connection);
                 c.ExecuteNonQuery();

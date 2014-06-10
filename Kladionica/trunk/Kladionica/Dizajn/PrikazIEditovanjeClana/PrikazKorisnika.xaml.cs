@@ -24,14 +24,31 @@ namespace Kladionica
         {
             InitializeComponent();
         }
-
-        public PrikazKorisnika(ClanKluba c)
+        ClanKluba _c;
+        ContentPresenter _p;
+        public PrikazKorisnika(ClanKluba c, ContentPresenter p)
         {
             InitializeComponent();
             Username.Content = c.Username;
             Prezime.Content = c.Prezime;
             Ime.Content = c.Ime;
             Novac.Content = c.Novac;
+            _c = c;
+            _p = p;
         }
+
+        private void UplatiNovac_Click(object sender, RoutedEventArgs e)
+        {
+            UplataIIsplata u = new UplataIIsplata("Uplata", _c, _p);
+            u.Show();
+        }
+
+        private void IsplatiNovac_Click(object sender, RoutedEventArgs e)
+        {
+            UplataIIsplata u = new UplataIIsplata("Isplata", _c, _p);
+            u.Show();
+        }
+
+
     }
 }

@@ -61,12 +61,11 @@ namespace Kladionica
                 ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
                 baza.create(new ClanKluba(ImeBox.Text, PrezimeBox.Text, UsernameBox.Text, PasswordBox.Password, Convert.ToInt32(PINBox.Password)));
                 _c.Content = new DobarUnos();
-            
-
             }
             else
             {
-
+                System.Windows.MessageBox.Show("Greska prilikom unosa parametara! Unesite ponovo.");
+                _c.Content = new UnosKorisnika(_c);
             }
             
         }
@@ -83,11 +82,16 @@ namespace Kladionica
             return true;
         }
 
-        private bool IsNotAllDigit(string p)
+        public static bool IsNotAllDigit(string p)
         {
             for (int i = 0; i < p.Length; i++)
                 if (p[i] < '0' || p[i] > '9') return true;
             return false;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            _c.Content = new UnosKorisnika(_c);
         }
     }
 }

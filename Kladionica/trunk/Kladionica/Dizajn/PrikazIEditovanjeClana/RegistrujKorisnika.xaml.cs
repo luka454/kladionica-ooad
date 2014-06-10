@@ -44,13 +44,14 @@ namespace Kladionica
             if(c != null)
             if(ClanKluba.HashFunkcijaSifra(PassBox.Password) == c.HashPassword)
             {
-                _c.Content = new PrikazKorisnika(c);
+                _c.Content = new PrikazKorisnika(c, _c);
                 this.Close();
             }
             else
             {
-
+                System.Windows.MessageBox.Show("Pogresna sifra!");
             }
+            else System.Windows.MessageBox.Show("Pogresan username!");
         }
     }
 }
