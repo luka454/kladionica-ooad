@@ -25,6 +25,11 @@ namespace Kladionica
                 Iznos = i;
                 KojiKorisnik = k;
             }
+            public Transakcija(decimal i, ClanKluba k)
+            {
+                Iznos = i;
+                KojiKorisnik = k;
+            }
             public bool IzvrsiTransakciju(ClanKluba k)
             {
                 if (KojiKorisnik == null) { KojiKorisnik = k; return true; }
