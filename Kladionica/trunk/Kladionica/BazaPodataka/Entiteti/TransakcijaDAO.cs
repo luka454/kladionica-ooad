@@ -4,27 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Globalization;
+using Kladionica.BazaPodataka.Interfejsi;
 
 namespace Kladionica.BazaPodataka
 {
-    class TransakcijaDAO
+    public class TransakcijaDAO : IDaoCrud<Transakcija>
     {
          protected MySqlCommand c;
         public long create(Transakcija entity)
         {
             try
             {
-                c = new MySqlCommand("insert into transakcije(id, datum, iznos, korisnik_id)" +
-                    " values( " + entity.ID + ", " + entity.Vrijeme + ", " + entity.Iznos +
-                    ", " + entity.KojiKorisnik.ID + ")", DAL.Connection);
+                DAL.Connection.Open();
+                c = new MySqlCommand("insert into transakcija(Vrijeme, Iznos, ClanKluba_ID)" +
+                    " values( '" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "', " + entity.Iznos.ToString(CultureInfo.InvariantCulture) + ", " + entity.KojiKorisnik.ID + ")", DAL.Connection);
                 c.ExecuteNonQuery();
+                DAL.Connection.Close();
                 return c.LastInsertedId;
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-
         }
 
         public Transakcija read(Transakcija entity)

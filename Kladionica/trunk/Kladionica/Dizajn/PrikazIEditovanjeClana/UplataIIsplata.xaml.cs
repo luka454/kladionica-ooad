@@ -52,6 +52,8 @@ namespace Kladionica
                     ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
                     if (baza.UpdateStanjeRacuna(_c.ID, _c.Novac + Convert.ToDecimal(Novac.Text)))
                     {
+                        TransakcijaDAO tra = BazaPodataka.DAL.Factory.getTransakcijaDAO();
+                        tra.create(new Transakcija(Convert.ToDecimal(Novac.Text), _c));
                         _c.Novac += Convert.ToDecimal(Novac.Text);
                         _p.Content = new PrikazKorisnika(_c, _p);
                         this.Close();
@@ -67,6 +69,8 @@ namespace Kladionica
                         ClanKlubaDAO baza = BazaPodataka.DAL.Factory.getClanKlubaDao();
                         if(baza.UpdateStanjeRacuna(_c.ID, _c.Novac - Convert.ToDecimal(Novac.Text)))
                         {
+                            TransakcijaDAO tra = BazaPodataka.DAL.Factory.getTransakcijaDAO();
+                            tra.create(new Transakcija(-Convert.ToDecimal(Novac.Text), _c));
                             _c.Novac -= Convert.ToDecimal(Novac.Text);
                             _p.Content = new PrikazKorisnika(_c, _p);
                             this.Close();

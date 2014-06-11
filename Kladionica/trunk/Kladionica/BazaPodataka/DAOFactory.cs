@@ -50,6 +50,11 @@ namespace Kladionica.BazaPodataka
             return new KoeficijentDAO();
         }
 
+        public TransakcijaDAO getTransakcijaDAO()
+        {
+            return new TransakcijaDAO();
+        }
+
         public ClanKlubaDAO getClanKlubaDao()
         {
             return new ClanKlubaDAO();
