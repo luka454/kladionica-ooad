@@ -14,7 +14,7 @@
 
         </ComboBox>
         <GroupBox Header="QR kod" HorizontalAlignment="Left" Height="230" Margin="10,10,0,0" VerticalAlignment="Top" Width="251">
-            <cam:Webcam Name="Cam"></cam:Webcam>
+            <cam:Webcam Name="Cam"/>
         </GroupBox>
         <Label Content="Spojene web kamere:" HorizontalAlignment="Left" Margin="266,20,0,0" VerticalAlignment="Top"/>
         <TextBox Name="tb_ID" HorizontalAlignment="Left" Height="34" Margin="412,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105" IsEnabled="False"/>
