@@ -49,6 +49,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Encoder">
+      <HintPath>References\Microsoft.Expression.Encoder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Encoder.Api2">
+      <HintPath>References\Microsoft.Expression.Encoder.Api2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Encoder.Types">
+      <HintPath>References\Microsoft.Expression.Encoder.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Encoder.Utilities">
+      <HintPath>References\Microsoft.Expression.Encoder.Utilities.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -68,6 +80,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="zxing">
+      <HintPath>References\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -267,6 +282,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="KomunikacijaVanjskiUredjaji\QRScannerWin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Klase\Osoba.cs" />
@@ -275,6 +294,9 @@
     </Compile>
     <Compile Include="Dizajn\PrikazIEditovanjeClana\PromijeniPIN.xaml.cs">
       <DependentUpon>PromijeniPIN.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KomunikacijaVanjskiUredjaji\QRScannerWin.xaml.cs">
+      <DependentUpon>QRScannerWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
