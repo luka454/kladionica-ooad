@@ -92,5 +92,15 @@ namespace Kladionica
             w.Close();
             novi.Show();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MainWindow w = Window.GetWindow(this) as MainWindow;
+
+            Window novi = new AdministracijaWindow();
+            App.Current.MainWindow = novi;
+            w.Close();
+            novi.Show();
+        }
     }
 }

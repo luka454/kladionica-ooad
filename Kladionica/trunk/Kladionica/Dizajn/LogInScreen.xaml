@@ -87,7 +87,9 @@
         </Grid>
         <Button Content="Preskoci" Background="#505050"  Foreground="White" HorizontalAlignment="Left" Margin="583,93,0,0" FontSize="18" 
                 Grid.Row="2" VerticalAlignment="Top" Width="107" Click="Button_Click_2" Height="53"/>
-        
+        <Button Content="Administracija" Background="#505050"  Foreground="White" HorizontalAlignment="Left" Margin="444,93,0,0" FontSize="18" 
+        	Grid.Row="2" VerticalAlignment="Top" Width="134" Click="Button_Click_3" Height="53"/>
+
 
     </Grid>
     
