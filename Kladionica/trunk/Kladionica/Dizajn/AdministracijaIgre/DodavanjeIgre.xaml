@@ -5,78 +5,219 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="360" d:DesignWidth="450">
+    <ContentControl.Resources>
+        <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
+        <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
+        <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
+        <Style x:Key="Labels" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="17"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+        </Style>
+        <Style x:Key="Borders" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="white"/>
+            <Setter Property="MaxWidth" Value="230" />
+            <Setter Property="Width" Value="230"/>
+            <Setter Property="MinWidth" Value="50" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="BorderBrush" Value="Beige" />
+            <Setter Property="CornerRadius" Value="15"/>
+            <Setter Property="Padding" Value="20,3" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="DugmeZeleno" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="{DynamicResource Zelena}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#426700"></Setter>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" Value="Gray"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Grid>
+                            <Border x:Name="Border" Background = "{DynamicResource Plava}" BorderBrush = "CadetBlue" BorderThickness="2,3,2,0" CornerRadius="2,26,0,0"
+                                    Width="220" Height="30">
+                                <ContentPresenter x:Name="ContentSite" TextBlock.FontWeight ="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" ContentSource="Header" Margin="12,2,12,2"
+                                 TextBlock.FontSize="15"/>
+                            </Border>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{DynamicResource Plava}" />
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter TargetName="Border" Property="Background" Value="{DynamicResource SvijetloSiva}" />
+                                <Setter TargetName="Border" Property="TextBlock.Foreground" Value="Gray" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style  TargetType="{x:Type TabControl}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabControl}">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <TabPanel 
+              Grid.Row="0"
+              Panel.ZIndex="1" 
+              Margin="0,0,4,-1" 
+              IsItemsHost="True"
+              Background="Transparent" />
+                            <Border 
+                        		Grid.Row="1"
+                        		BorderBrush="CadetBlue" 
+                        		BorderThickness="1" 
+                        		CornerRadius="0, 12, 12, 12" Background ="{DynamicResource Plava}">
+                                <ContentPresenter ContentSource="SelectedContent" />
+                            </Border>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ContentControl.Resources>
+    
+    <!--FUDBAL TAB-->
     <Grid Background = "{DynamicResource Plava}">
         <TabControl Background="{DynamicResource Plava}" Foreground="White">
-            <TabItem Header="Fudbalska utakmica" Foreground="White" Margin="-2,-1,-112,-2">
+            <TabItem Header="Fudbalska utakmica" Foreground="White">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="32" />
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="30" />
-                        <RowDefinition Height="40" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="15" />
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="230" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    
+                    <Label Style="{DynamicResource Labels}" Grid.Row="1" Grid.Column="1" Content="Pocetak:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="2" Grid.Column="1" Content="Naziv:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Status igre:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Domacin:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Gost:"/>
 
-                    <Grid Grid.Column="1" Grid.Row="1">
-                        <Label Content="Pocetak:" Foreground="White" FontSize="17"/>
-                    </Grid>
                     <Grid Grid.Column="2" Grid.Row="1">
-                        <DatePicker Height="30" Width="Auto" VerticalAlignment="Bottom"/>
+                        <DatePicker Height="30" Width="Auto" Name="PocetakFDate"/>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="2">
-                        <Label Content="Naziv:" Foreground="White" FontSize="17"/>
+                    <Grid Grid.Column="2" Grid.Row="2">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="NazivFBox" FontSize="17" BorderThickness="0" />
+                        </Border>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="3">
-                        <Label Content="Status igre:" Foreground="White" FontSize="17"/>
+                    <Grid Grid.Column="2" Grid.Row="3">
+                        <ComboBox Width="230" Height="32" BorderBrush="{DynamicResource Zelena}" Background="White" Foreground="Black" Name="FStatusIgre">
+                            <RadioButton Content="Nije pocela" FontSize="17" BorderBrush="#FF72A700"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="Odgodjena" FontSize="17"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="Obustavljena" FontSize="17"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="U toku" FontSize="17"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="Zavrsena" FontSize="17"/>
+                        </ComboBox>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="4">
-                        <Label Content="Domacin:" Foreground="White" FontSize="17"/>
+                    <Grid Grid.Column="2" Grid.Row="4">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="DomacinBox" FontSize="17" BorderThickness="0" />
+                        </Border>
                     </Grid>
-                    <Grid Grid.Column="1" Grid.Row="5">
-                        <Label Content="Gost:" Foreground="White" FontSize="17"/>
+                    <Grid Grid.Column="2" Grid.Row="5">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="GostBox" FontSize="17" BorderThickness="0" />
+                        </Border>
                     </Grid>
                     <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
                     <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
                 </Grid>
-
             </TabItem>
-            <TabItem Header="Teniska utakmica" Foreground="White" Margin="113,0,-227,-3">
+            
+            <!--TENIS TAB-->
+            <TabItem Header="Teniska utakmica" Foreground="White">
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
                         <RowDefinition Height="40" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="15" />
                         <RowDefinition Height="40" />
-                        <RowDefinition Height="20" />
-                        <RowDefinition Height="40" />
-                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="230" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    
+                    <Label Style="{DynamicResource Labels}" Grid.Row="1" Grid.Column="1" Content="Pocetak:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="2" Grid.Column="1" Content="Naziv:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Status igre:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Prvi protivnik:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Drugi protivnik:"/>
+
                     <Grid Grid.Column="2" Grid.Row="1">
-                    
+                        <DatePicker Height="30" Width="Auto" Name="PocetakTDate"/>
                     </Grid>
                     <Grid Grid.Column="2" Grid.Row="2">
-                    
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="NazivTBox" FontSize="17" BorderThickness="0" />
+                        </Border>
                     </Grid>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
+                    <Grid Grid.Column="2" Grid.Row="3">
+                        <ComboBox Width="230" Height="32" BorderBrush="{DynamicResource Zelena}" Background="White" Foreground="Black" Name="TStatusIgre">
+                            <RadioButton Content="Nije pocela" FontSize="17" BorderBrush="#FF72A700"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="Odgodjena" FontSize="17"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="Obustavljena" FontSize="17"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="U toku" FontSize="17"/>
+                            <RadioButton BorderBrush="#FF72A700" Content="Zavrsena" FontSize="17"/>
+                        </ComboBox>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="4">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="PrviProtivnikBox" FontSize="17" BorderThickness="0" />
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="5">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="DrugiProtivnikBox" FontSize="17" BorderThickness="0" />
+                        </Border>
+                    </Grid>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
                 </Grid>
             </TabItem>
 
