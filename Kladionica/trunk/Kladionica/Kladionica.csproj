@@ -75,6 +75,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="BazaPodataka\Entiteti\TiketDAO.cs" />
+    <Compile Include="Dizajn\AdministracijaIgre\DobarUnosIgre.xaml.cs">
+      <DependentUpon>DobarUnosIgre.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dizajn\AdministracijaIgre\DodavanjeIgre.xaml.cs">
       <DependentUpon>DodavanjeIgre.xaml</DependentUpon>
     </Compile>
@@ -156,6 +159,10 @@
     <Compile Include="Dizajn\PrikazIEditovanjeClana\UplataIIsplata.xaml.cs">
       <DependentUpon>UplataIIsplata.xaml</DependentUpon>
     </Compile>
+    <Page Include="Dizajn\AdministracijaIgre\DobarUnosIgre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Dizajn\AdministracijaIgre\DodavanjeIgre.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

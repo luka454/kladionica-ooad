@@ -1,0 +1,33 @@
+﻿<ContentControl x:Class="Kladionica.AdministracijaIgre.DobarUnosIgre"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <ContentControl.Resources>
+        <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
+        <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
+        <SolidColorBrush x:Key="Zelena">#72a700</SolidColorBrush>
+    </ContentControl.Resources>
+    <Grid Background="{DynamicResource Plava}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="350" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Image  Grid.Column="1" Grid.Row="1" Margin="0,10,0,0" Source="{DynamicResource OK}"/>
+        <TextBlock x:Name="Tekst" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="SemiBold" Foreground="{DynamicResource Zelena}">
+            Fudbalska utakmica   
+        </TextBlock>
+        <TextBlock x:Name="Tekst1" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontWeight="SemiBold" Foreground="{DynamicResource Zelena}">
+            uspjesno dodana
+        </TextBlock>
+    </Grid>
+</ContentControl>
