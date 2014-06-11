@@ -24,11 +24,13 @@ namespace Kladionica
         public AdministracijaWindow()
         {
             InitializeComponent();
+            Stranica.Content = new Welcome();
         }
 
         private void BDodajIgre_Click_1(object sender, RoutedEventArgs e)
         {
-            Stranica.Content = new AdministracijaIgre.DodavanjeIgre(this);
+            DodavanjeIgre dodaj = new DodavanjeIgre();
+            dodaj.Show();
         }
     }
 }

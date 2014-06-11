@@ -10,22 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Kladionica.BazaPodataka;
 
 namespace Kladionica.AdministracijaIgre
 {
     /// <summary>
     /// Interaction logic for DodavanjeIgre.xaml
     /// </summary>
-    public partial class DodavanjeIgre : ContentControl
+    public partial class DodavanjeIgre : Window
     {
-        AdministracijaWindow _otac; //ovo ako ti zatreba da mijenjaš šta... recimo da iz ovog promijeniš šta
-        //šta se prikazuje na ovoj Stranica
-        public DodavanjeIgre(AdministracijaWindow otac)
+        public DodavanjeIgre()
         {
-            _otac = otac;
             InitializeComponent();
+        }
+
+        private void OdustaniF_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OdustaniT_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

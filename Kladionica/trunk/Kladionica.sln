@@ -2,13 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kladionica", "Kladionica\Kladionica.csproj", "{2B090C3E-4A73-4444-B3ED-715E2D3302BD}"
-	ProjectSection(ProjectDependencies) = postProject
-		{201B1431-DFA6-4449-A45E-4492ADDC0D0D} = {201B1431-DFA6-4449-A45E-4492ADDC0D0D}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KladionicaKlase", "KladionicaKlase\KladionicaKlase.csproj", "{94D3239B-E329-47A9-AE50-733D5004E451}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bingo", "Bingo\Bingo.csproj", "{201B1431-DFA6-4449-A45E-4492ADDC0D0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2B090C3E-4A73-4444-B3ED-715E2D3302BD} = {2B090C3E-4A73-4444-B3ED-715E2D3302BD}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
