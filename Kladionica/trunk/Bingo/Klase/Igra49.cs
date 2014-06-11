@@ -32,13 +32,17 @@ namespace Bingo
             MoguciBrojevi.RemoveAt(tempBroj);
             return br;
         }
-        public void DodajObserver(Tiket6 t)
+        public void DodajTiket(Tiket6 t)
         {
             //OdigraniTiketi.Add(t);
         }
-        public void IzbrisiObserver(Tiket6 t)
+        public void IzbrisiTiket(Tiket6 t)
         {
             //OdigraniTiketi.Remove(t);
+        }
+        public void Obavijesti()
+        {
+            //
         }
     }
 }
