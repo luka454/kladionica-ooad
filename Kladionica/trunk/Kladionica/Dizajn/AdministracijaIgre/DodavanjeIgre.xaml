@@ -4,8 +4,79 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="800">
-    <Grid Background="#ffdfdf">
-        <TextBlock FontSize="30">Pozdrav za Aidu</TextBlock>
+             d:DesignHeight="360" d:DesignWidth="450">
+    <Grid Background = "{DynamicResource Plava}">
+        <TabControl Background="{DynamicResource Plava}" Foreground="White">
+            <TabItem Header="Fudbalska utakmica" Foreground="White" Margin="-2,-1,-112,-2">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="32" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    
+
+                    <Grid Grid.Column="1" Grid.Row="1">
+                        <Label Content="Pocetak:" Foreground="White" FontSize="17"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="2">
+                        <Label Content="Naziv:" Foreground="White" FontSize="17"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="3">
+                        <Label Content="Status igre:" Foreground="White" FontSize="17"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="4">
+                        <Label Content="Domacin:" Foreground="White" FontSize="17"/>
+                    </Grid>
+                    <Grid Grid.Column="1" Grid.Row="5">
+                        <Label Content="Gost:" Foreground="White" FontSize="17"/>
+                    </Grid>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Teniska utakmica" Foreground="White" Margin="113,0,-227,-3">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="20" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    
+                    <Grid Grid.Column="2" Grid.Row="1">
+                    
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="2">
+                    
+                    </Grid>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
     </Grid>
 </ContentControl>
