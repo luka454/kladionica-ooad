@@ -8,7 +8,8 @@ namespace Bingo
 {
     public interface Igra
     {
-        void DodajObserver(Tiket6 t);
-        void IzbrisiObserver(Tiket6 t);
+        void DodajTiket(Tiket6 t);
+        void IzbrisiTiket(Tiket6 t);
+        void Obavijesti();
     }
 }
