@@ -31,6 +31,9 @@
                     <Grid Grid.Column="1" Grid.Row="1">
                         <Label Content="Pocetak:" Foreground="White" FontSize="17"/>
                     </Grid>
+                    <Grid Grid.Column="2" Grid.Row="1">
+                        <DatePicker Height="30" Width="Auto" VerticalAlignment="Bottom"/>
+                    </Grid>
                     <Grid Grid.Column="1" Grid.Row="2">
                         <Label Content="Naziv:" Foreground="White" FontSize="17"/>
                     </Grid>
