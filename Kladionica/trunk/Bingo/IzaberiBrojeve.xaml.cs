@@ -1718,7 +1718,7 @@ namespace Bingo
         private void Automatski_Click(object sender, RoutedEventArgs e)
         {
             if (AktivirajLjubicaste || AktivirajNarandzaste || AktivirajCrvene ||
-                AktivirajRoze || AktivirajZelene || AktivirajZute || AktivirajPlave) return;
+                AktivirajRoze || AktivirajZelene || AktivirajZute || AktivirajPlave || JelAutomatski) return;
             JelAutomatski = true;
             _tiket=TiketFactory.DajAutomatski();
             foreach (int broj in _tiket.Brojevi)
@@ -1749,6 +1749,7 @@ namespace Bingo
             AktivirajRoze = false;
             AktivirajZelene = false;
             AktivirajZute = false;
+            JelAutomatski = false;
             foreach (Kuglice k in _kuglice)
             {
                 k.IsSelected = false;
