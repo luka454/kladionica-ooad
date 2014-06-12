@@ -32,5 +32,13 @@ namespace Kladionica
             DodavanjeIgre dodaj = new DodavanjeIgre(Stranica);
             dodaj.Show();
         }
+
+        private void BLogOut_Click_1(object sender, RoutedEventArgs e)
+        {
+            Window novi = new MainWindow();
+            App.Current.MainWindow = novi;
+            this.Close();
+            novi.Show();
+        }
     }
 }

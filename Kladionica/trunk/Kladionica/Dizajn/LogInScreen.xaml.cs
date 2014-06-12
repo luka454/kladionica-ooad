@@ -48,7 +48,17 @@ namespace Kladionica
                     return;
                 }
 
-                
+                if (Username.Text.ToLower() == "administracija")
+                {
+                    MainWindow we = Window.GetWindow(this) as MainWindow;
+
+                    Window novi2 = new AdministracijaWindow();
+                    App.Current.MainWindow = novi2;
+                    we.Close();
+                    novi2.Show();
+                    return;
+                }
+
                 Radnica r = BazaPodataka.DAL.Factory.getRadnicaDAO().getByUsername(Username.Text);
 
                 if (r == null)
