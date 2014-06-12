@@ -19,6 +19,8 @@ using ZXing;
 using ZXing.QrCode;
 using System.Drawing;
 using ZXing.Common;
+using Kladionica;
+using Kladionica.BazaPodataka;
 
 namespace Kladionica.KomunikacijaVanjskiUredjaji
 {
