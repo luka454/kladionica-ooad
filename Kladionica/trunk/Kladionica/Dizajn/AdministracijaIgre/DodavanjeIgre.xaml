@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="360" d:DesignWidth="450">
+             d:DesignHeight="560" d:DesignWidth="450">
     <ContentControl.Resources>
         <SolidColorBrush x:Key="SvijetloSiva">#f0f0f0</SolidColorBrush>
         <SolidColorBrush x:Key="Plava">#00bbff</SolidColorBrush>
@@ -115,7 +115,13 @@
                         <RowDefinition Height="35" />
                         <RowDefinition Height="35" />
                         <RowDefinition Height="35" />
-                        <RowDefinition Height="15" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="10" />
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -130,6 +136,11 @@
                     <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Status igre:"/>
                     <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Domacin:"/>
                     <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Gost:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="7" Grid.Column="1" Content="1" Margin="130,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="8" Grid.Column="1" Content="1x" Margin="120,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="9" Grid.Column="1" Content="x" Margin="130,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="10" Grid.Column="1" Content="x2" Margin="120,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="11" Grid.Column="1" Content="2" Margin="130,0,0,0"/>
 
                     <Grid Grid.Column="2" Grid.Row="1">
                         <DatePicker Height="30" Width="Auto" Name="PocetakFDate"/>
@@ -158,8 +169,34 @@
                             <TextBox x:Name="GostBox" FontSize="17" BorderThickness="0" />
                         </Border>
                     </Grid>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold" Click="DodajFudbal_Click"/>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="OdustaniF_Click"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="13" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold" Click="DodajFudbal_Click"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="13" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="OdustaniF_Click"/>
+                    <GroupBox Grid.Column="1" Grid.ColumnSpan="3" Header="Koeficijenti" FontSize="17" HorizontalAlignment="Left" Grid.Row="6" Grid.RowSpan="7" VerticalAlignment="Top" Height="222" Width="389"/>
+                    <Grid Grid.Column="2" Grid.Row="7">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="k1Box" FontSize="17" BorderThickness="0" TextChanged="k1Box_TextChanged" />
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="8">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="k1xBox" FontSize="17" BorderThickness="0" />
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="9">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="kxBox" FontSize="17" BorderThickness="0" />
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="10">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="kx2Box" FontSize="17" BorderThickness="0" />
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="11">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="k2Box" FontSize="17" BorderThickness="0" />
+                        </Border>
+                    </Grid>
                 </Grid>
             </TabItem>
 
@@ -173,7 +210,10 @@
                         <RowDefinition Height="35" />
                         <RowDefinition Height="35" />
                         <RowDefinition Height="35" />
-                        <RowDefinition Height="15" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
+                        <RowDefinition Height="35" />
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -188,6 +228,8 @@
                     <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Status igre:"/>
                     <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Prvi protivnik:"/>
                     <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Drugi protivnik:"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="7" Grid.Column="1" Content="P1 setovi:" Margin="65,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="8" Grid.Column="1" Content="P2 setovi:" Margin="65,0,0,0"/>
 
                     <Grid Grid.Column="2" Grid.Row="1">
                         <DatePicker Height="30" Width="Auto" Name="PocetakTDate"/>
@@ -216,8 +258,19 @@
                             <TextBox x:Name="DrugiProtivnikBox" FontSize="17" BorderThickness="0" />
                         </Border>
                     </Grid>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold"/>
-                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="OdustaniT_Click"/>
+                    <GroupBox Grid.Column="1" Grid.ColumnSpan="3" Header="Koeficijenti" FontSize="17" HorizontalAlignment="Left" Grid.Row="6" Grid.RowSpan="4" VerticalAlignment="Top" Height="119" Width="389"/>
+                    <Grid Grid.Column="2" Grid.Row="7">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="P1Box" FontSize="17" BorderThickness="0"/>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Column="2" Grid.Row="8">
+                        <Border Style="{DynamicResource Borders}">
+                            <TextBox x:Name="P2Box" FontSize="17" BorderThickness="0"/>
+                        </Border>
+                    </Grid>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="1" Grid.Row="10" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Prijava" FontWeight="Bold" Click="Button_Click"/>
+                    <Button Style="{DynamicResource DugmeZeleno}" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Right" MinWidth="150" FontSize="15" Foreground="White" Content="Odustani" FontWeight="Bold" Click="OdustaniT_Click"/>
                 </Grid>
             </TabItem>
 

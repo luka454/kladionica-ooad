@@ -43,6 +43,18 @@ namespace Kladionica.AdministracijaIgre
 
         private void DodajFudbal_Click(object sender, RoutedEventArgs e)
         {
+            Decimal broj1, broj1x, brojx, brojx2, broj2;
+            Decimal.TryParse(k1Box.Text, out broj1);
+            Decimal.TryParse(k1xBox.Text, out broj1x);
+            Decimal.TryParse(kxBox.Text, out brojx);
+            Decimal.TryParse(kx2Box.Text, out brojx2);
+            Decimal.TryParse(k2Box.Text, out broj2);
+            Koeficijent k1 = new Koeficijent("1", broj1);
+            Koeficijent k1x = new Koeficijent("1x", broj1x);
+            Koeficijent kx = new Koeficijent("x", brojx);
+            Koeficijent kx2 = new Koeficijent("x2", brojx2);
+            Koeficijent k2 = new Koeficijent("2", broj2);
+
             StatusIgre si=new StatusIgre();
             switch(Convert.ToString(FStatusIgre.SelectedValue))
             {
@@ -65,15 +77,8 @@ namespace Kladionica.AdministracijaIgre
             if (validirano())
             {
                 FudbalskaUtakmicaDAO fudbalDAO = BazaPodataka.DAL.Factory.getFudbalskaUtakmicaDao();
-                Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(PocetakFDate.SelectedDate.Value);
-                if (p == null)
-                {
-                    p = new Ponuda(PocetakFDate.SelectedDate.Value);
-                    p.ID  = Convert.ToInt32(BazaPodataka.DAL.Factory.getPonudaDAO().create(p));
-                }
-                
-
-                fudbalDAO.create(new FudbalskaUtakmica(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, DomacinBox.Text, GostBox.Text), p);
+                KoeficijentDAO koefDAO = BazaPodataka.DAL.Factory.getKoeficijentDAO();
+                fudbalDAO.create(new FudbalskaUtakmica(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, DomacinBox.Text, GostBox.Text));
                 _c.Content = new DobarUnosIgre();
                 this.Close();
             }
@@ -92,6 +97,54 @@ namespace Kladionica.AdministracijaIgre
             if (GostBox.Text.Length < 2) return false;
             //if (FStatusIgre.SelectedValue == null) return false;
             return true;
+        }
+
+        private void k1Box_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Decimal broj1, broj2;
+            Decimal.TryParse(P1Box.Text, out broj1);
+            Decimal.TryParse(P2Box.Text, out broj2);
+            Koeficijent P1 = new Koeficijent("1", broj1);
+            Koeficijent P2 = new Koeficijent("2", broj2);
+
+            StatusIgre si = new StatusIgre();
+            switch (Convert.ToString(FStatusIgre.SelectedValue))
+            {
+                case "Nije pocela":
+                    si = StatusIgre.NijePocela;
+                    break;
+                case "Obustavljena":
+                    si = StatusIgre.Obustavljena;
+                    break;
+                case "Odgodjena":
+                    si = StatusIgre.Odgodjena;
+                    break;
+                case "U toku":
+                    si = StatusIgre.UToku;
+                    break;
+                case "Zavrsena":
+                    si = StatusIgre.Zavrsena;
+                    break;
+            }
+            if (validirano())
+            {
+                TenisDAO tenDAO = BazaPodataka.DAL.Factory.getTenisDao();
+                KoeficijentDAO koefDAO = BazaPodataka.DAL.Factory.getKoeficijentDAO();
+                tenDAO.create(new Tenis(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, PrviProtivnikBox.Text, DrugiProtivnikBox.Text));
+                _c.Content = new DobarUnosIgre();
+                this.Close();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Greska prilikom unosa parametara! Unesite ponovo.");
+                //_c.Content = new UnosKorisnika(_c);
+
+            }   
         }
     }
 }
