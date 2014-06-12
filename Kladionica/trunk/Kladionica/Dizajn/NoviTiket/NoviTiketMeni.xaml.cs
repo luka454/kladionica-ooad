@@ -98,6 +98,7 @@ namespace Kladionica.NoviTiket
                     MessageBox.Show("Nemate dovoljno na racunu");
                     return;
                 }
+                _clan.Novac -= Convert.ToDecimal(TBnovac.Text);
 
                 Tiket tiket = new Tiket(ukupniKoeficijent, Convert.ToDecimal(TBnovac.Text), TipTiketa.Normalni);
                 tiket.OdigraneIgre = stavke;

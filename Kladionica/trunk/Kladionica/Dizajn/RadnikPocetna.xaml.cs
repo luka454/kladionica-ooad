@@ -157,5 +157,10 @@ namespace Kladionica
         }
 
         public bool izlogovan { get; set; }
+
+        private void BisplatiTiket_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

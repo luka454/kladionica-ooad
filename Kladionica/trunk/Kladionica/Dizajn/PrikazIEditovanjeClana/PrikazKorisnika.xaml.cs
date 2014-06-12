@@ -59,6 +59,11 @@ namespace Kladionica
             _p.Content = new EditKorisnika(_p, _c);
         }
 
+        private void OdigrajTiket_Click_1(object sender, RoutedEventArgs e)
+        {
+            _p.Content = new NoviTiket.NoviTiketMeni(_c);
+        }
+
 
     }
 }
