@@ -77,8 +77,17 @@ namespace Kladionica.AdministracijaIgre
             if (validirano())
             {
                 FudbalskaUtakmicaDAO fudbalDAO = BazaPodataka.DAL.Factory.getFudbalskaUtakmicaDao();
-                KoeficijentDAO koefDAO = BazaPodataka.DAL.Factory.getKoeficijentDAO();
-                fudbalDAO.create(new FudbalskaUtakmica(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, DomacinBox.Text, GostBox.Text));
+                FudbalskaUtakmica f = new FudbalskaUtakmica(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, DomacinBox.Text, GostBox.Text);
+                f.koeficijenti = new List<Koeficijent>() { k1, k1x, kx, kx2, k2 };
+
+                Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(PocetakFDate.SelectedDate.Value);
+                if (p == null)
+                {
+                    p = new Ponuda(PocetakFDate.SelectedDate.Value);
+                    p.ID  = Convert.ToInt32(BazaPodataka.DAL.Factory.getPonudaDAO().create(p));
+                }
+
+                fudbalDAO.create(f, p);
                 _c.Content = new DobarUnosIgre();
                 this.Close();
             }
@@ -134,8 +143,17 @@ namespace Kladionica.AdministracijaIgre
             if (validirano())
             {
                 TenisDAO tenDAO = BazaPodataka.DAL.Factory.getTenisDao();
-                KoeficijentDAO koefDAO = BazaPodataka.DAL.Factory.getKoeficijentDAO();
-                tenDAO.create(new Tenis(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, PrviProtivnikBox.Text, DrugiProtivnikBox.Text));
+                Tenis t = new Tenis(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, PrviProtivnikBox.Text, DrugiProtivnikBox.Text);
+                t.koeficijenti = new List<Koeficijent>() { P1, P2 };
+
+                Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(PocetakFDate.SelectedDate.Value);
+                if (p == null)
+                {
+                    p = new Ponuda(PocetakFDate.SelectedDate.Value);
+                    p.ID = Convert.ToInt32(BazaPodataka.DAL.Factory.getPonudaDAO().create(p));
+                }
+
+                tenDAO.create(t, p);
                 _c.Content = new DobarUnosIgre();
                 this.Close();
             }

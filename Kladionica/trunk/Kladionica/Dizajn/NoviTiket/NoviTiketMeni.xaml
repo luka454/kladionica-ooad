@@ -52,15 +52,11 @@
                     <RowDefinition />
                 </Grid.RowDefinitions>
                 <TextBlock FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Left" Grid.Column="1" Margin="205,5,0,0"
-                           VerticalAlignment="Top" Grid.ColumnSpan="2">
-                    Unesite PIN:
-                </TextBlock>
+        			VerticalAlignment="Top" Grid.ColumnSpan="2"><Run Text="Unesite PIN:"/></TextBlock>
                 <TextBox x:Name="TBPin" FontSize="18" HorizontalAlignment="Right" Grid.Column="2" Width="70" Margin="0,4,10,0"
-                         VerticalAlignment="Top" TextChanged="TBnovac_TextChanged"></TextBox>
-                <Button Grid.Column="3" Grid.Row="1" Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" Click="Button_Click_3" >
-                    Potvrdi
-                </Button>
-   
+        			VerticalAlignment="Top" TextChanged="TBnovac_TextChanged"/>
+                <Button Grid.Column="3" Grid.Row="1" Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Background}" Click="Button_Click_3" Content="Potvrdi" />
+
             </Grid>
         </Border>
         <Border x:Name="uplataObicni" Padding="10" Background="#FFF5E5E5">

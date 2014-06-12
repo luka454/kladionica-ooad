@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Kladionica;
+using System.Globalization;
 
 namespace Kladionica.BazaPodataka
 {
@@ -128,6 +129,24 @@ namespace Kladionica.BazaPodataka
             }
         }
 
+        public void updateUlog(Tiket entitet, Decimal ulog)
+        {
+            try
+            {
+                DAL.Connection.Open();
+
+                string cmd = String.Format("update tiketi set ulog = '{0}' where id = {1}", ulog.ToString(CultureInfo.InvariantCulture), entitet.ID);
+                c = new MySqlCommand(cmd, DAL.Connection);
+                c.ExecuteNonQuery();
+
+                DAL.Connection.Close();
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
         public List<Tiket> getAll()
         {
             throw new NotImplementedException();

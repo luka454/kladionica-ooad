@@ -80,8 +80,8 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="zxing">
-      <HintPath>References\zxing.dll</HintPath>
+    <Reference Include="zxing.wp8.0">
+      <HintPath>KomunikacijaVanjskiUredjaji\wp8.0\zxing.wp8.0.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -114,6 +114,9 @@
     <Compile Include="BazaPodataka\Entiteti\TenisDAO.cs" />
     <Compile Include="BazaPodataka\Interfejsi\IDaoCrud.cs" />
     <Compile Include="BazaPodataka\Entiteti\TransakcijaDAO.cs" />
+    <Compile Include="Dizajn\IsplatiTiket\IsplatiTiketMeni.xaml.cs">
+      <DependentUpon>IsplatiTiketMeni.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dizajn\LOCK.xaml.cs">
       <DependentUpon>LOCK.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dizajn\ClanKlubaDodaj\DobarUnos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\IsplatiTiket\IsplatiTiketMeni.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -289,10 +296,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="KomunikacijaVanjskiUredjaji\QRScannerWin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Klase\Osoba.cs" />
@@ -301,9 +304,6 @@
     </Compile>
     <Compile Include="Dizajn\PrikazIEditovanjeClana\PromijeniPIN.xaml.cs">
       <DependentUpon>PromijeniPIN.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="KomunikacijaVanjskiUredjaji\QRScannerWin.xaml.cs">
-      <DependentUpon>QRScannerWin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

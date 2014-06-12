@@ -103,6 +103,19 @@
                                        Foreground="White">Korisnički klub</TextBlock>
                         </Grid>
                     </Button>
+                    <Button Name="BisplatiTiket" Grid.Row="0" Grid.ColumnSpan="2" Width="280" Height="130"
+                          Style="{DynamicResource DugmeZeleno}" Click="BisplatiTiket_Click_1">
+
+                        <Grid Height="126" Width="265">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="40*"/>
+                                <RowDefinition Height="23*"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="../ico/novi_tiket.png" Margin="0,10,0,0"/>
+                            <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Center" FontSize="18"
+                                       Foreground="White">Isplati tiket</TextBlock>
+                        </Grid>
+                    </Button>
 
                     <Button Name="BNoviTiket" Grid.Row="2" Grid.ColumnSpan="2" Width="280" Height="130"
                           Style="{DynamicResource DugmeZeleno}" Click="BNoviTiket_Click">
