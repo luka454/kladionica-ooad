@@ -114,6 +114,9 @@
     <Compile Include="BazaPodataka\Entiteti\TenisDAO.cs" />
     <Compile Include="BazaPodataka\Interfejsi\IDaoCrud.cs" />
     <Compile Include="BazaPodataka\Entiteti\TransakcijaDAO.cs" />
+    <Compile Include="Dizajn\LOCK.xaml.cs">
+      <DependentUpon>LOCK.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Dizajn\NoviTiket\NoviTiketMeni.xaml.cs">
       <DependentUpon>NoviTiketMeni.xaml</DependentUpon>
     </Compile>
@@ -187,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Dizajn\ClanKlubaDodaj\DobarUnos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dizajn\LOCK.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

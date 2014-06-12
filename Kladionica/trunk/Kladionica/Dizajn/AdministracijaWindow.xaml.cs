@@ -29,7 +29,7 @@ namespace Kladionica
 
         private void BDodajIgre_Click_1(object sender, RoutedEventArgs e)
         {
-            DodavanjeIgre dodaj = new DodavanjeIgre();
+            DodavanjeIgre dodaj = new DodavanjeIgre(Stranica);
             dodaj.Show();
         }
     }

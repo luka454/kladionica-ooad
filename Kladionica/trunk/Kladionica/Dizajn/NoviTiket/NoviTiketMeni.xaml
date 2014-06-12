@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="800">
-    <StackPanel Orientation="Vertical">
+    <StackPanel Orientation="Vertical" Margin="0,0,0,-54">
 
         <Border x:Name="borderKreiranje" Padding="10" Background="#FFE3E2F5" >
             <StackPanel>
@@ -40,6 +40,29 @@
                 </Grid>
             </StackPanel>
         </Border>
+        <Border x:Name="UnosPIN" Padding="10" Background="#FFF5E5E5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65*"/>
+                    <ColumnDefinition Width="38*"/>
+                    <ColumnDefinition Width="27*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <TextBlock FontSize="18" FontWeight="SemiBold" HorizontalAlignment="Left" Grid.Column="1" Margin="205,5,0,0"
+                           VerticalAlignment="Top" Grid.ColumnSpan="2">
+                    Unesite PIN:
+                </TextBlock>
+                <TextBox x:Name="TBPin" FontSize="18" HorizontalAlignment="Right" Grid.Column="2" Width="70" Margin="0,4,10,0"
+                         VerticalAlignment="Top" TextChanged="TBnovac_TextChanged"></TextBox>
+                <Button Grid.Column="3" Grid.Row="1" Padding="4" Height="32" FontSize="18" Margin="4" Background="{Binding Path=Background}" Click="Button_Click_3" >
+                    Potvrdi
+                </Button>
+   
+            </Grid>
+        </Border>
         <Border x:Name="uplataObicni" Padding="10" Background="#FFF5E5E5">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -65,5 +88,11 @@
 
             </Grid>
         </Border>
+        <Border x:Name="uspjesno" Padding="10" Background="#FFF5E5E5">
+            <Grid>
+                <TextBlock FontSize="48" HorizontalAlignment="Center">Uspjeso uplaceno</TextBlock>
+            </Grid>
+        </Border>
+
     </StackPanel>
 </ContentControl>

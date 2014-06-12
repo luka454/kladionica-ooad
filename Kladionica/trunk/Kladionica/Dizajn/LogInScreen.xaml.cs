@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,6 +66,12 @@ namespace Kladionica
                     return;
                 }
 
+                BazaPodataka.DAL.Connection.Open();
+                string cmd = String.Format("insert into dolazaknaposao values ('{0}', '{1}')",r.ID,DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss"));
+                MySqlCommand c = new MySqlCommand(cmd, BazaPodataka.DAL.Connection);
+                c.ExecuteNonQuery();
+                BazaPodataka.DAL.Connection.Close();
+
                 MainWindow w = Window.GetWindow(this) as MainWindow;
 
                 RadnikPocetna novi = new RadnikPocetna(r);
@@ -84,6 +91,7 @@ namespace Kladionica
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             Radnica r = new Radnica("Luka", "Pejović", "luka454", 000, 5000M);
+            r.ID = 0;
 
             MainWindow w = Window.GetWindow(this) as MainWindow;
 

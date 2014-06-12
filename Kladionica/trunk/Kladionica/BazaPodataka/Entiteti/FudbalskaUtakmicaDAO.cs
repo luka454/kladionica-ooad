@@ -7,10 +7,11 @@ using MySql.Data.MySqlClient;
 
 namespace Kladionica.BazaPodataka
 {
-    public class FudbalskaUtakmicaDAO : Interfejsi.IDaoCrud<FudbalskaUtakmica>
+    public class FudbalskaUtakmicaDAO //: Interfejsi.IDaoCrud<FudbalskaUtakmica>
     {
         protected MySqlCommand c;
-        public long create(FudbalskaUtakmica entity)
+        
+        public long create(FudbalskaUtakmica entity, Ponuda p)
         {
             try
             {
@@ -20,7 +21,7 @@ namespace Kladionica.BazaPodataka
                 //moguće greške sa smještanjem DATETIME u bazu
                 //rijašiti tako da DateTIme konverutjemo u string, a iz stringa u bazi u DateTime
                 //Ponude ID nije riješeno kako treba
-                string ponuda = "(select max(id) from ponude)";
+                string ponuda = p.ID.ToString();
                 c = new MySqlCommand("insert into Igre(Pocetak, StatusIgre, Naziv, IgreType_ID, Ponude_ID)" +
                     " values( '" + entity.Pocetak.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + codeStatus(entity.statusIgre) + "', '" + entity.Naziv + "', " +
                     1 + ", " + ponuda + ")", DAL.Connection);

@@ -162,6 +162,8 @@ namespace Kladionica.BazaPodataka
                 {
                     Radnica rad = new Radnica(r.GetString("ime"), r.GetString("prezime"), r.GetString("username"),
                         r.GetInt32("hashpassworda"), r.GetDecimal("plata"));
+
+                    rad.ID = r.GetInt32("id");
                     return rad;
                 }
                 else

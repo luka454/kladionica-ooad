@@ -18,7 +18,7 @@ namespace Kladionica.BazaPodataka
             {
                 DAL.Connection.Open();
                 c = new MySqlCommand("insert into Ponude(datum)" +
-                    " values( " + entity.Datum + ")", DAL.Connection);
+                    " values( '" + entity.Datum.ToString(dateFormat) + "')", DAL.Connection);
                 c.ExecuteNonQuery();
                 return c.LastInsertedId;
             }
@@ -180,6 +180,7 @@ namespace Kladionica.BazaPodataka
                 if (!r.Read())
                 {
                     r.Close();
+                    DAL.Connection.Close();
                     return null;
                 }
 
@@ -191,6 +192,8 @@ namespace Kladionica.BazaPodataka
                 
                 ponuda.IgreUPonudi = DAL.Factory.getIgraDao().getByPonuda(ponuda);
                 return ponuda;
+
+               
             }
             catch (Exception ex)
             {

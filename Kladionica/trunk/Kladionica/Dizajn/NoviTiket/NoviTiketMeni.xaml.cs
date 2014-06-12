@@ -36,6 +36,8 @@ namespace Kladionica.NoviTiket
             listbox.Items.Add(new UnosNovogTiketa(listbox, this));
 
             uplataObicni.Visibility = System.Windows.Visibility.Collapsed;
+            UnosPIN.Visibility = System.Windows.Visibility.Collapsed;
+            uspjesno.Visibility = System.Windows.Visibility.Collapsed;
         }
 
         public void dodajStavku(StavkaTiketa s){
@@ -68,7 +70,8 @@ namespace Kladionica.NoviTiket
             }
             else
             {
-
+                borderKreiranje.IsEnabled = false;
+                UnosPIN.Visibility = System.Windows.Visibility.Visible;
             }
 
         }
@@ -88,6 +91,36 @@ namespace Kladionica.NoviTiket
                 tiket.OdigraneIgre = stavke;
                 BazaPodataka.DAL.Factory.getTiketDAO().create(tiket);
             }
+            else
+            {
+                if (Convert.ToDecimal(TBnovac.Text) > _clan.Novac)
+                {
+                    MessageBox.Show("Nemate dovoljno na racunu");
+                    return;
+                }
+
+                Tiket tiket = new Tiket(ukupniKoeficijent, Convert.ToDecimal(TBnovac.Text), TipTiketa.Normalni);
+                tiket.OdigraneIgre = stavke;
+                tiket.Vlasnik = _clan;
+
+                BazaPodataka.DAL.Factory.getTiketDAO().create(tiket);
+            }
+            uplataObicni.IsEnabled = false;
+            uspjesno.Visibility = System.Windows.Visibility.Visible;
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            
+            if (TBPin.Text != _clan.PIN.ToString())
+            {
+                MessageBox.Show("Pogrešan unos PIN-a");
+                return;
+            }
+
+            UnosPIN.IsEnabled = false;
+
+            uplataObicni.Visibility = System.Windows.Visibility.Visible;
         }
     }
 }
