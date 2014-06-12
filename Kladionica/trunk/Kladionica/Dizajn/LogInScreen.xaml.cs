@@ -48,6 +48,9 @@ namespace Kladionica
                     return;
                 }
 
+                char[] car = new char[2]{'\'','\"'};
+                Username.Text = Username.Text.Trim(car);
+
                 if (Username.Text.ToLower() == "administracija")
                 {
                     MainWindow we = Window.GetWindow(this) as MainWindow;
