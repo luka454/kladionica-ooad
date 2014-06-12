@@ -14,9 +14,11 @@ namespace Bingo
         public List<int> MoguciBrojevi { get; set; }
         public int Dobitak { get; set; }
 
+        List<ITiket> _tiketi;
         public Igra49()
         {
             Tiket = new Tiket6();
+            _tiketi = new List<ITiket>();
             MoguciBrojevi = new List<int>();
             for (int i = 1; i <= 49; i++)
                 MoguciBrojevi.Add(i);
@@ -30,19 +32,24 @@ namespace Bingo
             br = MoguciBrojevi[tempBroj];
             TrenutniBroj = br;
             MoguciBrojevi.RemoveAt(tempBroj);
+
+            Obavijesti(br);
             return br;
         }
         public void DodajTiket(Tiket6 t)
         {
-            //OdigraniTiketi.Add(t);
+            _tiketi.Add(t);
         }
         public void IzbrisiTiket(Tiket6 t)
         {
-            //OdigraniTiketi.Remove(t);
+            _tiketi.Remove(t);
         }
-        public void Obavijesti()
+        public void Obavijesti(int n)
         {
-            //
+            foreach (var item in _tiketi)
+            {
+                item.Obavijesti(n);
+            }
         }
     }
 }
