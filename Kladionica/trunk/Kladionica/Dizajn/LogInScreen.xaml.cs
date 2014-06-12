@@ -22,10 +22,11 @@ namespace Kladionica
     /// </summary>
     public partial class LogInScreen : Page
     {
+        Point currentPoint = new Point();
         public LogInScreen()
         {
             InitializeComponent();
-            
+           
         }
 
         private void UserName_TextChanged(object sender, TextChangedEventArgs e)
@@ -109,6 +110,31 @@ namespace Kladionica
             App.Current.MainWindow = novi;
             w.Close();
             novi.Show();
+        }
+
+        private void canvas_MouseDown_1(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ButtonState == MouseButtonState.Pressed)
+                currentPoint = e.GetPosition(this);
+        }
+
+        private void canvas_MouseMove_1(object sender, MouseEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                Line line = new Line();
+                line.Stroke = Brushes.White;
+
+                
+                line.X1 = currentPoint.X;
+                line.Y1 = currentPoint.Y;
+                line.X2 = e.GetPosition(this).X;
+                line.Y2 = e.GetPosition(this).Y;
+
+                currentPoint = e.GetPosition(this);
+
+                paintSurface.Children.Add(line);
+            }
         }
     }
 }

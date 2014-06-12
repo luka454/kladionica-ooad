@@ -44,6 +44,7 @@
             <WrapPanel x:Name="ErrorPanel" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed">
                 <TextBlock x:Name="ErrorMessage" Foreground="White" FontSize="16"></TextBlock>
             </WrapPanel>
+            <Canvas x:Name="paintSurface"  Background="{DynamicResource Plava}" HorizontalAlignment="Left" Height="69" Margin="10,3,0,0" VerticalAlignment="Top" Width="680" MouseDown="canvas_MouseDown_1" MouseMove="canvas_MouseMove_1"/>
         </Grid>
         <!-- Loggin dio-->
         <Grid Grid.Row="1" Margin="150,0">
