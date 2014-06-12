@@ -8,17 +8,17 @@ using MySql.Data.MySqlClient;
 
 namespace Kladionica.BazaPodataka
 {
-    public class IgraDAO : Interfejsi.IDaoCrud<Igra>
+    public class IgraDAO //: Interfejsi.IDaoCrud<Igra>
     {
         protected MySqlCommand c;
-        public long create(Igra entity)
+        public long create(Igra entity, Ponuda p)
         {
             if ((entity as FudbalskaUtakmica) != null)
-                return DAL.Factory.getFudbalskaUtakmicaDao().create(entity as FudbalskaUtakmica);
+                return DAL.Factory.getFudbalskaUtakmicaDao().create(entity as FudbalskaUtakmica, p);
             
 
             else if ((entity as Tenis) != null)
-                return DAL.Factory.getTenisDao().create(entity as Tenis);
+                return DAL.Factory.getTenisDao().create(entity as Tenis, p);
 
             return -1;
         }

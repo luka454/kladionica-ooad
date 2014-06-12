@@ -65,7 +65,15 @@ namespace Kladionica.AdministracijaIgre
             if (validirano())
             {
                 FudbalskaUtakmicaDAO fudbalDAO = BazaPodataka.DAL.Factory.getFudbalskaUtakmicaDao();
-                fudbalDAO.create(new FudbalskaUtakmica(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, DomacinBox.Text, GostBox.Text));
+                Ponuda p = BazaPodataka.DAL.Factory.getPonudaDAO().getByExample(PocetakFDate.SelectedDate.Value);
+                if (p == null)
+                {
+                    p = new Ponuda(PocetakFDate.SelectedDate.Value);
+                    p.ID  = Convert.ToInt32(BazaPodataka.DAL.Factory.getPonudaDAO().create(p));
+                }
+                
+
+                fudbalDAO.create(new FudbalskaUtakmica(PocetakFDate.SelectedDate.Value, NazivFBox.Text, si, DomacinBox.Text, GostBox.Text), p);
                 _c.Content = new DobarUnosIgre();
                 this.Close();
             }
