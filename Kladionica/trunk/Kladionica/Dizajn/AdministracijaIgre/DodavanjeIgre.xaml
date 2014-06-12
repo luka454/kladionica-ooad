@@ -228,8 +228,8 @@
                     <Label Style="{DynamicResource Labels}" Grid.Row="3" Grid.Column="1" Content="Status igre:"/>
                     <Label Style="{DynamicResource Labels}" Grid.Row="4" Grid.Column="1" Content="Prvi protivnik:"/>
                     <Label Style="{DynamicResource Labels}" Grid.Row="5" Grid.Column="1" Content="Drugi protivnik:"/>
-                    <Label Style="{DynamicResource Labels}" Grid.Row="7" Grid.Column="1" Content="P1 setovi:" Margin="65,0,0,0"/>
-                    <Label Style="{DynamicResource Labels}" Grid.Row="8" Grid.Column="1" Content="P2 setovi:" Margin="65,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="7" Grid.Column="1" Content="1:" Margin="120,0,0,0"/>
+                    <Label Style="{DynamicResource Labels}" Grid.Row="8" Grid.Column="1" Content="2:" Margin="120,0,0,0" RenderTransformOrigin="3.115,0.58"/>
 
                     <Grid Grid.Column="2" Grid.Row="1">
                         <DatePicker Height="30" Width="Auto" Name="PocetakTDate"/>
